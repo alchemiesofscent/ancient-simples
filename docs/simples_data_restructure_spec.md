@@ -8,8 +8,10 @@ This document governs how the legacy Excel workbook (`Simples.xlsx`, ~1,699 entr
 - `entries.csv`
 - `lemmata.csv`
 - `parts.csv`
+- `preparations.csv`
 - `modern_ids.csv` (template)
 - Review aides: `lemmata_review.csv`, `unmatched_terms.csv`
+- Linking artefacts (import-only): `entry_preparations.csv`
 
 > All CSVs must be UTF-8, comma-separated, quoted as needed, and checked into version control before database import.
 
@@ -29,7 +31,8 @@ Parts ─────────────────┘
 
 - `entries.csv` supplies row-level text content.
 - `lemmata.csv` defines normalized headwords with parent/child relations.
-- `parts.csv` stores controlled vocabulary for plant/animal/mineral parts or preparations.
+- `parts.csv` stores controlled vocabulary for plant/animal/mineral parts and material/residue nouns (e.g., τέφρα, σποδός).
+- `preparations.csv` stores controlled vocabulary for adjectival/process preparation terms that modify a base substance (e.g., κεκαυμένος, ἀφέψημα).
 - `entry_lemmata` is **not** represented as its own CSV; instead, `entries.csv` temporarily includes a `lemma_ids` column for import convenience. Import scripts must split the comma-separated values into rows within the canonical junction table because Supabase relies on proper many-to-many relationships.
 
 ### Supabase Compatibility Notes
@@ -78,7 +81,16 @@ Parts ─────────────────┘
 | greek | string | Polytonic term (ῥίζα, σπέρμα, κέρας, etc.). |
 | english | string | Plain-language equivalent. |
 | category | enum | `vegetable`, `animal`, `mineral`, or `all`. |
-| notes | text | Free-form context/preparation instructions. |
+| notes | text | Free-form context notes. |
+
+### Preparations Sheet
+| Column | Type | Notes |
+|--------|------|-------|
+| prep_id | string | `PR###`. |
+| greek | string | Polytonic preparation/state term (e.g., κεκαυμένος, ἀφέψημα). |
+| english | string | Plain-language equivalent. |
+| scope | enum | `vegetable`, `animal`, `mineral`, or `all`. Use the most permissive logically admissible scope. |
+| notes | text | Free-form remarks. |
 
 ### Modern IDs Template
 Provides headers (`modern_id,lemma_id,binomial,common_en,authority,source_citation,confidence,notes`). Leave empty rows for now; future ETL can populate it.
@@ -93,7 +105,7 @@ Category (animal / vegetable / mineral)
             └─ Part/Preparation (if specified)
 ```
 - Multi-word headings such as "ἀγαρικοῦ ῥίζα" link lemma=ἄγαρικον plus part=ῥίζα.
-- Names containing preparation states (κεκαυμένος, τέφρα) map to parts list entries for tracking.
+- Names containing preparation/state terms (κεκαυμένος, ἀφέψημα, etc.) map to `preparations.csv` for tracking; residue/product nouns such as τέφρα and σποδός remain `parts.csv`.
 
 ---
 
@@ -101,9 +113,13 @@ Category (animal / vegetable / mineral)
 All tasks assume Claude/Codex CLI tooling in a local workspace. Keep intermediate scripts under version control when possible.
 
 ### Task A – Generate `parts.csv`
-1. Seed with vocabulary from this spec (see Appendix A) covering plant, animal, mineral parts, and preparations.
-2. Scan original lemma column + chapter titles for additional part terms (ῥίζα, φύλλα, κεκαυμένος, κέρας, etc.) and append missing entries with proper categories.
+1. Seed with vocabulary from this spec (see Appendix A) covering plant, animal, and mineral parts (parts only).
+2. Scan original lemma column + chapter titles for additional part terms (ῥίζα, φύλλα, κέρας, etc.) and append missing entries with proper categories.
 3. Include brief notes where ambiguity exists (e.g., σπέρμα = seed; used across plant entries).
+
+### Task A2 – Generate `preparations.csv`
+1. Seed with preparation/state vocabulary (see Appendix A2) with stable IDs (`PR###`).
+2. Scan original lemma column + chapter titles for additional preparation/state terms conservatively; if unsure, log candidates in `preparations_review.csv` rather than adding.
 
 ### Task B – Generate `lemmata.csv`
 1. Parse the master lemma list (Appendix B) where parentheses indicate subtype/synonym candidates.
@@ -123,7 +139,8 @@ All tasks assume Claude/Codex CLI tooling in a local workspace. Keep intermediat
 2. Normalize each token (strip accents/breathings, lowercase) and match against `lemmata.headword_normalized`.
 3. Populate `lemma_ids` with comma-separated IDs per entry. Log unmatched tokens into `unmatched_terms.csv` for manual review.
 4. Detect part references by scanning chapter titles and lemma strings; set `part_id` accordingly.
-5. After import, scripts must expand `lemma_ids` into `entry_lemmata` rows:
+5. Detect preparation/state references by scanning chapter titles and lemma strings; emit `entry_preparations.csv` (import-only) with `entry_id,prep_id,is_primary,notes`.
+6. After import, scripts must expand `lemma_ids` into `entry_lemmata` rows:
    ```
    INSERT INTO entry_lemmata(entry_id, lemma_id, is_primary)
    SELECT entry_id, UNNEST(string_to_array(lemma_ids, ',')), first = TRUE
@@ -156,6 +173,8 @@ Process 30 representative entries (list provided in Appendix C) through the enti
 - [ ] 100% of entries populated in `entries.csv`.
 - [ ] ≥95% entries have at least one `lemma_id`; remainder itemized in `unmatched_terms.csv`.
 - [ ] `parts.csv` covers every explicit part/preparation mention.
+- [ ] `parts.csv` covers every explicit part mention.
+- [ ] `preparations.csv` covers every explicit preparation/state mention.
 - [ ] `lemmata_review.csv` adjudicated by domain experts.
 - [ ] Diff-check and OpenRefine logs archived alongside CSV commit.
 
@@ -183,11 +202,17 @@ Supabase imports pull directly from these CSVs; keep them synchronized with Git 
 ## Appendix A – Starter Parts Vocabulary
 *(expand as data demands)*
 
-**Vegetable**: ῥίζα/root (P001), φύλλον/leaf (P002), σπέρμα/seed (P003), καρπός/fruit (P004), ἄνθος/flower (P005), φλοιός/bark (P006), χυλός/juice (P007), ὀπός/resin (P008), κλάδος/branch (P009), βλαστός/shoot (P010), τέφρα/ash (P102), ἀφέψημα/decoction (P103).
+**Vegetable**: ῥίζα/root (P001), φύλλον/leaf (P002), σπέρμα/seed (P003), καρπός/fruit (P004), ἄνθος/flower (P005), φλοιός/bark (P006), χυλός/juice (P007), ὀπός/resin (P008), κλάδος/branch (P009), βλαστός/shoot (P010), τέφρα/ash (P102).
 
 **Animal**: αἷμα/blood (P201), γάλα/milk (P202), χολή/bile (P203), πιμελή-fat (P204), μυελός/marrow (P205), ἧπαρ/liver (P206), κόπρος/dung (P207), οὖρον/urine (P208), ὀστοῦν/bone (P209), κέρας/horn (P210), δέρμα/skin (P211), ὄνυξ/claw (P212), ὠόν/egg (P213).
 
-**Mineral**: λίθος/stone (P301), ἄνθος (efflorescence) (P302), σποδός/powder (P303), κεκαυμένος/burnt (P304).
+**Mineral**: λίθος/stone (P301), ἄνθος (efflorescence) (P302), σποδός/powder/ash residue (P303).
+
+## Appendix A2 – Starter Preparations Vocabulary
+*(expand as data demands)*
+
+- κεκαυμένος / burnt/calcined (PR001)
+- ἀφέψημα / decoction (PR002)
 
 Add more as needed; keep IDs stable once published.
 
