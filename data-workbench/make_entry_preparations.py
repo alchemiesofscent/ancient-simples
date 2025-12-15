@@ -104,6 +104,16 @@ def main() -> int:
 
     preparations_df = pd.read_csv(preparations_csv_path, dtype=str).fillna("")
 
+    # Tokens that should never be treated as preparations.
+    # Example: ωμοτριβές is a lexicalized oil-type label ("cold-pressed oil"), not a preparation/state.
+    prep_exclude_tokens = {
+        # Lexicalized oil-type label ("cold-pressed oil"), not a preparation/state.
+        "ωμοτριβες",
+        # In this corpus, ξηρά is used as a lexicalized subtype label in resin/oil naming
+        # (e.g., πιτυινη ἡ ξηρά), not as a generic drying preparation/state.
+        "ξηρα",
+    }
+
     # Conservative preparation-like stems (used for unmatched logging only).
     prep_like_stems = {
         "εψη": "boiled/cooked family",
@@ -112,7 +122,6 @@ def main() -> int:
         "τετριμ": "ground family",
         "κοπαν": "pounded family",
         "ξηρ": "dried family",
-        "ωμ": "raw family",
     }
 
     xl = pd.ExcelFile(xlsx_path, engine="openpyxl")
@@ -137,22 +146,19 @@ def main() -> int:
         candidates: list[str]
         always_include: set[str] = set()
         if base_norm == "κεκαυμενος":
-            candidates = [
-                "κεκαυμενος",
-                "κεκαυμενη",
-                "κεκαυμενον",
-                "κεκαυμενοι",
-                "κεκαυμεναι",
-                "κεκαυμενα",
-                "κεκαυμενων",
-                "κεκαυμενους",
-                "κεκαυμεναις",
-                "κεκαυμενοις",
-                "κεκαυμενης",
-                "κεκαυμενου",
-                "κεκαυμενω",
-            ]
+            # Include all attested κεκαυμ- token forms as full tokens.
+            candidates = sorted(
+                {t for t in attested_token_norms if t.startswith("κεκαυμε")}
+            )
             always_include = {"κεκαυμενος", "κεκαυμενη", "κεκαυμενον"}
+        elif base_norm == "εψησις":
+            candidates = sorted({t for t in attested_token_norms if t.startswith("εψησ")})
+            always_include = {"εψησις", "εψησεως"}
+        elif base_norm == "πεπλυμενος":
+            candidates = sorted(
+                {t for t in attested_token_norms if t.startswith("πεπλυμε")}
+            )
+            always_include = {"πεπλυμενον"}
         elif base_norm == "αφεψημα":
             candidates = [
                 "αφεψημα",
@@ -212,8 +218,15 @@ def main() -> int:
                     continue
                 text = str(value)
                 tokens = list(iter_greek_tokens(text))
+                tokens_norm = [normalize_greek_for_match(t) for t in tokens]
+                tokens_norm_set = set(tokens_norm)
                 for token in tokens:
                     token_norm = normalize_greek_for_match(token)
+
+                    if token_norm in prep_exclude_tokens:
+                        # Exclude known lexicalized qualifiers (e.g., ωμοτριβές with ἔλαιον).
+                        # Treat as lemma/product qualifier, not a preparation/state.
+                        continue
 
                     matched = False
                     for rule in rules:

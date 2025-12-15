@@ -1,24 +1,19 @@
-# Preparations split diff report
+# preparations.csv update report
 
-- Generated: `2025-12-15T16:35:19+00:00`
-- Workbook: `Simples.xlsx`
+- Generated: `2025-12-15T18:34:00+00:00`
 
-## (a) Removed from parts.csv
-- _(none)_
-
-## (b) Added to parts.csv
-- `P303` σποδός — powder/ash residue (mineral)
-
-## (c) Removed from preparations.csv
-- `PR003` σποδός — powder (scope: all)
-
-## (d) Added to preparations.csv
+## Current controlled vocabulary
 - `PR001` κεκαυμένος — burnt/calcined (scope: all)
 - `PR002` ἀφέψημα — decoction (scope: all)
+- `PR003` ἕψησις — boiling/cooking (scope: all)
+- `PR004` πεπλυμένος — washed (scope: all)
 
-## (e) Rule for preparations vs residue nouns
-- Deterministic rule: preparations are adjectival or process terms that modify a base substance; residue/product nouns (e.g., σποδός, τέφρα) remain parts/materials even if produced by a process.
+## Notes
+- Includes PR003 (ἕψησις) and PR004 (πεπλυμένος) as promoted preparation/process terms.
 
-## (f) Downstream consistency changes
-- `κεκαυμένος` and `ἀφέψημα` remain preparations (not parts).
-- Linking for preparations will be emitted as `entry_preparations.csv` (import-only), analogous to `lemma_ids` → `entry_lemmata`.
+## Matching policy
+- `entry_preparations.csv` linking uses strict tokenization + normalization + exact token match against explicit controlled forms per preparation.
+
+## Exclusions
+- `ωμοτριβες`: lexicalized oil-type qualifier (not a preparation/state in this corpus).
+- `ξηρα`: lexicalized subtype adjective in resin/oil naming (e.g., πιτυινη ἡ ξηρά), not a generic drying preparation/state.
