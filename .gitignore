@@ -4,6 +4,9 @@ node_modules/
 .next/
 dist/
 build/
+.vercel/
+.turbo/
+.swc/
 .DS_Store
 Thumbs.db
 .venv/
@@ -11,3 +14,8 @@ __pycache__/
 *.pyc
 *.xlsx
 *.xls
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
