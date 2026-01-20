@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install root deps
+        run: npm ci
+
+      - name: Validate data-workbench outputs
+        run: npm run data:validate
+
+      - name: Install app deps
+        run: npm ci
+        working-directory: app
+
+      - name: Lint app
+        run: npm run app:lint
+
+      - name: Build app
+        run: npm run app:build

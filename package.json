@@ -6,7 +6,10 @@
     "db:push": "npx supabase db push --yes",
     "data:validate": "python scripts/validate_data.py",
     "db:import": "python scripts/import_supabase.py",
-    "db:setup": "npm run db:push && npm run data:validate && npm run db:import"
+    "db:setup": "npm run db:push && npm run data:validate && npm run db:import",
+    "app:lint": "npm --prefix app run lint",
+    "app:build": "node scripts/run_app_build.js",
+    "ci": "npm run data:validate && npm run app:lint && npm run app:build"
   },
   "devDependencies": {
     "supabase": "^2.72.8"
