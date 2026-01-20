@@ -1,4 +1,13 @@
 {
+  "name": "ancient-simples",
+  "private": true,
+  "scripts": {
+    "supabase:link": "npx supabase link --project-ref ziyjzprjlefidadtqfnx",
+    "db:push": "npx supabase db push --yes",
+    "data:validate": "python scripts/validate_data.py",
+    "db:import": "python scripts/import_supabase.py",
+    "db:setup": "npm run db:push && npm run data:validate && npm run db:import"
+  },
   "devDependencies": {
     "supabase": "^2.72.8"
   }
