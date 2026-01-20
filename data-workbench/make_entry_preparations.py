@@ -11,6 +11,14 @@ from typing import Iterable
 
 import pandas as pd
 
+from workbook_utils import (
+    EXPECTED_SHEETS,
+    build_ref,
+    dedupe_entry_ids,
+    find_workbook_path,
+    source_code_for_sheet,
+)
+
 
 GREEK_TOKEN_RE = re.compile(r"[\u0370-\u03FF\u1F00-\u1FFF]+", re.UNICODE)
 
@@ -56,38 +64,11 @@ def to_intish_string(value: object) -> str | None:
     return v if v else None
 
 
-def source_code_for_sheet(sheet: str) -> str:
-    return {
-        "SMT": "GAL_SMT",
-        "Alim.Fac": "GAL_ALIM",
-        "Oribasius CM 15": "ORIB_CM",
-        "Aetius I-II": "AET_LM",
-    }.get(sheet, sheet.upper().replace(" ", "_"))
-
-
-def build_entry_id(row: pd.Series, *, source_code: str, row_index_1_based: int) -> str:
-    book = to_intish_string(row.get("Book_Arabic"))
-    chapter = to_intish_string(row.get("Chapter_Arabic"))
-    section = to_intish_string(row.get("Section_Arabic"))
-
-    ref: str
-    if book and chapter:
-        ref = f"{book}.{chapter}"
-        if section and section not in {"0", "0.0"}:
-            ref = f"{ref}.{section}"
-    elif section:
-        ref = section
-    else:
-        ref = f"row{row_index_1_based}"
-
-    return f"{source_code}-{ref}"
-
-
 def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     workbench = repo_root / "data-workbench"
 
-    xlsx_path = workbench / "Simples.xlsx"
+    xlsx_path = find_workbook_path(workbench)
     preparations_csv_path = workbench / "preparations.csv"
     out_csv_path = workbench / "entry_preparations.csv"
     unmatched_csv_path = workbench / "unmatched_preparations.csv"
@@ -128,9 +109,22 @@ def main() -> int:
 
     # Build a workbook token set for form-safe, exact matching of attested forms.
     attested_token_norms: set[str] = set()
-    for sheet in xl.sheet_names:
-        df = xl.parse(sheet, usecols=["Lemma", "Chapter_Title", "Section_Title"])
-        for col in ["Lemma", "Chapter_Title", "Section_Title"]:
+    for sheet in EXPECTED_SHEETS:
+        df = xl.parse(sheet)
+        scan_cols = [
+            c
+            for c in [
+                "lemma_gr",
+                "var_par_prod_gr",
+                "chapter_gr",
+                "section_gr",
+                "Lemma",
+                "Chapter_Title",
+                "Section_Title",
+            ]
+            if c in df.columns
+        ]
+        for col in scan_cols:
             for value in df[col].dropna().astype(str):
                 for token in iter_greek_tokens(value):
                     attested_token_norms.add(normalize_greek_for_match(token))
@@ -197,17 +191,29 @@ def main() -> int:
     out_rows: list[dict[str, str]] = []
     unmatched_rows: list[dict[str, str]] = []
 
-    for sheet in xl.sheet_names:
+    # Precompute entry_ids with the same deterministic duplicate suffixing as entries.csv.
+    base_entry_ids: list[str] = []
+    for sheet in EXPECTED_SHEETS:
         df = xl.parse(sheet)
         source_code = source_code_for_sheet(sheet)
+        for idx, row in df.iterrows():
+            ref = build_ref(row, row_index_1_based=idx + 1)
+            base_entry_ids.append(f"{source_code}-{ref}")
+    entry_ids = dedupe_entry_ids(base_entry_ids)
+
+    global_row_idx = 0
+    for sheet in EXPECTED_SHEETS:
+        df = xl.parse(sheet)
 
         for idx, row in df.iterrows():
-            entry_id = build_entry_id(row, source_code=source_code, row_index_1_based=idx + 1)
+            entry_id = entry_ids[global_row_idx]
+            global_row_idx += 1
 
             fields = [
-                ("Lemma", row.get("Lemma")),
-                ("Chapter_Title", row.get("Chapter_Title")),
-                ("Section_Title", row.get("Section_Title")),
+                ("lemma_gr", row.get("lemma_gr") if "lemma_gr" in df.columns else row.get("Lemma")),
+                ("var_par_prod_gr", row.get("var_par_prod_gr")),
+                ("chapter_gr", row.get("chapter_gr") if "chapter_gr" in df.columns else row.get("Chapter_Title")),
+                ("section_gr", row.get("section_gr") if "section_gr" in df.columns else row.get("Section_Title")),
             ]
 
             matches: list[tuple[str, str]] = []  # (prep_id, notes)

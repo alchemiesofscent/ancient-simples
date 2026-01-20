@@ -1,16 +1,19 @@
 # Column O (Category) audit
 
-- Workbook: `Simples.xlsx`
+- Workbook: `simples.xlsx`
 - Sheets: `SMT`, `Alim.Fac`, `Oribasius CM 15`, `Aetius I-II`
 
 ## Sheet headers
-- `SMT`: lemma column `M1` = `Lemma`, category column `O1` = `Category`
-- `Alim.Fac`: lemma column `M1` = `Lemma`, category column `O1` = `Category`
-- `Oribasius CM 15`: lemma column `M1` = `Lemma`, category column `O1` = `Category`
-- `Aetius I-II`: lemma column `M1` = `Lemma`, category column `O1` = `Category`
+- `SMT`: lemma column `M1` = `lemma_gr`, category column `S1` = `cat`
+- `Alim.Fac`: lemma column `M1` = `lemma_gr`, category column `S1` = `cat`
+- `Oribasius CM 15`: lemma column `M1` = `lemma_gr`, category column `S1` = `cat`
+- `Aetius I-II`: lemma column `M1` = `lemma_gr`, category column `S1` = `cat`
 
 ## Distinct column O values (trimmed)
-- `Plant`: 935
-- `plant`: 437
-- `Animal`: 179
-- `Mineral`: 178
+- `Plant`: 933
+- `plant`: 667
+- `Animal`: 196
+- `Mineral`: 148
+- `mineral`: 100
+- `animal`: 69
+- `substance`: 13

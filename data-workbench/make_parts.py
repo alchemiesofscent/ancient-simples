@@ -13,6 +13,8 @@ from typing import Iterable
 
 import pandas as pd
 
+from workbook_utils import find_workbook_path
+
 
 GREEK_TOKEN_RE = re.compile(r"[\u0370-\u03FF\u1F00-\u1FFF]+", re.UNICODE)
 
@@ -56,7 +58,8 @@ def relevant_text_columns(columns: Iterable[object]) -> list[str]:
         name_lower = name.lower()
         if "lemma" in name_lower:
             out.append(name)
-        elif name_lower in {"chapter_title", "section_title"}:
+            continue
+        if name_lower in {"chapter_title", "section_title", "chapter_gr", "section_gr", "var_par_prod_gr"}:
             out.append(name)
     return out
 
@@ -186,7 +189,7 @@ def detect_candidate_preparation_tokens(
 def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     workbench = repo_root / "data-workbench"
-    xlsx_path = workbench / "Simples.xlsx"
+    xlsx_path = find_workbook_path(workbench)
 
     parts_csv_path = workbench / "parts.csv"
     parts_qc_md_path = workbench / "parts_qc.md"

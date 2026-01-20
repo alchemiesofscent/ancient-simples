@@ -10,6 +10,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from workbook_utils import EXPECTED_SHEETS, find_workbook_path
+
 
 GREEK_TOKEN_RE = re.compile(r"[\u0370-\u03FF\u1F00-\u1FFF]+", re.UNICODE)
 
@@ -31,7 +33,7 @@ def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     workbench = repo_root / "data-workbench"
 
-    xlsx_path = workbench / "Simples.xlsx"
+    xlsx_path = find_workbook_path(workbench)
     preparations_csv_path = workbench / "preparations.csv"
     out_csv_path = workbench / "preparations_review.csv"
 
@@ -57,9 +59,22 @@ def main() -> int:
 
     # Compute attested token norms across scanned fields for exact-form exclusion.
     attested: set[str] = set()
-    for sheet in xl.sheet_names:
-        df = xl.parse(sheet, usecols=["Lemma", "Chapter_Title", "Section_Title"])
-        for col in ["Lemma", "Chapter_Title", "Section_Title"]:
+    for sheet in EXPECTED_SHEETS:
+        df = xl.parse(sheet)
+        scan_cols = [
+            c
+            for c in [
+                "lemma_gr",
+                "var_par_prod_gr",
+                "chapter_gr",
+                "section_gr",
+                "Lemma",
+                "Chapter_Title",
+                "Section_Title",
+            ]
+            if c in df.columns
+        ]
+        for col in scan_cols:
             for value in df[col].dropna().astype(str):
                 for token in iter_greek_tokens(value):
                     attested.add(normalize_greek_for_match(token))
@@ -90,9 +105,22 @@ def main() -> int:
     token_reason: dict[str, str] = {}
     token_count: dict[str, int] = defaultdict(int)
 
-    for sheet in xl.sheet_names:
-        df = xl.parse(sheet, usecols=["Lemma", "Chapter_Title", "Section_Title"])
-        for col in ["Lemma", "Chapter_Title", "Section_Title"]:
+    for sheet in EXPECTED_SHEETS:
+        df = xl.parse(sheet)
+        scan_cols = [
+            c
+            for c in [
+                "lemma_gr",
+                "var_par_prod_gr",
+                "chapter_gr",
+                "section_gr",
+                "Lemma",
+                "Chapter_Title",
+                "Section_Title",
+            ]
+            if c in df.columns
+        ]
+        for col in scan_cols:
             for value in df[col].dropna().astype(str):
                 tokens = iter_greek_tokens(value)
                 norms = [normalize_greek_for_match(t) for t in tokens]

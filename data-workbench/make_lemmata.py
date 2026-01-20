@@ -13,6 +13,8 @@ from pathlib import Path
 import pandas as pd
 from openpyxl import load_workbook
 
+from workbook_utils import find_workbook_path
+
 
 GREEK_TOKEN_RE = re.compile(r"[\u0370-\u03FF\u1F00-\u1FFF]+", re.UNICODE)
 
@@ -161,7 +163,7 @@ def has_non_greek_letters(headword_gr: str) -> bool:
 def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     workbench = repo_root / "data-workbench"
-    xlsx_path = workbench / "Simples.xlsx"
+    xlsx_path = find_workbook_path(workbench)
 
     lemmata_csv_path = workbench / "lemmata.csv"
     lemmata_review_csv_path = workbench / "lemmata_review.csv"
@@ -174,13 +176,15 @@ def main() -> int:
 
     xl = pd.ExcelFile(xlsx_path, engine="openpyxl")
 
-    # Column O (Excel) is authoritative category for lemmata.
+    # Category column is authoritative category for lemmata.
     # Map raw values to the controlled category set used in lemmata.csv.
     category_map = {
-        "plant": "plant",
-        "Plant": "plant",
+        "plant": "vegetable",
+        "Plant": "vegetable",
         "Animal": "animal",
+        "animal": "animal",
         "Mineral": "mineral",
+        "mineral": "mineral",
     }
     column_o_blank_fallbacks = 0
     column_o_unmapped_counts: dict[str, int] = defaultdict(int)
@@ -191,6 +195,7 @@ def main() -> int:
     headword_first_context: dict[str, tuple[str, int, str]] = {}
     headword_first_note: dict[str, str] = {}
     headword_first_category: dict[str, str] = {}
+    headword_first_category_is_fallback: dict[str, bool] = {}
     ordered_headwords: "OrderedDict[str, None]" = OrderedDict()
     review_rows: list[dict[str, str]] = []
 
@@ -207,18 +212,33 @@ def main() -> int:
     audit_lines.append("## Sheet headers")
     for sheet_name in wb.sheetnames:
         ws = wb[sheet_name]
+        header_to_col: dict[str, str] = {}
+        for cell in ws[1]:
+            if cell.value is None:
+                continue
+            header_to_col[str(cell.value).strip()] = cell.column_letter
+        lemma_col = header_to_col.get("lemma_gr") or header_to_col.get("Lemma") or "M"
+        cat_col = header_to_col.get("cat") or header_to_col.get("Category") or "O"
         audit_lines.append(
-            f"- `{sheet_name}`: lemma column `M1` = `{ws['M1'].value}`, category column `O1` = `{ws['O1'].value}`"
+            f"- `{sheet_name}`: lemma column `{lemma_col}1` = `{ws[f'{lemma_col}1'].value}`, category column `{cat_col}1` = `{ws[f'{cat_col}1'].value}`"
         )
     audit_lines.append("")
 
-    # 2) Collect lemmata in worksheet order using column M (Lemma) and column O (Category).
+    # 2) Collect lemmata in worksheet order using header-detected lemma + category columns.
     for sheet_name in wb.sheetnames:
         ws = wb[sheet_name]
+        header_to_col = {}
+        for cell in ws[1]:
+            if cell.value is None:
+                continue
+            header_to_col[str(cell.value).strip()] = cell.column_letter
+        lemma_col = header_to_col.get("lemma_gr") or header_to_col.get("Lemma") or "M"
+        cat_col = header_to_col.get("cat") or header_to_col.get("Category") or "O"
+
         row_index_1 = 1
         for row_index_1 in range(2, ws.max_row + 1):
-            lemma_cell = ws[f"M{row_index_1}"].value
-            category_raw = ws[f"O{row_index_1}"].value
+            lemma_cell = ws[f"{lemma_col}{row_index_1}"].value
+            category_raw = ws[f"{cat_col}{row_index_1}"].value
 
             if lemma_cell is None:
                 continue
@@ -228,8 +248,10 @@ def main() -> int:
             if category_raw_s:
                 column_o_counts[category_raw_s] += 1
 
-            if not category_raw_s:
-                category = "substance"
+            is_category_fallback = False
+            if not category_raw_s or category_raw_s.lower() == "substance":
+                category = "vegetable"
+                is_category_fallback = True
                 column_o_blank_fallbacks += 1
             else:
                 category = category_map.get(category_raw_s)
@@ -241,7 +263,7 @@ def main() -> int:
                             {
                                 "headword_gr": item,
                                 "context": f"{sheet_name} row {row_index_1}: {raw}",
-                                "reason": f"unknown category value in column O: {category_raw_s}",
+                                "reason": f"unknown category value in category column: {category_raw_s}",
                                 "suggested_category_or_parent": "",
                             }
                         )
@@ -274,14 +296,15 @@ def main() -> int:
                         note_out = (note_out + "; " if note_out else "") + "category inherited from bundle source"
                     headword_first_note[item] = note_out
                     headword_first_category[item] = category
+                    headword_first_category_is_fallback[item] = is_category_fallback
                 else:
                     if notes and not headword_first_note.get(item):
                         note_out = notes
                         note_out = (note_out + "; " if note_out else "") + "category inherited from bundle source"
                         headword_first_note[item] = note_out
-                    existing_cat = headword_first_category.get(item)
-                    if existing_cat == "substance" and category_raw_s and category != "substance":
+                    if headword_first_category_is_fallback.get(item, False) and not is_category_fallback:
                         headword_first_category[item] = category
+                        headword_first_category_is_fallback[item] = False
 
     # Write audit file.
     audit_lines.append("## Distinct column O values (trimmed)")
@@ -304,7 +327,7 @@ def main() -> int:
         lemma_ids[headword_gr] = lemma_id
 
         headword_norm = normalize_greek_for_match(headword_gr)
-        category = headword_first_category.get(headword_gr, "substance")
+        category = headword_first_category.get(headword_gr, "vegetable")
 
         notes = headword_first_note.get(headword_gr, "") or ""
 
@@ -555,10 +578,10 @@ def main() -> int:
                 qc_lines.append("  - _(more omitted)_")
                 break
     qc_lines.append("")
-    qc_lines.append("## Category (from column O)")
+    qc_lines.append("## Category (from workbook category column)")
     for cat, count in sorted(category_counts.items(), key=lambda kv: (-kv[1], kv[0])):
         qc_lines.append(f"- `{cat}`: **{count}**")
-    qc_lines.append(f"- Column O blank fallbacks to `substance`: **{column_o_blank_fallbacks}**")
+    qc_lines.append(f"- Blank/`substance` category fallbacks (defaulted to `vegetable`): **{column_o_blank_fallbacks}**")
     unmapped_total = sum(column_o_unmapped_counts.values())
     qc_lines.append(f"- Sent to review for unmapped column O values: **{unmapped_total}**")
     if column_o_unmapped_counts:

@@ -1,8 +1,19 @@
 # Ancient Simples Database: Data Restructuring Specification
 
-This document governs how the legacy Excel workbook (`Simples.xlsx`, ~1,699 entries) becomes normalized CSVs for import into Supabase/PostgreSQL. It aligns with the MVP architecture (Next.js + Supabase) and preserves a CSV-first workflow for scholarly review.
+This document governs how the legacy Excel workbook (`simples.xlsx`, ~1,699 entries) becomes normalized CSVs for import into Supabase/PostgreSQL. It aligns with the MVP architecture (Next.js + Supabase) and preserves a CSV-first workflow for scholarly review.
 
-**Input:** `/mnt/user-data/uploads/Simples.xlsx`
+**Input:** `/mnt/user-data/uploads/simples.xlsx`
+
+### Workbook Schema Note (repo-local)
+In this repository, the workbook is checked in as `data-workbench/simples.xlsx` and uses a snake_case column schema. The scripts in `data-workbench/` map these columns onto the fields described below:
+
+- `book_no`, `chapter_no`, `section_no`, `subsection_no` → `ref` components
+- `chapter_gr` / `section_gr` → `chapter_title_gr`
+- `lemma_gr` → legacy “Lemma column” used for Task B/D
+- `var_par_prod_gr` → variants/parts/preparation hints (used for conservative `part_id` assignment + preparation review)
+- `entry_gr` → `greek`
+- `entry_en` → `translation`
+- `cat` → category hints (`Plant`/`Animal`/`Mineral`)
 
 **Required Outputs:**
 - `entries.csv`
@@ -112,7 +123,7 @@ All tasks assume Claude/Codex CLI tooling in a local workspace. Keep intermediat
 4. Leave `headword_en` blank unless exact gloss exists.
 
 ### Task C – Restructure `entries.csv`
-1. Flatten all sheets from `Simples.xlsx` into a single table with consistent columns.
+1. Flatten all sheets from `simples.xlsx` into a single table with consistent columns.
 2. Generate `entry_id` by combining source code + ref (pad sections as needed to maintain uniqueness).
 3. Populate `chapter_title_en` via literal translation patterns; for multi-lemma headings, include both terms ("On southernwood and wormwood").
 4. Leave `lemma_ids` blank initially; populate during Task D.
@@ -164,7 +175,7 @@ Process 30 representative entries (list provided in Appendix C) through the enti
 ## 7. File Locations & Naming
 ```
 /project-root
- ├── Simples.xlsx                 # legacy input
+ ├── simples.xlsx                 # legacy input
  ├── simples_data_restructure_spec.md
  ├── entries.csv                  # authoritative staging file
  ├── lemmata.csv

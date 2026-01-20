@@ -14,7 +14,7 @@ All steps assume Windows 11 or macOS with VS Code, Node.js ≥20, and Supabase C
 - **pnpm or npm:** choose one (examples use `pnpm`).
 - **Claude CLI:** `npm install -g @anthropic-ai/claude-code` then `claude login`.
 - **Supabase CLI:** `npm install -g supabase` and authenticate via `supabase login`.
-- **Project files:** `Simples.xlsx`, `simples_data_restructure_spec.md`, and this guide.
+- **Project files:** `simples.xlsx`, `simples_data_restructure_spec.md`, and this guide.
 - **VS Code extensions (optional):** Greek input helper, Supabase, ESLint.
 
 ---
@@ -23,7 +23,7 @@ All steps assume Windows 11 or macOS with VS Code, Node.js ≥20, and Supabase C
 ```
 ancient-simples/
  ├── data-workbench/
- │    ├── Simples.xlsx
+ │    ├── simples.xlsx
  │    ├── simples_data_restructure_spec.md
  │    ├── (CSV outputs…)
  └── app/
@@ -43,13 +43,13 @@ claude
 ```
 Use the initial prompt:
 ```
-Read simples_data_restructure_spec.md and help me restructure Simples.xlsx into entries.csv, lemmata.csv, parts.csv, and supporting review files exactly as described. Confirm understanding before writing files.
+Read simples_data_restructure_spec.md and help me restructure simples.xlsx into entries.csv, lemmata.csv, parts.csv, and supporting review files exactly as described. Confirm understanding before writing files.
 ```
 
 ### Step 3.2 – Generate `parts.csv`
 Prompt Claude:
 ```
-Execute Task A from the spec: create parts.csv with columns part_id,greek,english,category,notes using the starter vocabulary and any additional terms discovered in Simples.xlsx.
+Execute Task A from the spec: create parts.csv with columns part_id,greek,english,category,notes using the starter vocabulary and any additional terms discovered in simples.xlsx.
 ```
 Double-check in VS Code (UTF-8). If edits are needed, request them explicitly.
 
