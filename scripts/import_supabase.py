@@ -205,10 +205,24 @@ def main() -> int:
     for batch in chunked(prep_link_rows, args.batch_links):
         client.upsert("entry_preparations", batch, on_conflict="entry_id,prep_id")
 
+    print("Remote row counts (post-import):")
+    for table in [
+        "parts",
+        "preparations",
+        "lemmata",
+        "entries",
+        "entry_lemmata",
+        "entry_preparations",
+        "entry_references",
+    ]:
+        try:
+            print(f"- {table}: {client.count(table)}")
+        except Exception as e:
+            print(f"- {table}: (count failed: {e})")
+
     print("Done.")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

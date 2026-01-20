@@ -85,10 +85,25 @@ class SupabaseRestClient:
             json_body=rows,
         )
 
+    def count(self, table: str) -> int:
+        status, headers, _body = self._request(
+            "GET",
+            f"/rest/v1/{table}",
+            query={"select": "*", "limit": "1"},
+            headers={"Prefer": "count=exact"},
+        )
+        if status < 200 or status >= 300:
+            raise SupabaseRestError(f"count({table}) unexpected status {status}")
+
+        content_range = headers.get("Content-Range") or headers.get("content-range") or ""
+        if "/" not in content_range:
+            raise SupabaseRestError(f"count({table}) missing Content-Range header")
+        total = content_range.split("/", 1)[1]
+        return int(total)
+
 
 def env_required(name: str) -> str:
     v = os.environ.get(name, "").strip()
     if not v:
         raise SystemExit(f"Missing required env var: {name}")
     return v
-
