@@ -100,14 +100,35 @@ def main() -> int:
     ):
         client.upsert("preparations", batch, on_conflict="prep_id")
 
-    print(f"Importing lemmata: {len(lemmata)}")
+    # Lemmata has a self-referential FK (parent_lemma -> lemma_id). Import in two passes:
+    # 1) Upsert all rows with parent_lemma=NULL to satisfy FK ordering.
+    # 2) Upsert again with the real parent_lemma values restored.
+    print(f"Lemmata pass 1 (no parent_lemma): {len(lemmata)}")
     for batch in chunked(
         [
             {
                 "lemma_id": r["lemma_id"],
                 "headword_gr": r.get("headword_gr", "") or "",
                 "headword_en": r.get("headword_en", "") or "",
-                "parent_lemma": (r.get("parent_lemma", "") or "") or None,
+                "parent_lemma": None,
+                "relationship": r.get("relationship", "") or "",
+                "category": r.get("category", "") or "",
+                "notes": r.get("notes", "") or "",
+            }
+            for r in lemmata
+        ],
+        args.batch_lemmata,
+    ):
+        client.upsert("lemmata", batch, on_conflict="lemma_id")
+
+    print(f"Lemmata pass 2 (with parent_lemma): {len(lemmata)}")
+    for batch in chunked(
+        [
+            {
+                "lemma_id": r["lemma_id"],
+                "headword_gr": r.get("headword_gr", "") or "",
+                "headword_en": r.get("headword_en", "") or "",
+                "parent_lemma": (r.get("parent_lemma", "") or "").strip() or None,
                 "relationship": r.get("relationship", "") or "",
                 "category": r.get("category", "") or "",
                 "notes": r.get("notes", "") or "",
