@@ -40,10 +40,11 @@ export default async function EntriesPage({
 
   let entries: EntryListItem[] = [];
   if (doSearch) {
+    const bounded = normalized.slice(0, 512);
     const { data } = await supabase
       .from("entries")
       .select("entry_id,source,ref,chapter_title_gr,chapter_title_en,trans_status")
-      .like("greek_normalized", `${normalized}%`)
+      .like("greek_normalized_prefix", `${bounded}%`)
       .order("source")
       .order("ref")
       .limit(100);
