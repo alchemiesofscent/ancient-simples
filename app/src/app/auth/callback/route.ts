@@ -29,12 +29,7 @@ export async function GET(request: NextRequest) {
     });
 
     await supabase.auth.exchangeCodeForSession(code);
-        const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
   }
 
   return response;
 }
-
