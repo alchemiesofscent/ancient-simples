@@ -5,12 +5,20 @@ import csv
 import sys
 from collections import Counter
 from pathlib import Path
+import unicodedata
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         return [dict(r) for r in reader]
+
+
+def normalize_greek_for_match(text: str) -> str:
+    lowered = (text or "").lower()
+    decomposed = unicodedata.normalize("NFD", lowered)
+    stripped = "".join(ch for ch in decomposed if not unicodedata.combining(ch) or ch == "\u0345")
+    return unicodedata.normalize("NFC", stripped)
 
 
 def main() -> int:
@@ -63,6 +71,9 @@ def main() -> int:
     bad_part_refs = 0
     bad_lemma_refs = 0
     bad_newlines = 0
+    bad_greek_norm = 0
+    alpha_diacritic_examples: list[str] = []
+    alpha_diacritic_total = 0
     total_with_lemma = 0
 
     for r in entries:
@@ -93,6 +104,25 @@ def main() -> int:
         if "\\n" in (r.get("translation") or ""):
             bad_newlines += 0
 
+        greek = r.get("greek") or ""
+        greek_norm = r.get("greek_normalized") or ""
+        expected_norm = normalize_greek_for_match(greek)
+        if greek_norm != expected_norm:
+            bad_greek_norm += 1
+            if bad_greek_norm <= 5:
+                print(
+                    f"ERROR: greek_normalized mismatch for entry_id={r.get('entry_id','')}: "
+                    f"expected {expected_norm!r} got {greek_norm!r}",
+                    file=sys.stderr,
+                )
+
+        greek_strip = greek.lstrip()
+        expected_strip = expected_norm.lstrip()
+        if greek_strip and expected_strip.startswith("α") and not greek_strip.startswith("α"):
+            alpha_diacritic_total += 1
+            if not greek_norm.lstrip().startswith("α") and len(alpha_diacritic_examples) < 5:
+                alpha_diacritic_examples.append(r.get("entry_id", ""))
+
     if bad_trans_status:
         print(f"ERROR: entries with invalid trans_status: {bad_trans_status}", file=sys.stderr)
         return 2
@@ -105,6 +135,21 @@ def main() -> int:
     if bad_newlines:
         print(
             f"ERROR: entries contain physical newline characters in a field (expected literal \\\\n tokens): {bad_newlines}",
+            file=sys.stderr,
+        )
+        return 2
+    if bad_greek_norm:
+        print(f"ERROR: entries with incorrect greek_normalized values: {bad_greek_norm}", file=sys.stderr)
+        return 2
+    if alpha_diacritic_total == 0:
+        print(
+            "ERROR: expected at least one entry whose Greek starts with diacritic alpha (e.g., ἀ...) to validate normalization",
+            file=sys.stderr,
+        )
+        return 2
+    if alpha_diacritic_examples:
+        print(
+            f"ERROR: entries where Greek starts with diacritic alpha but greek_normalized does not start with plain α: {alpha_diacritic_examples}",
             file=sys.stderr,
         )
         return 2
@@ -126,4 +171,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

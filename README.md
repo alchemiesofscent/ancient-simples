@@ -32,6 +32,15 @@ Prereqs: Node.js 20+, Python 3.12+, Supabase CLI auth (`npx supabase login`).
 5) Run the app:
 - `npm --prefix app run dev`
 
+## Verify Greek prefix search
+In Supabase SQL editor:
+```sql
+select entry_id
+from public.entries
+where greek_normalized_prefix like 'αβρο%'
+limit 5;
+```
+
 ## Making an editor
 New signups default to `viewer` via `public.profiles`.
 

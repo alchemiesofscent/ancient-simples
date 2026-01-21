@@ -4,10 +4,18 @@ from __future__ import annotations
 import argparse
 import csv
 import sys
+import unicodedata
 from pathlib import Path
 from typing import Any
 
 from supabase_rest import SupabaseRestClient, env_required
+
+
+def normalize_greek_for_match(text: str) -> str:
+    lowered = (text or "").lower()
+    decomposed = unicodedata.normalize("NFD", lowered)
+    stripped = "".join(ch for ch in decomposed if not unicodedata.combining(ch) or ch == "\u0345")
+    return unicodedata.normalize("NFC", stripped)
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -109,6 +117,7 @@ def main() -> int:
             {
                 "lemma_id": r["lemma_id"],
                 "headword_gr": r.get("headword_gr", "") or "",
+                "headword_normalized": normalize_greek_for_match(r.get("headword_gr", "") or ""),
                 "headword_en": r.get("headword_en", "") or "",
                 "parent_lemma": None,
                 "relationship": r.get("relationship", "") or "",
@@ -127,6 +136,7 @@ def main() -> int:
             {
                 "lemma_id": r["lemma_id"],
                 "headword_gr": r.get("headword_gr", "") or "",
+                "headword_normalized": normalize_greek_for_match(r.get("headword_gr", "") or ""),
                 "headword_en": r.get("headword_en", "") or "",
                 "parent_lemma": (r.get("parent_lemma", "") or "").strip() or None,
                 "relationship": r.get("relationship", "") or "",
@@ -150,6 +160,8 @@ def main() -> int:
     edition_id = editions[0]["edition_id"]
 
     for r in entries:
+        greek = r.get("greek", "") or ""
+        greek_normalized = normalize_greek_for_match(greek)
         translation = (r.get("translation", "") or "").replace("\\n", "\n")
         entry_rows.append(
             {
@@ -159,7 +171,8 @@ def main() -> int:
                 "chapter_title_gr": r.get("chapter_title_gr", "") or "",
                 "chapter_title_en": r.get("chapter_title_en", "") or "",
                 "part_id": (r.get("part_id", "") or "") or None,
-                "greek": r.get("greek", "") or "",
+                "greek": greek,
+                "greek_normalized": greek_normalized,
                 "translation": translation,
                 "trans_status": r.get("trans_status", "") or "draft",
                 "word_count": to_int_or_none(r.get("word_count", "")),
