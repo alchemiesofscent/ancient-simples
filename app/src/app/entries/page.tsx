@@ -20,7 +20,7 @@ export default async function EntriesPage({
   const { q } = await searchParams;
   const query = (q ?? "").trim();
   const normalized = normalizeGreekForMatch(query).replace(/\s+/g, "");
-
+  console.log({ query, normalized, len: normalized.length });
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -39,15 +39,26 @@ export default async function EntriesPage({
   const doSearch = normalized.length >= 3;
 
   let entries: EntryListItem[] = [];
-  if (doSearch) {
-    const bounded = normalized.slice(0, 512);
+ if (doSearch) {
+  const bounded = normalized.slice(0, 512);
+  const { data, error } = await supabase
+    .from("entries")
+    .select("entry_id,source,ref,chapter_title_gr,chapter_title_en,trans_status")
+    .like("greek_normalized_prefix", `${bounded}%`)
+    .order("source")
+    .order("ref")
+    .limit(100);
+
+  if (error) console.error("entries search error", error);
+
+  entries = (data ?? []) as EntryListItem[];
+} else if (normalized.length === 0) {
     const { data } = await supabase
       .from("entries")
       .select("entry_id,source,ref,chapter_title_gr,chapter_title_en,trans_status")
-      .like("greek_normalized_prefix", `${bounded}%`)
       .order("source")
       .order("ref")
-      .limit(100);
+      .limit(50);
     entries = (data ?? []) as EntryListItem[];
   }
 
