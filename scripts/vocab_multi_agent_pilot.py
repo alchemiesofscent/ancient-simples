@@ -34,6 +34,65 @@ def _utc_run_id() -> str:
 _USAGE_LIMIT_RE = re.compile(r"\"resets_in_seconds\"\\s*:\\s*(\\d+)")
 
 
+def _utc_session_id() -> str:
+    return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S_utc")
+
+
+def _read_jsonl(path: Path):
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            yield json.loads(line)
+        except Exception:
+            continue
+
+
+def _extract_usage_from_codex_home(codex_home: Path) -> dict | None:
+    sessions_dir = codex_home / ".codex" / "sessions"
+    if not sessions_dir.exists():
+        return None
+
+    rollouts = sorted(sessions_dir.rglob("rollout-*.jsonl"), key=lambda p: p.stat().st_mtime)
+    if not rollouts:
+        return None
+
+    rollout = rollouts[-1]
+    start_secondary = None
+    end_secondary = None
+    last_usage = None
+    total_usage = None
+
+    for obj in _read_jsonl(rollout):
+        if obj.get("type") != "event_msg":
+            continue
+        payload = obj.get("payload") or {}
+        if payload.get("type") != "token_count":
+            continue
+
+        rate_limits = payload.get("rate_limits") or {}
+        secondary = rate_limits.get("secondary") or {}
+        used_percent = secondary.get("used_percent")
+        if start_secondary is None and used_percent is not None:
+            start_secondary = used_percent
+
+        info = payload.get("info")
+        if isinstance(info, dict):
+            if used_percent is not None:
+                end_secondary = used_percent
+            last_usage = info.get("last_token_usage") or last_usage
+            total_usage = info.get("total_token_usage") or total_usage
+
+    return {
+        "rollout": str(rollout),
+        "start_secondary_used_percent": start_secondary,
+        "end_secondary_used_percent": end_secondary,
+        "last_token_usage": last_usage,
+        "total_token_usage": total_usage,
+    }
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="Orchestrate a 5-row multi-agent pilot run for vocab extraction."
@@ -49,6 +108,11 @@ def main() -> int:
         help="Base prompt markdown file.",
     )
     ap.add_argument("--n", type=int, default=5, help="Number of entries to run.")
+    ap.add_argument(
+        "--session-id",
+        default=None,
+        help="Session id for this invocation (used to name manifest + job folder).",
+    )
     ap.add_argument(
         "--outdir",
         default=str(_repo_root() / "outputs/vocab_pilot"),
@@ -143,6 +207,18 @@ def main() -> int:
         default=10,
         help="Max times to wait for `usage_limit_reached` resets before failing an entry.",
     )
+    ap.add_argument(
+        "--usage-limit-policy",
+        choices=["wait", "stop", "fail"],
+        default="wait",
+        help="What to do when `usage_limit_reached` occurs: wait, stop the whole session, or fail and continue.",
+    )
+    ap.add_argument(
+        "--usage-limit-stop-threshold",
+        type=int,
+        default=600,
+        help="If policy=stop, only stop when resets_in_seconds >= this threshold.",
+    )
 
     args = ap.parse_args()
 
@@ -162,11 +238,21 @@ def main() -> int:
     jobs_dir = run_root / "jobs"
     results_dir = run_root / "results"
     errors_dir = run_root / "errors"
+    usage_dir = run_root / "usage"
     jobs_dir.mkdir(parents=True, exist_ok=True)
     results_dir.mkdir(parents=True, exist_ok=True)
     errors_dir.mkdir(parents=True, exist_ok=True)
+    usage_dir.mkdir(parents=True, exist_ok=True)
 
     prompt_base = prompt_path.read_text(encoding="utf-8")
+
+    session_id = args.session_id or _utc_session_id()
+    jobs_session_dir = jobs_dir / session_id
+    jobs_session_dir.mkdir(parents=True, exist_ok=True)
+
+    existing_results: set[str] = set()
+    if args.resume and not args.ids_file:
+        existing_results = {p.stem for p in results_dir.glob("*.json")}
 
     ids_set: set[str] | None = None
     if args.ids_file:
@@ -203,6 +289,8 @@ def main() -> int:
 
             if ids_set is not None and source_id not in ids_set:
                 continue
+            if existing_results and source_id in existing_results:
+                continue
             if args.id_prefix and not source_id.startswith(args.id_prefix):
                 continue
             if id_re and not id_re.search(source_id):
@@ -226,6 +314,7 @@ def main() -> int:
 
     manifest = {
         "run_id": run_id,
+        "session_id": session_id,
         "csv": str(csv_path),
         "prompt": str(prompt_path),
         "schema": str(schema_path),
@@ -236,7 +325,7 @@ def main() -> int:
 
     for row_i, source_id, text, prev in selected:
         safe_id = _safe_filename(source_id)
-        job_path = jobs_dir / f"{safe_id}.prompt.md"
+        job_path = jobs_session_dir / f"{safe_id}.prompt.md"
         result_path = results_dir / f"{safe_id}.json"
         error_path = errors_dir / f"{safe_id}.txt"
 
@@ -274,7 +363,7 @@ def main() -> int:
             }
         )
 
-    manifest_path = run_root / "manifest.json"
+    manifest_path = run_root / f"manifest_{session_id}.json"
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     if args.prepare_only:
@@ -289,9 +378,12 @@ def main() -> int:
     block_lock = threading.Lock()
     block_cond = threading.Condition(block_lock)
     blocked_until = 0.0
+    stop_event = threading.Event()
+    stop_reason = {"message": None}
 
     completed = 0
     failed = 0
+    skipped = 0
 
     def set_block(seconds: int) -> None:
         nonlocal blocked_until
@@ -351,6 +443,8 @@ def main() -> int:
 
         attempt = 1
         while attempt <= attempts:
+            if stop_event.is_set():
+                return (source_id, 2)
             wait_if_blocked()
             proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             if proc.returncode == 0:
@@ -369,10 +463,19 @@ def main() -> int:
             if "usage_limit_reached" in lower_err:
                 m = _USAGE_LIMIT_RE.search(last_err)
                 if m:
+                    resets_in_seconds = int(m.group(1))
+                    if args.usage_limit_policy == "stop" and resets_in_seconds >= int(
+                        args.usage_limit_stop_threshold
+                    ):
+                        stop_reason["message"] = f"usage_limit_reached (resets_in_seconds={resets_in_seconds})"
+                        stop_event.set()
+                        break
+                    if args.usage_limit_policy == "fail":
+                        break
                     usage_waits += 1
                     if usage_waits > int(args.usage_limit_max_waits):
                         break
-                    set_block(int(m.group(1)))
+                    set_block(resets_in_seconds)
                     continue
 
             # Normal retry backoff.
@@ -403,8 +506,24 @@ def main() -> int:
         q.put(job)
 
     def worker() -> None:
-        nonlocal completed, failed
+        nonlocal completed, failed, skipped
         while True:
+            if stop_event.is_set():
+                # Drain remaining tasks without writing errors/results so they can be picked up in a future session.
+                while True:
+                    try:
+                        job = q.get_nowait()
+                    except Empty:
+                        return
+                    with progress_lock:
+                        skipped += 1
+                        done = completed + failed + skipped
+                        if done % 25 == 0 or done == total:
+                            print(
+                                f"Progress: {done}/{total} (ok={completed}, failed={failed}, skipped={skipped})"
+                            )
+                    q.task_done()
+                return
             try:
                 job = q.get_nowait()
             except Empty:
@@ -416,9 +535,11 @@ def main() -> int:
                         completed += 1
                     else:
                         failed += 1
-                    done = completed + failed
+                    done = completed + failed + skipped
                     if done % 25 == 0 or done == total:
-                        print(f"Progress: {done}/{total} (ok={completed}, failed={failed})")
+                        print(
+                            f"Progress: {done}/{total} (ok={completed}, failed={failed}, skipped={skipped})"
+                        )
             finally:
                 q.task_done()
 
@@ -441,9 +562,49 @@ def main() -> int:
                 continue
             out.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
-    print(f"Pilot complete: {completed} succeeded, {failed} failed.")
+    # Usage summary for this session (best-effort).
+    usage_summary = {
+        "run_id": run_id,
+        "session_id": session_id,
+        "jobs": [],
+        "totals": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0,
+            "total_tokens": 0,
+        },
+        "secondary_used_percent": {"start_min": None, "end_max": None},
+    }
+    for job in manifest["jobs"]:
+        safe_id = Path(job["result_json"]).stem
+        codex_home = run_root / "_codex_home" / safe_id
+        info = _extract_usage_from_codex_home(codex_home)
+        if not info:
+            continue
+        usage_summary["jobs"].append({"source_id": job["source_id"], "safe_id": safe_id, "usage": info})
+        last = info.get("last_token_usage") or {}
+        for k in usage_summary["totals"].keys():
+            usage_summary["totals"][k] += int(last.get(k) or 0)
+
+        start_pct = info.get("start_secondary_used_percent")
+        end_pct = info.get("end_secondary_used_percent")
+        s = usage_summary["secondary_used_percent"]["start_min"]
+        e = usage_summary["secondary_used_percent"]["end_max"]
+        if start_pct is not None:
+            usage_summary["secondary_used_percent"]["start_min"] = start_pct if s is None else min(s, start_pct)
+        if end_pct is not None:
+            usage_summary["secondary_used_percent"]["end_max"] = end_pct if e is None else max(e, end_pct)
+
+    usage_path = usage_dir / f"usage_{session_id}.json"
+    usage_path.write_text(json.dumps(usage_summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    if stop_event.is_set():
+        print(f"Stopped early: {stop_reason['message']}")
+    print(f"Pilot complete: {completed} succeeded, {failed} failed, {skipped} skipped.")
     print(f"Review manifest: {manifest_path}")
     print(f"Review outputs:  {jsonl_path}")
+    print(f"Usage summary:   {usage_path}")
     if failed:
         print(f"Review errors:   {errors_dir}")
     print("Waiting for human review (no further entries will be processed).")
