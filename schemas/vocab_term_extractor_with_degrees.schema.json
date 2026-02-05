@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ancient Simples vocab_term_extractor_with_degrees output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "terms", "qualities"],
+  "properties": {
+    "source_id": { "type": "string", "minLength": 1 },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "display",
+          "normalized",
+          "lemma_gr",
+          "lemma_normalized",
+          "is_multiword",
+          "head_lemma_normalized",
+          "substance_lemma_normalized",
+          "part_lemma_normalized",
+          "variant_place_lemma_normalized",
+          "applies_to",
+          "confidence",
+          "lemma_confidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "SUBSTANCE",
+              "SUBSTANCE_PART",
+              "PART",
+              "PREPARATION",
+              "PROCESS",
+              "TOOL_CONTAINER",
+              "CONDITION",
+              "QUALITY_PROPERTY",
+              "APPLICATION_SITE",
+              "ADMINISTRATION",
+              "PLACE"
+            ]
+          },
+          "display": { "type": "string" },
+          "normalized": { "type": "string" },
+          "lemma_gr": { "type": "string" },
+          "lemma_normalized": { "type": "string" },
+          "is_multiword": { "type": "boolean" },
+          "head_lemma_normalized": { "type": ["string", "null"] },
+          "substance_lemma_normalized": { "type": ["string", "null"] },
+          "part_lemma_normalized": { "type": ["string", "null"] },
+          "variant_place_lemma_normalized": { "type": ["string", "null"] },
+          "applies_to": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "lemma_normalized",
+              "substance_lemma_normalized",
+              "part_lemma_normalized"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "SUBSTANCE",
+                  "PART",
+                  "PREPARATION",
+                  "SUBSTANCE_PART",
+                  "UNSPECIFIED"
+                ]
+              },
+              "lemma_normalized": { "type": ["string", "null"] },
+              "substance_lemma_normalized": { "type": ["string", "null"] },
+              "part_lemma_normalized": { "type": ["string", "null"] }
+            }
+          },
+          "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "lemma_confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+        }
+      }
+    },
+    "qualities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "axis",
+          "degree",
+          "intensity",
+          "hedge",
+          "evidence_display",
+          "evidence_normalized",
+          "variant_place_lemma_normalized",
+          "applies_to",
+          "confidence"
+        ],
+        "properties": {
+          "axis": { "type": "string", "enum": ["HOT", "COLD", "DRY", "WET"] },
+          "degree": {
+            "anyOf": [
+              { "type": "integer", "minimum": 1, "maximum": 4 },
+              { "type": "null" }
+            ]
+          },
+          "intensity": {
+            "type": "string",
+            "enum": ["none", "weak", "moderate", "balanced", "strong", "extreme"]
+          },
+          "hedge": { "type": "string", "enum": ["none", "που", "approx"] },
+          "evidence_display": { "type": "string" },
+          "evidence_normalized": { "type": "string" },
+          "variant_place_lemma_normalized": { "type": ["string", "null"] },
+          "applies_to": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "lemma_normalized",
+              "substance_lemma_normalized",
+              "part_lemma_normalized"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "SUBSTANCE",
+                  "PART",
+                  "PREPARATION",
+                  "SUBSTANCE_PART",
+                  "UNSPECIFIED"
+                ]
+              },
+              "lemma_normalized": { "type": ["string", "null"] },
+              "substance_lemma_normalized": { "type": ["string", "null"] },
+              "part_lemma_normalized": { "type": ["string", "null"] }
+            }
+          },
+          "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+        }
+      }
+    }
+  }
+}
