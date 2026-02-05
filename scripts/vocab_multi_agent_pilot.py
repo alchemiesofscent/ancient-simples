@@ -76,6 +76,11 @@ def main() -> int:
         help="If set, only process rows whose SOURCE_ID matches this regex.",
     )
     ap.add_argument(
+        "--ids-file",
+        default=None,
+        help="If set, only process SOURCE_IDs listed in this file (one per line).",
+    )
+    ap.add_argument(
         "--prepare-only",
         action="store_true",
         help="Only write job files + manifest, do not invoke the agent.",
@@ -163,6 +168,19 @@ def main() -> int:
 
     prompt_base = prompt_path.read_text(encoding="utf-8")
 
+    ids_set: set[str] | None = None
+    if args.ids_file:
+        ids_path = Path(args.ids_file)
+        ids = []
+        for line in ids_path.read_text(encoding="utf-8", errors="replace").splitlines():
+            value = line.strip()
+            if not value or value.startswith("#"):
+                continue
+            ids.append(value)
+        ids_set = set(ids)
+        if not ids_set:
+            raise SystemExit(f"--ids-file provided but contained no ids: {ids_path}")
+
     selected = []
     id_re = re.compile(args.id_regex) if args.id_regex else None
     with csv_path.open("r", encoding="utf-8", newline="") as f:
@@ -181,19 +199,30 @@ def main() -> int:
                 continue
 
             prev = prev_by_source.get(source)
+            prev_by_source[source] = (source_id, text)
+
+            if ids_set is not None and source_id not in ids_set:
+                continue
             if args.id_prefix and not source_id.startswith(args.id_prefix):
-                prev_by_source[source] = (source_id, text)
                 continue
             if id_re and not id_re.search(source_id):
-                prev_by_source[source] = (source_id, text)
                 continue
             selected.append((row_i, source_id, text, prev))
-            prev_by_source[source] = (source_id, text)
-            if len(selected) >= args.n:
-                break
+            if ids_set is not None:
+                if len(selected) >= len(ids_set):
+                    break
+            else:
+                if len(selected) >= args.n:
+                    break
 
     if not selected:
         raise SystemExit("No non-empty rows found to run.")
+
+    if ids_set is not None:
+        found = {sid for _, sid, _, _ in selected}
+        missing = sorted(ids_set - found)
+        if missing:
+            raise SystemExit(f"--ids-file ids not found in CSV (with non-empty text): {missing[:20]}")
 
     manifest = {
         "run_id": run_id,

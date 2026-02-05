@@ -5,6 +5,7 @@ import json
 import os
 import subprocess
 import sys
+import shutil
 from pathlib import Path
 
 
@@ -84,6 +85,14 @@ def main() -> int:
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    codex_bin = args.codex_bin
+    if not Path(codex_bin).exists():
+        resolved = shutil.which(codex_bin)
+        if resolved:
+            codex_bin = resolved
+        else:
+            raise SystemExit(f"Could not find codex binary on PATH: {args.codex_bin!r}")
+
     schema_path = Path(args.schema)
     if not schema_path.exists():
         raise SystemExit(f"Schema file not found: {schema_path}")
@@ -117,7 +126,7 @@ def main() -> int:
     env["HOME"] = str(codex_home)
 
     cmd = [
-        args.codex_bin,
+        codex_bin,
         "exec",
         "-C",
         str(_repo_root()),
