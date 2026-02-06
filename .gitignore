@@ -25,9 +25,6 @@ yarn-error.log*
 # Next.js app local env
 app/.env.local
 
-# local/generated
-import/
-vocab.md
-
-# Local runs
+# Local runs (do not commit large artifacts or Codex session state)
 outputs/
+
