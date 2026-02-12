@@ -1,0 +1,17 @@
+{
+  "run_id": "20260202_194227_utc",
+  "csv": "/home/seanm/github/ancient-simples/data-workbench/entries.csv",
+  "prompt": "/home/seanm/github/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seanm/github/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 1,
+  "n_selected": 1,
+  "jobs": [
+    {
+      "csv_line": 2,
+      "source_id": "GAL_SMT-6.prooimion",
+      "job_prompt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_194227_utc/jobs/GAL_SMT-6.prooimion.prompt.md",
+      "result_json": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_194227_utc/results/GAL_SMT-6.prooimion.json",
+      "error_txt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_194227_utc/errors/GAL_SMT-6.prooimion.txt"
+    }
+  ]
+}

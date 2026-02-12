@@ -1,0 +1,143 @@
+{
+  "source_id": "ORIB_CM-15.1.11.29",
+  "terms": [
+    {
+      "label": "PLACE",
+      "display": "Λιβύῃ",
+      "normalized": "λιβυῃ",
+      "lemma_gr": "Λιβύη",
+      "lemma_normalized": "λιβυη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαινόντων",
+      "normalized": "θερμαινοντων",
+      "lemma_gr": "θερμαίνων",
+      "lemma_normalized": "θερμαινων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος αγριος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικόν",
+      "normalized": "ρυπτικον",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος αγριος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λωτὸς",
+      "normalized": "λωτος",
+      "lemma_gr": "λωτός",
+      "lemma_normalized": "λωτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἄγριος λωτὸς",
+      "normalized": "αγριος λωτος",
+      "lemma_gr": "λωτός ἄγριος",
+      "lemma_normalized": "λωτος αγριος",
+      "is_multiword": true,
+      "head_lemma_normalized": "λωτος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "σπέρμα",
+      "normalized": "σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λωτος αγριος",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.95
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τὸ σπέρμα δ' αὐτοῦ τῆς δευτέρας τάξεώς ἐστι τῶν θερμαινόντων",
+      "evidence_normalized": "το σπερμα δ' αυτου της δευτερας ταξεως εστι των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος αγριος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.83
+    }
+  ]
+}

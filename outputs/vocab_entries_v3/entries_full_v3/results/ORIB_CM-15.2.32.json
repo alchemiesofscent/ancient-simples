@@ -1,0 +1,103 @@
+{
+  "source_id": "ORIB_CM-15.2.32",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἑλκτικήν",
+      "normalized": "ελκτικην",
+      "lemma_gr": "ἑλκτικός",
+      "lemma_normalized": "ελκτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "βοος κοπρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικῆς δυνάμεως",
+      "normalized": "ξηραντικης δυναμεως",
+      "lemma_gr": "ξηραντικὴ δύναμις",
+      "lemma_normalized": "ξηραντικη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "βοος κοπρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "βοῶν κόπροι",
+      "normalized": "βοων κοπροι",
+      "lemma_gr": "βοὸς κόπρος",
+      "lemma_normalized": "βοος κοπρος",
+      "is_multiword": true,
+      "head_lemma_normalized": "κοπρος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "κόπροι",
+      "normalized": "κοπροι",
+      "lemma_gr": "κόπρος",
+      "lemma_normalized": "κοπρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "μετὰ τῆς ξηραντικῆς δυνάμεως",
+      "evidence_normalized": "μετα της ξηραντικης δυναμεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "βοος κοπρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86
+    }
+  ]
+}

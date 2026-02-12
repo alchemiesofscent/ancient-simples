@@ -1,0 +1,79 @@
+{
+  "source_id": "ORIB_CM-15.1.10.3",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαινόντων",
+      "normalized": "θερμαινοντων",
+      "lemma_gr": "θερμαίνω",
+      "lemma_normalized": "θερμαινω",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραινόντων",
+      "normalized": "ξηραινοντων",
+      "lemma_gr": "ξηραίνω",
+      "lemma_normalized": "ξηραινω",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.8
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "δευτέρας τάξεως τῶν θερμαινόντων τε καὶ ξηραινόντων, καὶ σφοδρότερόν γε ξηραινόντων ἢ θερμαινόντων",
+      "evidence_normalized": "δευτερας ταξεως των θερμαινοντων τε και ξηραινοντων, και σφοδροτερον γε ξηραινοντων η θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6
+    },
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "δευτέρας τάξεως τῶν θερμαινόντων τε καὶ ξηραινόντων",
+      "evidence_normalized": "δευτερας ταξεως των θερμαινοντων τε και ξηραινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65
+    }
+  ]
+}

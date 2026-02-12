@@ -1,0 +1,100 @@
+{
+  "source_id": "GAL_SMT-6.1.46",
+  "terms": [
+    {
+      "label": "CONDITION",
+      "display": "ἕλκη",
+      "normalized": "ελκη",
+      "lemma_gr": "ἕλκος",
+      "lemma_normalized": "ελκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἐπιλήπτοις",
+      "normalized": "επιληπτοις",
+      "lemma_gr": "ἐπίληπτος",
+      "lemma_normalized": "επιληπτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.75,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερεστέρα",
+      "normalized": "λεπτομερεστερα",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραίνουσι",
+      "normalized": "ξηραινουσι",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικωτέρα",
+      "normalized": "ρυπτικωτερα",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀνθυλλὶς",
+      "normalized": "ανθυλλις",
+      "lemma_gr": "ἀνθυλλίς",
+      "lemma_normalized": "ανθυλλις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.9,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "χαμαιπίτυϊ",
+      "normalized": "χαμαιπιτυϊ",
+      "lemma_gr": "χαμαιπίτυς",
+      "lemma_normalized": "χαμαιπιτυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "moderate",
+      "hedge": "none",
+      "evidence_display": "ἀμφότεραι δὲ ξηραίνουσι μετρίως",
+      "evidence_normalized": "αμφοτεραι δε ξηραινουσι μετριως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ανθυλλις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    }
+  ]
+}

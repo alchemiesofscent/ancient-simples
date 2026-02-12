@@ -1,0 +1,50 @@
+{
+  "source_id": "GAL_SMT-6.1.33",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀσθενεστέρα",
+      "normalized": "ασθενεστερα",
+      "lemma_gr": "ἀσθενής",
+      "lemma_normalized": "ασθενης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.7,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δύναμίς",
+      "normalized": "δυναμις",
+      "lemma_gr": "δύναμις",
+      "lemma_normalized": "δυναμις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.85,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀμπέλου",
+      "normalized": "αμπελου",
+      "lemma_gr": "ἄμπελος",
+      "lemma_normalized": "αμπελος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀμπέλου ἡμέρου",
+      "normalized": "αμπελου ημερου",
+      "lemma_gr": "ἄμπελος ἥμερος",
+      "lemma_normalized": "αμπελος ημερος",
+      "is_multiword": true,
+      "head_lemma_normalized": "αμπελος",
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    }
+  ],
+  "qualities": []
+}

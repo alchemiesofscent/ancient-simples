@@ -1,0 +1,84 @@
+--- medium+++ low@@ -29,7 +29,7 @@     [
+       "WET",
+       null,
+-      "none",
++      "moderate",
+       "none",
+       null,
+       [
+@@ -155,20 +155,6 @@       ]
+     ],
+     [
+-      "PROCESS",
+-      "φοινισσω",
+-      null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "SUBSTANCE_PART",
+-        null,
+-        "ελενιον",
+-        "ριζα"
+-      ]
+-    ],
+-    [
+       "QUALITY_PROPERTY",
+       "γλισχρος",
+       null,
+@@ -184,7 +170,7 @@     ],
+     [
+       "QUALITY_PROPERTY",
+-      "θερμος",
++      "θερμαινω",
+       null,
+       null,
+       null,
+@@ -268,21 +254,21 @@     ],
+     [
+       "SUBSTANCE",
++      "λευκον πεπερι",
++      null,
++      null,
+       "πεπερι",
+       null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "UNSPECIFIED",
+-        null,
+-        null,
+-        null
+-      ]
+-    ],
+-    [
+-      "SUBSTANCE",
+-      "πεπερι λευκον",
++      [
++        "UNSPECIFIED",
++        null,
++        null,
++        null
++      ]
++    ],
++    [
++      "SUBSTANCE",
++      "μελαν πεπερι",
+       null,
+       null,
+       "πεπερι",
+@@ -296,10 +282,10 @@     ],
+     [
+       "SUBSTANCE",
+-      "πεπερι μελαν",
+-      null,
+-      null,
+       "πεπερι",
++      null,
++      null,
++      null,
+       null,
+       [
+         "UNSPECIFIED",
+

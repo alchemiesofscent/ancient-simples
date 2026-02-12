@@ -1,0 +1,68 @@
+--- medium+++ low@@ -3,20 +3,6 @@   "source_id": "GAL_SMT-6.1.44",
+   "terms_semantic": [
+     [
+-      "ADMINISTRATION",
+-      "διαμασασθαι",
+-      null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "SUBSTANCE_PART",
+-        null,
+-        "ανεμωνη",
+-        "ριζα"
+-      ]
+-    ],
+-    [
+       "APPLICATION_SITE",
+       "οφθαλμος",
+       null,
+@@ -38,8 +24,8 @@       null,
+       null,
+       [
+-        "UNSPECIFIED",
+-        null,
++        "PREPARATION",
++        "χυλος",
+         null,
+         null
+       ]
+@@ -87,8 +73,8 @@       ]
+     ],
+     [
+-      "PROCESS",
+-      "προστιθεναι",
++      "PREPARATION",
++      "χυλος",
+       null,
+       null,
+       null,
+@@ -200,7 +186,7 @@     ],
+     [
+       "SUBSTANCE",
+-      "εμμηνα",
++      "εμμηνον",
+       null,
+       null,
+       null,
+@@ -239,20 +225,6 @@         null,
+         null
+       ]
+-    ],
+-    [
+-      "SUBSTANCE_PART",
+-      "",
+-      "ανεμωνη",
+-      "χυλος",
+-      null,
+-      null,
+-      [
+-        "UNSPECIFIED",
+-        null,
+-        null,
+-        null
+-      ]
+     ]
+   ]
+ }

@@ -1,0 +1,79 @@
+{
+  "source_id": "ORIB_CM-15.1.10.73",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικὸν",
+      "normalized": "ρυπτικον",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κριθη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Κριθαὶ",
+      "normalized": "κριθαι",
+      "lemma_gr": "κριθή",
+      "lemma_normalized": "κριθη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῆς πρώτης εἰσὶ τάξεως ἐν τῷ ξηραίνειν καὶ ψύχειν",
+      "evidence_normalized": "της πρωτης εισι ταξεως εν τω ξηραινειν και ψυχειν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κριθη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῆς πρώτης εἰσὶ τάξεως ἐν τῷ ξηραίνειν καὶ ψύχειν",
+      "evidence_normalized": "της πρωτης εισι ταξεως εν τω ξηραινειν και ψυχειν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κριθη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78
+    }
+  ]
+}

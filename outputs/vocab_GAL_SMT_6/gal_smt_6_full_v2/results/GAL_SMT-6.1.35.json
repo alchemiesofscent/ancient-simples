@@ -1,0 +1,50 @@
+{
+  "source_id": "GAL_SMT-6.1.35",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀσθενεστέρα",
+      "normalized": "ασθενεστερα",
+      "lemma_gr": "ἀσθενής",
+      "lemma_normalized": "ασθενης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.7,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἄμπελος",
+      "normalized": "αμπελος",
+      "lemma_gr": "ἄμπελος",
+      "lemma_normalized": "αμπελος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἄμπελος μέλαινα",
+      "normalized": "αμπελος μελαινα",
+      "lemma_gr": "ἄμπελος μέλαινα",
+      "lemma_normalized": "αμπελος μελαινα",
+      "is_multiword": true,
+      "head_lemma_normalized": "αμπελος",
+      "confidence": 0.85,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "βρυωνία",
+      "normalized": "βρυωνια",
+      "lemma_gr": "βρυωνία",
+      "lemma_normalized": "βρυωνια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

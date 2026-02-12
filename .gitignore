@@ -25,8 +25,8 @@ yarn-error.log*
 # Next.js app local env
 app/.env.local
 
-# Local runs (do not commit large artifacts or Codex session state)
-outputs/
+# Codex session state (large, not useful to share)
+_codex_home/
 
 # TEI indexer (lxml compiled artifacts)
 *.so

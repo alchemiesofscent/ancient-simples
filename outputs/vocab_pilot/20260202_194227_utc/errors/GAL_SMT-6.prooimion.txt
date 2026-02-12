@@ -1,0 +1,21 @@
+Runner failed for source_id=GAL_SMT-6.prooimion
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 179, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 157, in main
+    raise RuntimeError(msg)
+RuntimeError: codex exec failed (exit=1).
+
+STDERR:
+Error: OSS setup failed: OSS setup failed: No running Ollama server detected. Start it with: `ollama serve` (after installing). Install instructions: https://github.com/ollama/ollama?tab=readme-ov-file#ollama
+
+
+STDOUT:
+
+

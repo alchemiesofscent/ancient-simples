@@ -1,0 +1,32 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260205_124254_utc",
+  "csv": "/home/seanm/github/ancient-simples/data-workbench/entries.csv",
+  "prompt": "/home/seanm/github/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seanm/github/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 3,
+  "n_selected": 3,
+  "jobs": [
+    {
+      "csv_line": 214,
+      "source_id": "GAL_SMT-7.10.43",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260205_124254_utc/GAL_SMT-7.10.43.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/GAL_SMT-7.10.43.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/GAL_SMT-7.10.43.txt"
+    },
+    {
+      "csv_line": 215,
+      "source_id": "GAL_SMT-7.10.44",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260205_124254_utc/GAL_SMT-7.10.44.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/GAL_SMT-7.10.44.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/GAL_SMT-7.10.44.txt"
+    },
+    {
+      "csv_line": 216,
+      "source_id": "GAL_SMT-7.10.45",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260205_124254_utc/GAL_SMT-7.10.45.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/GAL_SMT-7.10.45.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/GAL_SMT-7.10.45.txt"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "source_id": "ORIB_CM-15.1.16.21",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Πήγανον",
+      "normalized": "πηγανον",
+      "lemma_gr": "πήγανον",
+      "lemma_normalized": "πηγανον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Πήγανον ἄγριον",
+      "normalized": "πηγανον αγριον",
+      "lemma_gr": "πήγανον ἄγριον",
+      "lemma_normalized": "πηγανον αγριον",
+      "is_multiword": true,
+      "head_lemma_normalized": "πηγανον",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Πήγανον ἥμερον",
+      "normalized": "πηγανον ημερον",
+      "lemma_gr": "πήγανον ἥμερον",
+      "lemma_normalized": "πηγανον ημερον",
+      "is_multiword": true,
+      "head_lemma_normalized": "πηγανον",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.75
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῶν θερμαινόντων καὶ ξηραινόντων, τὸ δ' ἥμερον ἐκ τῆς τρίτης",
+      "evidence_normalized": "των θερμαινοντων και ξηραινοντων, το δ' ημερον εκ της τριτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πηγανον ημερον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65
+    },
+    {
+      "axis": "DRY",
+      "degree": 4,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Πήγανον τὸ μὲν ἄγριον ἐκ τῆς τετάρτης ... τῶν θερμαινόντων καὶ ξηραινόντων",
+      "evidence_normalized": "πηγανον το μεν αγριον εκ της τεταρτης ... των θερμαινοντων και ξηραινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πηγανον αγριον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῶν θερμαινόντων καὶ ξηραινόντων, τὸ δ' ἥμερον ἐκ τῆς τρίτης",
+      "evidence_normalized": "των θερμαινοντων και ξηραινοντων, το δ' ημερον εκ της τριτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πηγανον ημερον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65
+    },
+    {
+      "axis": "HOT",
+      "degree": 4,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Πήγανον τὸ μὲν ἄγριον ἐκ τῆς τετάρτης ... τῶν θερμαινόντων καὶ ξηραινόντων",
+      "evidence_normalized": "πηγανον το μεν αγριον εκ της τεταρτης ... των θερμαινοντων και ξηραινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πηγανον αγριον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    }
+  ]
+}

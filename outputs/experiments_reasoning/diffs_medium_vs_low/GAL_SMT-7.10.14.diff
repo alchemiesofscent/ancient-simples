@@ -1,0 +1,97 @@
+--- medium+++ low@@ -80,8 +80,8 @@       null,
+       null,
+       [
+-        "SUBSTANCE",
+-        "καρπησιον",
++        "UNSPECIFIED",
++        null,
+         null,
+         null
+       ]
+@@ -95,7 +95,7 @@       null,
+       [
+         "SUBSTANCE",
+-        "καρπησιον",
++        "ουρον",
+         null,
+         null
+       ]
+@@ -108,22 +108,8 @@       null,
+       null,
+       [
+-        "SUBSTANCE",
+-        "καρπησιον",
+-        null,
+-        null
+-      ]
+-    ],
+-    [
+-      "PROCESS",
+-      "χρησθαι",
+-      null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "SUBSTANCE",
+-        "καρπησιον",
++        "UNSPECIFIED",
++        null,
+         null,
+         null
+       ]
+@@ -136,8 +122,8 @@       null,
+       null,
+       [
+-        "UNSPECIFIED",
+-        null,
++        "SUBSTANCE",
++        "καρπησιον",
+         null,
+         null
+       ]
+@@ -150,8 +136,8 @@       null,
+       null,
+       [
+-        "UNSPECIFIED",
+-        null,
++        "SUBSTANCE",
++        "καρπησιον",
+         null,
+         null
+       ]
+@@ -172,6 +158,20 @@     ],
+     [
+       "SUBSTANCE",
++      "αριστη κασια",
++      null,
++      null,
++      "κασια",
++      null,
++      [
++        "UNSPECIFIED",
++        null,
++        null,
++        null
++      ]
++    ],
++    [
++      "SUBSTANCE",
+       "καρπησιον",
+       null,
+       null,
+@@ -214,10 +214,10 @@     ],
+     [
+       "SUBSTANCE",
+-      "λαερτικος",
+-      null,
+-      null,
+-      null,
++      "λαερτικον καρπησιον",
++      null,
++      null,
++      "καρπησιον",
+       null,
+       [
+         "UNSPECIFIED",
+
