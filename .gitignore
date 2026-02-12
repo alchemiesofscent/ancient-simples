@@ -28,3 +28,9 @@ app/.env.local
 # Local runs (do not commit large artifacts or Codex session state)
 outputs/
 
+# TEI indexer (lxml compiled artifacts)
+*.so
+
+# CMG submodule working tree does not pollute ancient-simples status
+# (submodule itself is tracked via .gitmodules)
+

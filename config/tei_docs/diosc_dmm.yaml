@@ -1,0 +1,13 @@
+# TEI doc config: Dioscorides, De Materia Medica
+# Edition: Wellmann (page-range-only — no line breaks in TEI)
+
+tei_doc_id: diosc_dmm
+source_code: DIOSC_DMM
+tei_relpath: tei/cmg/tei/output/tlg0656.tlg001.aos-grc1.xml
+segment_xpath: "//tei:div[@type='chapter'][not(descendant::tei:div[@type='chapter'])]"
+label: "Dioscorides, De Materia Medica"
+edition_label: "Wellmann"
+allow_empty_segments: false
+
+# Wellmann edition uses page-only references (no lb milestones)
+# Citation formatter must not invent line numbers

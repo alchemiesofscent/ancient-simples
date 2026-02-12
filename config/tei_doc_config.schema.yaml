@@ -1,0 +1,77 @@
+# TEI Doc Config Schema
+# Each TEI document to be indexed requires a YAML config file conforming to this schema.
+# See config/tei_docs/ for examples.
+
+type: object
+required:
+  - tei_doc_id
+  - source_code
+  - tei_relpath
+  - segment_xpath
+properties:
+  tei_doc_id:
+    type: string
+    description: >
+      Stable identifier for this TEI document. Used as the first component
+      of display_entry_id (e.g., "gal_smt"). Must be lowercase alphanumeric
+      plus underscores.
+    pattern: "^[a-z][a-z0-9_]*$"
+
+  source_code:
+    type: string
+    description: >
+      FK to tei_sources.code (e.g., "GAL_SMT"). Must match an existing
+      source registry entry.
+
+  tei_relpath:
+    type: string
+    description: >
+      Relative path from repo root to the TEI XML file
+      (e.g., "tei/cmg/tei/output/tlg0057.tlg075.aos-grc1.xml").
+
+  segment_xpath:
+    type: string
+    description: >
+      XPath expression selecting segment nodes to index as entries.
+      Must use the TEI namespace prefix "tei".
+      Each selected node must have an @xml:id attribute.
+
+  label:
+    type: string
+    description: Human-readable label for this document.
+
+  edition_label:
+    type: string
+    description: >
+      Edition label for citation formatting (e.g., "Kühn XI–XII").
+
+  allow_empty_segments:
+    type: boolean
+    default: false
+    description: >
+      If true, segments with empty reading_text after extraction
+      will not cause validation errors.
+
+  structure_div_types:
+    type: array
+    items:
+      type: string
+    description: >
+      If set, only include ancestor divs with @type matching one of these
+      values in structure refs. If not set, include all ancestor divs.
+
+  edition_config:
+    type: object
+    properties:
+      primary_ed:
+        type: string
+        description: >
+          Value of @ed attribute to use as primary edition for pb refs.
+          If not set, all pb elements are treated as primary.
+      secondary_ed:
+        type: string
+        description: >
+          Value of @ed or @edRef for secondary edition refs (e.g., "Kühn").
+    description: >
+      Configuration for editions with dual pb streams (e.g., GAL_ALIM
+      with Helmreich primary and Kühn secondary).

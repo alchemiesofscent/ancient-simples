@@ -1,0 +1,58 @@
+# Ancient Simples TEI-first test subset (~18 entries)
+# Used by Phase 2 validation gate (T-01)
+#
+# Selection criteria:
+# - 10+ Galen/Aetius entries covering quality degrees, SUBSTANCE_PART,
+#   PREPARATION, APPLICATION_SITE, PLACE
+# - 3-5 Dioscorides entries covering multi-lemma heading, rich var_par_prod,
+#   short entry, known lemma overlap, animal/mineral
+# - Entries from >= 3 sources
+#
+# Format: one display_entry_id per line (tei_doc_id~tei_segment_id)
+# Lines starting with # are comments.
+#
+# NOTE: These are placeholder IDs. Replace with actual TEI segment IDs
+# once the CMG submodule is added and segment XPaths are confirmed.
+
+# --- Galen SMT (6 entries) ---
+# 6.1.1 ἶρις (iris) — hot 3rd degree, well-known substance
+gal_smt~seg_6_1_1
+# 6.1.5 ἄκορον (sweet flag) — hot 2nd degree, drying
+gal_smt~seg_6_1_5
+# 6.2.1 βάλσαμον (balsam) — hot, preparations mentioned
+gal_smt~seg_6_2_1
+# 8.15.9 κασσία (cassia) — hot 3rd degree, SUBSTANCE_PART (bark)
+gal_smt~seg_8_15_9
+# 8.18.5 ψύλλιον (fleawort) — cold, APPLICATION_SITE
+gal_smt~seg_8_18_5
+# 11.1.36 γῆ Σαμία (Samian earth) — mineral, PLACE
+gal_smt~seg_11_1_36
+
+# --- Aetius LM (5 entries) ---
+# I.106 — parallel to Galen 6.1.1 (iris), quality degrees
+aet_lm~ch106
+# I.107 — parallel to Galen 6.1.5, PREPARATION mentioned
+aet_lm~ch107
+# I.200 — SUBSTANCE_PART example
+aet_lm~ch200
+# II.15 — quality with multiple axes
+aet_lm~ch2_15
+# II.42 — APPLICATION_SITE example
+aet_lm~ch2_42
+
+# --- Dioscorides DMM (5 entries) ---
+# 1.1 ἶρις (iris) — multi-lemma heading (3 regional variants), known overlap with GAL_SMT
+diosc_dmm~seg_1_1
+# 1.7 νάρδος (nard) — rich var_par_prod_gr (5 terms)
+diosc_dmm~seg_1_7
+# 1.4 κύπερος (cyperus) — known lemma overlap with GAL_SMT
+diosc_dmm~seg_1_4
+# 4.41 χαμαιπεύκη — short entry (~60 chars, minimum-length edge case)
+diosc_dmm~seg_4_41
+# 2.1 — animal substance entry (from Book 2)
+diosc_dmm~seg_2_1
+
+# --- Cross-validation targets ---
+# At least 1 cross-tradition lemma link: ἶρις appears in gal_smt~seg_6_1_1,
+# aet_lm~ch106, and diosc_dmm~seg_1_1
+# At least 1 cross-tradition lemma link: κύπερος in gal_smt and diosc_dmm
