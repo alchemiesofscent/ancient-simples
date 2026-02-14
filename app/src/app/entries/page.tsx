@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { normalizeGreekForMatch } from "@/lib/greek/normalize";
 
@@ -19,26 +20,39 @@ export default async function EntriesPage({
   const { q } = await searchParams;
   const query = (q ?? "").trim();
   const normalized = normalizeGreekForMatch(query).replace(/\s+/g, "");
+  console.log({ query, normalized, len: normalized.length });
   const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/login");
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  const isEditor = profile?.role === "editor";
 
   const tooShort = normalized.length > 0 && normalized.length < 3;
   const doSearch = normalized.length >= 3;
 
   let entries: EntryListItem[] = [];
-  if (doSearch) {
-    const bounded = normalized.slice(0, 512);
-    const { data, error } = await supabase
-      .from("entries")
-      .select("entry_id,source,ref,chapter_title_gr,chapter_title_en,trans_status")
-      .like("greek_normalized_prefix", `${bounded}%`)
-      .order("source")
-      .order("ref")
-      .limit(100);
+ if (doSearch) {
+  const bounded = normalized.slice(0, 512);
+  const { data, error } = await supabase
+    .from("entries")
+    .select("entry_id,source,ref,chapter_title_gr,chapter_title_en,trans_status")
+    .like("greek_normalized_prefix", `${bounded}%`)
+    .order("source")
+    .order("ref")
+    .limit(100);
 
-    if (error) console.error("entries search error", error);
+  if (error) console.error("entries search error", error);
 
-    entries = (data ?? []) as EntryListItem[];
-  } else if (normalized.length === 0) {
+  entries = (data ?? []) as EntryListItem[];
+} else if (normalized.length === 0) {
     const { data } = await supabase
       .from("entries")
       .select("entry_id,source,ref,chapter_title_gr,chapter_title_en,trans_status")
@@ -57,7 +71,10 @@ export default async function EntriesPage({
             Greek search is diacritics-insensitive prefix matching (≥3 characters).
           </p>
         </div>
-        <div className="text-sm text-zinc-600">Public</div>
+        <div className="text-sm text-zinc-600">
+          Signed in as <span className="font-medium">{user.email}</span> (
+          {isEditor ? "editor" : "viewer"})
+        </div>
       </header>
 
       <form className="mt-6 flex gap-2" action="/entries" method="get">

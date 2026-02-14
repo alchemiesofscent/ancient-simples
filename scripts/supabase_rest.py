@@ -6,7 +6,6 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Any
 
 
@@ -103,31 +102,7 @@ class SupabaseRestClient:
         return int(total)
 
 
-def _load_repo_dotenv_if_present() -> None:
-    repo_root = Path(__file__).resolve().parents[1]
-    dotenv_path = repo_root / ".env.local"
-    if not dotenv_path.exists():
-        return
-
-    try:
-        for raw_line in dotenv_path.read_text(encoding="utf-8").splitlines():
-            line = raw_line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            key, value = line.split("=", 1)
-            key = key.strip()
-            value = value.strip()
-            if not key:
-                continue
-            if (value.startswith('"') and value.endswith('"')) or (value.startswith("'") and value.endswith("'")):
-                value = value[1:-1]
-            os.environ.setdefault(key, value)
-    except Exception:
-        return
-
-
 def env_required(name: str) -> str:
-    _load_repo_dotenv_if_present()
     v = os.environ.get(name, "").strip()
     if not v:
         raise SystemExit(f"Missing required env var: {name}")

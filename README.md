@@ -30,7 +30,7 @@ Workspace layout:
 - `app/` — Next.js (App Router, TypeScript) MVP UI.
 
 ## Quick start (hosted Supabase)
-Prereqs: Node.js 20+, Python 3.12+ (via `python3`), Supabase CLI auth (`npx supabase login`).
+Prereqs: Node.js 20+, Python 3.12+, Supabase CLI auth (`npx supabase login`).
 
 1) Install tooling:
 - `npm ci`
