@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { revalidatePath } from "next/cache";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export default async function EntryDetailPage({
@@ -11,17 +9,6 @@ export default async function EntryDetailPage({
   const { entry_id } = await params;
 
   const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) redirect("/login");
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("role")
-    .eq("id", user.id)
-    .maybeSingle();
-  const isEditor = profile?.role === "editor";
 
   const { data: entry, error } = await supabase
     .from("entries")
@@ -40,24 +27,6 @@ export default async function EntryDetailPage({
         </Link>
       </main>
     );
-  }
-
-  async function updateEntry(formData: FormData) {
-    "use server";
-    const translation = String(formData.get("translation") ?? "");
-    const transStatus = String(formData.get("trans_status") ?? "draft");
-    if (!["draft", "review", "final"].includes(transStatus)) {
-      throw new Error("Invalid trans_status");
-    }
-
-    const supabase = await createSupabaseServerClient();
-    const { error } = await supabase
-      .from("entries")
-      .update({ translation, trans_status: transStatus })
-      .eq("entry_id", entry_id);
-    if (error) throw new Error(error.message);
-
-    revalidatePath(`/entries/${encodeURIComponent(entry_id)}`);
   }
 
   return (
@@ -80,7 +49,7 @@ export default async function EntryDetailPage({
 
       <section className="mt-6">
         <h2 className="text-sm font-semibold">Greek</h2>
-        <div className="mt-2 whitespace-pre-wrap rounded-md border bg-white p-3 font-serif text-sm leading-7">
+        <div className="mt-2 whitespace-pre-wrap rounded-md border bg-white p-3 text-base leading-8">
           {entry.greek}
         </div>
       </section>
@@ -91,45 +60,6 @@ export default async function EntryDetailPage({
           {entry.translation}
         </div>
       </section>
-
-      {isEditor ? (
-        <section className="mt-8 rounded-md border bg-white p-4">
-          <h2 className="text-sm font-semibold">Edit (editor)</h2>
-          <form className="mt-3 flex flex-col gap-3" action={updateEntry}>
-            <label className="text-sm font-medium" htmlFor="trans_status">
-              Status
-            </label>
-            <select
-              id="trans_status"
-              name="trans_status"
-              defaultValue={entry.trans_status}
-              className="w-48 rounded-md border px-3 py-2"
-            >
-              <option value="draft">draft</option>
-              <option value="review">review</option>
-              <option value="final">final</option>
-            </select>
-
-            <label className="text-sm font-medium" htmlFor="translation">
-              Translation (supports line breaks)
-            </label>
-            <textarea
-              id="translation"
-              name="translation"
-              defaultValue={entry.translation}
-              rows={12}
-              className="w-full rounded-md border px-3 py-2 font-sans text-sm"
-            />
-            <button className="w-fit rounded-md bg-black px-4 py-2 text-white">
-              Save
-            </button>
-          </form>
-        </section>
-      ) : (
-        <p className="mt-8 text-sm text-zinc-600">
-          Viewer mode: editing disabled.
-        </p>
-      )}
     </main>
   );
 }
