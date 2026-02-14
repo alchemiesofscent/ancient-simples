@@ -1,0 +1,2317 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260205_171049_utc",
+  "jobs": [
+    {
+      "source_id": "GAL_SMT-8.15.6",
+      "safe_id": "GAL_SMT-8.15.6",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.6/.codex/sessions/2026/02/05/rollout-2026-02-05T18-10-50-019c2ec8-feb7-70a3-ae87-d2a5b7d6f478.jsonl",
+        "start_secondary_used_percent": 74.0,
+        "end_secondary_used_percent": 74.0,
+        "last_token_usage": {
+          "input_tokens": 15864,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3787,
+          "reasoning_output_tokens": 2746,
+          "total_tokens": 19651
+        },
+        "total_token_usage": {
+          "input_tokens": 15864,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3787,
+          "reasoning_output_tokens": 2746,
+          "total_tokens": 19651
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.7",
+      "safe_id": "GAL_SMT-8.15.7",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.7/.codex/sessions/2026/02/05/rollout-2026-02-05T18-12-06-019c2eca-28cc-75d3-a226-6cc2aed33d51.jsonl",
+        "start_secondary_used_percent": 74.0,
+        "end_secondary_used_percent": 74.0,
+        "last_token_usage": {
+          "input_tokens": 15904,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3863,
+          "reasoning_output_tokens": 2717,
+          "total_tokens": 19767
+        },
+        "total_token_usage": {
+          "input_tokens": 15904,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3863,
+          "reasoning_output_tokens": 2717,
+          "total_tokens": 19767
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.8",
+      "safe_id": "GAL_SMT-8.15.8",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.8/.codex/sessions/2026/02/05/rollout-2026-02-05T18-13-19-019c2ecb-4678-79a1-a0a2-e4546434a495.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 15972,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6605,
+          "reasoning_output_tokens": 4656,
+          "total_tokens": 22577
+        },
+        "total_token_usage": {
+          "input_tokens": 15972,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6605,
+          "reasoning_output_tokens": 4656,
+          "total_tokens": 22577
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.9",
+      "safe_id": "GAL_SMT-8.15.9",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.9/.codex/sessions/2026/02/05/rollout-2026-02-05T18-15-20-019c2ecd-1efd-7b93-a269-4c46cf4de208.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16105,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7083,
+          "reasoning_output_tokens": 4848,
+          "total_tokens": 23188
+        },
+        "total_token_usage": {
+          "input_tokens": 16105,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7083,
+          "reasoning_output_tokens": 4848,
+          "total_tokens": 23188
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.10",
+      "safe_id": "GAL_SMT-8.15.10",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.10/.codex/sessions/2026/02/05/rollout-2026-02-05T18-17-38-019c2ecf-385c-7ff0-8556-70c57afcfeac.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16139,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5041,
+          "reasoning_output_tokens": 3623,
+          "total_tokens": 21180
+        },
+        "total_token_usage": {
+          "input_tokens": 16139,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5041,
+          "reasoning_output_tokens": 3623,
+          "total_tokens": 21180
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.11",
+      "safe_id": "GAL_SMT-8.15.11",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.11/.codex/sessions/2026/02/05/rollout-2026-02-05T18-19-10-019c2ed0-a062-77f0-af4f-15fd2651ccb2.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16237,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6098,
+          "reasoning_output_tokens": 3937,
+          "total_tokens": 22335
+        },
+        "total_token_usage": {
+          "input_tokens": 16237,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6098,
+          "reasoning_output_tokens": 3937,
+          "total_tokens": 22335
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.12",
+      "safe_id": "GAL_SMT-8.15.12",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.12/.codex/sessions/2026/02/05/rollout-2026-02-05T18-21-15-019c2ed2-883b-7a10-bd09-947842fc48cc.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16372,
+          "cached_input_tokens": 3840,
+          "output_tokens": 11861,
+          "reasoning_output_tokens": 8279,
+          "total_tokens": 28233
+        },
+        "total_token_usage": {
+          "input_tokens": 16372,
+          "cached_input_tokens": 3840,
+          "output_tokens": 11861,
+          "reasoning_output_tokens": 8279,
+          "total_tokens": 28233
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.13",
+      "safe_id": "GAL_SMT-8.15.13",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.13/.codex/sessions/2026/02/05/rollout-2026-02-05T18-24-50-019c2ed5-d14b-7b82-999a-cebde834c554.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16224,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6672,
+          "reasoning_output_tokens": 4284,
+          "total_tokens": 22896
+        },
+        "total_token_usage": {
+          "input_tokens": 16224,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6672,
+          "reasoning_output_tokens": 4284,
+          "total_tokens": 22896
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.14",
+      "safe_id": "GAL_SMT-8.15.14",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.14/.codex/sessions/2026/02/05/rollout-2026-02-05T18-26-52-019c2ed7-ad3b-7f22-836a-909f50ce7a69.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16046,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4530,
+          "reasoning_output_tokens": 2867,
+          "total_tokens": 20576
+        },
+        "total_token_usage": {
+          "input_tokens": 16046,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4530,
+          "reasoning_output_tokens": 2867,
+          "total_tokens": 20576
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.15",
+      "safe_id": "GAL_SMT-8.15.15",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.15/.codex/sessions/2026/02/05/rollout-2026-02-05T18-28-15-019c2ed8-f236-7b82-8cd0-b1bb44fec67c.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 15892,
+          "cached_input_tokens": 10880,
+          "output_tokens": 1699,
+          "reasoning_output_tokens": 879,
+          "total_tokens": 17591
+        },
+        "total_token_usage": {
+          "input_tokens": 15892,
+          "cached_input_tokens": 10880,
+          "output_tokens": 1699,
+          "reasoning_output_tokens": 879,
+          "total_tokens": 17591
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.16",
+      "safe_id": "GAL_SMT-8.15.16",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.16/.codex/sessions/2026/02/05/rollout-2026-02-05T18-28-49-019c2ed9-7554-7d42-b86f-2cb98e73e63c.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 15779,
+          "cached_input_tokens": 10880,
+          "output_tokens": 874,
+          "reasoning_output_tokens": 463,
+          "total_tokens": 16653
+        },
+        "total_token_usage": {
+          "input_tokens": 15779,
+          "cached_input_tokens": 10880,
+          "output_tokens": 874,
+          "reasoning_output_tokens": 463,
+          "total_tokens": 16653
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.17",
+      "safe_id": "GAL_SMT-8.15.17",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.17/.codex/sessions/2026/02/05/rollout-2026-02-05T18-29-07-019c2ed9-bd27-7f92-a0be-3ac111850d62.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16147,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9249,
+          "reasoning_output_tokens": 5996,
+          "total_tokens": 25396
+        },
+        "total_token_usage": {
+          "input_tokens": 16147,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9249,
+          "reasoning_output_tokens": 5996,
+          "total_tokens": 25396
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.18",
+      "safe_id": "GAL_SMT-8.15.18",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.18/.codex/sessions/2026/02/05/rollout-2026-02-05T18-31-59-019c2edc-5c79-7bf2-86fe-c16664d1bcc1.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16387,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5323,
+          "reasoning_output_tokens": 3253,
+          "total_tokens": 21710
+        },
+        "total_token_usage": {
+          "input_tokens": 16387,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5323,
+          "reasoning_output_tokens": 3253,
+          "total_tokens": 21710
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.15.19",
+      "safe_id": "GAL_SMT-8.15.19",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.15.19/.codex/sessions/2026/02/05/rollout-2026-02-05T18-33-36-019c2edd-d8eb-7f41-af2e-c04fe172346e.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16071,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4317,
+          "reasoning_output_tokens": 3141,
+          "total_tokens": 20388
+        },
+        "total_token_usage": {
+          "input_tokens": 16071,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4317,
+          "reasoning_output_tokens": 3141,
+          "total_tokens": 20388
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.1",
+      "safe_id": "GAL_SMT-8.16.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.1/.codex/sessions/2026/02/05/rollout-2026-02-05T18-34-56-019c2edf-10a6-7e01-aad7-5aca9be0f4d6.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 15932,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3642,
+          "reasoning_output_tokens": 2717,
+          "total_tokens": 19574
+        },
+        "total_token_usage": {
+          "input_tokens": 15932,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3642,
+          "reasoning_output_tokens": 2717,
+          "total_tokens": 19574
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.2",
+      "safe_id": "GAL_SMT-8.16.2",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.2/.codex/sessions/2026/02/05/rollout-2026-02-05T18-36-04-019c2ee0-1b55-78b0-a0e0-02ad235b4e17.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16084,
+          "cached_input_tokens": 3840,
+          "output_tokens": 7077,
+          "reasoning_output_tokens": 4806,
+          "total_tokens": 23161
+        },
+        "total_token_usage": {
+          "input_tokens": 16084,
+          "cached_input_tokens": 3840,
+          "output_tokens": 7077,
+          "reasoning_output_tokens": 4806,
+          "total_tokens": 23161
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.3",
+      "safe_id": "GAL_SMT-8.16.3",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.3/.codex/sessions/2026/02/05/rollout-2026-02-05T18-38-15-019c2ee2-1826-7400-9640-88fa83ebebd9.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16259,
+          "cached_input_tokens": 3328,
+          "output_tokens": 6957,
+          "reasoning_output_tokens": 4302,
+          "total_tokens": 23216
+        },
+        "total_token_usage": {
+          "input_tokens": 16259,
+          "cached_input_tokens": 3328,
+          "output_tokens": 6957,
+          "reasoning_output_tokens": 4302,
+          "total_tokens": 23216
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.4",
+      "safe_id": "GAL_SMT-8.16.4",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.4/.codex/sessions/2026/02/05/rollout-2026-02-05T18-40-22-019c2ee4-09ed-7683-81b0-b03d5b0611c2.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16644,
+          "cached_input_tokens": 3328,
+          "output_tokens": 10930,
+          "reasoning_output_tokens": 7639,
+          "total_tokens": 27574
+        },
+        "total_token_usage": {
+          "input_tokens": 16644,
+          "cached_input_tokens": 3328,
+          "output_tokens": 10930,
+          "reasoning_output_tokens": 7639,
+          "total_tokens": 27574
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.5",
+      "safe_id": "GAL_SMT-8.16.5",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.5/.codex/sessions/2026/02/05/rollout-2026-02-05T18-43-44-019c2ee7-2002-74c2-a871-d99a0be77d40.jsonl",
+        "start_secondary_used_percent": 75.0,
+        "end_secondary_used_percent": 75.0,
+        "last_token_usage": {
+          "input_tokens": 16445,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6528,
+          "reasoning_output_tokens": 4418,
+          "total_tokens": 22973
+        },
+        "total_token_usage": {
+          "input_tokens": 16445,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6528,
+          "reasoning_output_tokens": 4418,
+          "total_tokens": 22973
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.6",
+      "safe_id": "GAL_SMT-8.16.6",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.6/.codex/sessions/2026/02/05/rollout-2026-02-05T18-45-44-019c2ee8-f274-7033-8419-808d11e868c3.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 15851,
+          "cached_input_tokens": 10880,
+          "output_tokens": 1547,
+          "reasoning_output_tokens": 1122,
+          "total_tokens": 17398
+        },
+        "total_token_usage": {
+          "input_tokens": 15851,
+          "cached_input_tokens": 10880,
+          "output_tokens": 1547,
+          "reasoning_output_tokens": 1122,
+          "total_tokens": 17398
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.7",
+      "safe_id": "GAL_SMT-8.16.7",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.7/.codex/sessions/2026/02/05/rollout-2026-02-05T18-46-13-019c2ee9-662e-7271-ade7-d1a05e38aa49.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16032,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5893,
+          "reasoning_output_tokens": 4430,
+          "total_tokens": 21925
+        },
+        "total_token_usage": {
+          "input_tokens": 16032,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5893,
+          "reasoning_output_tokens": 4430,
+          "total_tokens": 21925
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.8",
+      "safe_id": "GAL_SMT-8.16.8",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.8/.codex/sessions/2026/02/05/rollout-2026-02-05T18-48-01-019c2eeb-0985-7952-9012-118303c6a7a5.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16189,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5974,
+          "reasoning_output_tokens": 4189,
+          "total_tokens": 22163
+        },
+        "total_token_usage": {
+          "input_tokens": 16189,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5974,
+          "reasoning_output_tokens": 4189,
+          "total_tokens": 22163
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.9",
+      "safe_id": "GAL_SMT-8.16.9",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.9/.codex/sessions/2026/02/05/rollout-2026-02-05T18-49-52-019c2eec-bc90-7790-8916-b87f4700ec93.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 15992,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3455,
+          "reasoning_output_tokens": 2668,
+          "total_tokens": 19447
+        },
+        "total_token_usage": {
+          "input_tokens": 15992,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3455,
+          "reasoning_output_tokens": 2668,
+          "total_tokens": 19447
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.10",
+      "safe_id": "GAL_SMT-8.16.10",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.10/.codex/sessions/2026/02/05/rollout-2026-02-05T18-50-57-019c2eed-bad4-7803-bd2e-274daeced43f.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16004,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7279,
+          "reasoning_output_tokens": 4772,
+          "total_tokens": 23283
+        },
+        "total_token_usage": {
+          "input_tokens": 16004,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7279,
+          "reasoning_output_tokens": 4772,
+          "total_tokens": 23283
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.11",
+      "safe_id": "GAL_SMT-8.16.11",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.11/.codex/sessions/2026/02/05/rollout-2026-02-05T18-53-12-019c2eef-c79e-7bd2-bc89-d9dc1d6231c9.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16279,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8601,
+          "reasoning_output_tokens": 6204,
+          "total_tokens": 24880
+        },
+        "total_token_usage": {
+          "input_tokens": 16279,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8601,
+          "reasoning_output_tokens": 6204,
+          "total_tokens": 24880
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.12",
+      "safe_id": "GAL_SMT-8.16.12",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.12/.codex/sessions/2026/02/05/rollout-2026-02-05T18-55-49-019c2ef2-2eaa-7ec1-aaed-45797b61e824.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16147,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4010,
+          "reasoning_output_tokens": 3055,
+          "total_tokens": 20157
+        },
+        "total_token_usage": {
+          "input_tokens": 16147,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4010,
+          "reasoning_output_tokens": 3055,
+          "total_tokens": 20157
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.13",
+      "safe_id": "GAL_SMT-8.16.13",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.13/.codex/sessions/2026/02/05/rollout-2026-02-05T18-57-03-019c2ef3-504a-73e1-b658-fa77ef34f3c9.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16254,
+          "cached_input_tokens": 3840,
+          "output_tokens": 9527,
+          "reasoning_output_tokens": 6867,
+          "total_tokens": 25781
+        },
+        "total_token_usage": {
+          "input_tokens": 16254,
+          "cached_input_tokens": 3840,
+          "output_tokens": 9527,
+          "reasoning_output_tokens": 6867,
+          "total_tokens": 25781
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.14",
+      "safe_id": "GAL_SMT-8.16.14",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.14/.codex/sessions/2026/02/05/rollout-2026-02-05T18-59-59-019c2ef5-fe8d-70c1-ae70-15e4df00db62.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16263,
+          "cached_input_tokens": 3840,
+          "output_tokens": 2825,
+          "reasoning_output_tokens": 1913,
+          "total_tokens": 19088
+        },
+        "total_token_usage": {
+          "input_tokens": 16263,
+          "cached_input_tokens": 3840,
+          "output_tokens": 2825,
+          "reasoning_output_tokens": 1913,
+          "total_tokens": 19088
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.15",
+      "safe_id": "GAL_SMT-8.16.15",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.15/.codex/sessions/2026/02/05/rollout-2026-02-05T19-00-52-019c2ef6-cc74-71a0-bcbf-2e727024f7c6.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 15861,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4650,
+          "reasoning_output_tokens": 3341,
+          "total_tokens": 20511
+        },
+        "total_token_usage": {
+          "input_tokens": 15861,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4650,
+          "reasoning_output_tokens": 3341,
+          "total_tokens": 20511
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.16",
+      "safe_id": "GAL_SMT-8.16.16",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.16/.codex/sessions/2026/02/05/rollout-2026-02-05T19-02-17-019c2ef8-1c0c-70e0-a82f-dea59b805270.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16163,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8387,
+          "reasoning_output_tokens": 5163,
+          "total_tokens": 24550
+        },
+        "total_token_usage": {
+          "input_tokens": 16163,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8387,
+          "reasoning_output_tokens": 5163,
+          "total_tokens": 24550
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.17",
+      "safe_id": "GAL_SMT-8.16.17",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.17/.codex/sessions/2026/02/05/rollout-2026-02-05T19-04-51-019c2efa-726d-7ef3-8ffc-1060fc5dd569.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16828,
+          "cached_input_tokens": 10880,
+          "output_tokens": 12840,
+          "reasoning_output_tokens": 7937,
+          "total_tokens": 29668
+        },
+        "total_token_usage": {
+          "input_tokens": 16828,
+          "cached_input_tokens": 10880,
+          "output_tokens": 12840,
+          "reasoning_output_tokens": 7937,
+          "total_tokens": 29668
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.18",
+      "safe_id": "GAL_SMT-8.16.18",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.18/.codex/sessions/2026/02/05/rollout-2026-02-05T19-08-44-019c2efe-02a5-7b42-8605-2068763ddb50.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16845,
+          "cached_input_tokens": 10880,
+          "output_tokens": 14471,
+          "reasoning_output_tokens": 10411,
+          "total_tokens": 31316
+        },
+        "total_token_usage": {
+          "input_tokens": 16845,
+          "cached_input_tokens": 10880,
+          "output_tokens": 14471,
+          "reasoning_output_tokens": 10411,
+          "total_tokens": 31316
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.19",
+      "safe_id": "GAL_SMT-8.16.19",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.19/.codex/sessions/2026/02/05/rollout-2026-02-05T19-13-06-019c2f02-02b7-7002-8e3e-2a15d1965929.jsonl",
+        "start_secondary_used_percent": 76.0,
+        "end_secondary_used_percent": 76.0,
+        "last_token_usage": {
+          "input_tokens": 16693,
+          "cached_input_tokens": 10880,
+          "output_tokens": 15244,
+          "reasoning_output_tokens": 9701,
+          "total_tokens": 31937
+        },
+        "total_token_usage": {
+          "input_tokens": 16693,
+          "cached_input_tokens": 10880,
+          "output_tokens": 15244,
+          "reasoning_output_tokens": 9701,
+          "total_tokens": 31937
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.20",
+      "safe_id": "GAL_SMT-8.16.20",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.20/.codex/sessions/2026/02/05/rollout-2026-02-05T19-17-42-019c2f06-380d-7a42-a179-dc3f9ca963c5.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16369,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3669,
+          "reasoning_output_tokens": 2742,
+          "total_tokens": 20038
+        },
+        "total_token_usage": {
+          "input_tokens": 16369,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3669,
+          "reasoning_output_tokens": 2742,
+          "total_tokens": 20038
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.21",
+      "safe_id": "GAL_SMT-8.16.21",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.21/.codex/sessions/2026/02/05/rollout-2026-02-05T19-18-50-019c2f07-415d-7922-b839-18eeefb9e0d1.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 15948,
+          "cached_input_tokens": 3840,
+          "output_tokens": 5618,
+          "reasoning_output_tokens": 3600,
+          "total_tokens": 21566
+        },
+        "total_token_usage": {
+          "input_tokens": 15948,
+          "cached_input_tokens": 3840,
+          "output_tokens": 5618,
+          "reasoning_output_tokens": 3600,
+          "total_tokens": 21566
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.22",
+      "safe_id": "GAL_SMT-8.16.22",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.22/.codex/sessions/2026/02/05/rollout-2026-02-05T19-20-33-019c2f08-d41e-74e0-91af-671a1639d044.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16041,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4980,
+          "reasoning_output_tokens": 3295,
+          "total_tokens": 21021
+        },
+        "total_token_usage": {
+          "input_tokens": 16041,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4980,
+          "reasoning_output_tokens": 3295,
+          "total_tokens": 21021
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.23",
+      "safe_id": "GAL_SMT-8.16.23",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.23/.codex/sessions/2026/02/05/rollout-2026-02-05T19-22-08-019c2f0a-4642-7463-8111-81ecbccd5fd9.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16382,
+          "cached_input_tokens": 10880,
+          "output_tokens": 10237,
+          "reasoning_output_tokens": 7163,
+          "total_tokens": 26619
+        },
+        "total_token_usage": {
+          "input_tokens": 16382,
+          "cached_input_tokens": 10880,
+          "output_tokens": 10237,
+          "reasoning_output_tokens": 7163,
+          "total_tokens": 26619
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.24",
+      "safe_id": "GAL_SMT-8.16.24",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.24/.codex/sessions/2026/02/05/rollout-2026-02-05T19-25-14-019c2f0d-1c8f-7272-8ec0-cdcf23e64845.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16331,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3040,
+          "reasoning_output_tokens": 2128,
+          "total_tokens": 19371
+        },
+        "total_token_usage": {
+          "input_tokens": 16331,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3040,
+          "reasoning_output_tokens": 2128,
+          "total_tokens": 19371
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.25",
+      "safe_id": "GAL_SMT-8.16.25",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.25/.codex/sessions/2026/02/05/rollout-2026-02-05T19-26-16-019c2f0e-0d6c-75e2-8536-588888e91a9a.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16398,
+          "cached_input_tokens": 10880,
+          "output_tokens": 16020,
+          "reasoning_output_tokens": 9140,
+          "total_tokens": 32418
+        },
+        "total_token_usage": {
+          "input_tokens": 16398,
+          "cached_input_tokens": 10880,
+          "output_tokens": 16020,
+          "reasoning_output_tokens": 9140,
+          "total_tokens": 32418
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.26",
+      "safe_id": "GAL_SMT-8.16.26",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.26/.codex/sessions/2026/02/05/rollout-2026-02-05T19-31-07-019c2f12-7f1e-7203-929c-a12227bf2c98.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16978,
+          "cached_input_tokens": 3840,
+          "output_tokens": 9223,
+          "reasoning_output_tokens": 5008,
+          "total_tokens": 26201
+        },
+        "total_token_usage": {
+          "input_tokens": 16978,
+          "cached_input_tokens": 3840,
+          "output_tokens": 9223,
+          "reasoning_output_tokens": 5008,
+          "total_tokens": 26201
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.27",
+      "safe_id": "GAL_SMT-8.16.27",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.27/.codex/sessions/2026/02/05/rollout-2026-02-05T19-33-55-019c2f15-0f73-79c0-bf79-f4607750f1d2.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16486,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3513,
+          "reasoning_output_tokens": 2356,
+          "total_tokens": 19999
+        },
+        "total_token_usage": {
+          "input_tokens": 16486,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3513,
+          "reasoning_output_tokens": 2356,
+          "total_tokens": 19999
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.28",
+      "safe_id": "GAL_SMT-8.16.28",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.28/.codex/sessions/2026/02/05/rollout-2026-02-05T19-35-00-019c2f16-0d41-7770-9661-2ab5414496ea.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 15980,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6945,
+          "reasoning_output_tokens": 4410,
+          "total_tokens": 22925
+        },
+        "total_token_usage": {
+          "input_tokens": 15980,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6945,
+          "reasoning_output_tokens": 4410,
+          "total_tokens": 22925
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.29",
+      "safe_id": "GAL_SMT-8.16.29",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.29/.codex/sessions/2026/02/05/rollout-2026-02-05T19-37-07-019c2f17-fd92-7783-8104-8d35a162b086.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16051,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5763,
+          "reasoning_output_tokens": 3454,
+          "total_tokens": 21814
+        },
+        "total_token_usage": {
+          "input_tokens": 16051,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5763,
+          "reasoning_output_tokens": 3454,
+          "total_tokens": 21814
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.30",
+      "safe_id": "GAL_SMT-8.16.30",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.30/.codex/sessions/2026/02/05/rollout-2026-02-05T19-38-52-019c2f19-99b5-7251-b138-d531141c7bc4.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16062,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8786,
+          "reasoning_output_tokens": 5992,
+          "total_tokens": 24848
+        },
+        "total_token_usage": {
+          "input_tokens": 16062,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8786,
+          "reasoning_output_tokens": 5992,
+          "total_tokens": 24848
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.31",
+      "safe_id": "GAL_SMT-8.16.31",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.31/.codex/sessions/2026/02/05/rollout-2026-02-05T19-41-33-019c2f1c-0b60-79e1-8b38-3eed47059ab2.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 16057,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3473,
+          "reasoning_output_tokens": 2266,
+          "total_tokens": 19530
+        },
+        "total_token_usage": {
+          "input_tokens": 16057,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3473,
+          "reasoning_output_tokens": 2266,
+          "total_tokens": 19530
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.32",
+      "safe_id": "GAL_SMT-8.16.32",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.32/.codex/sessions/2026/02/05/rollout-2026-02-05T19-42-38-019c2f1d-0bbe-7432-9f36-e1823de381b9.jsonl",
+        "start_secondary_used_percent": 77.0,
+        "end_secondary_used_percent": 77.0,
+        "last_token_usage": {
+          "input_tokens": 15911,
+          "cached_input_tokens": 10880,
+          "output_tokens": 1726,
+          "reasoning_output_tokens": 1059,
+          "total_tokens": 17637
+        },
+        "total_token_usage": {
+          "input_tokens": 15911,
+          "cached_input_tokens": 10880,
+          "output_tokens": 1726,
+          "reasoning_output_tokens": 1059,
+          "total_tokens": 17637
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.33",
+      "safe_id": "GAL_SMT-8.16.33",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.33/.codex/sessions/2026/02/05/rollout-2026-02-05T19-43-11-019c2f1d-8c82-7e11-86e8-e2833018a9a0.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 15825,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3016,
+          "reasoning_output_tokens": 2239,
+          "total_tokens": 18841
+        },
+        "total_token_usage": {
+          "input_tokens": 15825,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3016,
+          "reasoning_output_tokens": 2239,
+          "total_tokens": 18841
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.34",
+      "safe_id": "GAL_SMT-8.16.34",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.34/.codex/sessions/2026/02/05/rollout-2026-02-05T19-44-14-019c2f1e-8209-7592-8c6e-8be9def8b9fe.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 15838,
+          "cached_input_tokens": 3840,
+          "output_tokens": 2149,
+          "reasoning_output_tokens": 1113,
+          "total_tokens": 17987
+        },
+        "total_token_usage": {
+          "input_tokens": 15838,
+          "cached_input_tokens": 3840,
+          "output_tokens": 2149,
+          "reasoning_output_tokens": 1113,
+          "total_tokens": 17987
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.35",
+      "safe_id": "GAL_SMT-8.16.35",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.35/.codex/sessions/2026/02/05/rollout-2026-02-05T19-44-56-019c2f1f-2561-74b1-b251-18f11feb9c2a.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16236,
+          "cached_input_tokens": 10880,
+          "output_tokens": 13657,
+          "reasoning_output_tokens": 8176,
+          "total_tokens": 29893
+        },
+        "total_token_usage": {
+          "input_tokens": 16236,
+          "cached_input_tokens": 10880,
+          "output_tokens": 13657,
+          "reasoning_output_tokens": 8176,
+          "total_tokens": 29893
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.36",
+      "safe_id": "GAL_SMT-8.16.36",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.36/.codex/sessions/2026/02/05/rollout-2026-02-05T19-49-04-019c2f22-ee40-7e80-8f89-d963dca56fe8.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16307,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3600,
+          "reasoning_output_tokens": 2059,
+          "total_tokens": 19907
+        },
+        "total_token_usage": {
+          "input_tokens": 16307,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3600,
+          "reasoning_output_tokens": 2059,
+          "total_tokens": 19907
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.37",
+      "safe_id": "GAL_SMT-8.16.37",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.37/.codex/sessions/2026/02/05/rollout-2026-02-05T19-50-11-019c2f23-f2cd-7e30-a3c0-7335cd2355a8.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16025,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9500,
+          "reasoning_output_tokens": 6539,
+          "total_tokens": 25525
+        },
+        "total_token_usage": {
+          "input_tokens": 16025,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9500,
+          "reasoning_output_tokens": 6539,
+          "total_tokens": 25525
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.38",
+      "safe_id": "GAL_SMT-8.16.38",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.38/.codex/sessions/2026/02/05/rollout-2026-02-05T19-53-03-019c2f26-9422-7ff1-bbaf-4150e161f6ac.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16199,
+          "cached_input_tokens": 10880,
+          "output_tokens": 12588,
+          "reasoning_output_tokens": 8489,
+          "total_tokens": 28787
+        },
+        "total_token_usage": {
+          "input_tokens": 16199,
+          "cached_input_tokens": 10880,
+          "output_tokens": 12588,
+          "reasoning_output_tokens": 8489,
+          "total_tokens": 28787
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.39",
+      "safe_id": "GAL_SMT-8.16.39",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.39/.codex/sessions/2026/02/05/rollout-2026-02-05T19-56-51-019c2f2a-10e6-71c3-bf29-02e55684f06e.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16331,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8519,
+          "reasoning_output_tokens": 6013,
+          "total_tokens": 24850
+        },
+        "total_token_usage": {
+          "input_tokens": 16331,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8519,
+          "reasoning_output_tokens": 6013,
+          "total_tokens": 24850
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.40",
+      "safe_id": "GAL_SMT-8.16.40",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.40/.codex/sessions/2026/02/05/rollout-2026-02-05T19-59-35-019c2f2c-8ec6-7700-8ed8-29911c0f0901.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16365,
+          "cached_input_tokens": 3840,
+          "output_tokens": 8196,
+          "reasoning_output_tokens": 4758,
+          "total_tokens": 24561
+        },
+        "total_token_usage": {
+          "input_tokens": 16365,
+          "cached_input_tokens": 3840,
+          "output_tokens": 8196,
+          "reasoning_output_tokens": 4758,
+          "total_tokens": 24561
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.41",
+      "safe_id": "GAL_SMT-8.16.41",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.41/.codex/sessions/2026/02/05/rollout-2026-02-05T20-02-16-019c2f2f-0552-7710-8baf-a760aa2d7d65.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16196,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4391,
+          "reasoning_output_tokens": 2963,
+          "total_tokens": 20587
+        },
+        "total_token_usage": {
+          "input_tokens": 16196,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4391,
+          "reasoning_output_tokens": 2963,
+          "total_tokens": 20587
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.16.42",
+      "safe_id": "GAL_SMT-8.16.42",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.16.42/.codex/sessions/2026/02/05/rollout-2026-02-05T20-03-41-019c2f30-50e8-7ce2-a532-3eeb3587fb86.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16220,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9118,
+          "reasoning_output_tokens": 6816,
+          "total_tokens": 25338
+        },
+        "total_token_usage": {
+          "input_tokens": 16220,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9118,
+          "reasoning_output_tokens": 6816,
+          "total_tokens": 25338
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.1",
+      "safe_id": "GAL_SMT-8.17.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.1/.codex/sessions/2026/02/05/rollout-2026-02-05T20-06-41-019c2f33-0fcd-7cc0-b5b3-e2f3feeb8597.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16243,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4904,
+          "reasoning_output_tokens": 3070,
+          "total_tokens": 21147
+        },
+        "total_token_usage": {
+          "input_tokens": 16243,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4904,
+          "reasoning_output_tokens": 3070,
+          "total_tokens": 21147
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.2",
+      "safe_id": "GAL_SMT-8.17.2",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.2/.codex/sessions/2026/02/05/rollout-2026-02-05T20-08-13-019c2f34-76d1-7632-84b9-4f6f93f86b47.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16079,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6771,
+          "reasoning_output_tokens": 4801,
+          "total_tokens": 22850
+        },
+        "total_token_usage": {
+          "input_tokens": 16079,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6771,
+          "reasoning_output_tokens": 4801,
+          "total_tokens": 22850
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.3",
+      "safe_id": "GAL_SMT-8.17.3",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.3/.codex/sessions/2026/02/05/rollout-2026-02-05T20-10-33-019c2f36-9a52-7350-a0df-6da76380ae65.jsonl",
+        "start_secondary_used_percent": 78.0,
+        "end_secondary_used_percent": 78.0,
+        "last_token_usage": {
+          "input_tokens": 16452,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8451,
+          "reasoning_output_tokens": 5171,
+          "total_tokens": 24903
+        },
+        "total_token_usage": {
+          "input_tokens": 16452,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8451,
+          "reasoning_output_tokens": 5171,
+          "total_tokens": 24903
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.4",
+      "safe_id": "GAL_SMT-8.17.4",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.4/.codex/sessions/2026/02/05/rollout-2026-02-05T20-13-08-019c2f38-f769-7ca3-8241-52de69e020ba.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 17168,
+          "cached_input_tokens": 17024,
+          "output_tokens": 14904,
+          "reasoning_output_tokens": 9598,
+          "total_tokens": 32072
+        },
+        "total_token_usage": {
+          "input_tokens": 17168,
+          "cached_input_tokens": 17024,
+          "output_tokens": 14904,
+          "reasoning_output_tokens": 9598,
+          "total_tokens": 32072
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.5",
+      "safe_id": "GAL_SMT-8.17.5",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.5/.codex/sessions/2026/02/05/rollout-2026-02-05T20-19-40-019c2f3e-f4a2-7ad1-8891-30b5d1a14ece.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16916,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6806,
+          "reasoning_output_tokens": 4701,
+          "total_tokens": 23722
+        },
+        "total_token_usage": {
+          "input_tokens": 16916,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6806,
+          "reasoning_output_tokens": 4701,
+          "total_tokens": 23722
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.6",
+      "safe_id": "GAL_SMT-8.17.6",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.6/.codex/sessions/2026/02/05/rollout-2026-02-05T20-21-45-019c2f40-db24-7fe2-915f-968c7fbb385c.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16106,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3577,
+          "reasoning_output_tokens": 2505,
+          "total_tokens": 19683
+        },
+        "total_token_usage": {
+          "input_tokens": 16106,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3577,
+          "reasoning_output_tokens": 2505,
+          "total_tokens": 19683
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.7",
+      "safe_id": "GAL_SMT-8.17.7",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.7/.codex/sessions/2026/02/05/rollout-2026-02-05T20-23-01-019c2f42-0296-76a1-9c5d-1da40c00ce4b.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 15973,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3826,
+          "reasoning_output_tokens": 2390,
+          "total_tokens": 19799
+        },
+        "total_token_usage": {
+          "input_tokens": 15973,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3826,
+          "reasoning_output_tokens": 2390,
+          "total_tokens": 19799
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.8",
+      "safe_id": "GAL_SMT-8.17.8",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.8/.codex/sessions/2026/02/05/rollout-2026-02-05T20-24-14-019c2f43-221d-7203-b81a-2f070787e56a.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16245,
+          "cached_input_tokens": 3328,
+          "output_tokens": 9037,
+          "reasoning_output_tokens": 7074,
+          "total_tokens": 25282
+        },
+        "total_token_usage": {
+          "input_tokens": 16245,
+          "cached_input_tokens": 3328,
+          "output_tokens": 9037,
+          "reasoning_output_tokens": 7074,
+          "total_tokens": 25282
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.9",
+      "safe_id": "GAL_SMT-8.17.9",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.9/.codex/sessions/2026/02/05/rollout-2026-02-05T20-27-17-019c2f45-ec6c-7bf1-8e50-0201dcaf7824.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16409,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6905,
+          "reasoning_output_tokens": 4988,
+          "total_tokens": 23314
+        },
+        "total_token_usage": {
+          "input_tokens": 16409,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6905,
+          "reasoning_output_tokens": 4988,
+          "total_tokens": 23314
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.17.10",
+      "safe_id": "GAL_SMT-8.17.10",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.17.10/.codex/sessions/2026/02/05/rollout-2026-02-05T20-29-36-019c2f48-0b08-7571-9201-59fb99baa1bc.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16696,
+          "cached_input_tokens": 3840,
+          "output_tokens": 11750,
+          "reasoning_output_tokens": 8920,
+          "total_tokens": 28446
+        },
+        "total_token_usage": {
+          "input_tokens": 16696,
+          "cached_input_tokens": 3840,
+          "output_tokens": 11750,
+          "reasoning_output_tokens": 8920,
+          "total_tokens": 28446
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.1",
+      "safe_id": "GAL_SMT-8.18.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.1/.codex/sessions/2026/02/05/rollout-2026-02-05T20-33-22-019c2f4b-7df1-7f91-947e-92a87d90ec5d.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16797,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7920,
+          "reasoning_output_tokens": 5054,
+          "total_tokens": 24717
+        },
+        "total_token_usage": {
+          "input_tokens": 16797,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7920,
+          "reasoning_output_tokens": 5054,
+          "total_tokens": 24717
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.2",
+      "safe_id": "GAL_SMT-8.18.2",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.2/.codex/sessions/2026/02/05/rollout-2026-02-05T20-36-02-019c2f4d-edaa-7562-a32c-dfe912f832dc.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16176,
+          "cached_input_tokens": 10880,
+          "output_tokens": 2192,
+          "reasoning_output_tokens": 1353,
+          "total_tokens": 18368
+        },
+        "total_token_usage": {
+          "input_tokens": 16176,
+          "cached_input_tokens": 10880,
+          "output_tokens": 2192,
+          "reasoning_output_tokens": 1353,
+          "total_tokens": 18368
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.3",
+      "safe_id": "GAL_SMT-8.18.3",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.3/.codex/sessions/2026/02/05/rollout-2026-02-05T20-36-45-019c2f4e-9771-7b82-a0d6-47c511a7caba.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 15849,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3411,
+          "reasoning_output_tokens": 2324,
+          "total_tokens": 19260
+        },
+        "total_token_usage": {
+          "input_tokens": 15849,
+          "cached_input_tokens": 10880,
+          "output_tokens": 3411,
+          "reasoning_output_tokens": 2324,
+          "total_tokens": 19260
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.4",
+      "safe_id": "GAL_SMT-8.18.4",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.4/.codex/sessions/2026/02/05/rollout-2026-02-05T20-37-52-019c2f4f-9e5c-7021-a6aa-0abf5177bea0.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 15907,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7768,
+          "reasoning_output_tokens": 5970,
+          "total_tokens": 23675
+        },
+        "total_token_usage": {
+          "input_tokens": 15907,
+          "cached_input_tokens": 10880,
+          "output_tokens": 7768,
+          "reasoning_output_tokens": 5970,
+          "total_tokens": 23675
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.5",
+      "safe_id": "GAL_SMT-8.18.5",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.5/.codex/sessions/2026/02/05/rollout-2026-02-05T20-40-28-019c2f51-fee6-7652-9ce7-27688a0209f8.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16033,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8435,
+          "reasoning_output_tokens": 5392,
+          "total_tokens": 24468
+        },
+        "total_token_usage": {
+          "input_tokens": 16033,
+          "cached_input_tokens": 10880,
+          "output_tokens": 8435,
+          "reasoning_output_tokens": 5392,
+          "total_tokens": 24468
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.6",
+      "safe_id": "GAL_SMT-8.18.6",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.6/.codex/sessions/2026/02/05/rollout-2026-02-05T20-43-09-019c2f54-72a2-7a61-b003-41eeac4effa4.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16097,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6658,
+          "reasoning_output_tokens": 5009,
+          "total_tokens": 22755
+        },
+        "total_token_usage": {
+          "input_tokens": 16097,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6658,
+          "reasoning_output_tokens": 5009,
+          "total_tokens": 22755
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.7",
+      "safe_id": "GAL_SMT-8.18.7",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.7/.codex/sessions/2026/02/05/rollout-2026-02-05T20-45-23-019c2f56-7ea9-7ff2-a328-881480762477.jsonl",
+        "start_secondary_used_percent": 79.0,
+        "end_secondary_used_percent": 79.0,
+        "last_token_usage": {
+          "input_tokens": 16209,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9524,
+          "reasoning_output_tokens": 7375,
+          "total_tokens": 25733
+        },
+        "total_token_usage": {
+          "input_tokens": 16209,
+          "cached_input_tokens": 10880,
+          "output_tokens": 9524,
+          "reasoning_output_tokens": 7375,
+          "total_tokens": 25733
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.8",
+      "safe_id": "GAL_SMT-8.18.8",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.8/.codex/sessions/2026/02/05/rollout-2026-02-05T20-48-31-019c2f59-5e64-73c1-9d82-bdea64eab07c.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16399,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6435,
+          "reasoning_output_tokens": 4597,
+          "total_tokens": 22834
+        },
+        "total_token_usage": {
+          "input_tokens": 16399,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6435,
+          "reasoning_output_tokens": 4597,
+          "total_tokens": 22834
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.9",
+      "safe_id": "GAL_SMT-8.18.9",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.9/.codex/sessions/2026/02/05/rollout-2026-02-05T20-50-55-019c2f5b-904e-73a2-8386-58b98937f743.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16213,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4463,
+          "reasoning_output_tokens": 3294,
+          "total_tokens": 20676
+        },
+        "total_token_usage": {
+          "input_tokens": 16213,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4463,
+          "reasoning_output_tokens": 3294,
+          "total_tokens": 20676
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.10",
+      "safe_id": "GAL_SMT-8.18.10",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.10/.codex/sessions/2026/02/05/rollout-2026-02-05T20-52-25-019c2f5c-eea1-7eb0-a3c9-7bb9d2302ef9.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16006,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4752,
+          "reasoning_output_tokens": 3248,
+          "total_tokens": 20758
+        },
+        "total_token_usage": {
+          "input_tokens": 16006,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4752,
+          "reasoning_output_tokens": 3248,
+          "total_tokens": 20758
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.11",
+      "safe_id": "GAL_SMT-8.18.11",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.11/.codex/sessions/2026/02/05/rollout-2026-02-05T20-53-58-019c2f5e-59e0-7e42-8174-7829fae20999.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16053,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6572,
+          "reasoning_output_tokens": 4974,
+          "total_tokens": 22625
+        },
+        "total_token_usage": {
+          "input_tokens": 16053,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6572,
+          "reasoning_output_tokens": 4974,
+          "total_tokens": 22625
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.12",
+      "safe_id": "GAL_SMT-8.18.12",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.12/.codex/sessions/2026/02/05/rollout-2026-02-05T20-56-06-019c2f60-4ed0-76a2-a1ea-035acffc216b.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 15975,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4975,
+          "reasoning_output_tokens": 3266,
+          "total_tokens": 20950
+        },
+        "total_token_usage": {
+          "input_tokens": 15975,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4975,
+          "reasoning_output_tokens": 3266,
+          "total_tokens": 20950
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.13",
+      "safe_id": "GAL_SMT-8.18.13",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.13/.codex/sessions/2026/02/05/rollout-2026-02-05T20-57-41-019c2f61-c2a1-7993-81b0-dd61f680a852.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16066,
+          "cached_input_tokens": 3840,
+          "output_tokens": 7566,
+          "reasoning_output_tokens": 5598,
+          "total_tokens": 23632
+        },
+        "total_token_usage": {
+          "input_tokens": 16066,
+          "cached_input_tokens": 3840,
+          "output_tokens": 7566,
+          "reasoning_output_tokens": 5598,
+          "total_tokens": 23632
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.14",
+      "safe_id": "GAL_SMT-8.18.14",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.14/.codex/sessions/2026/02/05/rollout-2026-02-05T21-00-06-019c2f63-f91b-72c1-9398-751b6b21efd7.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16443,
+          "cached_input_tokens": 10880,
+          "output_tokens": 17514,
+          "reasoning_output_tokens": 12253,
+          "total_tokens": 33957
+        },
+        "total_token_usage": {
+          "input_tokens": 16443,
+          "cached_input_tokens": 10880,
+          "output_tokens": 17514,
+          "reasoning_output_tokens": 12253,
+          "total_tokens": 33957
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.15",
+      "safe_id": "GAL_SMT-8.18.15",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.15/.codex/sessions/2026/02/05/rollout-2026-02-05T21-05-44-019c2f69-1fdd-7a30-bf4b-1230695144b8.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16856,
+          "cached_input_tokens": 10880,
+          "output_tokens": 12585,
+          "reasoning_output_tokens": 7095,
+          "total_tokens": 29441
+        },
+        "total_token_usage": {
+          "input_tokens": 16856,
+          "cached_input_tokens": 10880,
+          "output_tokens": 12585,
+          "reasoning_output_tokens": 7095,
+          "total_tokens": 29441
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.16",
+      "safe_id": "GAL_SMT-8.18.16",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.16/.codex/sessions/2026/02/05/rollout-2026-02-05T21-09-33-019c2f6c-9d6c-7483-991e-2d985a8bc6fc.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16653,
+          "cached_input_tokens": 3328,
+          "output_tokens": 9538,
+          "reasoning_output_tokens": 6113,
+          "total_tokens": 26191
+        },
+        "total_token_usage": {
+          "input_tokens": 16653,
+          "cached_input_tokens": 3328,
+          "output_tokens": 9538,
+          "reasoning_output_tokens": 6113,
+          "total_tokens": 26191
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.17",
+      "safe_id": "GAL_SMT-8.18.17",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.17/.codex/sessions/2026/02/05/rollout-2026-02-05T21-12-32-019c2f6f-5a48-71b2-8b1d-a9ca3524f612.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16060,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4261,
+          "reasoning_output_tokens": 2316,
+          "total_tokens": 20321
+        },
+        "total_token_usage": {
+          "input_tokens": 16060,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4261,
+          "reasoning_output_tokens": 2316,
+          "total_tokens": 20321
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.18",
+      "safe_id": "GAL_SMT-8.18.18",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.18/.codex/sessions/2026/02/05/rollout-2026-02-05T21-13-51-019c2f70-8c71-7060-8e0c-67ed0b29521d.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 15918,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4615,
+          "reasoning_output_tokens": 2855,
+          "total_tokens": 20533
+        },
+        "total_token_usage": {
+          "input_tokens": 15918,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4615,
+          "reasoning_output_tokens": 2855,
+          "total_tokens": 20533
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.19",
+      "safe_id": "GAL_SMT-8.18.19",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.19/.codex/sessions/2026/02/05/rollout-2026-02-05T21-15-17-019c2f71-dea2-78f2-b5cf-642785592929.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 15913,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4861,
+          "reasoning_output_tokens": 3195,
+          "total_tokens": 20774
+        },
+        "total_token_usage": {
+          "input_tokens": 15913,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4861,
+          "reasoning_output_tokens": 3195,
+          "total_tokens": 20774
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.20",
+      "safe_id": "GAL_SMT-8.18.20",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.20/.codex/sessions/2026/02/05/rollout-2026-02-05T21-16-47-019c2f73-3d14-7e80-9b16-f527a1a85eaf.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 15955,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6758,
+          "reasoning_output_tokens": 4084,
+          "total_tokens": 22713
+        },
+        "total_token_usage": {
+          "input_tokens": 15955,
+          "cached_input_tokens": 10880,
+          "output_tokens": 6758,
+          "reasoning_output_tokens": 4084,
+          "total_tokens": 22713
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.21",
+      "safe_id": "GAL_SMT-8.18.21",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.21/.codex/sessions/2026/02/05/rollout-2026-02-05T21-18-51-019c2f75-21dc-7fb2-8871-715fe84ad778.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16018,
+          "cached_input_tokens": 3840,
+          "output_tokens": 5243,
+          "reasoning_output_tokens": 3035,
+          "total_tokens": 21261
+        },
+        "total_token_usage": {
+          "input_tokens": 16018,
+          "cached_input_tokens": 3840,
+          "output_tokens": 5243,
+          "reasoning_output_tokens": 3035,
+          "total_tokens": 21261
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.22",
+      "safe_id": "GAL_SMT-8.18.22",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.22/.codex/sessions/2026/02/05/rollout-2026-02-05T21-20-30-019c2f76-a350-7173-a934-22da954b589c.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16039,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5201,
+          "reasoning_output_tokens": 3269,
+          "total_tokens": 21240
+        },
+        "total_token_usage": {
+          "input_tokens": 16039,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5201,
+          "reasoning_output_tokens": 3269,
+          "total_tokens": 21240
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.23",
+      "safe_id": "GAL_SMT-8.18.23",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.23/.codex/sessions/2026/02/05/rollout-2026-02-05T21-22-19-019c2f78-505d-7283-9e48-d6fbc7b5dce2.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16044,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4357,
+          "reasoning_output_tokens": 2736,
+          "total_tokens": 20401
+        },
+        "total_token_usage": {
+          "input_tokens": 16044,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4357,
+          "reasoning_output_tokens": 2736,
+          "total_tokens": 20401
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.24",
+      "safe_id": "GAL_SMT-8.18.24",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.24/.codex/sessions/2026/02/05/rollout-2026-02-05T21-23-43-019c2f79-981f-79d2-b7e6-59522db05e79.jsonl",
+        "start_secondary_used_percent": 80.0,
+        "end_secondary_used_percent": 80.0,
+        "last_token_usage": {
+          "input_tokens": 16150,
+          "cached_input_tokens": 3840,
+          "output_tokens": 7598,
+          "reasoning_output_tokens": 4539,
+          "total_tokens": 23748
+        },
+        "total_token_usage": {
+          "input_tokens": 16150,
+          "cached_input_tokens": 3840,
+          "output_tokens": 7598,
+          "reasoning_output_tokens": 4539,
+          "total_tokens": 23748
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.25",
+      "safe_id": "GAL_SMT-8.18.25",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.25/.codex/sessions/2026/02/05/rollout-2026-02-05T21-26-13-019c2f7b-deb8-7b23-b0bd-b69135b8f359.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16319,
+          "cached_input_tokens": 10880,
+          "output_tokens": 10937,
+          "reasoning_output_tokens": 5456,
+          "total_tokens": 27256
+        },
+        "total_token_usage": {
+          "input_tokens": 16319,
+          "cached_input_tokens": 10880,
+          "output_tokens": 10937,
+          "reasoning_output_tokens": 5456,
+          "total_tokens": 27256
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.26",
+      "safe_id": "GAL_SMT-8.18.26",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.26/.codex/sessions/2026/02/05/rollout-2026-02-05T21-29-31-019c2f7e-e794-7d10-b268-7a289f3f4986.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16149,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4839,
+          "reasoning_output_tokens": 3709,
+          "total_tokens": 20988
+        },
+        "total_token_usage": {
+          "input_tokens": 16149,
+          "cached_input_tokens": 10880,
+          "output_tokens": 4839,
+          "reasoning_output_tokens": 3709,
+          "total_tokens": 20988
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.27",
+      "safe_id": "GAL_SMT-8.18.27",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.27/.codex/sessions/2026/02/05/rollout-2026-02-05T21-31-17-019c2f80-8541-74b1-b3b7-6e9182562ecc.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 15907,
+          "cached_input_tokens": 3840,
+          "output_tokens": 2599,
+          "reasoning_output_tokens": 1532,
+          "total_tokens": 18506
+        },
+        "total_token_usage": {
+          "input_tokens": 15907,
+          "cached_input_tokens": 3840,
+          "output_tokens": 2599,
+          "reasoning_output_tokens": 1532,
+          "total_tokens": 18506
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.28",
+      "safe_id": "GAL_SMT-8.18.28",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.28/.codex/sessions/2026/02/05/rollout-2026-02-05T21-32-11-019c2f81-5587-7fa1-84e7-61d0ecc2e282.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 15842,
+          "cached_input_tokens": 10880,
+          "output_tokens": 2039,
+          "reasoning_output_tokens": 1372,
+          "total_tokens": 17881
+        },
+        "total_token_usage": {
+          "input_tokens": 15842,
+          "cached_input_tokens": 10880,
+          "output_tokens": 2039,
+          "reasoning_output_tokens": 1372,
+          "total_tokens": 17881
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.29",
+      "safe_id": "GAL_SMT-8.18.29",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.29/.codex/sessions/2026/02/05/rollout-2026-02-05T21-32-53-019c2f81-f9f9-7ba2-aec5-dc9adaf47218.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 15780,
+          "cached_input_tokens": 10880,
+          "output_tokens": 2032,
+          "reasoning_output_tokens": 1486,
+          "total_tokens": 17812
+        },
+        "total_token_usage": {
+          "input_tokens": 15780,
+          "cached_input_tokens": 10880,
+          "output_tokens": 2032,
+          "reasoning_output_tokens": 1486,
+          "total_tokens": 17812
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.30",
+      "safe_id": "GAL_SMT-8.18.30",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.30/.codex/sessions/2026/02/05/rollout-2026-02-05T21-33-37-019c2f82-a525-78e2-bb4c-86d94973c485.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16260,
+          "cached_input_tokens": 3840,
+          "output_tokens": 8246,
+          "reasoning_output_tokens": 5458,
+          "total_tokens": 24506
+        },
+        "total_token_usage": {
+          "input_tokens": 16260,
+          "cached_input_tokens": 3840,
+          "output_tokens": 8246,
+          "reasoning_output_tokens": 5458,
+          "total_tokens": 24506
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.31",
+      "safe_id": "GAL_SMT-8.18.31",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.31/.codex/sessions/2026/02/05/rollout-2026-02-05T21-36-16-019c2f85-159e-7261-b6cf-89fea2576ce8.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16266,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3025,
+          "reasoning_output_tokens": 2079,
+          "total_tokens": 19291
+        },
+        "total_token_usage": {
+          "input_tokens": 16266,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3025,
+          "reasoning_output_tokens": 2079,
+          "total_tokens": 19291
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.32",
+      "safe_id": "GAL_SMT-8.18.32",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.32/.codex/sessions/2026/02/05/rollout-2026-02-05T21-37-15-019c2f85-fc50-77c1-8582-a3263f0af15f.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16202,
+          "cached_input_tokens": 3840,
+          "output_tokens": 13663,
+          "reasoning_output_tokens": 9159,
+          "total_tokens": 29865
+        },
+        "total_token_usage": {
+          "input_tokens": 16202,
+          "cached_input_tokens": 3840,
+          "output_tokens": 13663,
+          "reasoning_output_tokens": 9159,
+          "total_tokens": 29865
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.33",
+      "safe_id": "GAL_SMT-8.18.33",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.33/.codex/sessions/2026/02/05/rollout-2026-02-05T21-41-27-019c2f89-d0f3-7913-bee6-80530c55b323.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16456,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5974,
+          "reasoning_output_tokens": 3856,
+          "total_tokens": 22430
+        },
+        "total_token_usage": {
+          "input_tokens": 16456,
+          "cached_input_tokens": 10880,
+          "output_tokens": 5974,
+          "reasoning_output_tokens": 3856,
+          "total_tokens": 22430
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.34",
+      "safe_id": "GAL_SMT-8.18.34",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-8.18.34/.codex/sessions/2026/02/05/rollout-2026-02-05T21-43-17-019c2f8b-7f61-7352-8a41-c3fe970c1df0.jsonl",
+        "start_secondary_used_percent": 81.0,
+        "end_secondary_used_percent": 81.0,
+        "last_token_usage": {
+          "input_tokens": 16015,
+          "cached_input_tokens": 3840,
+          "output_tokens": 1142,
+          "reasoning_output_tokens": 606,
+          "total_tokens": 17157
+        },
+        "total_token_usage": {
+          "input_tokens": 16015,
+          "cached_input_tokens": 3840,
+          "output_tokens": 1142,
+          "reasoning_output_tokens": 606,
+          "total_tokens": 17157
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 1619752,
+    "cached_input_tokens": 831616,
+    "output_tokens": 669195,
+    "reasoning_output_tokens": 445997,
+    "total_tokens": 2288947
+  },
+  "secondary_used_percent": {
+    "start_min": 74.0,
+    "end_max": 81.0
+  }
+}

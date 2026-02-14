@@ -1,5 +1,20 @@
 # Work tree / WBS — Ancient Simples platform + Aëtius CMG corpus (TEI‑first linking build)
 
+## Session checklist (keep current)
+- [ ] Review the **Now / Next / Done** list below and pick the next leaf task ID (e.g. `WT-...`).
+- [ ] Work in small commits and keep `git status` clean.
+- [ ] End of session: update **Now / Next / Done** + notes, then commit.
+
+## Now / Next / Done
+### Now
+- [ ] (add the specific `WT-...` task(s) you are working on)
+
+### Next
+- [ ] (add queued tasks)
+
+### Done (this session)
+- [ ] (move completed tasks here and check them off)
+
 Plain-English summary of what we need to do and why:
 
 We need to make TEI the reliable “citation spine” first, because every link, query result, annotation, and export must be able to point to stable identifiers and to both logical references (book/chapter/section) and physical references (volume/page/line). The Aëtius corpus is a good place to start because it already has a deterministic TEI pipeline and printed page/line anchors; it can serve as the first “compiler target” for the Simples indexer.

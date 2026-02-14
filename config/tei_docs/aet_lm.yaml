@@ -1,0 +1,10 @@
+# TEI doc config: Aetius, Libri Medicinales I–II
+# Edition: Olivieri CMG 8.1
+
+tei_doc_id: aet_lm
+source_code: AET_LM
+tei_relpath: tei/cmg/tei/output/tlg0718.tlg001.aos-grc1.xml
+segment_xpath: "//tei:div[@type='chapter'][not(descendant::tei:div[@type='chapter'])]"
+label: "Aetius, Libri Medicinales I–II"
+edition_label: "Olivieri CMG 8.1"
+allow_empty_segments: false

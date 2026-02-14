@@ -1,0 +1,10 @@
+# TEI doc config: Galen, De simplicium medicamentorum (Books VI–XI)
+# Edition: Kühn XI–XII
+
+tei_doc_id: gal_smt
+source_code: GAL_SMT
+tei_relpath: tei/cmg/tei/output/tlg0057.tlg075.aos-grc1.xml
+segment_xpath: "//tei:div[@type='chapter'][not(descendant::tei:div[@type='chapter'])]"
+label: "Galen, De simplicium medicamentorum VI–XI"
+edition_label: "Kühn XI–XII"
+allow_empty_segments: false

@@ -1,0 +1,137 @@
+{
+  "source_id": "GAL_SMT-6.1.10",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δριμέων",
+      "normalized": "δριμεων",
+      "lemma_gr": "δριμύς",
+      "lemma_normalized": "δριμυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.72,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερὴς",
+      "normalized": "λεπτομερης",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.7,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαίνει",
+      "normalized": "θερμαινει",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραίνει",
+      "normalized": "ξηραινει",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "αἴρα",
+      "normalized": "αιρα",
+      "lemma_gr": "αἴρα",
+      "lemma_normalized": "αιρα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.93,
+      "lemma_confidence": 0.96
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἴρεως",
+      "normalized": "ιρεως",
+      "lemma_gr": "ἴρις",
+      "lemma_normalized": "ιρις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἐπὶ τελευτῇ δὲ δευτέρας τῶν ξηραινόντων",
+      "evidence_normalized": "επι τελευτη δε δευτερας των ξηραινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αιρα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "αἴρα ξηραίνει καὶ θερμαίνει δραστικῶς",
+      "evidence_normalized": "αιρα ξηραινει και θερμαινει δραστικως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αιρα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἐν ἀρχῇ μὲν τῆς τρίτης τάξεως τῶν θερμαινόντων",
+      "evidence_normalized": "εν αρχη μεν της τριτης ταξεως των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αιρα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "αἴρα ξηραίνει καὶ θερμαίνει δραστικῶς",
+      "evidence_normalized": "αιρα ξηραινει και θερμαινει δραστικως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αιρα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "source_id": "GAL_SMT-7.11.22",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμόν",
+      "normalized": "θερμον",
+      "lemma_gr": "θερμός",
+      "lemma_normalized": "θερμος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηρόν",
+      "normalized": "ξηρον",
+      "lemma_gr": "ξηρός",
+      "lemma_normalized": "ξηρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λυχνίδος",
+      "normalized": "λυχνιδος",
+      "lemma_gr": "λυχνίς",
+      "lemma_normalized": "λυχνις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λυχνίδος τῆς εἰς τοὺς στεφάνους",
+      "normalized": "λυχνιδος της εις τους στεφανους",
+      "lemma_gr": "λυχνίς ἡ εἰς τοὺς στεφάνους",
+      "lemma_normalized": "λυχνις η εις τους στεφανους",
+      "is_multiword": true,
+      "head_lemma_normalized": "λυχνις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "σπέρμα",
+      "normalized": "σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "που",
+      "evidence_display": "θερμόν ἐστι κατὰ τὴν δευτέραν που τάξιν ἢ καὶ τρίτην ἤδη, καὶ δὴ καὶ ξηρὸν κατὰ τὸν αὐτὸν τρόπον",
+      "evidence_normalized": "θερμον εστι κατα την δευτεραν που ταξιν η και τριτην ηδη και δη και ξηρον κατα τον αυτον τροπον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.7
+    },
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "που",
+      "evidence_display": "θερμόν ἐστι κατὰ τὴν δευτέραν που τάξιν ἢ καὶ τρίτην ἤδη, καὶ δὴ καὶ ξηρὸν κατὰ τὸν αὐτὸν τρόπον",
+      "evidence_normalized": "θερμον εστι κατα την δευτεραν που ταξιν η και τριτην ηδη και δη και ξηρον κατα τον αυτον τροπον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.55
+    },
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "που",
+      "evidence_display": "θερμόν ἐστι κατὰ τὴν δευτέραν που τάξιν",
+      "evidence_normalized": "θερμον εστι κατα την δευτεραν που ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "που",
+      "evidence_display": "θερμόν ἐστι κατὰ τὴν δευτέραν που τάξιν ἢ καὶ τρίτην ἤδη",
+      "evidence_normalized": "θερμον εστι κατα την δευτεραν που ταξιν η και τριτην ηδη",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λυχνις η εις τους στεφανους",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.6
+    }
+  ]
+}

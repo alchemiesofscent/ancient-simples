@@ -1,0 +1,175 @@
+{
+  "source_id": "GAL_SMT-8.23.2",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραίνειν",
+      "normalized": "ξηραινειν",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "σύμμετρον",
+      "normalized": "συμμετρον",
+      "lemma_gr": "σύμμετρος",
+      "lemma_normalized": "συμμετρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὑγραίνειν",
+      "normalized": "υγραινειν",
+      "lemma_gr": "ὑγραίνειν",
+      "lemma_normalized": "υγραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ψυχόντων",
+      "normalized": "ψυχοντων",
+      "lemma_gr": "ψύχων",
+      "lemma_normalized": "ψυχων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ψυλλίου",
+      "normalized": "ψυλλιου",
+      "lemma_gr": "ψύλλιον",
+      "lemma_normalized": "ψυλλιον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ψυλλίου τὸ σπέρμα",
+      "normalized": "ψυλλιου το σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "ψυλλιον",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἐκ τῆς δευτέρας ὑπάρχον τάξεως τῶν ψυχόντων",
+      "evidence_normalized": "εκ της δευτερας υπαρχον ταξεως των ψυχοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.86
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "balanced",
+      "hedge": "approx",
+      "evidence_display": "ἐκ τῆς κατὰ τὸ ξηραίνειν καὶ ὑγραίνειν συζυγίας μέσον πώς ἐστι καὶ σύμμετρον",
+      "evidence_normalized": "εκ της κατα το ξηραινειν και υγραινειν συζυγιας μεσον πως εστι και συμμετρον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "WET",
+      "degree": null,
+      "intensity": "balanced",
+      "hedge": "approx",
+      "evidence_display": "ἐκ τῆς κατὰ τὸ ξηραίνειν καὶ ὑγραίνειν συζυγίας μέσον πώς ἐστι καὶ σύμμετρον",
+      "evidence_normalized": "εκ της κατα το ξηραινειν και υγραινειν συζυγιας μεσον πως εστι και συμμετρον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "source_id": "ORIB_CM-15.1.7.5",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "θάμνου",
+      "normalized": "θαμνου",
+      "lemma_gr": "θάμνος",
+      "lemma_normalized": "θαμνος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.55,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "κλῶνες",
+      "normalized": "κλωνες",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "θαμνος",
+      "part_lemma_normalized": "κλωνος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": []
+}

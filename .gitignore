@@ -25,9 +25,12 @@ yarn-error.log*
 # Next.js app local env
 app/.env.local
 
-# local/generated
-import/
-vocab.md
+# Codex session state (large, not useful to share)
+_codex_home/
 
-# Local runs
-outputs/
+# TEI indexer (lxml compiled artifacts)
+*.so
+
+# CMG submodule working tree does not pollute ancient-simples status
+# (submodule itself is tracked via .gitmodules)
+

@@ -1,0 +1,156 @@
+{
+  "source_id": "GAL_SMT-6.1.62",
+  "terms": [
+    {
+      "label": "APPLICATION_SITE",
+      "display": "νεφροῖς",
+      "normalized": "νεφροις",
+      "lemma_gr": "νεφρός",
+      "lemma_normalized": "νεφρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "ὑστερῶν",
+      "normalized": "υστερων",
+      "lemma_gr": "ὑστέρα",
+      "lemma_normalized": "υστερα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.86,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "CONDITION",
+      "display": "λίθους",
+      "normalized": "λιθους",
+      "lemma_gr": "λίθος",
+      "lemma_normalized": "λιθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.82,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "πυρίας",
+      "normalized": "πυριας",
+      "lemma_gr": "πυρία",
+      "lemma_normalized": "πυρια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.74,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διττὴ",
+      "normalized": "διττη",
+      "lemma_gr": "διττός",
+      "lemma_normalized": "διττος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.7,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερεῖς",
+      "normalized": "λεπτομερεις",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.84,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀρτεμισία",
+      "normalized": "αρτεμισια",
+      "lemma_gr": "ἀρτεμισία",
+      "lemma_normalized": "αρτεμισια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.96,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀρτεμισία πόα",
+      "normalized": "αρτεμισια ποα",
+      "lemma_gr": "ἀρτεμισία πόα",
+      "lemma_normalized": "αρτεμισια ποα",
+      "is_multiword": true,
+      "head_lemma_normalized": "ποα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.9,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πόα",
+      "normalized": "ποα",
+      "lemma_gr": "πόα",
+      "lemma_normalized": "ποα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "confidence": 0.62,
+      "lemma_confidence": 0.88
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "moderate",
+      "hedge": "approx",
+      "evidence_display": "μετρίως ξηραίνουσι … ἐν δὲ τῷ ξηραίνειν ἢ πρώτης ἐπιτεταμένης ἢ δευτέρας ἀρχομένης",
+      "evidence_normalized": "μετριως ξηραινουσι … εν δε τω ξηραινειν η πρωτης επιτεταμενης η δευτερας αρχομενης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρτεμισια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72
+    },
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἐν μὲν τῷ θερμαίνειν δευτέρας ἀποστάσεως",
+      "evidence_normalized": "εν μεν τω θερμαινειν δευτερας αποστασεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρτεμισια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Entry ID bridge: maps MVP-era old_entry_id to TEI-first identity.
+# This is a STUB that needs to be populated when actual TEI segment IDs are
+# known (i.e., after TEI indexing produces tei_entries rows).
+#
+# Columns:
+#   old_entry_id     - legacy entry_id from the CSV pipeline (e.g. GAL_SMT-6.1.1)
+#   tei_doc_id       - tei_docs.tei_doc_id value (e.g. gal_smt)
+#   tei_segment_id   - TEI @xml:id for the segment (e.g. seg_6_1_1)
+#   display_entry_id - computed as {tei_doc_id}~{tei_segment_id}
+#
+old_entry_id,tei_doc_id,tei_segment_id,display_entry_id
+GAL_SMT-6.1.1,gal_smt,seg_6_1_1,gal_smt~seg_6_1_1
+GAL_SMT-8.15.9,gal_smt,seg_8_15_9,gal_smt~seg_8_15_9
+AET_LM-1.106,aet_lm,ch106,aet_lm~ch106

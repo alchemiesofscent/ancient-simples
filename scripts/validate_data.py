@@ -15,9 +15,10 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 
 def normalize_greek_for_match(text: str) -> str:
+    """Greek normalization v1.1: strip ALL combining marks U+0300-U+036F including iota subscript."""
     lowered = (text or "").lower()
     decomposed = unicodedata.normalize("NFD", lowered)
-    stripped = "".join(ch for ch in decomposed if not unicodedata.combining(ch) or ch == "\u0345")
+    stripped = "".join(ch for ch in decomposed if not (0x0300 <= ord(ch) <= 0x036F))
     return unicodedata.normalize("NFC", stripped)
 
 

@@ -1,0 +1,286 @@
+Runner failed for source_id=GAL_SMT-6.prooimion
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+    raise RuntimeError(msg)
+RuntimeError: codex exec failed (exit=1).
+
+STDERR:
+OpenAI Codex v0.93.0 (research preview)
+--------
+workdir: /home/seanm/github/ancient-simples
+model: gpt-5.2
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: auto
+session id: 019c2000-3c8e-7661-9972-ff5f493c79da
+--------
+user
+# Vocab extractor prompt
+
+```prompt
+
+## Prompt (paste into LLM system/user message as-is)
+
+You are an extraction agent for the Ancient Simples Project. Read the input text (Ancient Greek, possibly with TEI tags) and extract candidate terms relevant to ancient pharmacy/science. Output must be strictly valid JSON (no commentary).
+
+### Labels (choose exactly one per term)
+- SUBSTANCE
+- PART
+- PREPARATION
+- PROCESS
+- TOOL_CONTAINER
+- CONDITION
+- QUALITY_PROPERTY
+- APPLICATION_SITE
+- ADMINISTRATION
+- PLACE
+
+### Exclusions (hard)
+- Ignore teiHeader metadata, page/line markers, and TEI-only tokens.
+- Exclude function words (articles, particles, conjunctions, pronouns), numbers, and single-character tokens.
+- Exclude generic discourse verbs unless part of a technical expression: εἰμί, γίγνομαι, λέγω, δοκέω.
+- Exclude generic anatomy containers as APPLICATION_SITE unless modified by a specific anatomical term: μόριον, μέρος, σῶμα.
+- Exclude culinary accompaniment/food terms unless clearly used as medicinal substances/remedies.
+
+### Normalization rules (mandatory)
+For every term provide:
+- `display`: representative Greek surface form from the text
+- `normalized`: lowercase + strip accents/breathings ONLY; preserve iota subscripts; keep Greek script (no transliteration)
+If multiword, normalize each word and join with single spaces.
+
+### Lemma rules (mandatory)
+For every term provide:
+- `lemma_gr`: best lemma candidate in polytonic Greek
+  - nouns/adjectives: nominative singular
+  - verbs (PROCESS/ADMINISTRATION): present infinitive if confident; otherwise dictionary headword
+- `lemma_normalized`: apply the same normalization to lemma_gr
+- `lemma_confidence`: 0.0–1.0 confidence that lemma_gr is correct
+
+### Label examples (illustrative; do not restrict extraction to these)
+SUBSTANCE (materials/ingredients/vehicles; includes bodily substances like καταμήνια when treated as substances)
+- Examples: μανδραγόρα, ἑλλέβορος, πέπερι, ὕδωρ, ὄξος, ἅλμη, θάλαττα, ψιμμύθιον, καταμήνια
+- Rule: could be a materia medica headword.
+
+PART (physical parts of a substance; not produced by a procedure)
+- Examples: ῥίζα, φύλλον, σπέρμα, φλοιός, ἄνθος (botanical), καρπός, βλαστός
+- Rule: answers “which part of the substance?”
+
+PREPARATION (products produced by procedures)
+- Examples: ἀφέψημα, χυμός, τέφρα/σποδός, κηρωτή, κατάπλασμα, ἄλειμμα
+- Rule: if you can ask “how was this made?”, it is a PREPARATION.
+
+PROCESS (hands-on preparation/application operations)
+- Examples: μίγνυμι, τήκω, ἕψω, διηθέω, καταθραύω, ἐπιτίθημι, ἐπαλείφω, βρέχω, καταντλέω, φρύγειν
+- Rule: what the practitioner does to make/apply a remedy. Exclude generic effect predictions unless framed as instructions.
+
+ADMINISTRATION (route-of-use actions by the patient)
+- Examples: ἐσθίειν, πίνειν, καταπίνειν, λαμβάνειν (when “take a drug”)
+- Rule: denotes how the remedy is taken/received.
+
+TOOL_CONTAINER (implements/vessels)
+- Examples: ἀγγεῖον, θυεία, σπόγγος, ἔριον, κεράμιον
+
+CONDITION (diseases/clinical states; includes κεφαλαλγής when used as a named adverse state)
+- Examples: πυρετός, φλεγμονή, ἕλκος, ἐρυσίπελας, καῦμα, κεφαλαλγία/κεφαλαλγής
+
+QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
+- Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+
+APPLICATION_SITE (bodily target site where remedy is applied/acts)
+- Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
+- Rule: where applied or where it acts in the body.
+
+PLACE (place names; provenance/varietal qualifiers)
+- Examples: Παρνασσός
+- Rule: toponyms used as provenance, varietal, or source qualifiers (do not treat as SUBSTANCE).
+
+Disambiguation reminders:
+- PART ≠ APPLICATION_SITE (ῥίζα is PART; δέρμα/κεφαλή are APPLICATION_SITE)
+- SUBSTANCE ≠ PREPARATION (μανδραγόρα is SUBSTANCE; ἀφέψημα μανδραγόρας is PREPARATION)
+- Adjectives are usually QUALITY_PROPERTY unless they clearly denote a CONDITION (e.g., κεφαλαλγής in therapeutic context).
+
+### Galenic quality tracking (mandatory)
+Additionally, extract statements about the four primary qualities, including:
+- explicit degrees (1–4)
+- intensity / balance statements (even without degrees)
+
+Axes:
+- HOT (θερμός / θερμαίνειν / θερμότης)
+- COLD (ψυχρός / ψύχειν / ψυχρότης)
+- DRY (ξηρός / ξηραίνειν / ξηρότης / ξηραντικός)
+- WET (ὑγρός / ὑγραίνειν / ὑγρότης)
+
+Detect explicit degrees 1–4 when the text uses phrases like:
+- “κατὰ τὴν πρώτην/δευτέραν/τρίτην/τετάρτην …” especially with ἀπόστασις or equivalent degree language.
+
+Map:
+- πρώτην → 1
+- δευτέραν → 2
+- τρίτην → 3
+- τετάρτην → 4
+
+Detect intensity/balance (set `intensity`, even if `degree` is null):
+- moderate: μετρίως, συμμετρῶς → intensity="moderate"
+- balanced: ἐν τῷ μέσῳ καθέστηκε → intensity="balanced"
+- balanced between WET and DRY: σύμμετος/σύμμετρος … κατὰ ὑγρότητα καὶ ξηρότητα → output TWO records (axis=WET and axis=DRY), both intensity="balanced", same evidence snippet
+- weak: οὐκ ἰσχυρῶς → intensity="weak"
+- strong: σφοδρῶς → intensity="strong"
+- extreme: ἄκρως → intensity="extreme"
+If multiple strength markers occur, choose the strongest that applies to the same axis.
+
+Hedges:
+- If the degree phrase contains “που” or similar approximation cues, record hedge="που" and lower confidence slightly.
+
+Axis assignment:
+- If “θερμ-” terms occur in the same clause/window as the degree phrase, record axis=HOT.
+- If “ψυχ-” terms occur, axis=COLD.
+- If “ξηρ- / ξηραντ-” terms occur, axis=DRY.
+- If “ὑγρ-” terms occur, axis=WET.
+If multiple axes are explicitly coordinated (e.g., “θερμὸς … καὶ ξηραντικὸς κατὰ τὴν τρίτην…”), output one record per axis with the same degree.
+
+Applies-to linking:
+- If the subject is clearly a SUBSTANCE/PREPARATION (e.g., “ἄγνος… θερμὸς…”) set applies_to.kind accordingly and set applies_to.lemma_normalized to that term’s lemma_normalized.
+- If the clause is specifically about a SUBSTANCE PART (e.g., ῥίζα/πόα/σπέρμα/φλοιός/φύλλον/ἄνθος/etc. of a substance), set applies_to.kind="SUBSTANCE_PART" and include:
+  - applies_to.substance_lemma_normalized
+  - applies_to.part_lemma_normalized
+- If unclear, set applies_to.kind="UNSPECIFIED".
+
+Place-qualifying variants:
+- Extract place names as PLACE terms.
+- If a quality statement is explicitly tied to a place-qualified variant/provenance (e.g., a substance “from/at” a named place, or a place-epithet modifying the subject), set qualities[].variant_place_lemma_normalized to that place’s lemma_normalized; otherwise set it to null.
+
+Do NOT treat degree ordinals as separate terms.
+
+### Multiword SUBSTANCE extraction (mandatory)
+When a substance head noun is modified by a qualifier yielding a distinct material/variety (MWE), ALWAYS emit:
+1) the multiword term (is_multiword=true) as SUBSTANCE
+2) the head noun alone as SUBSTANCE
+
+Examples of MWEs:
+- κίκινον ἔλαιον (castor oil) → emit MWE “κίκινον ἔλαιον” AND head “ἔλαιον”
+- μῆλον κυδώνιον (quince) → emit MWE “μῆλον κυδώνιον” AND head “μῆλον”
+
+For MWEs, set `head_lemma_normalized` to the head noun’s lemma_normalized. If not an MWE, set head_lemma_normalized=null.
+
+Qualifier-only rule:
+- If only the qualifier appears without the head noun, do NOT treat it as standalone SUBSTANCE unless it is clearly used as a headword/substance name in context.
+- If you include it anyway, lower confidence substantially and prefer omitting unless clearly warranted.
+
+### Deduplication (hard)
+- Deduplicate within the chunk by (label, lemma_normalized). If lemma_normalized is empty, deduplicate by (label, normalized).
+- Do not output the same lemma_normalized more than once under the same label.
+- Do not output the same lemma_normalized under multiple labels unless unavoidable; if unavoidable, choose the best label and lower confidence.
+
+### Output format (strict JSON only)
+{
+  "source_id": "<SOURCE_ID>",
+  "terms": [
+    {
+      "label": "SUBSTANCE|PART|PREPARATION|PROCESS|TOOL_CONTAINER|CONDITION|QUALITY_PROPERTY|APPLICATION_SITE|ADMINISTRATION|PLACE",
+      "display": "<GREEK_SURFACE>",
+      "normalized": "<NORMALIZED_SURFACE>",
+      "lemma_gr": "<GREEK_LEMMA_OR_EMPTY>",
+      "lemma_normalized": "<NORMALIZED_LEMMA_OR_EMPTY>",
+      "is_multiword": true|false,
+      "head_lemma_normalized": "<NORMALIZED_HEAD_LEMMA (or null if not an MWE)>",
+      "confidence": 0.0-1.0,
+      "lemma_confidence": 0.0-1.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT|COLD|DRY|WET",
+      "degree": 1|2|3|4|null,
+      "intensity": "none|weak|moderate|balanced|strong|extreme",
+      "hedge": "none|που|approx",
+      "evidence_display": "<short Greek snippet>",
+      "evidence_normalized": "<normalized snippet>",
+      "variant_place_lemma_normalized": "<PLACE_LEMMA_NORMALIZED (or null)>",
+      "applies_to": { ... },
+      "confidence": 0.0-1.0
+    }
+  ]
+}
+
+`applies_to` shape (choose ONE):
+- { "kind": "SUBSTANCE|PART|PREPARATION|UNSPECIFIED", "lemma_normalized": "<lemma key or empty>" }
+- { "kind": "SUBSTANCE_PART", "substance_lemma_normalized": "<lemma key>", "part_lemma_normalized": "<lemma key>" }
+
+Sorting:
+- Sort `terms` by label, then lemma_normalized (or normalized if lemma missing).
+- Sort `qualities` by axis, then degree, then intensity.
+
+Now process the following input.
+
+SOURCE_ID: <paste stable chunk id>
+TEXT:
+<paste chunk here>
+
+---
+
+## Examples (expected behavior)
+
+### Example 1: Degree extraction (HOT + DRY, degree 3 with hedge)
+
+Input snippet:
+“ἄγνος … θερμὸς μὲν ἐστι καὶ ξηραντικὸς κατὰ τὴν τρίτην που ἀπόστασιν …”
+
+Expected `qualities` records (shape):
+- HOT degree=3 hedge=που applies_to=αγνος
+- DRY degree=3 hedge=που applies_to=αγνος
+
+### Example 2: Administration
+
+Input snippet:
+“οὐ μόνον ἐσθιόμενα καὶ πινόμενα …”
+
+Expected:
+- ADMINISTRATION: ἐσθίειν
+- ADMINISTRATION: πίνειν
+
+### Example 3: Parts vs sites
+
+Input snippet:
+“τὰ φύλλα καὶ τὸ σπέρμα … ἄφυσος κατὰ γαστέρα …”
+
+Expected:
+- PART: φύλλον, σπέρμα
+- APPLICATION_SITE: γαστήρ
+- QUALITY_PROPERTY: ἄφυσος (aflatulent)
+
+
+---
+
+## INPUT (authoritative)
+Use the following SOURCE_ID and TEXT (ignore any placeholders above).
+
+SOURCE_ID: GAL_SMT-6.prooimion
+TEXT:
+περὶ τῆς τῶν ἁπλῶν φαρμάκων ἰδέας καὶ δυνάμεως ἐγχειρήσαντες γράφειν, ἐν μὲν τοῖς πρώτοις δύο βιβλίοις ἐπιδεῖξαι προειλόμεθα τοὺς μοχθηροὺς τρόπους τῶν ἐπιχειρημάτων, οἷς πλεῖστοι τῶν νεωτέρων ἰατρῶν χρώμενοι σφάλλονται μέγιστα. κατὰ δὲ τὸ τρίτον οἷον στοιχείωσίν τινα τῆς συμπάσης ἐποιησάμεθα διδασκαλίας, εἶτα ἑξῆς κατὰ τὸ τέταρτον ὑπὲρ τῆς τῶν χυμῶν φύσεως ἐζητήσαμεν, ἐξευρεῖν σπουδάσαντες ἅπαν ὅσον οἷόν τ' ἐστὶν ἐξ αὐτῶν εἰς τὴν τῶν δυνάμεων γνῶσιν ὠφεληθῆναι. διελέχθημεν δὲ ἐπὶ τῆς τελευτῆς τοῦ βιβλίου καὶ περὶ τῶν πρὸς τὴν ὄσφρησιν ἐν τοῖς ἁπλοῖς φαρμάκοις ποιοτήτων. ἐν δὲ τῷ πέμπτῳ μεταβάντες ἐπὶ τὸ λοιπὸν γένος τῶν δυνάμεων, ὃ παρονομάζεται ἀπὸ τῶν ἔργων αὐτῶν ἃ πεφύκασι δρᾷν, ἐπεδείξαμεν κᾀνταῦθα ἑκάστου τὴν φύσιν καὶ οὐσίαν. οἱ μὲν δὴ καθόλου λόγοι πάντες ὑπὲρ τῆς τῶν ἁπλῶν δυνάμεως ἐοίκασιν ἤδη τέλος ἔχειν· ἐπὶ δὲ τοὺς κατὰ μέρος ἢ κατ' εἶδος, ἢ ὅπως ἄν τις ὀνομάζειν ἐθέλοι, μετιέναι καιρός. εἶεν δ' ἂν οὗτοι καθ' ἕκαστον φάρμακον ἰδίᾳ περαινόμενοι, καθάπερ καὶ κατ' ἀρχὰς εὐθὺς ἐποιήσαμεν, ἐν μὲν τῷ πρώτῳ τῶνδε τῶν ὑπομνημάτων ὑπὲρ ὕδατός τε καὶ ὄξους ἐπισκεψάμενοι, κατὰ δὲ τὸ δεύτερον ὑπὲρ ἐλαίου καὶ ῥοδίνου, πλὴν ἐν ἐκείνοις μὲν ἐπὶ παραδειγμάτων ὁ λόγος ἡμῖν ἐγίγνετο πρὸς τοὺς οὐκ ὀρθῶς ὑπὲρ τῆς δυνάμεως αὐτῶν ἀποφηναμένους· ἐνταῦθα δὲ διὰ βραχέων ὑπὲρ ἑκάστου δίειμι μηκέτι φροντίζων, εἴ τις μὴ καλῶς ἀπεφήνατο περὶ τινος αὐτῶν, ἀλλ' ὅπερ ἀληθέστατόν μοι φαίνεται γράφων, ἄνευ τῆς πρὸς τοὺς διαμαρτάνοντας ἀντιλογίας. ὅτι δὲ οὐ μόνον ἀσαφὴς ὁ λόγος ἔσται τοῖς ἐπιλανθανομένοις τῶν ἔμπροσθεν, ἀλλὰ καὶ τὸ τῆς ἀποδείξεως πιστὸν οὐχ ἕξει, δῆλον μὲν οἶμαι κᾂν ἐγὼ μὴ λέγω, κάλλιον δ' ἐστὶν ἴσως ἀναμνῆσαι κᾀμὲ, πρῶτον μὲν ὡς ἐπὶ τῆς εὐκρατοτάτης φύσεως τὴν πεῖραν χρὴ ποιεῖσθαι τῆς τῶν φαρμάκων δυνάμεως, εἶθ' ἑξῆς ὡς ἐπὶ τῶν ἁπλῶν νοσημάτων. εἰ δὲ δὴ κᾀκ τῶν πρὸς τὴν γεῦσιν ποιοτήτων ἐθέλοι τις ἐνδεικτικῶς τεκμαίρεσθαι περὶ τῆς δυνάμεως αὐτῆς, ἐδείξαμεν ἐν τῷ τετάρτῳ καὶ τὴν ἐν τούτοις μέθοδον. ἐὰν οὖν τις ἤτοι ῥᾳθύμως ἀναγνοὺς τὰ πρόσθεν ἢ καὶ μηδ' ὅλως ἀναγνοὺς ἐπὶ τουτὶ τὸ βιβλίον εὐθέως ἀφίκηται, σπεύδων ὅτι τάχιστα ἐπιστήμων γενέσθαι τῆς τῶν φαρμάκων δυνάμεως, οὐχ ἕξει βεβαίαν τὴν γνῶσιν αὐτῶν. ἐπεὶ δὲ τὰ φάρμακα πάντα τὰ μέν ἐστι μόρια ζώων ἢ φυτῶν ἢ καρπῶν ἤ τινες ὀποὶ τούτων ἢ χυλοὶ, τὰ δὲ ἐκ τῶν μετάλλων λαμβάνεται, κάλλιον ἔδοξὲ μοι περὶ τῶν φυτῶν πρῶτον διελθεῖν, ὅτι τε πλεῖστον αὐτῶν ἐστι τὸ γένος ἰσχυρότατόν τε καὶ τὴν δύναμιν, εἶθ' ἑξῆς περὶ τῶν μεταλλευόντων εἰπεῖν, ἔπειθ' οὕτως ἐπὶ τὰ τῶν ζώων ἀφικέσθαι μόρια. καὶ μέντοι καὶ τὴν τάξιν αὐτῶν τῆς γραφῆς ἔγνων χρῆναι κατὰ στοιχεῖον ποιήσασθαι, πρῶτα μὲν ἐκεῖνα γράψας τῶν φυτῶν ὧν αἱ προσηγορίαι τὴν ἀρχὴν ἔχουσιν ἀπὸ τοῦ ἄλφα στοιχείου, δεύτερα δὲ ὅσα ἀπὸ τοῦ β, καὶ οὕτως ἤδη τρίτα τε καὶ τέταρτα καὶ πέμπτα καὶ τἄλλα ἐφεξῆς ἅπαντα κατὰ τὴν τῶν γραμμάτων τάξιν. οὕτω δὴ καὶ Πάμφιλος ἐποιήσατο τὴν περὶ τῶν βοτανῶν πραγματείαν. ἀλλ' ἐκεῖνος μὲν εἴς τε μύθους γραῶν τινας ἐξετράπετο καὶ τινας γοητείας Αἰγυπτίας ληρώδεις ἅμα τισὶν ἐπῳδαῖς, ἃς ἀναιρούμενοι τὰς βοτάνας ἐπιλέγουσι. καὶ δὴ κέχρηται πρὸς περίαπτα καὶ ἄλλας μαγγανείας οὐ περιέργους μόνον, οὐδ' ἔξω τῆς ἰατρικῆς τέχνης, ἀλλὰ καὶ ψευδεῖς ἁπάσας. ἡμεῖς δὲ οὔτε τούτων οὐδὲν οὔτε τὰς τούτων ἔτι ληρώδεις μεταμορφώσεις ἐροῦμεν. οὐδὲ γὰρ τοῖς μικροῖς παισὶ κομιδῆ χρησίμους ὑπολαμβάνομεν εἶναι τοὺς τοιούτους μύθους, μήτι γε δὴ τοῖς μετιέναι σπεύδουσι τὰ τῆς ἰατρικῆς ἔργα. καὶ μοι δοκεῖ πρὸς Ἱπποκράτους εὐθέως ἐν ἀρχῇ τῶν ἀφορισμῶν εἰρῆσθαι ὁ βίος βραχὺς, ἡ δὲ τέχνη μακρὰ χάριν τοῦ μὴ καταναλίσκειν τοὺς χρόνους εἰς ἄχρηστα, σπεύδειν δὲ ὡς οἷόν τε τὴν ἐπιτομωτάτην ἰέναι δι' αὐτῶν τῶν χρησιμωτάτων τῆς τέχνης. καὶ μὲν δὴ καὶ τὰ πολλὰ τῶν βοτανῶν ὀνόματα ταῦτα Αἰγυπτιακὰ καὶ Βαβυλώνια, καὶ ὅσα τινὲς ἰδίως ἢ συμβολικῶς ἐπ' αὐταῖς ἔθεντο, περιττὸν ἔδοξὲ μοι προσγράφειν ἐνταῦθα. κάλλιον γὰρ, εἴ τις ἐθέλοι καὶ ταῦτα πολυπραγμονεῖν, ἰδίᾳ καὶ καθ' ἑαυτὸν ἀναγινώσκειν τὰς τῶν ἀντιφραζόντων βίβλους. οὕτως γὰρ καὶ αὐτὰς ἐπιγράφουσιν οἱ συντιθέντες αὐτὰς, καθάπερ καὶ Ξενοκράτης ὁ Ἀφροδισιεὺς ἐποίησεν, ἄνθρωπος τἄλλα περίεργος ἱκανῶς καὶ γοητείας οὐκ ἀπηλλαγμένος. ὁ δὲ γε Πάμφιλος ὁ τὰ περὶ τῶν βοτανῶν συνθεὶς εὔδηλός ἐστιν κᾀξ αὐτῶν ὧν γράφει γραμματικὸς ὢν καὶ μήθ' ἑωρακὼς τὰς βοτάνας ὑπὲρ ὧν διηγεῖται μήτε τῆς δυνάμεως αὐτῶν πεπειραμένος, ἀλλὰ τοῖς πρὸ αὐτοῦ γεγραφόσιν ἅπασιν ἄνευ βασάνου πεπιστευκώς. οὗτος μὲν ἐξέγραψε βιβλία, πλῆθος ὀνομάτων ἐφ' ἑκάστῃ βοτάνῃ μάτην προστιθεὶς, εἶθ' ἑξῆς εἴ τις αὐτῶν ἐξ ἀνθρώπου μετεμορφώθη διηγούμενος, εἶτα ἐπῳδὰς καὶ σπονδὰς δὴ τινας καὶ θυμιάματα ταῖς ἐπὶ τούτων ἐκ τῆς γῆς ἀναιρέσεσι προσγράφων, ἑτέρας τε γοητείας τοιαύτας ληρώδεις. ὁ δὲ Ἀναζαρβεὺς Διοσκουρίδης ἐν πέντε βιβλίοις τὴν χρήσιμον ἅπασιν ὕλην ἔγραψεν οὐ βοτανῶν μόνον, ἀλλὰ καὶ δένδρων καὶ καρπῶν καὶ χυλῶν καὶ ὀπῶν, ἔτι τε τῶν μεταλλευομένων ἁπάντων καὶ τῶν ἐν τοῖς ζώοις μορίων μνημονεύσας. καὶ μοι δοκεῖ τελεώτατα πάντων οὗτος τὴν περὶ τῆς ὕλης τῶν φαρμάκων πραγματείαν ποιήσασθαι. πολλὰ μὲν γὰρ καὶ τοῖς ἔμπροσθεν ὑπὲρ αὐτῶν γέγραπται καλῶς, ἀλλ' ὑπὲρ ἁπάντων οὕτως οὐδενὶ, πλὴν εἰ Τάνιτρόν τις ἐπαινοίη τοῦ Ἀσκληπιάδου. καὶ γὰρ καὶ τούτῳ τἄλλα τε καλῶς εἴρηται, χωρὶς τῶν κατὰ τὰς αἰτίας λογισμῶν. ταῦτὰ τε οὖν ἀναγινώσκειν χρὴ τὸν ἔμπειρον γενέσθαι ὕλης βουλόμενον, ἔτι τε πρὸς τούτοις τὰ θ' Ἡρακλείδου τοῦ Ταραντίνου καὶ Κρατεύα καὶ Μαντίου. γέγραπται δὲ οὐχ ὁμοίως οὕτως ἐκείνοις, οὐδ' εἰς ἓν ἤθροισται πάντα, καθάπερ τῷ Διοσκουρίδῃ, περὶ ὕλης γε ἐπιγράψαντι τὰς πέντε βίβλους, ἀλλ' ἰδίᾳ μὲν, εἰ οὕτως ἔτυχε, περὶ σκευασίας τε καὶ δοκιμασίας φαρμάκων ἔγραψαν, ὥσπερ Ἡρακλείδης ὁ Ταραντῖνος, ἰδίως δὲ περὶ καθαρτικῆς ἢ προποτισμῶν ἢ κλυσμῶν, ὥσπερ ὁ Μαντίας ἐποίησεν. ἰδίᾳ δ' εὐπορίστων βοηθημάτων, ὡς Ἀπολλώνιος, ἢ τῶν κατὰ τόπους, ὡς Μαντίας. ἡ δὲ πλείστη τῶν φαρμάκων χρῆσις ἐν αὐταῖς ταῖς θεραπευτικαῖς πραγματείαις ὑπὸ τε τῶν παλαιῶν γέγραπται καὶ προσέτι τῶν νεωτέρων ἁπάντων σχεδόν· καὶ γὰρ πρὸς Ἱπποκράτους εἴρηται πολλὰ καὶ πρὸς Εὐρυφῶντος καὶ Διεύχους καὶ Διοκλέους καὶ Πλειστονίκου καὶ Πραξαγόρου καὶ Ἡροφίλου, καὶ οὐκ ἔστιν οὐδεὶς ἀνὴρ παλαιὸς ὃς οὐ συνεβάλλετὸ τι τῇ τέχνῃ μεῖζον ἢ μεῖον εἰς ἐπιστήμην φαρμάκων, ἄνευ γοητείας τε καὶ ἀλαζονείας, ἣν ὕστερον Ἀνδρέας ἐπεδείξατο, ὥσθ' ὅτῳ σχολὴ χρησίμοις ὁμιλεῖν βιβλίοις περὶ φαρμάκων γεγραμμένοις, ἔχει πολλὰ καὶ τῶν παλαιῶν μὲν, ὡς εἴρηται, καὶ τῶν νεωτέρων δὲ, οὐκ ὀλίγα μέχρι καὶ τῶν περὶ Πάμφιλόν τε καὶ Ἀριχιγένην. καὶ μὲν δὴ καὶ Ῥούφῳ τῷ Ἐφεσίῳ πολλὰ μὲν κᾀν τοῖς θεραπευτικοῖς βιβλίοις γέγραπται φάρμακα, καὶ περὶ βοτανῶν δὲ δι' ἑξαμέτρων ἐπῶν σύγκειται τέτταρα, καὶ οὐδεὶς φόβος ἐπιλείπειν χρήσιμα βιβλία, κᾂν ἐν ἅπαντι τῷ βίῳ βούληταὶ τις ἄλλο μηδὲν ἢ περὶ φαρμάκων ἀναγινώσκειν. Ἀνδρέου δὲ καὶ τῶν ὁμοίως ἀλαζόνων ἀφίστασθαι χρὴ, καὶ πολὺ μᾶλλον ἔτι Παμφίλου τοῦ μηδ' ὄναρ ἑωρακότος ποτὲ τὰς βοτάνας, ὧν τὰς ἰδέας ἐπιχειρεῖ γράφειν. οἱ γὰρ τοιοῦτοι τῶν ἀνθρώπων, ὥσπερ οὖν καὶ ὁ Ταραντῖνος Ἡρακλείδης εἴκαζεν αὐτοὺς, ὁμοιότατοι τοῖς κήρυξίν εἰσιν, ὅσοι τὰ τῆς ἰδέας γνωρίσματα κηρύττουσιν ἀποδεδρακότος ἀνδραπόδου, αὐτοὶ μηδεπώποτε θεασάμενοι. λαμβάνουσι μὲν γὰρ τὰ γνωρίσματα παρὰ τῶν εἰδότων, λέγουσι δὲ ὡς ἐπῳδὴν αὐτὰ, ἃ μηδὲ εἰ παρεστὼς ὁ κηρυττόμενος τύχῃ, διαγνῶναι δυνάμενοι. ἐγὼ μὲν γὰρ ἐμεμφόμην τοῖς πρώτως γράψασι τὰς ἰδέας τῶν βοτανῶν, ἄμεινον ἡγούμενος αὐτόπτην γενέσθαι παρ' αὐτῷ τῷ διδάσκοντι τὸν μανθάνοντα καὶ μὴ τοῖς ἐκ τοῦ βιβλίου κυβερνήταις ὁμοιωθῆναι. καὶ γὰρ ἀληθέστερον οὕτω καὶ σαφέστερον ἡ διδασκαλία περαίνοι ἂν ὑπὸ διδασκάλων οὐ βοτανῶν μόνων ἢ θάμνων ἢ δένδρων, ἀλλὰ καὶ τῶν ἄλλων ἁπάντων φαρμάκων. εἰ δὲ ἄρα καὶ δέοιτο τοῦ βιβλίου, τίς οὕτως ἄθλιος ὡς παρελθεῖν τὰ Διοσκουρδίου καὶ Νίγρου καὶ Ἡρακλείδου καὶ Κρατεύα καὶ ἄλλων μυρίων ἐν τῇ τέχνῃ καταγηρασάντων, βιβλία γραμματικὰ γράφοντος ἐπῳδὰς καὶ μεταμορφώσεις καὶ δεκανῶν καὶ δαιμόνων ἱερὰς βοτάνας ἀνάσχοιτ' ἄν; ὅτι γὰρ γόητες ἄνθρωποι ἐκπλήττειν τὸν πολὺν ὄχλον ἔργον πεποιημένοι τὰ τοιαῦτα συνέθεσαν ἐξ αὐτῶν ἔνεστὶ σοι γνῶναι τοῦ Παμφίλου βιβλίων, ὃς πρῶτον μὲν ἐν ταῖς βοτάναις ἔγραψεν ἀβρότονον, ἅπασιν ἡμῖν γνώριμον τυγχάνουσαν, εἶθ' ἑξῆς ἄγνον ἱκανῶς καὶ τοῦτο γνώριμον θάμνον, εἶτ' ἄγρωστιν οὐδὲ τοῖς ἰδιώταις ἄγνωστον πόαν, εἶτ' ἄγχουσαν ἣν οὐδὲ αὐτὴν ἀγνοεῖ τις, ὥσπερ οὖν οὐδὲ τὸ ἀδίαντον ἐφεξῆς αὐτῇ γεγραμμένον. ἐν μὲν δὴ τούτοις οὐδὲν ὧν ἴσμεν περιττότερον γράφει· μετὰ δὲ ταῦτα βοτάνης μέμνηται καλουμένης, ὡς αὐτός φησιν, ἀετοῦ, περὶ ἧς ὁμολογεῖ μηδένα τῶν Ἑλλήνων εἰρηκέναι μηδὲν, ἀλλ' ἔν τινι τῶν εἰς Ἑρμῆν τὸν Αἰγύπτιον ἀναφερομένων βιβλίων ἐγγεγράφθαι, περιέχοντι τὰς λστʹ τῶν ὡροσκόπων ἱερὰς βοτάνας, αἳ εὔδηλον ὅτι πᾶσαι λῆρός εἰσι καὶ πλάσματα τοῦ συνθέντος, ὁμοιότατα τοῖς ὀφιονίκοις τοῖς Κόγχλας. οὔτε γὰρ ὅλως ἐγίνετὸ τις Κόγχλας, ἀλλ' εἰς γέλωτα σύγκειται τοὔνομα, καθάπερ καὶ τἄλλα πάντα τὰ κατὰ τὸ βιβλίον αὐτοῦ γεγραμμένα. καὶ αἱ λστʹ αὗται βοτάναι μέχρι τῶν ὀνομάτων προέρχονται, μηδενὸς αὐταῖς ὑποκειμένου πράγματος. ἀλλὰ Πάμφιλος μὲν ὥσπερ ἄλλοι πολλοὶ σχολὴν ἴσως ἦγεν ἀχρήστους μύθους ἐγγράφειν βιβλίοις· ἡμεῖς δὲ καὶ νῦν ἡγούμεθα τὸν χρόνον ἀπολλύναι μνημονεύοντες αὐτῶν ἐπιπλέον. ἀρξώμεθα οὖν ἤδη τῶν χρησίμων.
+
+mcp startup: no servers
+2026-02-02T20:16:53.140015Z ERROR codex_api::endpoint::responses: error=http 400 Bad Request: Some("{\n  \"error\": {\n    \"message\": \"Invalid schema for response_format 'codex_output_schema': In context=('properties', 'qualities', 'items', 'properties', 'applies_to'), 'oneOf' is not permitted.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"text.format.schema\",\n    \"code\": \"invalid_json_schema\"\n  }\n}")
+ERROR: {
+  "error": {
+    "message": "Invalid schema for response_format 'codex_output_schema': In context=('properties', 'qualities', 'items', 'properties', 'applies_to'), 'oneOf' is not permitted.",
+    "type": "invalid_request_error",
+    "param": "text.format.schema",
+    "code": "invalid_json_schema"
+  }
+}
+Warning: no last agent message; wrote empty content to /home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_201652_utc/results/GAL_SMT-6.prooimion.json.tmp
+
+
+STDOUT:
+
+

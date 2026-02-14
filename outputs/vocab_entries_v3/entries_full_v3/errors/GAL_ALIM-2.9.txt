@@ -1,0 +1,330 @@
+Runner failed for source_id=GAL_ALIM-2.9
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+    raise RuntimeError(msg)
+RuntimeError: codex exec failed (exit=1).
+
+STDERR:
+OpenAI Codex v0.93.0 (research preview)
+--------
+workdir: /home/seanm/github/ancient-simples
+model: gpt-5.2
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: auto
+session id: 019c20de-662d-7fa0-a091-23f6cb6383ee
+--------
+user
+# Vocab extractor prompt
+
+```prompt
+
+## Prompt (paste into LLM system/user message as-is)
+
+You are an extraction agent for the Ancient Simples Project. Read the input text (Ancient Greek, possibly with TEI tags) and extract candidate terms relevant to ancient pharmacy/science. Output must be strictly valid JSON (no commentary).
+
+### Context (mandatory)
+You may be given a CONTEXT section containing the immediately preceding entry.
+Use CONTEXT ONLY if the current TEXT explicitly signals a back-reference (e.g., “as said earlier”, “the wild [X]”, “τῇ τῆς ἀγρίας” where the head is recoverable by explicit signal).
+- Do NOT invent terms from CONTEXT if the TEXT does not explicitly signal the reference.
+- If you resolve an implied head using CONTEXT, lower confidence and keep evidence snippets from the current TEXT.
+
+### Labels (choose exactly one per term)
+- SUBSTANCE
+- SUBSTANCE_PART
+- PART
+- PREPARATION
+- PROCESS
+- TOOL_CONTAINER
+- CONDITION
+- QUALITY_PROPERTY
+- APPLICATION_SITE
+- ADMINISTRATION
+- PLACE
+
+### Exclusions (hard)
+- Ignore teiHeader metadata, page/line markers, and TEI-only tokens.
+- Exclude function words (articles, particles, conjunctions, pronouns), numbers, and single-character tokens.
+- Exclude generic discourse verbs unless part of a technical expression: εἰμί, γίγνομαι, λέγω, δοκέω.
+- Exclude generic anatomy containers as APPLICATION_SITE unless modified by a specific anatomical term: μόριον, μέρος, σῶμα.
+- Exclude culinary accompaniment/food terms unless clearly used as medicinal substances/remedies.
+
+### Normalization rules (mandatory)
+For every term provide:
+- `display`: representative Greek surface form from the text
+- `normalized`: lowercase + strip accents/breathings ONLY; preserve iota subscripts; keep Greek script (no transliteration)
+If multiword, normalize each word and join with single spaces.
+
+### Lemma rules (mandatory)
+For every term provide:
+- `lemma_gr`: best lemma candidate in polytonic Greek
+  - nouns/adjectives: nominative singular
+  - verbs (PROCESS/ADMINISTRATION): present infinitive if confident; otherwise dictionary headword
+- `lemma_normalized`: apply the same normalization to lemma_gr
+- `lemma_confidence`: 0.0–1.0 confidence that lemma_gr is correct
+
+### Label examples (illustrative; do not restrict extraction to these)
+SUBSTANCE (materials/ingredients/vehicles; includes bodily substances like καταμήνια when treated as substances)
+- Examples: μανδραγόρα, ἑλλέβορος, πέπερι, ὕδωρ, ὄξος, ἅλμη, θάλαττα, ψιμμύθιον, καταμήνια
+- Rule: could be a materia medica headword.
+
+SUBSTANCE_PART (a specific part of a specific substance; keep specificity)
+- Examples (shape): “ἀμπέλου ἀγρίας οἱ βότρυες …” → substance=ἀμπελος ἀγρια, part=βότρυς
+- Rule: if a PART term is explicitly attached to a particular substance (genitive-of, “of X”, or clear attachment in the clause), emit SUBSTANCE_PART rather than a bare PART.
+- Output requirement: set `substance_lemma_normalized` and `part_lemma_normalized` (both non-null) and set the generic `lemma_normalized` to "" (empty string). Set applies_to.kind="UNSPECIFIED" and all applies_to lemma fields to null.
+
+PART (physical parts of a substance; not produced by a procedure)
+- Examples: ῥίζα, φύλλον, σπέρμα, φλοιός, ἄνθος (botanical), καρπός, βλαστός
+- Rule: answers “which part of the substance?” Use PART only if the substance is not clearly identifiable in the same clause/window.
+
+PREPARATION (products produced by procedures)
+- Examples: ἀφέψημα, χυμός, τέφρα/σποδός, κηρωτή, κατάπλασμα, ἄλειμμα
+- Rule: if you can ask “how was this made?”, it is a PREPARATION.
+
+PROCESS (hands-on preparation/application operations)
+- Examples: μίγνυμι, τήκω, ἕψω, διηθέω, καταθραύω, ἐπιτίθημι, ἐπαλείφω, βρέχω, καταντλέω, φρύγειν
+- Rule: what the practitioner does to make/apply a remedy. Exclude generic effect predictions unless framed as instructions.
+
+ADMINISTRATION (route-of-use actions by the patient)
+- Examples: ἐσθίειν, πίνειν, καταπίνειν, λαμβάνειν (when “take a drug”)
+- Rule: denotes how the remedy is taken/received.
+
+TOOL_CONTAINER (implements/vessels)
+- Examples: ἀγγεῖον, θυεία, σπόγγος, ἔριον, κεράμιον
+
+CONDITION (diseases/clinical states; includes κεφαλαλγής when used as a named adverse state)
+- Examples: πυρετός, φλεγμονή, ἕλκος, ἐρυσίπελας, καῦμα, κεφαλαλγία/κεφαλαλγής
+
+QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
+- Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+
+APPLICATION_SITE (bodily target site where remedy is applied/acts)
+- Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
+- Rule: where applied or where it acts in the body.
+
+PLACE (place names; provenance/varietal qualifiers)
+- Examples: Παρνασσός
+- Rule: toponyms used as provenance, varietal, or source qualifiers (do not treat as SUBSTANCE).
+
+Disambiguation reminders:
+- PART ≠ APPLICATION_SITE (ῥίζα is PART; δέρμα/κεφαλή are APPLICATION_SITE)
+- SUBSTANCE ≠ PREPARATION (μανδραγόρα is SUBSTANCE; ἀφέψημα μανδραγόρας is PREPARATION)
+- Adjectives are usually QUALITY_PROPERTY unless they clearly denote a CONDITION (e.g., κεφαλαλγής in therapeutic context).
+
+### Galenic quality tracking (mandatory)
+Additionally, extract statements about the four primary qualities, including:
+- explicit degrees (1–4)
+- intensity / balance statements (even without degrees)
+
+Axes:
+- HOT (θερμός / θερμαίνειν / θερμότης)
+- COLD (ψυχρός / ψύχειν / ψυχρότης)
+- DRY (ξηρός / ξηραίνειν / ξηρότης / ξηραντικός)
+- WET (ὑγρός / ὑγραίνειν / ὑγρότης)
+
+Detect explicit degrees 1–4 when the text uses phrases like:
+- “κατὰ τὴν πρώτην/δευτέραν/τρίτην/τετάρτην …” especially with ἀπόστασις or equivalent degree language.
+
+Map:
+- πρώτην → 1
+- δευτέραν → 2
+- τρίτην → 3
+- τετάρτην → 4
+
+Detect intensity/balance (set `intensity`, even if `degree` is null):
+- moderate: μετρίως, συμμετρῶς → intensity="moderate"
+- balanced: ἐν τῷ μέσῳ καθέστηκε → intensity="balanced"
+- balanced between WET and DRY: σύμμετος/σύμμετρος … κατὰ ὑγρότητα καὶ ξηρότητα → output TWO records (axis=WET and axis=DRY), both intensity="balanced", same evidence snippet
+- weak: οὐκ ἰσχυρῶς → intensity="weak"
+- strong: σφοδρῶς → intensity="strong"
+- extreme: ἄκρως → intensity="extreme"
+If multiple strength markers occur, choose the strongest that applies to the same axis.
+
+Hedges:
+- If the degree phrase contains “που” or similar approximation cues, record hedge="που" and lower confidence slightly.
+
+Axis assignment:
+- If “θερμ-” terms occur in the same clause/window as the degree phrase, record axis=HOT.
+- If “ψυχ-” terms occur, axis=COLD.
+- If “ξηρ- / ξηραντ-” terms occur, axis=DRY.
+- If “ὑγρ-” terms occur, axis=WET.
+If multiple axes are explicitly coordinated (e.g., “θερμὸς … καὶ ξηραντικὸς κατὰ τὴν τρίτην…”), output one record per axis with the same degree.
+
+Applies-to linking:
+- If the subject is clearly a SUBSTANCE/PREPARATION (e.g., “ἄγνος… θερμὸς…”) set applies_to.kind accordingly and set applies_to.lemma_normalized to that term’s lemma_normalized.
+- If the clause is specifically about a SUBSTANCE PART (e.g., ῥίζα/πόα/σπέρμα/φλοιός/φύλλον/ἄνθος/etc. of a substance), set applies_to.kind="SUBSTANCE_PART" and include:
+  - applies_to.substance_lemma_normalized
+  - applies_to.part_lemma_normalized
+- If unclear, set applies_to.kind="UNSPECIFIED".
+Always include all applies_to lemma fields; set unused fields to null.
+
+Place-qualifying variants:
+- Extract place names as PLACE terms.
+- If a quality statement is explicitly tied to a place-qualified variant/provenance (e.g., a substance “from/at” a named place, or a place-epithet modifying the subject), set qualities[].variant_place_lemma_normalized to that place’s lemma_normalized; otherwise set it to null.
+
+Do NOT treat degree ordinals as separate terms.
+
+### Multiword SUBSTANCE extraction (mandatory)
+When a substance head noun is modified by a qualifier yielding a distinct material/variety (MWE), ALWAYS emit:
+1) the multiword term (is_multiword=true) as SUBSTANCE
+2) the head noun alone as SUBSTANCE
+
+Examples of MWEs:
+- κίκινον ἔλαιον (castor oil) → emit MWE “κίκινον ἔλαιον” AND head “ἔλαιον”
+- μῆλον κυδώνιον (quince) → emit MWE “μῆλον κυδώνιον” AND head “μῆλον”
+
+For MWEs, set `head_lemma_normalized` to the head noun’s lemma_normalized. If not an MWE, set head_lemma_normalized=null.
+
+Qualifier-only rule:
+- If only the qualifier appears without the head noun, do NOT treat it as standalone SUBSTANCE unless it is clearly used as a headword/substance name in context.
+- If you include it anyway, lower confidence substantially and prefer omitting unless clearly warranted.
+
+### Term-level linking (mandatory; do not guess)
+For each extracted term, also record whether it applies to a specific subject in the clause/window.
+
+Set `terms[].applies_to` ONLY when the target is clear from the TEXT (or from CONTEXT when explicitly signalled):
+- QUALITY_PROPERTY terms: if the property describes a specific subject, set applies_to to that subject:
+  - kind="SUBSTANCE" or "PREPARATION" with applies_to.lemma_normalized set
+  - kind="SUBSTANCE_PART" with applies_to.substance_lemma_normalized + applies_to.part_lemma_normalized set
+- PROCESS / ADMINISTRATION terms: if the action is performed on/with a specific remedy/material, set applies_to similarly.
+
+Otherwise:
+- set applies_to.kind="UNSPECIFIED" and set applies_to.lemma_normalized/substance_lemma_normalized/part_lemma_normalized all to null.
+
+### Place association on terms (mandatory; do not guess)
+If a term itself is explicitly place-qualified (provenance/varietal/source), set `terms[].variant_place_lemma_normalized` to that place’s lemma_normalized; otherwise set it to null.
+Populate this field primarily for labels SUBSTANCE, PREPARATION, and SUBSTANCE_PART. For other labels, set it to null unless the term itself is unambiguously a place-qualified variant name.
+
+### Deduplication (hard)
+- Deduplicate within the chunk by (label, lemma_normalized). If lemma_normalized is empty, deduplicate by (label, normalized).
+- Do not output the same lemma_normalized more than once under the same label.
+- Do not output the same lemma_normalized under multiple labels unless unavoidable; if unavoidable, choose the best label and lower confidence.
+
+### Output format (strict JSON only)
+{
+  "source_id": "<SOURCE_ID>",
+  "terms": [
+    {
+      "label": "SUBSTANCE|SUBSTANCE_PART|PART|PREPARATION|PROCESS|TOOL_CONTAINER|CONDITION|QUALITY_PROPERTY|APPLICATION_SITE|ADMINISTRATION|PLACE",
+      "display": "<GREEK_SURFACE>",
+      "normalized": "<NORMALIZED_SURFACE>",
+      "lemma_gr": "<GREEK_LEMMA_OR_EMPTY>",
+      "lemma_normalized": "<NORMALIZED_LEMMA_OR_EMPTY>",
+      "is_multiword": true|false,
+      "head_lemma_normalized": "<NORMALIZED_HEAD_LEMMA (or null if not an MWE)>",
+      "substance_lemma_normalized": "<SUBSTANCE_LEMMA_NORMALIZED (or null)>",
+      "part_lemma_normalized": "<PART_LEMMA_NORMALIZED (or null)>",
+      "variant_place_lemma_normalized": "<PLACE_LEMMA_NORMALIZED (or null)>",
+      "applies_to": {
+        "kind": "SUBSTANCE|PART|PREPARATION|SUBSTANCE_PART|UNSPECIFIED",
+        "lemma_normalized": "<LEMMA_NORMALIZED (or null)>",
+        "substance_lemma_normalized": "<SUBSTANCE_LEMMA_NORMALIZED (or null)>",
+        "part_lemma_normalized": "<PART_LEMMA_NORMALIZED (or null)>"
+      },
+      "confidence": 0.0-1.0,
+      "lemma_confidence": 0.0-1.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT|COLD|DRY|WET",
+      "degree": 1|2|3|4|null,
+      "intensity": "none|weak|moderate|balanced|strong|extreme",
+      "hedge": "none|που|approx",
+      "evidence_display": "<short Greek snippet>",
+      "evidence_normalized": "<normalized snippet>",
+      "variant_place_lemma_normalized": "<PLACE_LEMMA_NORMALIZED (or null)>",
+      "applies_to": {
+        "kind": "SUBSTANCE|PART|PREPARATION|SUBSTANCE_PART|UNSPECIFIED",
+        "lemma_normalized": "<LEMMA_NORMALIZED (or null)>",
+        "substance_lemma_normalized": "<SUBSTANCE_LEMMA_NORMALIZED (or null)>",
+        "part_lemma_normalized": "<PART_LEMMA_NORMALIZED (or null)>"
+      },
+      "confidence": 0.0-1.0
+    }
+  ]
+}
+
+Sorting:
+- Sort `terms` by label, then lemma_normalized (or normalized if lemma missing).
+- Sort `qualities` by axis, then degree, then intensity.
+
+Deduplication refinements:
+- For label=SUBSTANCE_PART, deduplicate by (substance_lemma_normalized, part_lemma_normalized) and do NOT collapse distinct parts across different substances.
+- For label=QUALITY_PROPERTY, PROCESS, ADMINISTRATION: if applies_to is specified (kind != "UNSPECIFIED"), deduplicate by (label, lemma_normalized, applies_to.kind, applies_to.lemma_normalized, applies_to.substance_lemma_normalized, applies_to.part_lemma_normalized).
+
+Now process the following input.
+
+SOURCE_ID: <paste stable chunk id>
+TEXT:
+<paste chunk here>
+
+---
+
+## Examples (expected behavior)
+
+### Example 1: Degree extraction (HOT + DRY, degree 3 with hedge)
+
+Input snippet:
+“ἄγνος … θερμὸς μὲν ἐστι καὶ ξηραντικὸς κατὰ τὴν τρίτην που ἀπόστασιν …”
+
+Expected `qualities` records (shape):
+- HOT degree=3 hedge=που applies_to=αγνος
+- DRY degree=3 hedge=που applies_to=αγνος
+
+### Example 2: Administration
+
+Input snippet:
+“οὐ μόνον ἐσθιόμενα καὶ πινόμενα …”
+
+Expected:
+- ADMINISTRATION: ἐσθίειν
+- ADMINISTRATION: πίνειν
+
+### Example 3: Parts vs sites
+
+Input snippet:
+“τὰ φύλλα καὶ τὸ σπέρμα … ἄφυσος κατὰ γαστέρα …”
+
+Expected:
+- PART: φύλλον, σπέρμα
+- APPLICATION_SITE: γαστήρ
+- QUALITY_PROPERTY: ἄφυσος (aflatulent)
+
+
+---
+
+## CONTEXT (for anaphora; use only if explicitly signalled in TEXT)
+CONTEXT_PREV_SOURCE_ID: GAL_ALIM-2.8
+CONTEXT_PREV_TEXT:
+Τὸ μὲν κοινὸν οὐ μόνον ὀπώραις ἁπάσαις, ἀλλὰ καὶ τοῖς ὡραίοις ὀνομαζομένοις καρποῖς ἔχει καὶ τὰ σῦκα, φυγεῖν οὐ δυνηθέντα τὴν κακοχυμίαν οὐδ' αὐτά, καίτοι τῶν ἄλλων ἁπάντων ὡραίων ἧττον αὐτῆς μετέχοντα. πρόσεστι δ' αὐτοῖς ἀγαθὰ τό τε κατὰ γαστέρα πορίμοις εἶναι καὶ τὸ διεξέρχεσθαι ῥᾳδίως ὅλον τὸ | σῶμα. καὶ γάρ τι καὶ ῥυπτικὸν ἀξιόλογον ἔχει, καθ' ὃ καὶ ψαμμώδη πολλὰ τοῖς νεφριτικοῖς ἐπὶ ταῖς ἐδωδαῖς αὐτῶν ἐκκρίνεται. τροφὴν δ' ἁπασῶν τῶν ὀπωρῶν ὀλίγην τῷ σώματι διδουσῶν, ἧττον ἁπασῶν τοῦτο τὰ σῦκα πέπονθεν, οὐ μὴν ἐσφιγμένην γε καὶ ἰσχυρὰν ἐργάζεται τὴν σάρκα, καθάπερ ἄρτος τε καὶ κρέας ὕειον, ἀλλ' ὑπόσομφον, ὥσπερ ὁ κύαμος. ἐμπίπλησί γε μὴν φύσης καὶ αὐτὰ τὴν γαστέρα, καὶ ἦν ἂν ἱκανῶς ταύτῃ λυπηρά, μὴ προσλαβόντα τὸ διαχωρεῖσθαι ταχέως, ἐπικτησάμενα δὲ τοῦτο τῷ τάχει τῆς διεξόδου τὴν φῦσαν ὀλιγοχρόνιον ἐργάζεται, καὶ κατὰ τοῦτ' αὐτὸ τῆς ἄλλης ὀπώρας ἧττον εἴωθε βλάπτειν. οὐ σμικρὰ δ' ὑπεροχὴ τῶν πεπείρων ἐστὶ πρὸς τὰ μὴ τοιαῦτα, καὶ κατὰ τοὺς ἄλλους μὲν ἅπαντας ἐμφαινομένη καρπούς, οὐ μὴν τοσοῦτόν γε διαφέρουσα. τὸ γάρ τοι πέπειρον ἀκριβῶς σῦκον ἐγγὺς τοῦ μηδ' ὅλως βλάπτειν ἥκει, παραπλήσιον ἤδη ταῖς ἰσχάσι, πολλὰ μὲν ἐχούσαις τὰ χρήσιμα, μοχθηρὸν δ' ἕν τι τοῖς πλεονάζουσιν ἐν αὐταῖς. οὐ πάνυ γὰρ αἷμα γεν|νῶσι χρηστόν, ὅθεν αὐταῖς καὶ τὸ τῶν φθειρῶν πλῆθος ἕπεται. δύναμιν δ' ἔχουσι λεπτυντικήν τε καὶ τμητικήν, δι' ἣν καὶ τὴν γαστέρα πρὸς ἔκκρισιν ἐξορμῶσι καὶ νεφροὺς ἐκκαθαίρουσιν. ἥπατι δὲ καὶ σπληνὶ φλεγμαίνουσι μέν εἰσι βλαβεραί, καθάπερ καὶ τὰ σῦκα, τῷ κοινῷ λόγῳ τῶν γλυκέων ἁπάντων ἐδεσμάτων τε καὶ πομάτων, οὐ κατ' ἰδίαν τινὰ δύναμιν ἐξαίρετον· ἐμπεφραγμένοις δὲ καὶ σκιρουμένοις αὐταὶ μὲν καθ' ἑαυτὰς οὐδὲν οὔτ' εἰς ὠφέλειαν οὔτ' εἰς βλάβην ἐργάζονται, μιγνύμεναι δὲ τοῖς τέμνουσί τε καὶ λεπτύνουσι καὶ ῥύπτουσι φαρμάκοις οὐ σμικρὸν ὄφελός εἰσι καὶ διὰ τοῦτ' αὐτὰς διδόασι μετὰ θύμων ἢ πεπέρεως ἢ ζιγγιβέρεως ἢ γλήχωνος ἢ θύμβρας ἢ καλαμίνθης ἢ ὀριγάνου ἢ ὑσσώπου πρὸ πολλοῦ γε τῆς τροφῆς ἔνιοι τῶν ἰατρῶν ἐπὶ τῶν εἰρημένων ἐν ἥπατι καὶ σπληνὶ διαθέσεων. ὡσαύτως δὲ καὶ ἐὰν μετά τινος τῶν ἄλλων, ὅσα δριμεῖαν ἢ ὅλως λεπτυντικήν τε καὶ τμητικὴν ἔχει δύναμιν, ἡ προσφορὰ γίγνηται τῶν ἰσχάδων, ὠφέλιμός ἐστιν οὐ μόνον | τοῖς οὕτω πάσχουσιν, ἀλλὰ καὶ τοῖς ὑγιαίνουσιν· ἀνεῳγμένας γὰρ εἶναι τὰς καθ' ἧπαρ διεξόδους τῆς τροφῆς οὐ τοῖς κάμνουσι μόνον, ἀλλὰ καὶ τοῖς ὑγιαίνουσιν ἀσφαλέστατον. οὕτω γοῦν καὶ τὰ σῦκα μετά τε τῶν λεπτυνόντων ἁλῶν τῶν σκευαστῶν καὶ δι' ὄξους καὶ γάρου προσφέρονται πολλοὶ τῇ πείρᾳ τὸ χρήσιμον εὑρηκότες. εἰκὸς δὲ καὶ τῶν ἰατρῶν τινος ὑποθεμένου πράττειν οὕτως ἐνίοις αὐτῶν εἰς πολλοὺς ἐκταθῆναι τὴν γνῶσιν. ὅσοι δὲ μετά τινος τῶν παχυνόντων ἐδεσμάτων ἐσθίουσι τά τε σῦκα καὶ τὰς ἰσχάδας, οὐ σμικρὰ βλάπτονται.
+
+
+---
+
+## INPUT (authoritative)
+Use the following SOURCE_ID and TEXT (ignore any placeholders above).
+
+SOURCE_ID: GAL_ALIM-2.9
+TEXT:
+Σῦκα καὶ σταφυλαὶ τῆς ὀπώρας ὥσπερ κεφάλαιόν εἰσι· καὶ γὰρ τρέφει μᾶλλον ἁπάντων τῶν ὡραίων ταῦτα καὶ ἥκιστ' ἐστὶ κακόχυμα, καὶ μάλισθ' ὅταν ἀκριβῶς ᾖ πέπειρα. τοῦ μὲν οὖν τρέφειν αὐτὰ μέγιστον σημεῖον οἱ φυλάττοντες τὸν καρπὸν τῶν ἀμπέλων, ἐσθίοντες μὲν ἐν δύο μησὶν οἷς φυλάττουσιν ἢ μόνα διὰ παντὸς τὰ σῦκα μετὰ τῶν σταφυλῶν ἤ που καὶ βραχύ τι | παρεντιθέντες ἄρτου, πιαινόμενοι δ' ἱκανῶς· οὐ μὴν ἰσχυρά γε καὶ πυκνὴ σάρξ ἐστιν ἡ ἐξ αὐτῶν γεννωμένη, καθάπερ ἡ ἐκ τῶν κρεῶν, ἀλλὰ χαύνη καὶ πλαδαρά, διὸ καὶ ταχέως προσστέλλεται παυσαμένων τῆς ἐδωδῆς. ἧττον δὲ τῶν σύκων αἱ σταφυλαὶ τρέφουσι, καὶ μέγιστον ἀγαθὸν αὐταῖς ὑπάρχει τὸ ταχέως ὑπέρχεσθαι. διὸ κἂν ἐπισχεθῶσί ποτε, βλάπτουσιν ἱκανῶς, οὐκ ἐχόντων τοῦτο τῶν πεπείρων σύκων. εἰ γὰρ καὶ μὴ διαχωρήσειεν ἀξιολόγως, πεφθείη δ' ἐν τῇ γαστρὶ καλῶς, ἀβλαβῆ δίδωσι τροφὴν τῷ σώματι. ταῖς σταφυλαῖς δ' οὐδέτερον ὑπάρχει τούτων· οὔτε γὰρ πέττονται καλῶς, ὅταν ἐπισχεθῶσι, καὶ κατὰ τὴν εἰς ἧπάρ τε καὶ φλέβας ἀνάδοσιν ὠμὸν γεννῶσι χυμόν, οὐ ῥᾳδίως εἰς αἷμα μεταβαλλόμενον. ἡ γάρ τοι τῶν ῥαγῶν οὐσία σύνθετός ἐστιν ἔκ τε τῆς οἷον σαρκὸς αὐτῶν καὶ τῆς παρεσπαρμένης κατ' αὐτὴν ὑγρότητος, ἐξ ἧς ὁ οἶνος γίγνεται, καὶ πρὸς τούτοις ἔτι γιγάρτων τε καὶ τοῦ ταῦτα περιέχοντος ἔξωθεν ὑμενώδους σκεπάσματος. ἀλλ' ἡ μὲν τῶν γιγάρτων | οὐσία ξηρὰ καὶ στύφουσά πώς ἐστι, διεξέρχεται δὲ τὰ ἔντερα πάντα κατὰ μηδὲν ἑαυτῆς αἰσθητῶς ἀλλοιουμένη, παραπλησίως ταῖς ἐν τοῖς σύκοις κεγχραμίσιν. ἀνάλογον γὰρ ἑκάτερον ἑκατέρῳ τῶν καρπῶν ἐστι, σπέρμα μὲν ὑπάρχον ὅλου τοῦ φυτοῦ, διεξιὸν δ' ἀναλλοίωτόν τε καὶ ἀχύλωτον καὶ ἀμετάβλητον. ἀναλογία δ' ἐστὶ καὶ τοῖς περιέχουσιν ἑκάτερον τῶν καρπῶν σκεπάσμασι, τοιαύτην χρείαν παρέχουσιν αὐτοῖς, οἵαν τοῖς ζῴοις τὸ δέρμα. βραχεῖα δὲ καὶ ἡ τούτου μεταβολὴ γίγνεται κατὰ τὴν γαστέρα, καί τινες ὡς ἄχρηστον ἀποπτύουσιν αὐτὸ μυζήσαντες ἅπαν τὸ ἔνδον ἅμα τοῖς γιγάρτοις. ἔνιοι δὲ καὶ ταῦτ' ἐκπτύειν πειρῶνται, καὶ μάλισθ' ὅταν αἱ ῥᾶγες ὦσι μεγάλαι· δύσκολον γὰρ ἐν ταῖς μικραῖς αὐτὸ πράττειν. εὔδηλον δ' ὅτι μᾶλλον ἡ γαστὴρ ὑπέρχεται, μόνης τῆς σαρκὸς τῶν ῥαγῶν ἅμα τῷ χυλῷ καταποθείσης ἄνευ τῶν γιγάρτων τε καὶ τοῦ περικειμένου χιτῶνος ἔξωθεν, ἔτι δὲ μᾶλλον, ὅταν αὐτὸς μόνος ὁ χυλὸς ἐκθλιβεὶς καταποθῇ· καλοῦσι δ' αὐτὸν οἱ ἄνθρωποι γλεῦκος, ἐμπιπλάντα φύσης | τὴν κοιλίαν, εἰ μὴ διεξέλθοι ταχέως. γίγνεται μὲν οὖν τις κἀκ τούτου τροφὴ τῷ σώματι, πλείων δ' ἐκ τῆς σαρκώδους οὐσίας, καὶ διὰ τοῦτό τινες μὲν τῶν σταφυλῶν τρέφουσι μᾶλλον ἢ διαχωροῦνται, τινὲς δὲ διαχωροῦνται μᾶλλον ἢ τρέφουσιν· ὧν μὲν ἂν ὁ χυλὸς ὀλίγος ᾖ, τρέφουσι μᾶλλον, ὧν δὲ πλείων, ἧττον μὲν τρέφουσιν, ὑπέρχονται δὲ μᾶλλον. ὀνομάζουσι δ' εὐγενεῖς τὰς τοιαύτας σταφυλάς, ἐν αἷς αἱ ῥᾶγες ὀλίγην μὲν ἔχουσι τὴν ὑγρὰν οὐσίαν, οὐκ ὀλίγην δὲ τὴν στερεωτέραν, ἣν ὥσπερ σάρκα τῆς ῥαγὸς ἔφην εἶναι. καὶ χρῶνται κατά γε τὸν τῆς ὀπώρας καιρὸν ἀποτιθέμενοι πολυειδῶς. καὶ γὰρ εἰς γλεῦκος ἐμβάλλουσιν αὐτὰς καὶ χύτρας καινὰς πληροῦντες ἐναποτίθενται τοῖς στεμφύλοις. καλῶ δὲ στέμφυλα τὰ στερεὰ λείψανα τῆς σταφυλῆς, ἐπειδὰν ἐν ταῖς ληνοῖς αὐτῶν ἐκθλιβῇ πᾶς ὁ χυλός. ἃ καὶ αὐτὰ συντιθέασιν ἐν πίθοις οἱ ἄνθρωποι, σφίγγοντές τε καὶ πιλοῦντες ἰσχυρῶς ὀνομάζοντές τε τρύγα ταὐτὸν τοῦθ', ὅπερ ἐγὼ στέμφυλον ἐκάλεσα. τὴν δὲ τοῦ στεμφύλου προσηγορίαν ἐπιφέρουσιν αὐτοὶ τῷ τῶν κλημάτων ἐκπεφυκότι ῥιζώματι τῶν | ῥαγῶν. [τοῦτο δ' ἡμεῖς βοτρυοῦχον καλοῦμεν, ὅθεν ἐξήρτηνται αἱ ῥᾶγες.] εἰς ταύτην οὖν τὴν τρύγα τὰς καινὰς χύτρας πλήρεις τῶν σταφυλῶν ἐντιθέασι, πώμασι στεγνοῦντες ἀκριβῶς, ὡς μηδαμόθι παραπνεῖσθαι, καὶ καθ' ὃ συμβάλλει γε τὸ πῶμα τῇ χύτρᾳ, πίτταν ἐπαλείφουσιν ἀποκλείουσαν ἁπάσας τὰς διαπνοάς. εἶναι δὲ χρὴ καὶ τὴν χύτραν αὐτὴν ἐξ εὐώδους τε πηλοῦ καὶ τελέως ὠπτημένου. τονωτικὴ μὲν οὖν ἐκλύτου γαστρὸς ἡ τοιαύτη σταφυλὴ καὶ τοὺς ἀνορέκτους ἐπεγείρει πρὸς ἐδωδὴν σιτίων, οὐ μὴν ὑπέρχεταί γε κατὰ γαστέρα, καὶ εἰ πλείων βρωθείη, κεφαλῆς ἅπτεται. ταύτης δ' ἔτι μᾶλλόν ἐστι κεφαλαλγὴς ἡ ἐκ τοῦ γλεύκους. ἡ μέντοι κρεμασθεῖσα κεφαλὴν οὐδ' ὅλως πλήττει, γαστέρα δ' οὔτ' ἐπέχειν οὔτε προτρέπειν εἰς διαχώρησιν πέφυκεν. ὡσαύτως δ' ἔχει καὶ πρὸς τὴν ὄρεξιν, οὔτ' ἐπεγείρουσα τὴν ἄρρωστον οὔτ' ἐκλύουσα τὴν εὔρωστον. εὐπεπτοτέρα δ' ἐστὶ τῶν ἄλλων σταφυλῶν, ἃς ἐν γλεύκει καὶ στεμφύλοις ἔφην ἀποτίθεσθαι τοὺς ἀνθρώπους εἰς ὅλον τὸν ἑξῆς ἐνιαυτὸν ἄχρι τοῦ δευτέρου τρυγητοῦ. αἱ κρεμασθεῖσαι δ' αὐτῶν, ὅταν ξηρανθῶσιν, ἄχρη|στοι γίγνονται, τινὲς μὲν κατὰ τὸ ἔαρ εὐθέως, ἐν δ' οὖν τῷ θέρει πάντως. οὐ σμικρὰ δὲ διαφορὰ τῶν σταφυλῶν ἐστι καὶ κατὰ τὸ γλυκείας ἢ αὐστηρὰς ἢ ὀξείας εἶναι ἢ μηδεμίαν ἐχούσας σφοδρὰν ποιότητα· καλοῦσι δ' αὐτὰς οἰνώδεις. αἱ μὲν οὖν γλυκεῖαι θερμότερον ἔχουσι τὸν χυλόν, διὸ καὶ διψώδεις εἰσίν, αἱ δ' αὐστηραί τε καὶ ὀξεῖαι ψυχρότερον, αἱ δ' οἰνώδεις ἐν τῷ μέσῳ θερμοῦ τε καὶ ψυχροῦ. γαστέρα δ' ὑπάγουσιν αἱ γλυκεῖαι, καὶ μάλισθ' ὅταν ὦσιν ὑγραί, μετὰ ταύτας δ' αἱ οἰνώδεις ὑγραί. μοχθηραὶ δ' οὐκ εἰς ταῦτα μόνον, ἀλλὰ καὶ πρὸς τὴν ἐν τῇ γαστρὶ πέψιν ἀνάδοσίν τε καὶ θρέψιν αἵ τ' ὀξεῖαι καὶ αὐστηραὶ σταφυλαί. αἱ μὲν οὖν ὀξεῖαι, κἂν ἀκριβῶς ἐπὶ τῆς ἀμπέλου πεπανθεῖσαι κρεμασθῶσιν, οὐδ' οὕτω γίγνονται γλυκεῖαι, τῶν δ' αὐστηρῶν ἔνιαι μεταβάλλουσιν εἰς τὸ γλυκύτερον ἐπὶ πλέον κρεμασθεῖσαι. ταῖς στρυφναῖς δέ, καθάπερ καὶ ταῖς ὀξείαις, οὐδ' ἂν ἐπὶ πλεῖστον κρέμωνται, τὴν εἰς γλυκύτητα μεταβολὴν οἷόν τε σχεῖν· διὸ καὶ φυλάττεσθαι τὴν ἐδωδὴν αὐτῶν ἀεὶ προσήκει. πασῶν μὲν οὖν ἀσφαλεστάτη χρῆσίς | ἐστιν, ὅταν σαρκώδεις τ' ὦσιν αἱ σταφυλαὶ φύσει πεπειροτάτων τ' αὐτῶν τις ἐσθίῃ συμμέτρως, εἴτ' οὖν ἐπὶ τῶν ἀμπέλων ἐπὶ πλεῖστον πεπανθεισῶν εἴτε καὶ τὸ λεῖπον ἐκ τοῦ κρεμασθῆναι προσλαβουσῶν. ἐφεξῆς δὲ τῶν ὑγρῶν ἄνευ ποιότητος ὀξείας ἢ αὐστηρᾶς ἕνεκεν ὑπαγωγῆς γαστρὸς ἐγχωρεῖ δαψιλῶς ἐσθίειν. ἔνιοι δὲ καὶ γλεῦκος πίνουσι τῆς αὐτῆς χρείας ἕνεκα καὶ μάλιστα τὸ γλυκύτατον· ὑπακτικώτατον γὰρ τοῦτο, τὸ δ' ἐξ αὐστηρῶν ἢ ὀξειῶν σταφυλῶν φαυλότατον εἰς πάντα. ἐγὼ μὲν οὖν τοῖς ὀνόμασιν οὕτως ἐχρησάμην, ὡς οἱ νῦν ἄνθρωποι χρῶνται, βέλτιον ἡγούμενος εἶναι διδάξαι σαφῶς τὰ πράγματα τοῦ παλαιῶς ἀττικίζειν. οἷς δὲ τοῦτο τιμιώτερόν ἐστι τῆς σαφοῦς διδασκαλίας, βρύτια μὲν ὀνομάζουσι τὰ τῶν σταφυλῶν στερεὰ μόρια, τοῦ γλεύκους ἐκθλιβέντος, στέμφυλα δὲ τὰ τῶν ἐλαῶν, ὅταν ἐκθλιβῇ τοὔλαιον· τό γε μὴν ὑφιστάμενον τοῖς οἴνοις παχὺ τοῖς πολλοῖς ὡσαύτως ὀνομάζουσιν οἱ ἀττικίζοντες τρύγα. ὥστ' οὐδ' ὁμωνυμία τίς ἐστι παρ' αὐτοῖς, ὥσπερ παρὰ τοῖς ἄλλοις ἀνθρώποις, ὅσοι καὶ τὰ βρύτια τρύγα καλοῦσι. καὶ μὴν | καὶ τρίτον τι σημαινόμενόν ἐστι τοῦ τῆς τρυγὸς ὀνόματος ἐν ἔθει τοῖς νῦν Ἕλλησι. τὸ γάρ τοι τῶν βρυτίων ἀπόβρεγμα τρύγα καλοῦσιν, ὅπερ αὖ πάλιν οἱ ἀττικίζοντες ὀνομάζουσι δευτερίαν. [στεμφυλίτης οὗτος παρ' ἡμῖν καλεῖται.] ἐμβάλλοντες γὰρ εἰς πιθάκνας μικρὰς τὰ βρύτια προσεπιχέουσιν ὕδωρ, ὡς διαβρόχους ἁπάσας γενέσθαι, κἀπειδὰν ἱκανῶς αὐτοῖς τοῦτο πεπρᾶχθαι δοκῇ, τὸ παρὰ τὸν πυθμένα τρῆμα τῆς πιθάκνης ἀνοίγουσιν, ὡς ἐκρυῆναι τὸ ἀπόβρεγμα αὐτῶν, καὶ πίνουσιν ἀντ' οἴνου τοῦτο. πρόδηλον δ', ὅτι κατὰ τὴν τῶν βρυτίων ποσότητα καὶ τὸ ὕδωρ ἐπιχέουσιν ἐξ ἐμπειρίας, ὡς μήθ' ὑδαρῆ πάνυ μήτ' ἄκρατον γενέσθαι τὸν δευτερίαν. εἶτα πάλιν ἕτερον ὕδωρ ἐπιχέουσι τοῖς αὐτοῖς βρυτίοις, ἔλαττον τοῦ προτέρου, ὡς γενέσθαι καὶ τοῦτο σύμμετρον εἰς πόσιν, ὅπερ καὶ αὐτὸ ἀξιοῦσιν ἔνιοι τῶν ἀττικιζόντων ὀνομάζεσθαι δευτερίαν ἰδίως, οὐχ ὡς τὸ πρότερον. ἔστι δὲ κεφαλαλγὲς μὲν ἑκάτερον αὐτῶν πινόμενον, εἰ μή τις ὑδαρέστερον αὐτὸ πίνοι, μᾶλλον μέντοι τὸ πρότερον ἅπτεται τῆς κεφαλῆς. ἀγαθὸν δ' ὑπάρχει τῷ τοιούτῳ πόματι τὸ ταχέως οὐρεῖσθαι, διαφορᾶς οὐκ ὀλίγης ἐν αὐτῷ γιγνομένης | παρὰ τὸ τῶν σταφυλῶν εἶδος, ἐξ ὧν ἐστι τὰ βρύτια. γλυκειῶν μὲν γὰρ αὐτῶν οὐσῶν ἥδιόν τε πολλῷ γίγνεται τὸ πόμα καὶ θᾶττον οὐρεῖται, στρυφνῶν δὲ καὶ ὀξειῶν ἀηδέστερόν τε μακρῷ καὶ ἧττον οὐρητικόν. ἰσχυρότερον δὲ τὸ ἀποβρέγμα τοῦτο γίγνεται καὶ μᾶλλον οἰνῶδες, ὅταν εἰς τὸ ἔαρ ἢ καὶ τὸ θέρος ἡ τρὺξ φυλαχθῇ· κατὰ δὲ τὸν χειμῶνα χρωμένων, ὥσπερ ἧττον ἅπτεται κεφαλῆς, οὕτω καὶ ἧττον οὐρεῖται.
+
+mcp startup: no servers
+2026-02-03T00:19:32.623220Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770078388,\"eligible_promo\":null,\"resets_in_seconds\":416}}")
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 1:26 AM.
+Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/GAL_ALIM-2.9.json.tmp
+
+
+STDOUT:
+
+

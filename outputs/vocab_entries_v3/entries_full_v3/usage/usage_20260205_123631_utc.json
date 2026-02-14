@@ -1,0 +1,40 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260205_123631_utc",
+  "jobs": [
+    {
+      "source_id": "GAL_SMT-7.10.42",
+      "safe_id": "GAL_SMT-7.10.42",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/GAL_SMT-7.10.42/.codex/sessions/2026/02/05/rollout-2026-02-05T13-36-32-019c2dcd-dcf5-7d13-9e81-a39ef8f831d2.jsonl",
+        "start_secondary_used_percent": 67.0,
+        "end_secondary_used_percent": 67.0,
+        "last_token_usage": {
+          "input_tokens": 16380,
+          "cached_input_tokens": 3328,
+          "output_tokens": 13210,
+          "reasoning_output_tokens": 9246,
+          "total_tokens": 29590
+        },
+        "total_token_usage": {
+          "input_tokens": 16380,
+          "cached_input_tokens": 3328,
+          "output_tokens": 13210,
+          "reasoning_output_tokens": 9246,
+          "total_tokens": 29590
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 16380,
+    "cached_input_tokens": 3328,
+    "output_tokens": 13210,
+    "reasoning_output_tokens": 9246,
+    "total_tokens": 29590
+  },
+  "secondary_used_percent": {
+    "start_min": 67.0,
+    "end_max": 67.0
+  }
+}

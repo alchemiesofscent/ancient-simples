@@ -1,0 +1,45 @@
+{
+  "run_id": "20260202_193756_utc",
+  "csv": "/home/seanm/github/ancient-simples/data-workbench/entries.csv",
+  "prompt": "/home/seanm/github/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seanm/github/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 5,
+  "n_selected": 5,
+  "jobs": [
+    {
+      "csv_line": 2,
+      "source_id": "GAL_SMT-6.prooimion",
+      "job_prompt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/jobs/GAL_SMT-6.prooimion.prompt.md",
+      "result_json": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/results/GAL_SMT-6.prooimion.json",
+      "error_txt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/errors/GAL_SMT-6.prooimion.txt"
+    },
+    {
+      "csv_line": 3,
+      "source_id": "GAL_SMT-6.1.1",
+      "job_prompt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/jobs/GAL_SMT-6.1.1.prompt.md",
+      "result_json": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/results/GAL_SMT-6.1.1.json",
+      "error_txt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/errors/GAL_SMT-6.1.1.txt"
+    },
+    {
+      "csv_line": 4,
+      "source_id": "GAL_SMT-6.1.2",
+      "job_prompt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/jobs/GAL_SMT-6.1.2.prompt.md",
+      "result_json": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/results/GAL_SMT-6.1.2.json",
+      "error_txt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/errors/GAL_SMT-6.1.2.txt"
+    },
+    {
+      "csv_line": 5,
+      "source_id": "GAL_SMT-6.1.3",
+      "job_prompt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/jobs/GAL_SMT-6.1.3.prompt.md",
+      "result_json": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/results/GAL_SMT-6.1.3.json",
+      "error_txt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/errors/GAL_SMT-6.1.3.txt"
+    },
+    {
+      "csv_line": 6,
+      "source_id": "GAL_SMT-6.1.4",
+      "job_prompt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/jobs/GAL_SMT-6.1.4.prompt.md",
+      "result_json": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/results/GAL_SMT-6.1.4.json",
+      "error_txt": "/home/seanm/github/ancient-simples/outputs/vocab_pilot/20260202_193756_utc/errors/GAL_SMT-6.1.4.txt"
+    }
+  ]
+}

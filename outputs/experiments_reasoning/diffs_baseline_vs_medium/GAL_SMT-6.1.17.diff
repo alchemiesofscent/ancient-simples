@@ -1,0 +1,145 @@
+--- baseline_high+++ medium@@ -5,7 +5,7 @@       null,
+       "none",
+       "none",
+-      "αιγυπτος",
++      null,
+       [
+         "SUBSTANCE",
+         "ακανθος αιγυπτια",
+@@ -32,20 +32,6 @@     ],
+     [
+       "APPLICATION_SITE",
+-      "ουλη",
+-      null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "UNSPECIFIED",
+-        null,
+-        null,
+-        null
+-      ]
+-    ],
+-    [
+-      "APPLICATION_SITE",
+       "σταφυλη",
+       null,
+       null,
+@@ -74,6 +60,20 @@     ],
+     [
+       "CONDITION",
++      "ουλη",
++      null,
++      null,
++      null,
++      null,
++      [
++        "UNSPECIFIED",
++        null,
++        null,
++        null
++      ]
++    ],
++    [
++      "CONDITION",
+       "ρους γυναικειος",
+       null,
+       null,
+@@ -87,31 +87,17 @@       ]
+     ],
+     [
+-      "PLACE",
+-      "αιγυπτος",
+-      null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "UNSPECIFIED",
+-        null,
+-        null,
+-        null
+-      ]
+-    ],
+-    [
+-      "PLACE",
+-      "αραβια",
+-      null,
+-      null,
+-      null,
+-      null,
+-      [
+-        "UNSPECIFIED",
+-        null,
+-        null,
+-        null
++      "PROCESS",
++      "εμφυσαω",
++      null,
++      null,
++      null,
++      null,
++      [
++        "SUBSTANCE_PART",
++        null,
++        "ακανθος αιγυπτια",
++        "καρπος"
+       ]
+     ],
+     [
+@@ -164,10 +150,10 @@       null,
+       null,
+       [
+-        "SUBSTANCE",
+-        "ακανθος αιγυπτια",
+-        null,
+-        null
++        "SUBSTANCE_PART",
++        null,
++        "ακανθος αιγυπτια",
++        "καρπος"
+       ]
+     ],
+     [
+@@ -190,7 +176,7 @@       null,
+       null,
+       "ακανθος",
+-      "αιγυπτος",
++      null,
+       [
+         "UNSPECIFIED",
+         null,
+@@ -214,11 +200,11 @@     ],
+     [
+       "SUBSTANCE",
+-      "αραβικος",
+-      null,
+-      null,
+-      null,
+-      "αραβια",
++      "αραβικη",
++      null,
++      null,
++      null,
++      null,
+       [
+         "UNSPECIFIED",
+         null,
+@@ -232,7 +218,7 @@       "ακανθος αιγυπτια",
+       "καρπος",
+       null,
+-      "αιγυπτος",
++      null,
+       [
+         "UNSPECIFIED",
+         null,
+@@ -246,7 +232,7 @@       "ακανθος αιγυπτια",
+       "ριζα",
+       null,
+-      "αιγυπτος",
++      null,
+       [
+         "UNSPECIFIED",
+         null,
+

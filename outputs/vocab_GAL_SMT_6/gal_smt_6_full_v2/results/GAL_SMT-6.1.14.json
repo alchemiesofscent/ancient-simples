@@ -1,0 +1,144 @@
+{
+  "source_id": "GAL_SMT-6.1.14",
+  "terms": [
+    {
+      "label": "PART",
+      "display": "ῥίζα",
+      "normalized": "ριζα",
+      "lemma_gr": "ῥίζα",
+      "lemma_normalized": "ριζα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "PART",
+      "display": "φύλλα",
+      "normalized": "φυλλα",
+      "lemma_gr": "φύλλον",
+      "lemma_normalized": "φυλλον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀτρέμα",
+      "normalized": "ατρεμα",
+      "lemma_gr": "ἀτρέμως",
+      "lemma_normalized": "ατρεμως",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.65,
+      "lemma_confidence": 0.5
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικὴν",
+      "normalized": "διαφορητικην",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δύναμιν",
+      "normalized": "δυναμιν",
+      "lemma_gr": "δύναμις",
+      "lemma_normalized": "δυναμις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερής",
+      "normalized": "λεπτομερης",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.75,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "τμητικὴ",
+      "normalized": "τμητικη",
+      "lemma_gr": "τμητικός",
+      "lemma_normalized": "τμητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικὴ",
+      "normalized": "ξηραντικη",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.9,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἄκανθος",
+      "normalized": "ακανθος",
+      "lemma_gr": "ἄκανθος",
+      "lemma_normalized": "ακανθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μελάμφυλλον",
+      "normalized": "μελαμφυλλον",
+      "lemma_gr": "μελάμφυλλον",
+      "lemma_normalized": "μελαμφυλλον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "παιδέρωτα",
+      "normalized": "παιδερωτα",
+      "lemma_gr": "παιδέρωτα",
+      "lemma_normalized": "παιδερωτα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.75,
+      "lemma_confidence": 0.4
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἡ δὲ ῥίζα ξηραντικὴ",
+      "evidence_normalized": "η δε ριζα ξηραντικη",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ακανθος",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.85
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+# Vocab extractor prompt
+
+```prompt
+
+## Prompt (paste into LLM system/user message as-is)
+
+You are an extraction agent for the Ancient Simples Project. Read the input text (Ancient Greek, possibly with TEI tags) and extract candidate terms relevant to ancient pharmacy/science. Output must be strictly valid JSON (no commentary).
+
+### Labels (choose exactly one per term)
+- SUBSTANCE
+- SUBSTANCE_PART
+- PART
+- PREPARATION
+- PROCESS
+- TOOL_CONTAINER
+- CONDITION
+- QUALITY_PROPERTY
+- APPLICATION_SITE
+- ADMINISTRATION
+- PLACE
+
+### Exclusions (hard)
+- Ignore teiHeader metadata, page/line markers, and TEI-only tokens.
+- Exclude function words (articles, particles, conjunctions, pronouns), numbers, and single-character tokens.
+- Exclude generic discourse verbs unless part of a technical expression: εἰμί, γίγνομαι, λέγω, δοκέω.
+- Exclude generic anatomy containers as APPLICATION_SITE unless modified by a specific anatomical term: μόριον, μέρος, σῶμα.
+- Exclude culinary accompaniment/food terms unless clearly used as medicinal substances/remedies.
+
+### Normalization rules (mandatory)
+For every term provide:
+- `display`: representative Greek surface form from the text
+- `normalized`: lowercase + strip accents/breathings ONLY; preserve iota subscripts; keep Greek script (no transliteration)
+If multiword, normalize each word and join with single spaces.
+
+### Lemma rules (mandatory)
+For every term provide:
+- `lemma_gr`: best lemma candidate in polytonic Greek
+  - nouns/adjectives: nominative singular
+  - verbs (PROCESS/ADMINISTRATION): present infinitive if confident; otherwise dictionary headword
+- `lemma_normalized`: apply the same normalization to lemma_gr
+- `lemma_confidence`: 0.0–1.0 confidence that lemma_gr is correct
+
+### Label examples (illustrative; do not restrict extraction to these)
+SUBSTANCE (materials/ingredients/vehicles; includes bodily substances like καταμήνια when treated as substances)
+- Examples: μανδραγόρα, ἑλλέβορος, πέπερι, ὕδωρ, ὄξος, ἅλμη, θάλαττα, ψιμμύθιον, καταμήνια
+- Rule: could be a materia medica headword.
+
+SUBSTANCE_PART (a specific part of a specific substance; keep specificity)
+- Examples (shape): “ἀμπέλου ἀγρίας οἱ βότρυες …” → substance=ἀμπελος ἀγρια, part=βότρυς
+- Rule: if a PART term is explicitly attached to a particular substance (genitive-of, “of X”, or clear attachment in the clause), emit SUBSTANCE_PART rather than a bare PART.
+- Output requirement: set `substance_lemma_normalized` and `part_lemma_normalized` (both non-null) and set the generic `lemma_normalized` to "" (empty string).
+
+PART (physical parts of a substance; not produced by a procedure)
+- Examples: ῥίζα, φύλλον, σπέρμα, φλοιός, ἄνθος (botanical), καρπός, βλαστός
+- Rule: answers “which part of the substance?” Use PART only if the substance is not clearly identifiable in the same clause/window.
+
+PREPARATION (products produced by procedures)
+- Examples: ἀφέψημα, χυμός, τέφρα/σποδός, κηρωτή, κατάπλασμα, ἄλειμμα
+- Rule: if you can ask “how was this made?”, it is a PREPARATION.
+
+PROCESS (hands-on preparation/application operations)
+- Examples: μίγνυμι, τήκω, ἕψω, διηθέω, καταθραύω, ἐπιτίθημι, ἐπαλείφω, βρέχω, καταντλέω, φρύγειν
+- Rule: what the practitioner does to make/apply a remedy. Exclude generic effect predictions unless framed as instructions.
+
+ADMINISTRATION (route-of-use actions by the patient)
+- Examples: ἐσθίειν, πίνειν, καταπίνειν, λαμβάνειν (when “take a drug”)
+- Rule: denotes how the remedy is taken/received.
+
+TOOL_CONTAINER (implements/vessels)
+- Examples: ἀγγεῖον, θυεία, σπόγγος, ἔριον, κεράμιον
+
+CONDITION (diseases/clinical states; includes κεφαλαλγής when used as a named adverse state)
+- Examples: πυρετός, φλεγμονή, ἕλκος, ἐρυσίπελας, καῦμα, κεφαλαλγία/κεφαλαλγής
+
+QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
+- Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+
+APPLICATION_SITE (bodily target site where remedy is applied/acts)
+- Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
+- Rule: where applied or where it acts in the body.
+
+PLACE (place names; provenance/varietal qualifiers)
+- Examples: Παρνασσός
+- Rule: toponyms used as provenance, varietal, or source qualifiers (do not treat as SUBSTANCE).
+
+Disambiguation reminders:
+- PART ≠ APPLICATION_SITE (ῥίζα is PART; δέρμα/κεφαλή are APPLICATION_SITE)
+- SUBSTANCE ≠ PREPARATION (μανδραγόρα is SUBSTANCE; ἀφέψημα μανδραγόρας is PREPARATION)
+- Adjectives are usually QUALITY_PROPERTY unless they clearly denote a CONDITION (e.g., κεφαλαλγής in therapeutic context).
+
+### Galenic quality tracking (mandatory)
+Additionally, extract statements about the four primary qualities, including:
+- explicit degrees (1–4)
+- intensity / balance statements (even without degrees)
+
+Axes:
+- HOT (θερμός / θερμαίνειν / θερμότης)
+- COLD (ψυχρός / ψύχειν / ψυχρότης)
+- DRY (ξηρός / ξηραίνειν / ξηρότης / ξηραντικός)
+- WET (ὑγρός / ὑγραίνειν / ὑγρότης)
+
+Detect explicit degrees 1–4 when the text uses phrases like:
+- “κατὰ τὴν πρώτην/δευτέραν/τρίτην/τετάρτην …” especially with ἀπόστασις or equivalent degree language.
+
+Map:
+- πρώτην → 1
+- δευτέραν → 2
+- τρίτην → 3
+- τετάρτην → 4
+
+Detect intensity/balance (set `intensity`, even if `degree` is null):
+- moderate: μετρίως, συμμετρῶς → intensity="moderate"
+- balanced: ἐν τῷ μέσῳ καθέστηκε → intensity="balanced"
+- balanced between WET and DRY: σύμμετος/σύμμετρος … κατὰ ὑγρότητα καὶ ξηρότητα → output TWO records (axis=WET and axis=DRY), both intensity="balanced", same evidence snippet
+- weak: οὐκ ἰσχυρῶς → intensity="weak"
+- strong: σφοδρῶς → intensity="strong"
+- extreme: ἄκρως → intensity="extreme"
+If multiple strength markers occur, choose the strongest that applies to the same axis.
+
+Hedges:
+- If the degree phrase contains “που” or similar approximation cues, record hedge="που" and lower confidence slightly.
+
+Axis assignment:
+- If “θερμ-” terms occur in the same clause/window as the degree phrase, record axis=HOT.
+- If “ψυχ-” terms occur, axis=COLD.
+- If “ξηρ- / ξηραντ-” terms occur, axis=DRY.
+- If “ὑγρ-” terms occur, axis=WET.
+If multiple axes are explicitly coordinated (e.g., “θερμὸς … καὶ ξηραντικὸς κατὰ τὴν τρίτην…”), output one record per axis with the same degree.
+
+Applies-to linking:
+- If the subject is clearly a SUBSTANCE/PREPARATION (e.g., “ἄγνος… θερμὸς…”) set applies_to.kind accordingly and set applies_to.lemma_normalized to that term’s lemma_normalized.
+- If the clause is specifically about a SUBSTANCE PART (e.g., ῥίζα/πόα/σπέρμα/φλοιός/φύλλον/ἄνθος/etc. of a substance), set applies_to.kind="SUBSTANCE_PART" and include:
+  - applies_to.substance_lemma_normalized
+  - applies_to.part_lemma_normalized
+- If unclear, set applies_to.kind="UNSPECIFIED".
+Always include all applies_to lemma fields; set unused fields to null.
+
+Place-qualifying variants:
+- Extract place names as PLACE terms.
+- If a quality statement is explicitly tied to a place-qualified variant/provenance (e.g., a substance “from/at” a named place, or a place-epithet modifying the subject), set qualities[].variant_place_lemma_normalized to that place’s lemma_normalized; otherwise set it to null.
+
+Do NOT treat degree ordinals as separate terms.
+
+### Multiword SUBSTANCE extraction (mandatory)
+When a substance head noun is modified by a qualifier yielding a distinct material/variety (MWE), ALWAYS emit:
+1) the multiword term (is_multiword=true) as SUBSTANCE
+2) the head noun alone as SUBSTANCE
+
+Examples of MWEs:
+- κίκινον ἔλαιον (castor oil) → emit MWE “κίκινον ἔλαιον” AND head “ἔλαιον”
+- μῆλον κυδώνιον (quince) → emit MWE “μῆλον κυδώνιον” AND head “μῆλον”
+
+For MWEs, set `head_lemma_normalized` to the head noun’s lemma_normalized. If not an MWE, set head_lemma_normalized=null.
+
+Qualifier-only rule:
+- If only the qualifier appears without the head noun, do NOT treat it as standalone SUBSTANCE unless it is clearly used as a headword/substance name in context.
+- If you include it anyway, lower confidence substantially and prefer omitting unless clearly warranted.
+
+### Deduplication (hard)
+- Deduplicate within the chunk by (label, lemma_normalized). If lemma_normalized is empty, deduplicate by (label, normalized).
+- Do not output the same lemma_normalized more than once under the same label.
+- Do not output the same lemma_normalized under multiple labels unless unavoidable; if unavoidable, choose the best label and lower confidence.
+
+### Output format (strict JSON only)
+{
+  "source_id": "<SOURCE_ID>",
+  "terms": [
+    {
+      "label": "SUBSTANCE|SUBSTANCE_PART|PART|PREPARATION|PROCESS|TOOL_CONTAINER|CONDITION|QUALITY_PROPERTY|APPLICATION_SITE|ADMINISTRATION|PLACE",
+      "display": "<GREEK_SURFACE>",
+      "normalized": "<NORMALIZED_SURFACE>",
+      "lemma_gr": "<GREEK_LEMMA_OR_EMPTY>",
+      "lemma_normalized": "<NORMALIZED_LEMMA_OR_EMPTY>",
+      "is_multiword": true|false,
+      "head_lemma_normalized": "<NORMALIZED_HEAD_LEMMA (or null if not an MWE)>",
+      "substance_lemma_normalized": "<SUBSTANCE_LEMMA_NORMALIZED (or null)>",
+      "part_lemma_normalized": "<PART_LEMMA_NORMALIZED (or null)>",
+      "confidence": 0.0-1.0,
+      "lemma_confidence": 0.0-1.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT|COLD|DRY|WET",
+      "degree": 1|2|3|4|null,
+      "intensity": "none|weak|moderate|balanced|strong|extreme",
+      "hedge": "none|που|approx",
+      "evidence_display": "<short Greek snippet>",
+      "evidence_normalized": "<normalized snippet>",
+      "variant_place_lemma_normalized": "<PLACE_LEMMA_NORMALIZED (or null)>",
+      "applies_to": {
+        "kind": "SUBSTANCE|PART|PREPARATION|SUBSTANCE_PART|UNSPECIFIED",
+        "lemma_normalized": "<LEMMA_NORMALIZED (or null)>",
+        "substance_lemma_normalized": "<SUBSTANCE_LEMMA_NORMALIZED (or null)>",
+        "part_lemma_normalized": "<PART_LEMMA_NORMALIZED (or null)>"
+      },
+      "confidence": 0.0-1.0
+    }
+  ]
+}
+
+Sorting:
+- Sort `terms` by label, then lemma_normalized (or normalized if lemma missing).
+- Sort `qualities` by axis, then degree, then intensity.
+
+Deduplication refinements:
+- For label=SUBSTANCE_PART, deduplicate by (substance_lemma_normalized, part_lemma_normalized) and do NOT collapse distinct parts across different substances.
+
+Now process the following input.
+
+SOURCE_ID: <paste stable chunk id>
+TEXT:
+<paste chunk here>
+
+---
+
+## Examples (expected behavior)
+
+### Example 1: Degree extraction (HOT + DRY, degree 3 with hedge)
+
+Input snippet:
+“ἄγνος … θερμὸς μὲν ἐστι καὶ ξηραντικὸς κατὰ τὴν τρίτην που ἀπόστασιν …”
+
+Expected `qualities` records (shape):
+- HOT degree=3 hedge=που applies_to=αγνος
+- DRY degree=3 hedge=που applies_to=αγνος
+
+### Example 2: Administration
+
+Input snippet:
+“οὐ μόνον ἐσθιόμενα καὶ πινόμενα …”
+
+Expected:
+- ADMINISTRATION: ἐσθίειν
+- ADMINISTRATION: πίνειν
+
+### Example 3: Parts vs sites
+
+Input snippet:
+“τὰ φύλλα καὶ τὸ σπέρμα … ἄφυσος κατὰ γαστέρα …”
+
+Expected:
+- PART: φύλλον, σπέρμα
+- APPLICATION_SITE: γαστήρ
+- QUALITY_PROPERTY: ἄφυσος (aflatulent)
+
+
+---
+
+## CONTEXT (for anaphora; use only if explicitly signalled in TEXT)
+CONTEXT_PREV_SOURCE_ID: GAL_SMT-9.1.1
+CONTEXT_PREV_TEXT:
+δυοῖν σημαινομένων πραγμάτων ἐκ τοῦ τῆς γῆς ὀνόματος ἀναγκαῖόν ἐστιν διαστεῖλαι πρότερον αὐτὰ σαφηνείας ἕνεκα τῶν λεχθησομένων. τὸ μὲν οὖν ἕτερον αὐτῶν σύνηθές ἐστιν ἅπασι τοῖς Ἕλλησιν. ὅταν τε γάρ σπείρουσιν πυροὺς ἢ κριθὰς ἤ τι τῶν ἄλλων σπερμάτων, ἃ δημήτρια καλεῖται, μετρίως ὑγρὰν εἶναι χρῆναὶ φασι τὴν γῆν. ὅταν τε φυτεύουσιν ἀμπέλους ἢ συκὰς ἢ ἐλαίας ἤ τι τῶν ἄλλων δένδρων, φυλάττεσθαι κελεύουσι τήν τ' ἄνικμον ἐσχάτως καὶ ξηρὰν τήν θ' ὑγρὰν καὶ πηλώδη. καὶ γάρ οὖν ὀνομάζουσι πηλὸν τὴν γῆν ὑγρῷ φυραθεῖσαν, οἵ τε τὰ γεωργικὰ γράψαντες ἐν ταῖς τῶν χωρίων διαφοραῖς τὰ τε μελάγγαια καὶ ἀργιλώδη καὶ ψαμμώδη διαστελλόμενα λέγουσιν. καλοῦσι δὲ καὶ λιπαρὰν γῆν, ἐξ ἧς ὁ πηλὸς γίνεται γλίσχρος. ἑτέραν τε κατὰ τοὐναντίον τῇδε διακειμένην, ἀλιπῆ καὶ ψαθυρὸν, ὡς ἂν εἴποι τις, ἐργαζομένη τὸν πηλόν. ἓν μὲν δὴ τοῦτο σημαινόμενόν ἐστι τοῦ τῆς γῆς ὀνόματος ἅπασι σύνηθες. ἕτερον δὲ μόνον τοῖς φιλοσόφοις, ἐπειδὴ λέγωσι τῶν σωμάτων στοιχεῖα γῆν καὶ ὕδωρ καὶ ἀέρα καὶ πῦρ. τὸ γάρ ξηρὸν ἐσχάτως σῶμα καὶ ψυχρὸν ὀνομάζουσι γῆν. κατὰ τούτους οὖν οὐδὲν μὲν τῶν συνθέτων τούτων σωμάτων ἐστὶν ἡ στοιχειώδης γῆ, πλεῖστον μέντοι τῆς γῆς ἔχειν αὐτὰ φασιν, οἷον τόν τε ἀδάμαντα καὶ τὰς πέτρας, καὶ ὅσῳ γ' ἂν ὦσι σκληρότερα τὸ σῶμα, τοσούτῳ μᾶλλον αὐτὰ εἶναὶ φασι γεωδέστερα ἔμπαλιν τοῖς γεωργοῖς. οὐ γάρ τὴν σκληροτέραν σύστασιν τῶν σωμάτων ὀνομάζουσιν οὗτοι γεωδεστέραν, ἀλλὰ λίθους μὲν καὶ πέτρας τὰ τοιαῦτα καλοῦσιν ἀνεπιτηδειότατα πρὸς γεωργίαν. ἀκριβεστάτην δὲ γῆν εἶναὶ φασι τὴν πορρωτάτην τῇ συστάσει τῆς πέτρας, ὅπου γε καὶ τὴν ἀργιλώδη τε καὶ τὴν ψαμμώδη μέμφονται πρὸς τὰ πλεῖστα. κατὰ μὲν οὖν τὸ παρὰ τοῖς φιλοσόφοις σημαινόμενον αἱ τῆς γῆς διαφοραὶ τρισὶν ὁρισθήσονται γένεσιν. ἔστι γάρ τὸ μέν τι λίθος αὐτῆς, τὸ δὲ μεταλλευτόν τι σῶμα, τὸ δὲ τρίτον ἡ γεωργουμένη γῆ, διαφωνίας γεγονυίας παρ' αὐτοῖς περὶ τῶν χεομένων μεταλλευτῶν σωμάτων, οἷον χαλκοῦ καὶ κασσιτέρου καὶ μολύβδου. ταῦτα γάρ ἔνιοὶ φασιν οὐ γῆς, ἀλλ' ὕδατος ἔχειν τὸ πλέον. οἵ γε μὴν ἄλλοι πάντες ἄνθρωποι γῆν ὀνομάζουσιν ἐκείνην μόνην τὴν οὐσίαν, ἥτις ὑγρῷ φυραθεῖσα πηλὸς γίνεται. περὶ ἧς κᾀγὼ νῦν ἔγνωκα τὰς διαφορὰς εἰπεῖν, ἐκεῖνο μόνον ἔτι προσθεὶς, ὡς ἡ προειρημένη τομὴ τῶν γεωδῶν σωμάτων εἴς τε λίθους καὶ τὰ μεταλλευόμενα καὶ τὴν γεωργουμένην γῆν ἄνευ τῶν φυσικῶν ἰδίως ὀνομαζομένων σωμάτων εἴρηται. τούτων δὲ προσιόντων καὶ τὰ ξύλα πάντα καὶ καρπῶν μόρια πολλὰ, καθάπερ καὶ ζώων, ὀνομασθήσεται γεώδη τὴν οὐσίαν εἶναι. καρπῶν μὲν μόρια, πυρῆνες ἐλαιῶν καὶ γίγαρτα σταφυλῶν καὶ καρύων λέμματα καὶ κώνων, ἕτερὰ τε πολλὰ τοιαῦτα, τῶν ζώων δὲ τὰ τ' ὀστέα καὶ τὰ κέρατα καὶ οἱ ὀδόντες. ἀλλὰ περὶ μὲν τῶν ἐν τοῖς φυτοῖς μορίων ὅσα γεώδη καὶ σκληρὰ, τὸ μέν ποὺ τι καὶ πρόσθεν εἴρηται, τὸ δ' ἂν καὶ νῦν ῥηθείη· περὶ δὲ τῶν ἐν τοῖς ζώοις ἐφεξῆς εἰρήσεται, πρότερον διελθόντος μου τὰ κατὰ τὴν γῆν εἴδη. καλεῖν μὲν γάρ ἔξεστὶ σοι καὶ διαφορὰς αὐτὰ καὶ εἴδη καὶ γένη. λέγω δὴ ταῦτα λίθους τε καὶ τὰ μεταλλευτὰ σώματα, καὶ τὴν εἰς πηλὸν λυομένην γῆν, καὶ πρῶτόν γε τὰς διαφορὰς ἐρῶ τῆς ὑπὸ πάντων Ἑλλήνων ὀνομαζομένης γῆς, ἥτις ἔχει κοινὸν ὕδατι πλησιάσασα, διαλύεσθαι παραχρῆμα καὶ πηλὸν γίνεσθαι. τὸ γάρ τῆς παρὰ τοῖς φιλοσόφοις οὕτω καλούμενον οὐ κοινὸν ἅπασιν, ἀλλ' ἐκείνοις μόνοις σύνηθες ἔχει τοὶ σημαινόμενον.
+
+
+---
+
+## INPUT (authoritative)
+Use the following SOURCE_ID and TEXT (ignore any placeholders above).
+
+SOURCE_ID: GAL_SMT-9.1.2
+TEXT:
+γῆν ἔφην ὀνομάζεσθαι σύνηθες ἅπασιν Ἕλλησιν, ἥτις ἂν εἰς τὸ ὑγρὸν ἐμβληθεῖσα παραχρῆμα διαλύεταὶ τε καὶ πηλὸς γίνεται. ταύτης οὖν ἡ μέν τίς ἐστιν ἣν γεωργοῦσιν οἱ ἄνθρωποι, διαφορὰς ἔχουσὰ τινας μὲν κατὰ τὸν ἴδιον λόγον ἐν τῷ λιπαρὰ τε εἶναι καὶ γλίσχρος, ἥτις πάντως ἐστὶ καὶ μέλαινα τὴν χρόαν. ἡ δὲ ψαθυρωτέρα τε καὶ ἀλιπὴς, ἣν καλοῦσιν ἄργιλον, οὖσα καὶ ἥδε λευκοτέρα πως. ἐναντιώταται μὲν αὗται διαφοραί· αἱ δ' ἄλλαι μεταξὺ τούτων, ἤτοι τῇ ἑτέρᾳ πλησιάζουσαι μᾶλλον ἢ τῇ ἑτέρᾳ, τινὲς δὲ κᾀν τῷ μέσῳ δοκεῖν ἀκριβῶς εἶναι, τὴν ἴσην ἀμφοῖν ἀφεστηκυῖαι διάστασιν. αἱ δ' ἐξ ἐπιμιξίας ἑτερογενῶν σωμάτων διαφοραὶ τῆς γῆς εἰσι, καθὸ λιθώδεις τε καὶ ψαμμώδεις ὑπάρχουσιν, καὶ χωρίζουσὶ γε τῶν τοιούτων τὴν μεμιγμένην οὐσίαν, ἀναδεύσαντες καὶ ἀναφυράσαντες ὕδατι πολλῷ, μέχρι τοῦ πᾶν ὑγρὸν ἐργάσασθαι. καθισταμένου γάρ τούτου τὸ μὲν τῆς λιθώδους τε καὶ ψαμμώδους ἐμφερόμενον ὑφιζάνει πᾶν, ἐποχεῖται δὲ ἡ ἀκριβὴς γῆ. τοιοῦτον γάρ τι καὶ κατὰ τὴν Λημνίαν γίνεται γῆν, ἣν μίλτον ὀνομάζουσιν ἔνιοι Λημνίαν. καὶ τινες ἄλλοι σφραγῖδα Λημνίαν, διὰ τὴν ἐπιβαλλομένην αὐτῇ σφραγῖδα τῆς Ἀρτέμιδος ἱεράν. ταύτην γάρ τοι τὴν γῆν ἡ ἱέρεια λαμβάνουσα μετὰ τινος ἐπιχωρίου τιμῆς, οὐ ζώων θυομένων, ἀλλὰ πυρῶν καὶ κριθῶν ἀντιδιδομένων τῷ χωρίῳ, κομίζει μὲν εἰς τὴν πόλιν ἀναφυράσασα ὕδατι καὶ πηλὸν ὑγρὸν ἐργασαμένη καὶ τοῦτον ταράξασα σφοδρῶς, εἶτ' ἐάσασα καταστῆναι, πρῶτον μὲν ἀφαιρεῖ τὸ ἐπιπολῆς ὕδωρ, εἶθ' ὑπ' αὐτῷ τὸ λιπαρὸν τῆς γῆς λαβοῦσα καὶ μόνον ἀπολιποῦσα τὸ ὑφιζηκὸς λιθῶδές τε καὶ ψαμμῶδες, ὅπερ καὶ ἄχρηστόν ἐστιν ἄχρι τοσούτου ξηραίνει τὸν λιπαρὸν πηλὸν, ἄχρις ἂν εἰς σύστασιν ἀφίκηται μαλακοῦ κηροῦ, καὶ τούτου λαμβάνουσα μόρια σμικρὰ τὴν ἱερὰν τῆς Ἀρτέμιδος ἐπιβάλλει σφραγῖδα, κἄπειτα πάλιν ἐν σκιᾷ ξηραίνει, μέχρις ἂν ἀκριβῶς ἄνικμος ἀποτελεσθῇ, καὶ γένηται τοῦτο δὴ τὸ γινωσκόμενον ἰατροῖς ἅπασι φάρμακον ἡ Λημνία σφραγίς. οὕτω γάρ αὐτὴν ὀνομάζουσιν, ὡς ἔφην, ἔνιοι διὰ τὴν ἐπιβαλλομένην αὐτῇ σφραγῖδα, καθάπερ γε καὶ διὰ τὴν χρόαν ἔνιοι Λημνίαν μίλτον. ἔχει μὲν οὖν τὴν χρόαν τὴν αὐτὴν τῇ μίλτῳ, διαφέρει δ' αὐτῆς τῷ μὴ μολύνειν ἁπτομένην, καθάπερ ἐκείνην, καὶ κατὰ γε τὸν λόφον ἐν τῇ Λήμνῳ τὸν ὅλον ὄντα κιρρὸν τῇ χρόᾳ, καθ' ὃν οὔτε δένδρον ἐστὶν οὔτε πέτρα οὔτε φυτὸν, μόνη δ' ἡ τοιαύτη γῆ. τρεῖς δ' αὐτῆς εὑρίσκονται διαφοραί· μία μὲν ἡ προειρημένη τῆς ἱερᾶς γῆς, ἧς οὐδεὶς ἄλλος ἅπτεται πλὴν τῆς ἱερείας. δευτέρα δ' ἑτέρα τῆς ὄντως μίλτου, χρῶνται δ' οἱ τέκτονες αὐτῇ μάλιστα. τρίτη δ' ἡ τῆς ῥυπούσης, ᾗ χρῶνται τῶν πλυνόντων ὀθόνας τε καὶ ἐσθῆτας οἱ βουληθέντες. ἀνεγνωκὼς δὲ ἐγὼ παρὰ τε Διοσκορίδῃ καὶ ἄλλοις τισὶ μίγνυσθαι τράγειον αἷμα τῇ Λημνίᾳ γῇ, κᾀκ τοῦ διὰ μίξεως ταύτης γενομένου πηλοῦ τὴν ἱέρειαν ἀναπλάττειν τε καὶ σφραγίζειν ἃς ὀνομάζουσι Λημνίας σφραγῖδας, ὠρέχθην αὐτὸς ἱστορῆσαι τὴν συμμετρίαν τῆς μίξεως. ὥσπερ οὖν εἰς Κύπρον ἕνεκα τῶν ἐν αὐτῇ μετάλλων, εἴς τε τὴν κοίλην Συρίαν, μόριον οὖσαν τῆς Παλαιστίνης, ἕνεκεν ἀσφάλτου καὶ τινων ἄλλων κατ' αὐτὴν ἀξίων ἱστορίας ἐπορεύθην, οὕτως καὶ εἰς Λῆμνον οὐκ ὤκνησα πλεῦσαι, θεασόμενος ὁπόσον μίγνυται τοῦ αἵματος τῇ γῇ. καὶ τὸ γε δεύτερον ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας, ἔπλευσα πρότερον ἀπὸ Τρωάδος Ἀλεξανδρείας εἰς Λῆμνον, ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου, συνθεμένῳ τῷ ναυκλήρῳ παραβάλλειν πρότερον τῇ Λήμνῳ· ὁ δὲ προσέσχε μὲν, οὐ μὴν ᾗ γ' ἐχρῆν πόλει. τὴν ἀρχὴν γάρ οὐδ' ἠπιστάμην δύο πόλεις εἶναι κατὰ τὴν νῆσον, ἀλλὰ ᾤμην, ὡς Σάμον καὶ Χίον καὶ Κῶ Ἄνδρον τε καὶ Τῆνον καὶ πάσας τὰς κατὰ τὸ Αἰγαῖον, οὕτω καὶ τὴν Λῆμνον ὁμώνυμον ἔχειν πόλιν ὅλῃ τῇ νήσῳ μίαν. ὡς δὲ ἀποβὰς τῆς νεὼς, ἔγνων Μυρίναν μὲν ὀνομάζεσθαι τὴν πόλιν, εἶναι δ' οὔτε κατὰ Φιλοκτήτην οὔτε κατὰ τὸ ἱερὸν τοῦ Ἡφαίστου λόφον ἐν τῇ χώρᾳ τῆς πόλεως ἐκείνης, ἀλλ' ἐν ἑτέρᾳ τῇ Ἡφαιστιάδι καλουμένῃ, καὶ οὐδ' ἐγγὺς εἶναι τὴν πόλιν ἐκείνην τῆς Μυρίνης, ὅ τε ναύκληρος οὐκ ἠδύνατὸ με περιμένειν, ἀνεβαλλόμην εἰσαῦθις, ὅταν ἀπὸ Ῥώμης εἰς Ἀσίαν ἀφίκωμαι, θεάσασθαι τὴν Ἡφαιστιάδα. καὶ μοι τοῦτ' ἐπράχθη, καθάπερ ἤλπισὰ τε καὶ προὐθέμην. ὡς γάρ ἀπὸ τῆς Ἰταλίας διαβαλὼν εἰς τὴν Μακεδονίαν καὶ σχεδὸν ὅλην αὐτὴν ὁδοιπορήσας ἐν Φιλίπποις ἐγενόμην, ἥπερ ἐστὶν ὅμορος τῇ Θρᾴκῃ πόλις, ἐντεῦθεν ἐπὶ τὴν πλησίον θάλατταν εἴκοσιν ἐπὶ τοῖς ἑκατὸν ἀπέχουσαν στάδια κατελθὼν, ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους, ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους, εἶτ' αὖθις ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρωάδα. καὶ διὰ τοῦτ' ἐξεπίτηδες ἔγραψα περὶ τε τοῦ πλοῦ καὶ τῶν σταδίων, ὅπως εἴ τις ἐθέλῃ θεάσασθαι καὶ αὐτὸς ὁμοίως ἐμοὶ τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς, οὕτως παρασκευάζοιτο πρὸς τὸν πλοῦν. ἐν γάρ τοι τῇ ὅλῃ νήσῳ τῇ Λήμνῳ, κατὰ μὲν τὸ πρὸς ταῖς ἀνατολαῖς μέρος αὐτῆς ἐστιν Ἡφαιστιάς, κατὰ δὲ τὸ πρὸς ταῖς δυσμαῖς ἡ Μυρίνα. καὶ τὸ γε ὑπὸ τοῦ ποιητοῦ λεγόμενον ἐπὶ τοῦ Ἡφαίστου, κάππεσεν ἐν Λήμνῳ, διὰ τὴν φύσιν τοῦ λόφου δοκεῖ μοι τὸν μῦθον ἐπίστασθαι. φαίνεται γάρ ὁμοιότατος κεκαυμένῳ κατὰ γε τὴν χρόαν καὶ διὰ τὸ μηδὲν ἐν αὐτῷ φύεσθαι. εἰς τοῦτον οὖν τὸν λόφον ἥ τε ἱέρεια παραγενομένη, καθ' ὃν ἐγὼ καιρὸν ἐπέβην τῆς νήσου, καὶ τινα πυρῶν τε καὶ κριθῶν ἀριθμὸν ἐμβάλλουσα τῇ γῇ καὶ ἄλλα τινὰ ποιήσασα κατὰ τὸν ἐπιχώριον σεβασμὸν, ἐπλήρωσεν μὲν ὅλην ἅμαξαν τῆς γῆς. κομίσασα δ' εἰς τὴν πόλιν, ὡς εἶπον ἀρτίως, ἐσκεύασε τὰς πολυθρυλήτους Λημνίας σφραγῖδας. ἔδοξεν οὖν μοι πυθέσθαι μὴ τι πρότερόν ποτε τράγειον ἢ αἴγειον αἷμα τῇ γῇ ταύτῃ μιγνύμενον ἐν ἱστορίᾳ παρειλήφασιν. ἐφ' ᾗ πεύσει πάντες οἱ ἀκούσαντες ἐγέλασαν, οὐχ οἱ τυχόντες ἄνδρες ὄντες, ἀλλὰ καὶ πάνυ πεπαιδευμένοι τὰ τ' ἄλλα καὶ τὴν ἐπιχώριον ἱστορίαν ἅπασαν. ἀλλὰ καὶ βιβλίον ἔλαβον παρὰ τινος αὐτῶν, γεγραμμένον ὑπὸ τινος τῶν ἐπιχωρίων ἀνδρῶν ἔμπροσθεν, ἐν ᾧ τὴν χρῆσιν ἅπασαν ἐδίδασκε τῆς Λημνίας γῆς, ὅθεν οὐκ ὤκνησα κᾀγὼ πειραθῆναι τοῦ φαρμάκου, δισμυρίας λαβὼν σφραγῖδας. ἐχρῆτο δὲ καὶ αὐτὸς ὁ δοὺς τὸ βιβλίον, ἐν τοῖς πρώτοις ἀριθμούμενος τῆς Ἡφαιστιάδος, εἰς πολλὰ τῷ φαρμάκῳ. καὶ γάρ ἐπὶ τραυμάτων καὶ παλαιῶν καὶ δυσεπουλώτων ἐχεοδήκτων τε καὶ ὅλως θηριοδήκτων, ἐπὶ τε τῶν θανασίμων φαρμάκων, οὐ προδιδοὺς μόνον, ἀλλὰ καὶ ἐπιδιδοὺς, ἐχρῆτο τῇ σφραγῖδι. ἔφασκε δὲ καὶ τοῦ διὰ τῶν ἀρκευθίδων φαρμάκου πεῖραν ἔχειν, εἰς ὃ καὶ τῆς Λημνίας ἐμβάλλεται κινοῦντος ἔμετον, εἴ τις ἔτι κατὰ τὴν κοιλίαν ὄντος τοῦ θανασίμου φαρμάκου πίοι τὸ ἀλεξητήριον. ἀλλὰ τούτου μὲν καὶ ἡμεῖς ἔχομεν πεῖραν ἐπὶ τε λαγωοῦ θαλαττίου καὶ κανθαρίδων, ὑποπτευσάντων μὲν εἰληφέναι τι τοιοῦτον τῶν ἀνθρώπων, ἐμεσάντων δ' αὐτίκα πᾶν ἐπὶ τῷ διὰ τῆς Λημνίας σφραγῖδος φαρμάκῳ, καὶ μηδὲν μετὰ ταῦτα παθόντων σύμπτωμα τῶν ἑπομένων λαγωῷ τε καὶ κανθαρίσι, καίτοι τῆς δόσεως τῶν ὀλεθρίων φαρμάκων ἐλεγχθείσης. εἰ δὲ καὶ πρὸς τἄλλα θανάσιμα φάρμακα, ταῦτα δὴ τὰ δηλητήρια καλούμενα, τὴν αὐτὴν δύναμιν ἔχει τὸ διὰ τῶν ἀρκευθίδων καὶ τῆς Λημνίας φάρμακον, ἐμοὶ μὲν ἄδηλον. ὁ δ' ἐκ τῆς Ἡφαιστιάδος ἐπηγγείλατο μέχρι τοῦ καὶ λυττῶντος κυνὸς ἰᾶσθαι δῆγμα φάσκειν αὐτὴν, πινομένην δι' οἴνου κεκραμένου, κατὰ δὲ τοῦ ἕλκους ἐπιτιθεμένην δι' ὄξους πάνυ δριμέος. ἀλλὰ δι' ὄξους μὲν καὶ τὰ τῶν ἄλλων θηρίων ἔλεγεν αὐτὴν ἰᾶσθαι δήγματα. φύλλων βοτανῶν ἔξωθεν ἐπιτιθεμένων, ἃς ἐμάθομεν ἀντιπεπονθέναι σηπεδόσιν. μάλιστα δ' ἐπῄνει σκόρδιον, εἶτα κενταύριον τὸ λεπτὸν, εἶτα πράσιον. ἐπὶ γε μὴν κακοήθων καὶ σηπεδονωδῶν ἑλκῶν εἴ ποτ' ἐχρησάμην τῇ Λημνίᾳ, μεγάλως ὠφέλησε. ἡ δὲ χρῆσις γίνεται κατὰ τὸ μέγεθος τῆς τοῦ ἕλκους κακίας. τὸ μὲν γάρ δυσῶδες καὶ λίαν πλαδαρόν τε καὶ ῥυπαρὸν, ἀνέχεται δι' ὄξους δριμυτάτου τῆς Λημνίας λελυμένη; εἰς πηλώδη σύστασιν ὁμοίως τοῖς τροχίσκοις, ὧν ἄλλος ἄλλῳ χρῆται, Πολυείδου λέγω καὶ Πασίωνος καὶ Ἄνδρωνος, καὶ τούτῳ τῷ νῦν εἰρημένῳ, προσαγορευομένῳ δὲ Βητινῷ. καὶ γάρ οὗτοι πάντες ἰσχυρῶς ξηραίνοντες ὠφελοῦσι τὰ κακοήθη τῶν ἑλκῶν, ἀνιέμενοι ποτὲ μὲν οἴνῳ γλυκεῖ, ποτὲ δὲ σιραίῳ, ποτὲ δ' οἰνομέλιτι, ποτὲ δὲ τῶν λευκῶν οἴνων ἐνίοις ἢ τῶν κιρρῶν ἢ ξανθῶν, ὡς ἂν ἡ χρεία κελεύῃ. διορισθήσεται γάρ ὑπὲρ τούτων ἐν ἑτέροις. ὡσαύτως δὲ καὶ δι' ὄξους ἀνίενταὶ ποτε, καὶ δι' οἴνου ἢ ὕδατος ἢ ὀξυμέλιτος, ἢ ὀξυκράτου τε καὶ μελικράτου. καὶ ἡ Λημνία δὲ γῆ δι' ἑκάστου τῶν εἰρημένων ἀνιεμένη φάρμακον ἐπιτήδειόν ἐστιν εἴς τε τὴν τῶν προσφάτων τραυμάτων κόλλησιν εἴς τε τὴν τῶν χρονίων ἢ δυσεπουλώτων ἢ κακοήθων ἴασιν. ὡσαύτως δὲ καὶ ἡ ἄλλη πᾶσα φαρμακώδης γῆ. διελέσθαι γάρ δεήσει, καθάπερ ἔμπροσθεν ἀπὸ τῆς στοιχειώδους γῆς, ἐν ᾗ καὶ οἱ λίθοι περιείχοντο τὴν εἰς πηλὸν λυομένην, οὕτω νῦν ἀπὸ τῆς γεωργουμένης τὴν φαρμακώδη. καλέσαι γάρ οὐδὲν χεῖρον οὕτως ᾗ πρὸς τὰς θεραπείας χρώμεθα, καίτοι καὶ τῆς γεωργουμένης ἡ λιπαρὰ χρήσιμος εἰς θεραπείαν ἐστὶν ἁπάντων τῶν ξηρανθῆναι δεομένων μορίων, ὅθεν αὐτῇ κατὰ Ἀλεξάνδρειὰν τε καὶ Αἴγυπτον χρῶνται πολλοὶ μὲν ἰδίᾳ προαιρέσει, πολλοὶ δ' ἐξ ὀνειράτων. εἶδον γοῦν ἐπὶ τῆς Ἀλεξανδρείας ὑδερώδεις τε καὶ σπληνώδεις ἐνίους χρωμένους τῷ πηλῷ τῆς Αἰγυπτίας γῆς. πολλοὶ δὲ καὶ κνήμας καὶ μηροὺς καὶ πήχεις καὶ βραχίονας καὶ νῶτα καὶ πλευρὰς καὶ στέρνα τῷ πηλῷ τῆς γῆς ταύτης χριόμενοι σαφῶς ὠφελοῦντο. κατὰ δὲ τὸν αὐτὸν τρόπον τὰς τε παλαιὰς φλεγμονὰς καὶ τὰ χαῦνα τῶν οἰδημάτων ὀνίνησιν ὁ πηλὸς οὗτος, ὥστ' ἐνίους οἶδα καὶ ὅλην τὴν ἕξιν οἰδαλέους ἐξ αἱμορροΐδων ἀμέτρου κενώσεως γενομένους, ὠφεληθέντας ἐναργῶς. καὶ τινες ἀλγήματα χρόνια κατὰ τι μόριον ἐστηριγμένα τῷ πηλῷ τούτῳ τελέως ἐξιάσαντο, ξηραντικὴν γάρ ἔχει πᾶσα γῆ δύναμιν. ἐπεὶ καὶ φύσει ξηρὸν αὐτῆς ἐστι τὸ σῶμα, καὶ ὅτε γε ἀκριβῶς ᾖ πυρώδους ἄμικτος οὐσίας, ἀδηκτότατα ξηραίνει, συντελεῖ δὲ εἰς τοῦτο αὐτῇ τὸ πεπλύσθαι.

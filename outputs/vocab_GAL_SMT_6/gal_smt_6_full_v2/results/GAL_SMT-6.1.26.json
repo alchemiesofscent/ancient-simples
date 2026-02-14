@@ -1,0 +1,83 @@
+{
+  "source_id": "GAL_SMT-6.1.26",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαίνει",
+      "normalized": "θερμαινει",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.7,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμότητι",
+      "normalized": "θερμοτητι",
+      "lemma_gr": "θερμότης",
+      "lemma_normalized": "θερμοτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.8,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραίνει",
+      "normalized": "ξηραινει",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.75,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀμάρακον",
+      "normalized": "αμαρακον",
+      "lemma_gr": "ἀμάρακον",
+      "lemma_normalized": "αμαρακον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "weak",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει δὲ οὐ σφοδρῶς … ἐν δὲ τῷ ξηραίνειν τῆς δευτέρας.",
+      "evidence_normalized": "ξηραινει δε ου σφοδρως … εν δε τω ξηραινειν της δευτερας.",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αμαρακον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἀμάρακον θερμαίνει μὲν οὐκ ἀγεννῶς … ἐν μὲν τῇ θερμότητι τῆς τρίτης ἐστὶ τάξεως.",
+      "evidence_normalized": "αμαρακον θερμαινει μεν ουκ αγεννως … εν μεν τη θερμοτητι της τριτης εστι ταξεως.",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αμαρακον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

@@ -7,6 +7,12 @@
     "data:validate": "python3 scripts/validate_data.py",
     "db:import": "python3 scripts/import_supabase.py",
     "db:setup": "npm run db:push && npm run data:validate && npm run db:import",
+    "tei:validate": "python scripts/validate_tei.py",
+    "tei:index": "python scripts/index_tei.py",
+    "tei:index:dry-run": "python scripts/index_tei.py --dry-run",
+    "vocab:import": "python scripts/import_vocab_v3.py",
+    "align:import": "python scripts/import_alignments.py",
+    "textutils:test": "cd packages/textutils && python -m pytest tests/ -v",
     "app:lint": "npm --prefix app run lint",
     "app:build": "node scripts/run_app_build.js",
     "ci": "npm run data:validate && npm run app:lint && npm run app:build"

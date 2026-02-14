@@ -1,0 +1,80 @@
+{
+  "run_id": "galen_sample_medium",
+  "csv": "/home/seanm/github/ancient-simples/data-workbench/entries.csv",
+  "prompt": "/home/seanm/github/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seanm/github/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 100,
+  "n_selected": 10,
+  "jobs": [
+    {
+      "csv_line": 3,
+      "source_id": "GAL_SMT-6.1.1",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.1.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.1.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.1.txt"
+    },
+    {
+      "csv_line": 12,
+      "source_id": "GAL_SMT-6.1.10",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.10.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.10.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.10.txt"
+    },
+    {
+      "csv_line": 13,
+      "source_id": "GAL_SMT-6.1.11",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.11.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.11.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.11.txt"
+    },
+    {
+      "csv_line": 15,
+      "source_id": "GAL_SMT-6.1.13",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.13.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.13.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.13.txt"
+    },
+    {
+      "csv_line": 19,
+      "source_id": "GAL_SMT-6.1.17",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.17.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.17.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.17.txt"
+    },
+    {
+      "csv_line": 46,
+      "source_id": "GAL_SMT-6.1.44",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.44.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.44.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.44.txt"
+    },
+    {
+      "csv_line": 77,
+      "source_id": "GAL_SMT-6.1.75",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.1.75.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.1.75.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.1.75.txt"
+    },
+    {
+      "csv_line": 109,
+      "source_id": "GAL_SMT-6.4.1",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.4.1.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.4.1.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.4.1.txt"
+    },
+    {
+      "csv_line": 126,
+      "source_id": "GAL_SMT-6.5.7",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-6.5.7.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-6.5.7.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-6.5.7.txt"
+    },
+    {
+      "csv_line": 185,
+      "source_id": "GAL_SMT-7.10.14",
+      "job_prompt": "outputs/experiments_reasoning/galen_sample_medium/jobs/GAL_SMT-7.10.14.prompt.md",
+      "result_json": "outputs/experiments_reasoning/galen_sample_medium/results/GAL_SMT-7.10.14.json",
+      "error_txt": "outputs/experiments_reasoning/galen_sample_medium/errors/GAL_SMT-7.10.14.txt"
+    }
+  ]
+}
