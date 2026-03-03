@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c215a-8d3b-7d12-90f7-3bda5d7fdefb
+reasoning summaries: none
+session id: 019cb037-70e8-7120-9ded-780013717495
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,11 @@ SOURCE_ID: AET_LM-2.92
 TEXT:
 εὐχυμότατον καὶ τροφιμώτατον πᾶν τὸ ἄριστον γάλα σχεδὸν ἁπάντων ὅσα προσφερόμεθα, συγκείμενον ἐξ ἐναντίων οὐσιῶν τε καὶ δυνάμεων, ὑπακτικῆς τε καὶ σταλτικῆς, ἐκφρακτικῆς τε καὶ λεπτυντικῆς, καὶ ὅταν ἥ τε ποιότης αὐτοῦ τῇ τοῦ χρωμένου φύσει μηδὲν ὑπεναντίον ἔχῃ, τῶν τε σπλάγχνων εὐπετεῖς ὦσιν αἱ διέξοδοι διὰ τὴν τῶν ἀγγείων εὐρύτητα· τῶν μὲν οὖν ὠφελίμων ἐκ γάλακτος ἀπολαύουσιν οἱ τοιοῦτοι, μοχθηροῦ δὲ οὐδενὸς πειρῶνται. τὰ δὲ ἀγαθὰ τοῦ γάλακτος λέλεκται καὶ τοῖς ἔμπροσθεν ἰατροῖς, ὑπαγωγὴ μετρία γαστρὸς εὐχυμία τε καὶ θρέψις, καὶ τὴν μὲν σάρκα πεφθὲν χρηστοτέραν ἀποδείκνυσιν, ὅσοι δὲ χυμοὶ δακνώδεις ἔνεισιν ἐκκαθαίρει· ὅθεν καὶ δυσουριῶντι καὶ διαχωροῦντι δριμὺ οὐ μόνον πιεῖν συμφέρει, ἀλλὰ καὶ ἐγχεῖν κάτωθεν. πρὸς γὰρ τὰ δριμέα καὶ δάκνοντα ῥεύματα συμφορώτατόν ἐστιν οὐ μόνον ἀποπλῦνον αὐτὰ τῶν ἐνοχλουμένων μορίων διὰ τὸ περιέχειν ῥυπτικὴν ὑγρότητα ἐν τῷ ὀρρώδει ἑαυτοῦ μέρει, ᾧ προσκλύζει τε καὶ ἀπονίζει τὰ σώματα, ἀλλὰ καὶ περιπλαττόμενον τοῖς σώμασι τῷ παχεῖ καὶ λιπαρῷ οὐ συγχωρεῖ γυμνοῖς αὐτοῖς προσπεσεῖν τὸ ἐπιρρέον δριμύ. πρὸς μὲν οὖν τὰ ἕλκη τοῦ πνεύμονος καὶ τῶν ἐντέρων καὶ ὅσα ἐν νεφροῖς καὶ κύστει καὶ μήτρᾳ, ἐξανθήμασὶ τε καὶ δοθιῆσι καὶ τοῖς ἄλλοις τραχυσμοῖς τῆς ἐπιφανείας πινόμενον ἁρμοδιώτατον. καὶ πρὸς τοὺς κανθαρίδας πιόντας ἢ βούπρηστιν καὶ ὅλως πρὸς τὰ σήποντα καὶ ἑλκοῦντα φάρμακα καὶ πρὸς δὲ τὸν ὑοσκύαμον ὥς τι καὶ ἀντιφάρμακον. αὐτίκα γὰρ καὶ ἐμφρονεστέρους ποιεῖ τοὺς πάσχοντας. πρὸς δὲ τὰς τοῦ φαρυγγέθρου ἑλκώσεις ὅσαι γίγνονται καὶ ἐπ' ἄλλαις μὲν πολλαῖς αἰτίαις καὶ συνάγχαις καὶ τοῖς τὸ ἐφήμερον λαβοῦσιν ἀνακογχυλίζεσθαι συμφέρει. πινόμενον δὲ μεγάλως ὠφελεῖ τοὺς ἀτρόφους καὶ τοὺς ξηροτέρους καὶ δυσανακομίστους. ἀγαθὸν δὲ καὶ πρὸς τὰ κατὰ τοὺς ὀφθαλμοὺς ῥεύματα δριμέα καὶ τὰ ὑποσφάγματα. καὶ μέντοι καὶ κατὰ τῶν βλεφάρων ἔξωθεν ἐπιτιθέμενον ὑπνοῦν μελλόντων ἅμα ῥοδίνῳ καὶ ὠῷ πέττει τὰς φλεγμονὰς αὐτῶν, κἀπειδὰν τὰ κατὰ τὴν ἕδραν ἕλκη παρηγορεῖν βουληθῶμεν ὀδυνώμενα διὰ δριμεῖς ἰχώρας καὶ φλεγμονάς. οὕτως δὲ καὶ πρὸς τὰ κατὰ τὰ αἰδοῖα ἕλκη χρώμεθα καὶ πάνθ' ἁπλῶς τὰ παρηγορίας δεόμενα διὰ φλεγμονὴν ἢ δῆξιν ἢ κακοήθειαν. διὰ τοῦτο καὶ τοῖς καρκινώδεσι προσφέρεται μιγνύμενον τοῖς ἀνωδύνοις φαρμάκοις, οἷα μάλιστα διὰ πομφόλυγός ἐστι. παρηγορικὸν μὲν οὖν ἐστι καθόλου τὸ γάλα, ἄδηκτον μὲν ἔχον τὴν φύσιν. πολὺ δὲ μᾶλλον ὅταν ἐκδαπανήσωμεν τὸ πλέον τῆς ὀρώδους ὑγρότητος ἑψήσει ἢ ἑτέρᾳ μηχανῇ.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:35:09.071341Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10296}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.92.json.tmp
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.92.json.tmp
 
 
 STDOUT:

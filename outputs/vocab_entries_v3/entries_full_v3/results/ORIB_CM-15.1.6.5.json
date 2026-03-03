@@ -1,0 +1,119 @@
+{
+  "source_id": "ORIB_CM-15.1.6.5",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμότης",
+      "normalized": "θερμοτης",
+      "lemma_gr": "θερμότης",
+      "lemma_normalized": "θερμοτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μακρὸν πέπερι",
+      "normalized": "μακρον πεπερι",
+      "lemma_gr": "μακρὸν πέπερι",
+      "lemma_normalized": "μακρον πεπερι",
+      "is_multiword": true,
+      "head_lemma_normalized": "πεπερι",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πέπερι",
+      "normalized": "πεπερι",
+      "lemma_gr": "πέπερι",
+      "lemma_normalized": "πεπερι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ζιγγιβέρεώς",
+      "normalized": "ζιγγιβερεως",
+      "lemma_gr": "ζιγγίβερις",
+      "lemma_normalized": "ζιγγιβερις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἡ ἀπὸ ζιγγιβέρεώς τε καὶ μακροῦ πεπέρεως θερμότης",
+      "evidence_normalized": "η απο ζιγγιβερεως τε και μακρου πεπερεως θερμοτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζιγγιβερις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἡ ἀπὸ ζιγγιβέρεώς τε καὶ μακροῦ πεπέρεως θερμότης",
+      "evidence_normalized": "η απο ζιγγιβερεως τε και μακρου πεπερεως θερμοτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μακρον πεπερι",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8
+    }
+  ]
+}

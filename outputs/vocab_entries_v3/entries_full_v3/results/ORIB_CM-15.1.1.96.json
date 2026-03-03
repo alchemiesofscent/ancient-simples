@@ -1,0 +1,119 @@
+{
+  "source_id": "ORIB_CM-15.1.1.96",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δυνάμεως",
+      "normalized": "δυναμεως",
+      "lemma_gr": "δύναμις",
+      "lemma_normalized": "δυναμις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ασπαραγος μυακανθινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικῆς",
+      "normalized": "ρυπτικης",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ασπαραγος μυακανθινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀσπάραγος",
+      "normalized": "ασπαραγος",
+      "lemma_gr": "ἀσπάραγος",
+      "lemma_normalized": "ασπαραγος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀσπάραγος μυακάνθινος",
+      "normalized": "ασπαραγος μυακανθινος",
+      "lemma_gr": "ἀσπάραγος μυακάνθινος",
+      "lemma_normalized": "ασπαραγος μυακανθινος",
+      "is_multiword": true,
+      "head_lemma_normalized": "ασπαραγος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.85
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "οὔτε ψύχει",
+      "evidence_normalized": "ουτε ψυχει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ασπαραγος μυακανθινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "weak",
+      "hedge": "none",
+      "evidence_display": "οὔτε θερμαίνει σαφῶς",
+      "evidence_normalized": "ουτε θερμαινει σαφως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ασπαραγος μυακανθινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7
+    }
+  ]
+}

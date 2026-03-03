@@ -19,6 +19,7 @@ def _repo_root() -> Path:
 
 
 _SAFE_NAME_RE = re.compile(r"[^A-Za-z0-9._-]+")
+_STREAM_DISCONNECT_RE = re.compile(r"stream disconnected before completion", re.IGNORECASE)
 
 
 def _safe_filename(value: str) -> str:
@@ -477,6 +478,14 @@ def main() -> int:
                         break
                     set_block(resets_in_seconds)
                     continue
+
+            # Transient stream/network issues are common under load; retry with backoff.
+            if _STREAM_DISCONNECT_RE.search(last_err):
+                if attempt < attempts:
+                    sleep_s = float(args.retry_backoff) * (2 ** (attempt - 1))
+                    time.sleep(sleep_s)
+                attempt += 1
+                continue
 
             # Normal retry backoff.
             if attempt < attempts:

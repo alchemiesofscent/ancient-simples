@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c215b-7d98-7cb1-b494-16510b85ef86
+reasoning summaries: none
+session id: 019cb038-dafe-7e90-8621-27fd8578356a
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,23 @@ SOURCE_ID: AET_LM-2.124
 TEXT:
 τῶν ἀδενωδῶν σωμάτων εἰσὶ καὶ οἱ ὄρχεις. οἱ μὲν οὖν τῶν ὑῶν ἢ προβάτων ἢ τράγων ὄρχεις ἐσθιόμενοὶ εἰσι δύσπεπτοι καὶ κακόχυμοι, διὰ τὸ ἐνυπάρχον ἐν αὐτοῖς βρομῶδες. εἰς ὅσον δὲ ἡ τῶν ὑῶν σὰρξ τῆς τῶν ἄλλων ἐστὶ βελτίων, εἰς τοσοῦτον καὶ οἱ ὄρχεις. πεφθέντες δὲ καλῶς τρόφιμοι γίγνονται. μόνοι δὲ οἱ τῶν ἀλεκτρυόνων ὄρχεις ἄριστοι κατὰ πάντα καὶ ἥδιστοι καὶ τροφὴν χρηστὴν τῷ σώματι διδόασι, καὶ μάλιστα τῶν σιτευθέντων.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:36:10.744831Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10235}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.124.json.tmp
+2026-03-02T20:24:02.327657Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+2026-03-02T20:24:02.545704Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+2026-03-02T20:24:03.071210Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d631f6aba6957da-IAD)
+2026-03-02T20:24:03.674685Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d631f6f5b152d0c-IAD)
+2026-03-02T20:24:04.697661Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d631f759ecb13c8-IAD)
+2026-03-02T20:24:06.643395Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d631f81eec6200a-IAD)
+2026-03-02T20:24:10.476829Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d631f9909703968-IAD
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.124.json.tmp
 
 
 STDOUT:

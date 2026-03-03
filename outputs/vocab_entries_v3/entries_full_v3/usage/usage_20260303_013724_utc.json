@@ -1,0 +1,28 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260303_013724_utc",
+  "jobs": [
+    {
+      "source_id": "ORIB_CM-15.1.5.6",
+      "safe_id": "ORIB_CM-15.1.5.6",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/ORIB_CM-15.1.5.6/.codex/sessions/2026/03/02/rollout-2026-03-02T20-37-24-019cb157-c3c2-7ec3-9c37-93475a1d2657.jsonl",
+        "start_secondary_used_percent": 51.0,
+        "end_secondary_used_percent": null,
+        "last_token_usage": null,
+        "total_token_usage": null
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 0
+  },
+  "secondary_used_percent": {
+    "start_min": 51.0,
+    "end_max": null
+  }
+}

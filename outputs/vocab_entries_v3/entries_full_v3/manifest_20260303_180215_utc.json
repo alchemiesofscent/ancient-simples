@@ -1,0 +1,18 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260303_180215_utc",
+  "csv": "data-workbench/entries.csv",
+  "prompt": "/home/seancoughlin/Projects/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seancoughlin/Projects/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 5,
+  "n_selected": 1,
+  "jobs": [
+    {
+      "csv_line": 2076,
+      "source_id": "AET_LM-2.135",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_180215_utc/AET_LM-2.135.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.135.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.135.txt"
+    }
+  ]
+}

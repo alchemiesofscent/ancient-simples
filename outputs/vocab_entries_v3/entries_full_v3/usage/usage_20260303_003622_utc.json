@@ -1,0 +1,84 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260303_003622_utc",
+  "jobs": [
+    {
+      "source_id": "ORIB_CM-15.1.5.6",
+      "safe_id": "ORIB_CM-15.1.5.6",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/ORIB_CM-15.1.5.6/.codex/sessions/2026/03/02/rollout-2026-03-02T19-36-56-019cb120-665f-7910-ae9e-00867dbc7530.jsonl",
+        "start_secondary_used_percent": null,
+        "end_secondary_used_percent": null,
+        "last_token_usage": null,
+        "total_token_usage": null
+      }
+    },
+    {
+      "source_id": "ORIB_CM-15.1.5.9",
+      "safe_id": "ORIB_CM-15.1.5.9",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/ORIB_CM-15.1.5.9/.codex/sessions/2026/03/02/rollout-2026-03-02T19-36-56-019cb120-663c-7ae2-a9d1-07c7dbb2dc82.jsonl",
+        "start_secondary_used_percent": null,
+        "end_secondary_used_percent": null,
+        "last_token_usage": null,
+        "total_token_usage": null
+      }
+    },
+    {
+      "source_id": "AET_LM-1.prooimion",
+      "safe_id": "AET_LM-1.prooimion",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/AET_LM-1.prooimion/.codex/sessions/2026/03/02/rollout-2026-03-02T19-36-57-019cb120-6867-7950-ac82-92b5ab680c42.jsonl",
+        "start_secondary_used_percent": null,
+        "end_secondary_used_percent": null,
+        "last_token_usage": null,
+        "total_token_usage": null
+      }
+    },
+    {
+      "source_id": "AET_LM-1.1",
+      "safe_id": "AET_LM-1.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/AET_LM-1.1/.codex/sessions/2026/03/02/rollout-2026-03-02T19-36-56-019cb120-666e-7513-b314-9ad3be62557c.jsonl",
+        "start_secondary_used_percent": null,
+        "end_secondary_used_percent": null,
+        "last_token_usage": null,
+        "total_token_usage": null
+      }
+    },
+    {
+      "source_id": "AET_LM-1.7~1",
+      "safe_id": "AET_LM-1.7_1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/AET_LM-1.7_1/.codex/sessions/2026/03/02/rollout-2026-03-02T12-13-56-019caf8a-d13d-74b1-a1d1-2050f268e088.jsonl",
+        "start_secondary_used_percent": 15.0,
+        "end_secondary_used_percent": 16.0,
+        "last_token_usage": {
+          "input_tokens": 18114,
+          "cached_input_tokens": 18048,
+          "output_tokens": 12636,
+          "reasoning_output_tokens": 7694,
+          "total_tokens": 30750
+        },
+        "total_token_usage": {
+          "input_tokens": 18114,
+          "cached_input_tokens": 18048,
+          "output_tokens": 12636,
+          "reasoning_output_tokens": 7694,
+          "total_tokens": 30750
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 18114,
+    "cached_input_tokens": 18048,
+    "output_tokens": 12636,
+    "reasoning_output_tokens": 7694,
+    "total_tokens": 30750
+  },
+  "secondary_used_percent": {
+    "start_min": 15.0,
+    "end_max": 16.0
+  }
+}

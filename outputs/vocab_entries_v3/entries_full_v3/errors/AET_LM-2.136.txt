@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c215b-c5d9-7d40-bb2f-e4e8deeec050
+reasoning summaries: none
+session id: 019cb039-5047-7dc0-9f91-87cd1371c46c
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,23 @@ SOURCE_ID: AET_LM-2.136
 TEXT:
 τῶν ἐν ὕδατι διαιτωμένων ζῴων καὶ γένη πάμπολλα καὶ εἴδη τούτων εἰσὶ καὶ διαφοραί. λεχθήσεται δὲ νῦν, ὥσπερ ἐπὶ τῶν ἔμπροσθεν, ὅσα πρὸς τὴν ἰατρικὴν ἢ ὑγιεινὴν χρείαν ἐξ αὐτῶν παραλαμβάνεται. καθόλου τοίνυν χρὴ γιγνώσκειν ὡς καλλίστη σάρξ ἐστιν ἰχθύων τῶν ἐν καθαρᾷ θαλάττῃ διαιτωμένων, καὶ μᾶλλον ὅταν ὑπὸ ἀνέμων καταιγίζηται ὁ τόπος καὶ μήτε γεώδεις αἰγιαλοὶ μήτε λεῖοι περιλαμβάνουσι τὸ ὕδωρ, ἀλλ' ἤτοι ψαμμώδεις ἢ τραχεῖς καὶ λιθώδεις· εἰ δὲ καὶ πρὸς τὰ βόρεια τῶν πνευμάτων εἶεν οἱ τόποι ἐστραμμένοι, πολὺ βέλτιον. πρόδηλον δὲ ὡς καὶ θάλαττα θαλάττης ἀμείνων ἐστὶ καθόσον ἤτοι καθαρὰ τελέως ἐστίν, ἢ δέχεται ποταμοὺς μεγάλους τε καὶ πολλούς. οἵ τε γὰρ ἐν τῇ τοιαύτῃ θαλάττῃ διαιτώμενοι ἰχθύες, καθ' ὅσον πλεονεκτοῦσι τῶν λιμναίων, κατὰ τοσοῦτον ἀπολείπονται τῶν ἐν τῇ καθαρᾷ θαλάττῃ διαιτωμένων. καὶ γὰρ καὶ οἱ κατὰ τὴν σκεπινὴν καὶ ἀκύμονα θάλατταν διαιτώμενοι χείρονα τὴν σάρκα κέκτηνται. τῶν δὲ ἐν ταῖς λιμνοθαλάτταις διαιτωμένων ἰχθύων ἡ σὰρξ μεταξὺ πως τῶν ποταμίων καὶ τῶν θαλαττίων γίγνεται. περιττωματικὴ δὲ σάρξ ἐστι καὶ βλεννώδης ἱκανῶς τῶν ἐν ἰλυώδει καὶ ῥυπαρῷ ὕδατι διαιτωμένων, ἔτι δὲ χείρων τῆσδε καὶ ἡ τῶν ἐν λίμναις διαιτωμένων σάρξ. εἰ δὲ καὶ σμικραὶ τινες αἱ λίμναι τύχοιεν οὖσαι καὶ μήτε ποταμοὺς μεγάλους δεχόμεναι μήτε πηγὴν ἔχουσαι μήτε ἀπορροὴν δαψιλῆ πολὺ δήτι χείρους· εἰ δὲ μηδόλως ἀπορρεῖ τι τοῦ ὕδατος ἀλλ' εἴη στάσιμον ἱκανῶς μοχθηραί. τῶν δὲ ἐν ἕλεσι καὶ τέλμασι καὶ ὅσα τοιαῦτα χωρία διαιτωμένων, ἐσχάτως μοχθηρὰ καὶ ἡ σάρξ· τῶν δὲ ἐν τοῖς ποταμοῖς γεννωμένων ἀμείνους, οἱ κατὰ τοὺς τοιούτους ποταμούς, ἐν οἷς ὀξὺ καὶ πολὺ τὸ ῥεῦμα. τῶν δὲ κατὰ τοὺς λιμνάζοντας ποταμοὺς ἰχθύων ἡ σὰρξ οὐκ ἀγαθὴ πεφθῆναι καὶ τὴν μὲν χρηστὴν τροφὴν ὀλιγίστην ἔχουσι. καὶ χείριστοι δὲ γίγνονται οἱ κατὰ τὰς ἐκβολὰς τῶν ποταμῶν, ὅσοι κοπρῶνας ἐκκαθαίρουσιν ἢ βαλανεῖα ἢ μαγειρεῖα καὶ τὸν τῆς ἐσθῆτός τε καὶ τῶν ὀθονῶν ῥύπον, ὅσα τε ἄλλα τῆς πόλεως ἐστὶ, ἣν παραρρέουσι καθάρσεως δεόμενα, καὶ μάλισθ' ὅταν ᾖ πολυάνθρωπος ἡ πόλις. καὶ παρὰ τὰς τροφὰς δὲ βελτίους γίγνονται καὶ χείρους. ἔνιοι μὲν γὰρ εὐποροῦσι καὶ πόας καὶ ῥιζῶν χρηστῶν, καὶ διὰ τοῦτο κρείττους εἰσί· ἔνιοι δὲ ἰλυώδη τε πόαν ἐσθίουσι καὶ ῥίζας κακοχύμους καὶ τινες αὐτῶν ὅσοι κατὰ ποταμοὺς διαιτῶνται, μεγάλην διαρρέοντας πόλιν, ἀποπατήματα ἀνθρώπων καὶ τινας τοιαύτας προσφέρονται μοχθηρὰς τροφάς. χείριστοι δὲ οὗτοι, ὡς ἔφην, εἰσὶ κἂν βραχὺ πλείονι χρόνῳ διαμείνωσι μετὰ τὴν θήραν σήπονται παραχρῆμα, καὶ μοχθηρότατον ὄζουσιν. ἀηδεῖς δὲ καὶ βρωθῆναι πάντες οὗτοι καὶ πεφθῆναι καὶ τὴν μὲν χρηστὴν τροφὴν ὀλιγίστην ἔχουσι, περίττωμα δὲ οὐκ ὀλίγον καὶ κακοχυμίαν ἀθροίζουσιν ἐν τοῖς σώμασι τῶν ὁσημέραι προςφερομένων αὐτούς.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:36:29.236108Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10216}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.136.json.tmp
+2026-03-02T20:24:32.370444Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+2026-03-02T20:24:32.604038Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+2026-03-02T20:24:33.128481Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d632026c88417e5-IAD)
+2026-03-02T20:24:33.723346Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d63202acf7f204e-IAD)
+2026-03-02T20:24:34.941637Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320317a34b964-IAD)
+2026-03-02T20:24:36.616545Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d63203d4fc9d6a7-IAD)
+2026-03-02T20:24:40.377843Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320549efde647-IAD
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.136.json.tmp
 
 
 STDOUT:

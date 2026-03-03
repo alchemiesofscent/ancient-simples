@@ -1,0 +1,95 @@
+{
+  "source_id": "AET_LM-1.417",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "ψύλλιον",
+      "normalized": "ψυλλιον",
+      "lemma_gr": "ψύλλιον",
+      "lemma_normalized": "ψυλλιον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "σπέρμα",
+      "normalized": "σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "ψυλλιον",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῆς δευτέρας δ' ἐστὶ τάξεως τῶν ψυχόντων",
+      "evidence_normalized": "της δευτερας δ' εστι ταξεως των ψυχοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "balanced",
+      "hedge": "none",
+      "evidence_display": "κατὰ δὲ τὸ ξηραίνειν καὶ ὑγραίνειν τῆς μέσης",
+      "evidence_normalized": "κατα δε το ξηραινειν και υγραινειν της μεσης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.72
+    },
+    {
+      "axis": "WET",
+      "degree": null,
+      "intensity": "balanced",
+      "hedge": "none",
+      "evidence_display": "κατὰ δὲ τὸ ξηραίνειν καὶ ὑγραίνειν τῆς μέσης",
+      "evidence_normalized": "κατα δε το ξηραινειν και υγραινειν της μεσης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ψυλλιον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.72
+    }
+  ]
+}

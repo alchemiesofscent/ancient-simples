@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c2158-6480-7413-a6b8-98189802a6b1
+reasoning summaries: none
+session id: 019cb034-850f-7313-8254-4b5df2c5a93f
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,11 @@ SOURCE_ID: AET_LM-2.13
 TEXT:
 λίθος αἱματίτης ἀπὸ τῆς κατὰ τὴν χρόαν ὁμοιότητος οὕτως ὀνομάζεται· παρατριβόμενος γὰρ θυίαις ἢ ἀκόναις αἱματώδη χυλὸν ἀνίησιν. τοσοῦτον δὲ τῆς ψύξεως μετέχει ὅσον καὶ τῆς στύψεως. καὶ μόνῳ δ' αὐτῷ ἐχρησάμην τραχέων γεγονότων βλεφάρων, εἰ μὲν ἅμα φλεγμονῇ τοιαῦτα εἴη γεγονότα, δι' ὠοῦ τὴν ἄνεσιν ποιούμενος, ἢ μᾶλλον ἔτι τήλεως ἀφεψήματι· εἰ δὲ χωρὶς φλεγμονῆς, δι' ὕδατος. ἄρχου δὲ ἀεὶ ἀπὸ τοῦ μετρίως ὑγροῦ διὰ μήλης ἐγχέων· ὅταν δὲ φέρῃ ὁ πάσχων τὴν δύναμιν αὐτοῦ, παχύτερον ἀεὶ καὶ μᾶλλον ἐργάζου καὶ τελευτῶν οὕτω παχὺ ποιήσεις, ὡς μὴ διὰ μήλης πυρῆνος ὑπαλείφειν καθ' ὑποβολὴν τὸ βλέφαρον ἢ ἐκστρέψας παράτριβε. ὁ δ' αὐτὸς οὗτος λίθος ὁμοίως ἐπ' ἀκόνης ἀποτριβόμενος καὶ πινόμενος αἵματος πτύσεσιν ἁρμόττει καὶ πᾶσιν ἕλκεσι. ξηρὸς δὲ λειωθεὶς ὡς χνοώδης γενέσθαι καταστέλλει τὰ ὑπερσαρκοῦντα. χρῆται μὲν οὖν οὐδεὶς αὐτῷ καθ' αὑτόν. ἐγὼ δὲ ἐφ' ὧν εἶπον, ἐκ τῆς κατὰ τὴν γεῦσιν ποιότητος εὑρὼν τὴν δύναμιν, ἐχρησάμην. καὶ αὐτὰ δὲ τὰ κατὰ τοὺς ὀφθαλμοὺς ἕλκη συνουλοῖ αὐτὸς μόνος, ἀποτριβόμενος μέν, ὡς ὀλίγον ἔμπροσθεν εἶπον, ἤτοι δὲ ἐγχυματιζόμενος ἢ ὑπαλειφόμενος. ἐβασάνισα γὰρ καὶ τοῦτο τῇ πείρᾳ.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:32:47.604298Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10438}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.13.json.tmp
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.13.json.tmp
 
 
 STDOUT:

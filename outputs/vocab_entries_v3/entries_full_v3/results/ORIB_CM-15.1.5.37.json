@@ -1,0 +1,143 @@
+{
+  "source_id": "ORIB_CM-15.1.5.37",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀποκρουστικός",
+      "normalized": "αποκρουστικος",
+      "lemma_gr": "ἀποκρουστικός",
+      "lemma_normalized": "αποκρουστικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ποα εχινου",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικός",
+      "normalized": "ξηραντικος",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ποα εχινου",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στρυφνὸς",
+      "normalized": "στρυφνος",
+      "lemma_gr": "στρυφνός",
+      "lemma_normalized": "στρυφνος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ποα εχινου",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πόας",
+      "normalized": "ποας",
+      "lemma_gr": "πόα",
+      "lemma_normalized": "ποα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἐχίνου τῆς πόας",
+      "normalized": "εχινου της ποας",
+      "lemma_gr": "πόα ἐχίνου",
+      "lemma_normalized": "ποα εχινου",
+      "is_multiword": true,
+      "head_lemma_normalized": "ποα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "καρπὸς",
+      "normalized": "καρπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "ποα εχινου",
+      "part_lemma_normalized": "καρπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἀποκρουστικός τε καὶ ξηραντικός",
+      "evidence_normalized": "αποκρουστικος τε και ξηραντικος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ποα εχινου",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.86
+    }
+  ]
+}

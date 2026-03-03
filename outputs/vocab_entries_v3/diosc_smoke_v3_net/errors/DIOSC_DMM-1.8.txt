@@ -1,0 +1,22 @@
+Runner failed for source_id=DIOSC_DMM-1.8
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 315, in main
+    _validate_extraction_obj(obj)
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 139, in _validate_extraction_obj
+    raise RuntimeError(
+RuntimeError: Post-validation failed: normalized fields and/or SUBSTANCE_PART consistency checks failed.
+- terms[11].normalized: must equal normalize(display); expected 'ιστρια', got 'ιστριᾳ'
+- terms[11].normalized: expected normalized form 'ιστρια', got 'ιστριᾳ'
+- terms[47].normalized: must equal normalize(display); expected 'οινω', got 'οινῳ'
+- terms[47].normalized: expected normalized form 'οινω', got 'οινῳ'
+- terms[56].normalized: must equal normalize(display); expected 'αγγειω', got 'αγγειῳ'
+- terms[56].normalized: expected normalized form 'αγγειω', got 'αγγειῳ'
+

@@ -1,0 +1,99 @@
+{
+  "source_id": "ORIB_CM-15.1.1.91",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαίνειν",
+      "normalized": "θερμαινειν",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραίνειν",
+      "normalized": "ξηραινειν",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ῥίζαι",
+      "normalized": "ριζαι",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "αρον",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῷ θερμαίνειν καὶ τῷ ξηραίνειν τῆς πρώτης τάξεως",
+      "evidence_normalized": "τω θερμαινειν και τω ξηραινειν της πρωτης ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74
+    },
+    {
+      "axis": "HOT",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῷ θερμαίνειν καὶ τῷ ξηραίνειν τῆς πρώτης τάξεως",
+      "evidence_normalized": "τω θερμαινειν και τω ξηραινειν της πρωτης ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74
+    }
+  ]
+}

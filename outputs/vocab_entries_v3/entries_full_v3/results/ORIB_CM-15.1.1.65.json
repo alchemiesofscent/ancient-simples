@@ -1,0 +1,79 @@
+{
+  "source_id": "ORIB_CM-15.1.1.65",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "αὐστηροῦ",
+      "normalized": "αυστηρου",
+      "lemma_gr": "αὐστηρός",
+      "lemma_normalized": "αυστηρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ανδραχνη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀνδράχνη",
+      "normalized": "ανδραχνη",
+      "lemma_gr": "Ἀνδράχνη",
+      "lemma_normalized": "ανδραχνη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93,
+      "lemma_confidence": 0.95
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ψύχει μὲν κατὰ τὴν τρίτην ἀπόστασιν",
+      "evidence_normalized": "ψυχει μεν κατα την τριτην αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ανδραχνη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92
+    },
+    {
+      "axis": "WET",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὑγραίνει δὲ κατὰ τὴν δευτέραν",
+      "evidence_normalized": "υγραινει δε κατα την δευτεραν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ανδραχνη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92
+    }
+  ]
+}

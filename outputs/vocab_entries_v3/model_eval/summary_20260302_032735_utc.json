@@ -1,0 +1,47 @@
+{
+  "ids_file": "outputs/vocab_entries_v3/model_eval/ids_sample_fast.txt",
+  "runs": {
+    "gpt_5_2_high_20260302_025700_utc": {
+      "model": "gpt-5.2",
+      "model_reasoning_effort": "high",
+      "timeout_s": 300,
+      "results_dir": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/gpt_5_2_high_20260302_025700_utc/results",
+      "report_path": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/reports/gpt_5_2_high_20260302_025700_utc_vs_baseline.md",
+      "diffs_dir": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/diffs/gpt_5_2_high_20260302_025700_utc",
+      "stats": {
+        "ok": 6,
+        "missing_or_invalid": 0,
+        "avg_terms_per_entry": 7.0,
+        "avg_qualities_per_entry": 0.5
+      }
+    },
+    "gpt_5_2_xhigh_20260302_025700_utc": {
+      "model": "gpt-5.2",
+      "model_reasoning_effort": "xhigh",
+      "timeout_s": 450,
+      "results_dir": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/gpt_5_2_xhigh_20260302_025700_utc/results",
+      "report_path": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/reports/gpt_5_2_xhigh_20260302_025700_utc_vs_baseline.md",
+      "diffs_dir": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/diffs/gpt_5_2_xhigh_20260302_025700_utc",
+      "stats": {
+        "ok": 6,
+        "missing_or_invalid": 0,
+        "avg_terms_per_entry": 7.0,
+        "avg_qualities_per_entry": 0.5
+      }
+    },
+    "codex_5_3_high_20260302_025700_utc": {
+      "model": "gpt-5.3-codex",
+      "model_reasoning_effort": "high",
+      "timeout_s": 300,
+      "results_dir": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/codex_5_3_high_20260302_025700_utc/results",
+      "report_path": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/reports/codex_5_3_high_20260302_025700_utc_vs_baseline.md",
+      "diffs_dir": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/diffs/codex_5_3_high_20260302_025700_utc",
+      "stats": {
+        "ok": 6,
+        "missing_or_invalid": 0,
+        "avg_terms_per_entry": 7.0,
+        "avg_qualities_per_entry": 0.5
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/entries_full_v3",
+  "manifest_path": "outputs/vocab_entries_v3/entries_full_v3/manifest.json",
+  "run_id": "entries_full_v3",
+  "expected_jobs": 2135,
+  "result_files": 2135,
+  "valid_results": 2120,
+  "missing_results": 15,
+  "missing_result_ids": [
+    "AET_LM-1.7~1",
+    "AET_LM-1.7~2",
+    "AET_LM-1.77~1",
+    "AET_LM-1.77~2",
+    "AET_LM-1.209~1",
+    "AET_LM-1.209~2",
+    "AET_LM-1.241~1",
+    "AET_LM-1.241~2",
+    "AET_LM-1.241~3",
+    "AET_LM-1.241~4",
+    "AET_LM-1.318~1",
+    "AET_LM-1.318~2",
+    "AET_LM-1.318~3",
+    "AET_LM-2.122~1",
+    "AET_LM-2.122~2"
+  ],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 1329,
+  "completeness_ok": false,
+  "term_label_counts": {
+    "ADMINISTRATION": 573,
+    "APPLICATION_SITE": 1555,
+    "CONDITION": 2744,
+    "PART": 294,
+    "PLACE": 296,
+    "PREPARATION": 957,
+    "PROCESS": 2568,
+    "QUALITY_PROPERTY": 9960,
+    "SUBSTANCE": 6884,
+    "SUBSTANCE_PART": 1386,
+    "TOOL_CONTAINER": 290
+  },
+  "axis_counts": {
+    "COLD": 462,
+    "DRY": 1119,
+    "HOT": 1009,
+    "WET": 295
+  },
+  "intensity_counts": {
+    "balanced": 114,
+    "extreme": 22,
+    "moderate": 167,
+    "none": 2208,
+    "strong": 224,
+    "weak": 150
+  },
+  "qualities_total": 2885,
+  "qualities_with_degree": 814,
+  "entries_with_quality": 1395,
+  "entries_with_degree": 419,
+  "degree_ratio": 0.28214904679376085,
+  "generic_quality_property_count": 959,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 656,
+  "alerts": [
+    "High explicit-degree ratio for Dioscorides (>25%); check for over-quantification.",
+    "Generic QUALITY_PROPERTY terms (δυναμις/ουσια) detected; spot-check context.",
+    "Normalization anomalies detected; results may have bypassed runner post-validation."
+  ]
+}

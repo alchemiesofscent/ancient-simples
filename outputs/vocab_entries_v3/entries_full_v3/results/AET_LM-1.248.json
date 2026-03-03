@@ -1,0 +1,123 @@
+{
+  "source_id": "AET_LM-1.248",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικῇ",
+      "normalized": "διαφορητικη",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λεοντοποδιον",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαντικῇ",
+      "normalized": "θερμαντικη",
+      "lemma_gr": "θερμαντικός",
+      "lemma_normalized": "θερμαντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λεοντοποδιον",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.76
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λεοντοπέταλον",
+      "normalized": "λεοντοπεταλον",
+      "lemma_gr": "λεοντοπέταλον",
+      "lemma_normalized": "λεοντοπεταλον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λεοντοπόδιον",
+      "normalized": "λεοντοποδιον",
+      "lemma_gr": "λεοντοπόδιον",
+      "lemma_normalized": "λεοντοποδιον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ῥίζῃ",
+      "normalized": "ριζη",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λεοντοποδιον",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.77,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαντικῇ κατὰ τὴν τρίτην τάξιν",
+      "evidence_normalized": "θερμαντικη κατα την τριτην ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λεοντοποδιον",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.8
+    }
+  ]
+}

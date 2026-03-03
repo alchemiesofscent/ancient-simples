@@ -5,24 +5,25 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+2026-03-03T00:32:46.381234Z ERROR codex_core::models_manager::manager: failed to refresh available models: stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/models?client_version=0.107.0)
+OpenAI Codex v0.107.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c2151-6e64-7392-b134-b7fdeb9fc98a
+reasoning summaries: none
+session id: 019cb11c-9530-7ca3-b5b3-33bed91fab73
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +108,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -320,8 +323,12 @@ TEXT:
 καππάρεως. Ὁ μὲν φλοιὸς τῆς ῥίζης ἐπικρατοῦσαν ἔχει τὴν πικρὰν ποιότητα, δευτέραν δὲ τὴν δριμεῖαν, ἐφεξῆς δὲ ταύτῃ τὴν στρυφνήν, ᾧ δῆλον ὡς ἐκ διαφόρων τε καὶ μαχομένων σύγκειται δυνάμεων. ῥύπτειν μὲν γὰρ δύναται καὶ διακαθαίρειν καὶ τέμνειν τῇ πικρότητι, θερμαίνειν δὲ καὶ διαφορεῖν καὶ λεπτύνειν τῇ δριμύτητι, συνάγειν δὲ καὶ πιλεῖν καὶ σφίγγειν τῇ στρυφνότητι· καὶ διὰ τοῦτο σπλῆνας σκιρρώδεις, εἴπερ τι καὶ ἄλλο, τοῦτο τὸ φάρμακον ὀνίνησιν, ἔξωθέν τε τοῖς ἐπιτηδείοις καταπλάσμασι μιγνύμενον, εἴσω τε τοῦ σώματος λαμβανόμενον, ἤτοι γε ἀφεψόμενον ἐν ὄξει τε καὶ ὀξυμέλιτι καὶ τοῖς τοιούτοις, ἢ ξηρὸν λεῖον ἀναμιγνύμενον αὐτοῖς. κενοῖ γὰρ φανερῶς τοὺς γλίσχρους καὶ παχεῖς χυμοὺς οὕτω ληφθὲν οὐ δι' οὔρων μόνον, ἀλλὰ καὶ διὰ γαστρός. πολλάκις δὲ καὶ αἱματώδη διαχωροῦσιν, ἐφ' οἷς οἵ τε σπλῆνες ὀνίνανται καὶ αἱ κατ' ἰσχίον ὀδύναι. καὶ μὲν δὴ καὶ καταμήνια κινεῖ καὶ ἀποφλεγματίζει καὶ καταπαττόμενος δὲ τοῖς κακοήθεσιν ἕλκεσιν ὁ τῆς ῥίζης φλοιὸς λεῖος ἀγαθὸν φάρμακον, ὡς ἂν ἀπορρύπτειν τε δυνάμενος αὐτὰ καὶ ξηραίνειν ἰσχυρῶς. καὶ τοὺς ὀδόντων δὲ πόνους ὠφελεῖ σὺν οἴνῳ ἑψόμενος ἢ ὄξει. καὶ χοιράδας δὲ καὶ ὄγκους σκληροὺς διαφορεῖ, τοῖς ἐπιτηδείοις πρὸς ταῦτα φαρμάκοις μιγνύμενος. καὶ μὲν δὴ καὶ τὰ φύλλα καὶ ὁ καυλὸς καὶ ὁ καρπὸς παραπλησίας ἐστὶ τῷ φλοιῷ δυνάμεως, πλὴν ὅσον ἀσθενέστερα, καὶ ἔγωγὲ ποτε τοῖς φύλλοις μόνοις οἶδα διαφορήσας ἐν ὀλιγίσταις ἡμέραις χοιράδων σκληρότητα. μίγνυται δὲ αὐτοῖς δηλονότι τῶν ἀμβλυνόντων τι τὸ σφοδρὸν τῆς δυνάμεως. οὐδὲν δὲ θαυμαστὸν εἰ καὶ τοὺς ἐν ὠσὶ σκώληκας ὁ χυλὸς ἀναιρεῖ διὰ τὴν πικρότητα· ὁ δὲ ἐν τῇ ἅλμῃ τιθέμενος καρπὸς ἀποπλυθεὶς καὶ διαβραχεὶς ἄχρι τοῦ τελέως ἀποτίθεσθαι τὴν ἐκ τῶν ἁλῶν δύναμιν, φάρμακον ἐπιτήδειον γίγνεται ἐπεγείρειν πεπτωκυῖαν ὄρεξιν, ἀπορρύψαι τε καὶ ὑπαγαγεῖν τὸ κατὰ τὴν γαστέρα φλέγμα καὶ τὰς κατὰ σπλῆνὰ τε καὶ ἧπαρ ἐμφράξεις ἐκκαθαίρειν· χρῆσθαι δὲ εἰς ταῦτα προσῆκεν αὐτῷ δι' ὀξυμέλιτος ἢ δι' ὀξελαίου πρὸ τῶν ἄλλων ἁπάντων σιτίων.
 
 mcp startup: no servers
-2026-02-03T02:25:11.362980Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10894}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
+Reconnecting... 1/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 2/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 3/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 4/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 5/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+ERROR: stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
 Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.180.json.tmp
 
 

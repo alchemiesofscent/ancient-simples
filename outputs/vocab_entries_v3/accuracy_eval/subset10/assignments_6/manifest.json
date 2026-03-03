@@ -1,0 +1,39 @@
+{
+  "packets_dir": "outputs/vocab_entries_v3/accuracy_eval/subset10/packets",
+  "reviewers": 6,
+  "reviews_per_packet": 2,
+  "rotate": 2,
+  "assignments": {
+    "reviewer_01": [
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_ALIM-1.26.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_ALIM-2.35.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-6.5.5.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-7.10.44.md"
+    ],
+    "reviewer_02": [
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-6.5.5.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-7.10.44.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-7.12.2.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-8.18.34.md"
+    ],
+    "reviewer_03": [
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-7.12.2.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_SMT-8.18.34.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.10.28.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.11.5.md"
+    ],
+    "reviewer_04": [
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.10.28.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.11.5.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.12.43.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.14.1.md"
+    ],
+    "reviewer_05": [
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.12.43.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/ORIB_CM-15.1.14.1.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_ALIM-1.26.md",
+      "outputs/vocab_entries_v3/accuracy_eval/subset10/packets/GAL_ALIM-2.35.md"
+    ],
+    "reviewer_06": []
+  }
+}

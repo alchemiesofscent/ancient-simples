@@ -1,0 +1,46 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260303_003622_utc",
+  "csv": "data-workbench/entries.csv",
+  "prompt": "/home/seancoughlin/Projects/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seancoughlin/Projects/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 5,
+  "n_selected": 5,
+  "jobs": [
+    {
+      "csv_line": 848,
+      "source_id": "ORIB_CM-15.1.5.6",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_003622_utc/ORIB_CM-15.1.5.6.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/ORIB_CM-15.1.5.6.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/ORIB_CM-15.1.5.6.txt"
+    },
+    {
+      "csv_line": 851,
+      "source_id": "ORIB_CM-15.1.5.9",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_003622_utc/ORIB_CM-15.1.5.9.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/ORIB_CM-15.1.5.9.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/ORIB_CM-15.1.5.9.txt"
+    },
+    {
+      "csv_line": 1513,
+      "source_id": "AET_LM-1.prooimion",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_003622_utc/AET_LM-1.prooimion.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.prooimion.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-1.prooimion.txt"
+    },
+    {
+      "csv_line": 1514,
+      "source_id": "AET_LM-1.1",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_003622_utc/AET_LM-1.1.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.1.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-1.1.txt"
+    },
+    {
+      "csv_line": 1520,
+      "source_id": "AET_LM-1.7~1",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_003622_utc/AET_LM-1.7_1.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.7_1.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-1.7_1.txt"
+    }
+  ]
+}

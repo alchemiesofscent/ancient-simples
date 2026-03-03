@@ -1,0 +1,119 @@
+{
+  "source_id": "AET_LM-1.334",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἑλκτικῆς",
+      "normalized": "ελκτικης",
+      "lemma_gr": "ἑλκτικός",
+      "lemma_normalized": "ελκτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "προπολις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερὴς",
+      "normalized": "λεπτομερης",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "προπολις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "Ῥυπτικῆς",
+      "normalized": "ρυπτικης",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "προπολις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πρόπολις",
+      "normalized": "προπολις",
+      "lemma_gr": "πρόπολις",
+      "lemma_normalized": "προπολις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.95
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "θερμαίνει κατὰ τὴν δευτέραν ἀπόστασιν συμπληρουμένην ἢ τὴν τρίτην ἀρχομένην",
+      "evidence_normalized": "θερμαινει κατα την δευτεραν αποστασιν συμπληρουμενην η την τριτην αρχομενην",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "προπολις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "θερμαίνει κατὰ τὴν δευτέραν ἀπόστασιν συμπληρουμένην ἢ τὴν τρίτην ἀρχομένην",
+      "evidence_normalized": "θερμαινει κατα την δευτεραν αποστασιν συμπληρουμενην η την τριτην αρχομενην",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "προπολις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6
+    }
+  ]
+}

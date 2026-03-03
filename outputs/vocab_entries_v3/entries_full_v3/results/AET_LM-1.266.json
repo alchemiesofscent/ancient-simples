@@ -1,0 +1,86 @@
+{
+  "source_id": "AET_LM-1.266",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δύναμιν",
+      "normalized": "δυναμιν",
+      "lemma_gr": "δύναμις",
+      "lemma_normalized": "δυναμις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μαλαβαθρον",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μαλαβάθρου",
+      "normalized": "μαλαβαθρου",
+      "lemma_gr": "μαλάβαθρον",
+      "lemma_normalized": "μαλαβαθρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ναρδοστάχυϊ",
+      "normalized": "ναρδοσταχυι",
+      "lemma_gr": "ναρδόσταχυς",
+      "lemma_normalized": "ναρδοσταχυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "μαλαβάθρου φύλλον",
+      "normalized": "μαλαβαθρου φυλλον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μαλαβαθρον",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": []
+}

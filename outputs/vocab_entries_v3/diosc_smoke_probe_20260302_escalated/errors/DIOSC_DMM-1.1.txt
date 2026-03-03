@@ -1,0 +1,25 @@
+Runner failed for source_id=DIOSC_DMM-1.1
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 288, in main
+    proc = subprocess.run(
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/home/seancoughlin/.nvm/versions/node/v22.19.0/bin/codex', 'exec', '-c', 'model_reasoning_effort="high"', '-m', 'gpt-5.2', '-C', '/home/seancoughlin/Projects/ancient-simples', '--sandbox', 'read-only', '--color', 'never', '--output-schema', '/home/seancoughlin/Projects/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json', '--output-last-message', 'outputs/vocab_entries_v3/diosc_smoke_probe_20260302_escalated/results/DIOSC_DMM-1.1.json.tmp', '-']' timed out after 180 seconds
+

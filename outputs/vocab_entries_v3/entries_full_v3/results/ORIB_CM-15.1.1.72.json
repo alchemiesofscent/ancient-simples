@@ -1,0 +1,179 @@
+{
+  "source_id": "ORIB_CM-15.1.1.72",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορεῖ",
+      "normalized": "διαφορει",
+      "lemma_gr": "διαφορεῖν",
+      "lemma_normalized": "διαφορειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αννησον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δριμὺ",
+      "normalized": "δριμυ",
+      "lemma_gr": "δριμύς",
+      "lemma_normalized": "δριμυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αννησον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμότητι",
+      "normalized": "θερμοτητι",
+      "lemma_gr": "θερμότης",
+      "lemma_normalized": "θερμοτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αννησον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "καυστικῶν",
+      "normalized": "καυστικων",
+      "lemma_gr": "καυστικός",
+      "lemma_normalized": "καυστικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὑπόπικρον",
+      "normalized": "υποπικρον",
+      "lemma_gr": "ὑπόπικρος",
+      "lemma_normalized": "υποπικρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αννησον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.77
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀννήσου",
+      "normalized": "αννησου",
+      "lemma_gr": "ἄννησον",
+      "lemma_normalized": "αννησον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Ἀννήσου σπέρμα",
+      "normalized": "αννησου σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "αννησον",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "κἀν τῷ ξηραίνειν τρίτης ἀποστάσεως",
+      "evidence_normalized": "καν τω ξηραινειν τριτης αποστασεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αννησον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τρίτης ἀποστάσεως, ὥσπερ κἀν τῷ θερμαίνειν",
+      "evidence_normalized": "τριτης αποστασεως, ωσπερ καν τω θερμαινειν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αννησον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.88
+    }
+  ]
+}

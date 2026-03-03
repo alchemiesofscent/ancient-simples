@@ -1,0 +1,123 @@
+{
+  "source_id": "ORIB_CM-15.1.26.24",
+  "terms": [
+    {
+      "label": "PLACE",
+      "display": "Ναξίας",
+      "normalized": "ναξιας",
+      "lemma_gr": "Νάξος",
+      "lemma_normalized": "ναξος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ἀπότριμμα",
+      "normalized": "αποτριμμα",
+      "lemma_gr": "ἀπότριμμα",
+      "lemma_normalized": "αποτριμμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": "ναξος",
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ψυκτικῆς δυνάμεως",
+      "normalized": "ψυκτικης δυναμεως",
+      "lemma_gr": "ψυκτικὴ δύναμις",
+      "lemma_normalized": "ψυκτικη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "αποτριμμα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀκόνης",
+      "normalized": "ακονης",
+      "lemma_gr": "ἀκόνη",
+      "lemma_normalized": "ακονη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ναξίας ἀκόνης",
+      "normalized": "ναξιας ακονης",
+      "lemma_gr": "Ναξία ἀκόνη",
+      "lemma_normalized": "ναξια ακονη",
+      "is_multiword": true,
+      "head_lemma_normalized": "ακονη",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": "ναξος",
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.8
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἀπότριμμα ψυκτικῆς ἐστι δυνάμεως",
+      "evidence_normalized": "αποτριμμα ψυκτικης εστι δυναμεως",
+      "variant_place_lemma_normalized": "ναξος",
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "αποτριμμα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

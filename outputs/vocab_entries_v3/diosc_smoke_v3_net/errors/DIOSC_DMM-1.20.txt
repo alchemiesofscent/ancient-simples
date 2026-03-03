@@ -1,0 +1,27 @@
+Runner failed for source_id=DIOSC_DMM-1.20
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 315, in main
+    _validate_extraction_obj(obj)
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 139, in _validate_extraction_obj
+    raise RuntimeError(
+RuntimeError: Post-validation failed: normalized fields and/or SUBSTANCE_PART consistency checks failed.
+- terms[1].normalized: must equal normalize(display); expected 'αιδοιοις', got 'αιδοις'
+- terms[11].normalized: must equal normalize(display); expected 'νισυρω', got 'νισυρῳ'
+- terms[11].normalized: expected normalized form 'νισυρω', got 'νισυρῳ'
+- terms[12].normalized: must equal normalize(display); expected 'ροδια', got 'ροδιᾳ'
+- terms[12].normalized: expected normalized form 'ροδια', got 'ροδιᾳ'
+- terms[13].normalized: must equal normalize(display); expected 'συρια', got 'συριᾳ'
+- terms[13].normalized: expected normalized form 'συρια', got 'συριᾳ'
+- terms[35].normalized: must equal normalize(display); expected 'ερυσισκηπτρον', got 'ερυσιςκηπτρον'
+- terms[35].lemma_normalized: must equal normalize(lemma_gr); expected 'ερυσισκηπτρον', got 'ερυσιςκηπτρον'
+- terms[38].normalized: must equal normalize(display); expected 'πεσσω', got 'πεσσῳ'
+- terms[38].normalized: expected normalized form 'πεσσω', got 'πεσσῳ'
+

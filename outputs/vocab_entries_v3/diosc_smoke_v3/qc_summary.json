@@ -1,0 +1,67 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/diosc_smoke_v3",
+  "manifest_path": "outputs/vocab_entries_v3/diosc_smoke_v3/manifest_20260303_012830_utc.json",
+  "run_id": "diosc_smoke_v3",
+  "expected_jobs": 25,
+  "result_files": 2,
+  "valid_results": 2,
+  "missing_results": 23,
+  "missing_result_ids": [
+    "DIOSC_DMM-1.1",
+    "DIOSC_DMM-1.3",
+    "DIOSC_DMM-1.4",
+    "DIOSC_DMM-1.6",
+    "DIOSC_DMM-1.7",
+    "DIOSC_DMM-1.8",
+    "DIOSC_DMM-1.9",
+    "DIOSC_DMM-1.10",
+    "DIOSC_DMM-1.11",
+    "DIOSC_DMM-1.12",
+    "DIOSC_DMM-1.13",
+    "DIOSC_DMM-1.14",
+    "DIOSC_DMM-1.15",
+    "DIOSC_DMM-1.16",
+    "DIOSC_DMM-1.17",
+    "DIOSC_DMM-1.18",
+    "DIOSC_DMM-1.19",
+    "DIOSC_DMM-1.20",
+    "DIOSC_DMM-1.21",
+    "DIOSC_DMM-1.22",
+    "DIOSC_DMM-1.23",
+    "DIOSC_DMM-1.24",
+    "DIOSC_DMM-1.25"
+  ],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 25,
+  "completeness_ok": false,
+  "term_label_counts": {
+    "ADMINISTRATION": 2,
+    "APPLICATION_SITE": 6,
+    "CONDITION": 5,
+    "PLACE": 3,
+    "PREPARATION": 4,
+    "PROCESS": 2,
+    "QUALITY_PROPERTY": 7,
+    "SUBSTANCE": 6,
+    "SUBSTANCE_PART": 2
+  },
+  "axis_counts": {
+    "HOT": 1
+  },
+  "intensity_counts": {
+    "none": 1
+  },
+  "qualities_total": 1,
+  "qualities_with_degree": 0,
+  "entries_with_quality": 1,
+  "entries_with_degree": 0,
+  "degree_ratio": 0.0,
+  "generic_quality_property_count": 1,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 0,
+  "alerts": [
+    "Generic QUALITY_PROPERTY terms (δυναμις/ουσια) detected; spot-check context."
+  ]
+}

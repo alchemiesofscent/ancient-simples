@@ -1,0 +1,40 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260303_180215_utc",
+  "jobs": [
+    {
+      "source_id": "AET_LM-2.135",
+      "safe_id": "AET_LM-2.135",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/entries_full_v3/_codex_home/AET_LM-2.135/.codex/sessions/2026/03/03/rollout-2026-03-03T13-20-03-019cb4ed-b59d-7540-a04a-73f0e8ecff40.jsonl",
+        "start_secondary_used_percent": 34.0,
+        "end_secondary_used_percent": 34.0,
+        "last_token_usage": {
+          "input_tokens": 19146,
+          "cached_input_tokens": 19072,
+          "output_tokens": 14515,
+          "reasoning_output_tokens": 9946,
+          "total_tokens": 33661
+        },
+        "total_token_usage": {
+          "input_tokens": 19146,
+          "cached_input_tokens": 19072,
+          "output_tokens": 14515,
+          "reasoning_output_tokens": 9946,
+          "total_tokens": 33661
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 19146,
+    "cached_input_tokens": 19072,
+    "output_tokens": 14515,
+    "reasoning_output_tokens": 9946,
+    "total_tokens": 33661
+  },
+  "secondary_used_percent": {
+    "start_min": 34.0,
+    "end_max": 34.0
+  }
+}

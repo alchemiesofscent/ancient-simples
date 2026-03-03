@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c215c-085b-78b0-8259-4343be6024f1
+reasoning summaries: none
+session id: 019cb039-a9d6-7a82-a604-78d4c1446596
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,23 @@ SOURCE_ID: AET_LM-2.144
 TEXT:
 κήρυκες καὶ πορφύραι καὶ τὰ λοιπὰ ὄστρεα καὶ χῆμαι καλεῖται ὀστρακόδερμα. κοινὸν μὲν οὖν ἁπάντων τῶν τοιούτων ἁλυκὸν ἔχειν χυμὸν ἐν τῇ ἰδίᾳ σαρκὶ, λαπακτικὸν τῆς ἡμετέρας γαστρός· ἐν ἑκάστῳ δὲ αὐτῶν παρὰ τὸ μᾶλλόν τε καὶ ἧττον ἡ τοιαύτη ἐνέργειὰ ἐστι. τὰ μὲν γὰρ ὄστρεα μαλακωτάτην ἔχει τῶν ἄλλων τὴν σάρκα, καὶ μᾶλλον ὑπάγει τὴν γαστέρα καὶ χωρὶς ἑψήσεως ἐσθίουσιν αὐτὰ τινες. τὰ δὲ σμικρὰ χημία καὶ πορφύραι καὶ κήρυκες καὶ τὰ τοιαῦτα σκληρὰν καὶ δυσπεπτοτέραν ἔχει τὴν σάρκα, καὶ ἧττον ἐκείνων ὑπέρχεται καὶ κατὰ κοιλίαν. ὥσπερ δὲ δύσπεπτον ἔχει τὴν σάρκα τὰ σκληρόσαρκα, οὕτω καὶ δύσφθαρτον καὶ διὰ τοῦτο διδόασιν αὐτὰ πολλάκις τοῖς διαφθείρουσιν ἐν τῇ κοιλίᾳ τὴν τροφὴν ὑπὸ κακοχυμίας, ἕψοντες καὶ ἀποχέοντες δὶς καὶ τρὶς τὸ ὕδωρ, ἄχρις ἀπόθηται τὴν ἁλυκὴν ποιότητα. γίγνεται δὲ οὕτως σκευασθέντα καὶ σταλτικὰ γαστρός· εἰ δ' ἑψήσας μὴ ἀποχέων τὸ πρῶτον ὕδωρ, εἶτ' ἀρτύσας ἁλσὶν ἢ γάρῳ, μάλιστα εἰ πίῃ τις τὸν ζωμόν, ὑπαχθήσεται αὐτῷ ἡ γαστὴρ ἱκανῶς.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:36:46.133539Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10199}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.144.json.tmp
+2026-03-02T20:24:55.351842Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+2026-03-02T20:24:55.621494Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+2026-03-02T20:24:55.997255Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 2/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320b60d9f065d-IAD)
+2026-03-02T20:24:56.698265Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 3/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320ba2ae01e0d-IAD)
+2026-03-02T20:24:57.730424Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 4/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320c119b1b964-IAD)
+2026-03-02T20:24:59.430000Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+Reconnecting... 5/5 (unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320cb6e6d38fd-IAD)
+2026-03-02T20:25:03.022055Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 403 Forbidden: Unknown error, url: wss://chatgpt.com/backend-api/codex/responses, cf-ray: 9d6320e1d8400607-IAD
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.144.json.tmp
 
 
 STDOUT:

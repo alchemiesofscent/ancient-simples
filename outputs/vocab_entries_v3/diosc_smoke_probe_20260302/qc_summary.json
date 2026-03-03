@@ -1,0 +1,29 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/diosc_smoke_probe_20260302",
+  "manifest_path": "outputs/vocab_entries_v3/diosc_smoke_probe_20260302/manifest_20260303_000257_utc.json",
+  "run_id": "diosc_smoke_probe_20260302",
+  "expected_jobs": 1,
+  "result_files": 0,
+  "valid_results": 0,
+  "missing_results": 1,
+  "missing_result_ids": [
+    "DIOSC_DMM-1.1"
+  ],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 1,
+  "completeness_ok": false,
+  "term_label_counts": {},
+  "axis_counts": {},
+  "intensity_counts": {},
+  "qualities_total": 0,
+  "qualities_with_degree": 0,
+  "entries_with_quality": 0,
+  "entries_with_degree": 0,
+  "degree_ratio": 0.0,
+  "generic_quality_property_count": 0,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 0,
+  "alerts": []
+}

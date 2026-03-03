@@ -1,0 +1,56 @@
+{
+  "n_reviews": 20,
+  "missing_packets": 0,
+  "models": {
+    "codex_5_3_high": {
+      "avg": {
+        "precision": 4.8,
+        "coverage": 4.85,
+        "labeling": 4.55,
+        "lemma": 4.1,
+        "linking": 4.4,
+        "qualities": 4.9,
+        "overall": 4.6000000000000005
+      },
+      "wins": 13,
+      "rank_counts": {
+        "3": 7,
+        "1": 13
+      }
+    },
+    "gpt_5_2_high": {
+      "avg": {
+        "precision": 4.85,
+        "coverage": 4.9,
+        "labeling": 4.6,
+        "lemma": 4.1,
+        "linking": 4.8,
+        "qualities": 4.9,
+        "overall": 4.691666666666666
+      },
+      "wins": 4,
+      "rank_counts": {
+        "1": 4,
+        "3": 6,
+        "2": 10
+      }
+    },
+    "gpt_5_2_xhigh": {
+      "avg": {
+        "precision": 4.85,
+        "coverage": 4.9,
+        "labeling": 4.5,
+        "lemma": 4.05,
+        "linking": 4.7,
+        "qualities": 5.0,
+        "overall": 4.666666666666667
+      },
+      "wins": 3,
+      "rank_counts": {
+        "2": 10,
+        "3": 7,
+        "1": 3
+      }
+    }
+  }
+}

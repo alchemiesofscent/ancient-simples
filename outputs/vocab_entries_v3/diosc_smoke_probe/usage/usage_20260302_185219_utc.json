@@ -1,0 +1,28 @@
+{
+  "run_id": "diosc_smoke_probe",
+  "session_id": "20260302_185219_utc",
+  "jobs": [
+    {
+      "source_id": "DIOSC_DMM-1.1",
+      "safe_id": "DIOSC_DMM-1.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/diosc_smoke_probe/_codex_home/DIOSC_DMM-1.1/.codex/sessions/2026/03/02/rollout-2026-03-02T13-52-23-019cafe4-f456-72e1-91ba-ee0c26aebc9d.jsonl",
+        "start_secondary_used_percent": null,
+        "end_secondary_used_percent": null,
+        "last_token_usage": null,
+        "total_token_usage": null
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_output_tokens": 0,
+    "total_tokens": 0
+  },
+  "secondary_used_percent": {
+    "start_min": null,
+    "end_max": null
+  }
+}

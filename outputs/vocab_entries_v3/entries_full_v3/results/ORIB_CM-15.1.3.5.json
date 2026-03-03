@@ -1,0 +1,79 @@
+{
+  "source_id": "ORIB_CM-15.1.3.5",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀπόστασιν",
+      "normalized": "αποστασιν",
+      "lemma_gr": "ἀπόστασις",
+      "lemma_normalized": "αποστασις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.5,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμασίαν",
+      "normalized": "θερμασιαν",
+      "lemma_gr": "θερμασία",
+      "lemma_normalized": "θερμασια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει δὲ κατὰ τὴν δευτέραν ἀπόστασιν",
+      "evidence_normalized": "ξηραινει δε κατα την δευτεραν αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "weak",
+      "hedge": "none",
+      "evidence_display": "θερμασίαν μὲν οὖν οὐ πάνυ τι σαφῆ κέκτηται",
+      "evidence_normalized": "θερμασιαν μεν ουν ου πανυ τι σαφη κεκτηται",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.55
+    }
+  ]
+}

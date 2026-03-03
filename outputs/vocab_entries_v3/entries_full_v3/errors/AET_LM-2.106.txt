@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c215a-efd3-70f2-ba35-e06674a871b3
+reasoning summaries: none
+session id: 019cb038-3313-7b21-82aa-15f28c3e2034
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,11 @@ SOURCE_ID: AET_LM-2.106
 TEXT:
 τὸν ἐν τῇ χοληδόχῳ κύστει ἀθροιζόμενον χυμὸν ὀνομάζω νῦν χολήν, οὐ τὴν μέλαιναν· ξανθὴν δὲ ταύτην ὀνομάζουσι. καὶ ἐστιν ὁ χυμὸς οὗτος πάντων τῶν ἐν τῷ ζῴῳ χυμῶν θερμότατος. διαφοραὶ δὲ ἐν αὐτῷ πλεῖσται εὑρίσκονται παρὰ τε τὴν φύσιν τῶν ζῴων καὶ τὴν δίαιταν. ἡ γὰρ τῇ χρόᾳ ὠχροτέρα χολὴ μετρίως ἐστὶ θερμὴ, ἡ δὲ ὑπόλευκος ἐφ' ὅσον ἐκλύεται τῇ χρόᾳ ἐπὶ τοσοῦτον τῆς θερμῆς ποιότητος ἀπολείπεται. ἡ δὲ ξανθὴ θερμοτέρα τῆς ὠχρᾶς ἐστι τοσοῦτον ὅσον καὶ παχυτέρα καὶ ξανθοτέρα. θερμαινομένη γὰρ ἐπὶ πλέον ἡ ὠχρὰ τὴν ξανθὴν ἀποτελεῖ, εἰ δ' ἔτι ὑποθερμανθείη, ἐπὶ τὸ μελάντερον τρέπεται χρῶμα, ποτὲ μὲν ἰῶδες ἴσχουσα τοῦτο, ποτὲ δὲ κυανοῦν, ἐνίοτε δὲ τὸ τῆς ἰσάτιδος. πρόσεχε τοίνυν καὶ σὺ τῷ χρώματι τῶν χολῶν, ὅταν σκευάζῃς φάρμακον ἐν ᾧ καὶ χολῆς τι περιέχεται. γίγνεται δὲ καὶ παρὰ τὸ χρώμενον τῇ χολῇ σῶμα διαφορὰ τις, εὐαίσθητόν τε καὶ δυσαίσθητον ὑπάρχον εὐπαθές τε καὶ δυσπαθές. καὶ ἡ μὲν τῶν ὑῶν φαίνεται πάντων ὑδατωδεστάτη καὶ διὰ τοῦτο ἀσθενεστάτη, πλὴν τῶν ἀγρίων συῶν. χρῶνται δὲ τῇ τῶν ἡμέρων ὑῶν χολῇ ἐπὶ τῶν ἐν ὠσὶν ἑλκῶν, οὐκ ἀδοκίμῳ φαρμάκῳ, καὶ χρῶ καὶ σὺ μὴ παρόντος ἄλλου συνθέτου. ἡ δὲ τῶν προβάτων βραχὺ δριμυτέρα τῆς τῶν ὑῶν, καὶ ταύτης μᾶλλον ἡ τῶν αἰγῶν· παραπλησία δὲ ἐστι ταύτῃ ἡ τῶν ἄρκτων τε καὶ βοῶν. ἡ δὲ τῶν ταύρων ἰσχυροτάτη μὲν τούτων, ἀπολειπομένη δὲ τῶν ὑαινῶν· ἡ δὲ τοῦ καλλιωνύμου ἰχθύος καὶ σκορπίου καὶ χελώνης ταύτης ἰσχυρότεραι. εἰσὶ δὲ καὶ αἱ τῶν πτηνῶν ζῴων χολαὶ πᾶσαι δριμύτεραι καὶ ξηραντικώτεραι τῶν ἐν τοῖς τετράποσι· τῶν δὲ πτηνῶν αἱ τῶν ἀλεκτορίδων καὶ περδίκων ἀμείνους εἰς ἰατρικὴν χρείαν· αἱ δὲ τῶν ἱεράκων καὶ ἀετῶν δριμεῖαι ἱκανῶς εἰσι καὶ διαβρωτικαί. ταύτας οὖν αὐτῶν ἐπιστάμενος τὰς διαφοράς, ἐπιστάμενος δὲ καὶ τῶν παθῶν τίνα μὲν δεῖται μᾶλλον ξηραίνεσθαι, τίνα δὲ ἧττον, οὐκ ἂν ἁμάρτοις περὶ τὴν θεραπείαν.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:35:34.323492Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10271}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.106.json.tmp
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.106.json.tmp
 
 
 STDOUT:

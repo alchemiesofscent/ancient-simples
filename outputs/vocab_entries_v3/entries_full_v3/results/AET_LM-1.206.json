@@ -1,0 +1,83 @@
+{
+  "source_id": "AET_LM-1.206",
+  "terms": [
+    {
+      "label": "PROCESS",
+      "display": "καθάρσεις",
+      "normalized": "καθαρσεις",
+      "lemma_gr": "κάθαρσις",
+      "lemma_normalized": "καθαρσις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κνηκος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "κνῆκος",
+      "normalized": "κνηκος",
+      "lemma_gr": "κνῆκος",
+      "lemma_normalized": "κνηκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Κνήκου σπέρματι",
+      "normalized": "κνηκου σπερματι",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κνηκος",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῆς τρίτης δὲ ἐστι τάξεως τῶν θερμαινόντων",
+      "evidence_normalized": "της τριτης δε εστι ταξεως των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κνηκος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "source_id": "AET_LM-1.403",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "κράσεως",
+      "normalized": "κρασεως",
+      "lemma_gr": "κρᾶσις",
+      "lemma_normalized": "κρασις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "φακος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ψυχρᾶς",
+      "normalized": "ψυχρας",
+      "lemma_gr": "ψυχρός",
+      "lemma_normalized": "ψυχρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "φακος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.84
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὑγρᾶς",
+      "normalized": "υγρας",
+      "lemma_gr": "ὑγρός",
+      "lemma_normalized": "υγρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "φακος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.84
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "φακὸς",
+      "normalized": "φακος",
+      "lemma_gr": "φακός",
+      "lemma_normalized": "φακος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.92
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὑγρᾶς καὶ ψυχρᾶς κράσεως, ἐκ τῆς δευτέρας τάξεώς",
+      "evidence_normalized": "υγρας και ψυχρας κρασεως, εκ της δευτερας ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "φακος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72
+    },
+    {
+      "axis": "WET",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὑγρᾶς καὶ ψυχρᾶς κράσεως, ἐκ τῆς δευτέρας τάξεώς",
+      "evidence_normalized": "υγρας και ψυχρας κρασεως, εκ της δευτερας ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "φακος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72
+    }
+  ]
+}

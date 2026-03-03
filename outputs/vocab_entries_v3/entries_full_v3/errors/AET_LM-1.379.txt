@@ -5,24 +5,25 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+2026-03-03T17:25:31.651393Z ERROR codex_core::models_manager::manager: failed to refresh available models: stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/models?client_version=0.107.0)
+OpenAI Codex v0.107.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c2156-faf1-7912-b5ef-c353f26dd76d
+reasoning summaries: none
+session id: 019cb4bb-c985-7d91-a8c3-8cf1986fd02c
 --------
 user
 # Vocab extractor prompt
@@ -62,7 +63,7 @@ Use CONTEXT ONLY if the current TEXT explicitly signals a back-reference (e.g., 
 ### Normalization rules (mandatory)
 For every term provide:
 - `display`: representative Greek surface form from the text
-- `normalized`: lowercase + strip accents/breathings ONLY; preserve iota subscripts; keep Greek script (no transliteration)
+- `normalized`: lowercase + strip all combining marks U+0300-U+036F (including iota subscript); keep Greek script (no transliteration)
 If multiword, normalize each word and join with single spaces.
 
 ### Lemma rules (mandatory)
@@ -107,6 +108,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -320,8 +323,12 @@ TEXT:
 σταφυλὴ τρέφει μᾶλλον ἁπάντων τῶν ὡραίων, καὶ μάλισθ' ὅταν ἀκριβῶς ᾖ πεπεμμένη. ἧττον δὲ τῶν σύκων αἱ σταφυλαὶ τρέφουσιν καὶ μέγιστον ἀγαθὸν αὐταῖς ἐστι τὸ ταχέως ὑπέρχεσθαι. διὸ κἂν ἐπισχεθῶσὶ ποτε, βλάπτουσιν ἱκανῶς. οὔτε γὰρ πέττονται καλῶς ἐπισχεθεῖσαι, καὶ κατὰ τὴν εἰς ἧπάρ τε καὶ φλέβας ἀνάδοσιν ὠμὸν γεννῶσι χυμὸν οὐ ῥᾳδίως εἰς αἷμα μεταβαλλόμενον διὰ τε τὸ ἔξωθεν περικείμενον δέρμα καὶ τὰ γίγαρτα ξηρὰ καὶ στύφοντα τὴν οὐσίαν ὑπάρχοντα. διὸ τινες καλῶς ποιοῦντες, ὡς ἄχρηστα ταῦτα ἀποπτύουσιν, ἀπομυζήσαντες ἅπασαν τὴν ἔνδον σάρκα σὺν τῷ χυλῷ καὶ μᾶλλον τούτοις ἡ γαστὴρ ὑπέρχεται. ἀποτίθενται δὲ τὴν σταφυλὴν εἰς τὸν χειμῶνα διαφόρως. ἡ μὲν οὖν ἐν χύτρᾳ συντιθεμένη, πωμασθείσης δηλονότι τῆς χύτρας ἀκριβῶς καὶ πιττωθέντος τοῦ πώματος πρὸς τῷ μηδαμόθεν διαπνεῖσθαι, τονικὴ ἐκλύτου γαστρὸς ἡ τοιαύτη γίγνεται καὶ τοὺς ἀνορέκτους ἐπεγείρει πρὸς ἐδωδὴν σίτου· οὐ μὴν ὑπέρχεταὶ γε κατὰ γαστέρα καὶ εἰ ἐπὶ πλεῖον βρωθείη, ἅπτεται τῆς κεφαλῆς. ταύτης δὲ ἔτι μᾶλλόν ἐστι κεφαλαλγής, ἣν ἀποτίθενται κατὰ τὸ γλεῦκος. ἡ δὲ κρεμασθεῖσα κεφαλὴν οὐδόλως πλήττει, γαστέρα δὲ οὐδὲ προτρέπειν οὐδὲ ἐπέχειν πέφυκεν. ὡσαύτως δὲ οὐδὲ ἐπεγείρει τὴν ἄρρωστον ὄρεξιν οὐδὲ ἐκλύει τὴν εὔρωστον. αἱ μὲν οὖν γλυκεῖαι θερμότερον ἔχουσι τὸν χυλόν, διὸ καὶ διψώδεις εἰσὶν καὶ γαστέρα δὲ ὑπάγουσι καὶ μάλισθ' ὅταν ὦσιν ὑγραί· μεταξὺ γὰρ τῶν θερμαινόντων καὶ ψυχόντων εἰσί. μοχθηραὶ δὲ οὐκ εἰς ταῦτα μόνον, ἀλλὰ καὶ πρὸς τὴν ἐν γαστρὶ πέψιν καὶ ἀνάδοσιν καὶ θρέψιν, αἵ τε ὀξεῖαι καὶ αὐστηραὶ σταφυλαὶ καὶ αἱ τὸ περικείμενον δέρμα παχύτερον ἔχουσαι. καθόλου δὲ σε περὶ τῶν ἐδωδίμων τοῖς ἀνθρώποις καρπῶν ἐπίστασθαι χρὴ λόγῳ κοινῷ· τοὺς μὲν ὑγροὺς ὑγρὰν καὶ λεπτὴν ἐργάζεσθαι τὴν ἐξ αὐτῶν ἀναδιδομένην τῷ σώματι τροφήν, πορίμην τε καὶ διεξερχομένην ὅλον τὸ σῶμα ταχέως, ἐκκενουμένην τε δι' οὔρων καὶ κατὰ τὸ δέρμα· ἔμπαλιν δὲ τῶν στερεῶν ταῖς συστάσεσι καρπῶν ἥτε εἰς τὸ σῶμα πρόσθεσις παχεῖα αἵ τε διέξοδοι βραδύτεραι καὶ μάλισθ' ὅταν ἔχωσιν ἐν ἑαυτοῖς χυμὸν ἢ παχὺν ἢ γλίσχρον ἢ στυπτικόν.
 
 mcp startup: no servers
-2026-02-03T02:31:15.037806Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10530}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
+Reconnecting... 1/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 2/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 3/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 4/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 5/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+ERROR: stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
 Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.379.json.tmp
 
 

@@ -1,0 +1,43 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/diosc_smoke_probe_900_escalated",
+  "manifest_path": "outputs/vocab_entries_v3/diosc_smoke_probe_900_escalated/manifest_20260303_001221_utc.json",
+  "run_id": "diosc_smoke_probe_900_escalated",
+  "expected_jobs": 1,
+  "result_files": 1,
+  "valid_results": 1,
+  "missing_results": 0,
+  "missing_result_ids": [],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 0,
+  "completeness_ok": true,
+  "term_label_counts": {
+    "ADMINISTRATION": 1,
+    "APPLICATION_SITE": 2,
+    "CONDITION": 15,
+    "PLACE": 3,
+    "PREPARATION": 8,
+    "PROCESS": 9,
+    "QUALITY_PROPERTY": 8,
+    "SUBSTANCE": 10,
+    "SUBSTANCE_PART": 4
+  },
+  "axis_counts": {
+    "HOT": 1
+  },
+  "intensity_counts": {
+    "none": 1
+  },
+  "qualities_total": 1,
+  "qualities_with_degree": 0,
+  "entries_with_quality": 1,
+  "entries_with_degree": 0,
+  "degree_ratio": 0.0,
+  "generic_quality_property_count": 1,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 0,
+  "alerts": [
+    "Generic QUALITY_PROPERTY terms (δυναμις/ουσια) detected; spot-check context."
+  ]
+}

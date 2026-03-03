@@ -1,0 +1,130 @@
+{
+  "run_id": "entries_full_v3",
+  "session_id": "20260303_172936_utc",
+  "csv": "data-workbench/entries.csv",
+  "prompt": "/home/seancoughlin/Projects/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seancoughlin/Projects/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 5,
+  "n_selected": 17,
+  "jobs": [
+    {
+      "csv_line": 1900,
+      "source_id": "AET_LM-1.379",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-1.379.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.379.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-1.379.txt"
+    },
+    {
+      "csv_line": 1943,
+      "source_id": "AET_LM-2.3",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.3.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.3.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.3.txt"
+    },
+    {
+      "csv_line": 1987,
+      "source_id": "AET_LM-2.47",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.47.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.47.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.47.txt"
+    },
+    {
+      "csv_line": 2061,
+      "source_id": "AET_LM-2.121",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.121.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.121.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.121.txt"
+    },
+    {
+      "csv_line": 2076,
+      "source_id": "AET_LM-2.135",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.135.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.135.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.135.txt"
+    },
+    {
+      "csv_line": 2093,
+      "source_id": "AET_LM-2.152",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.152.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.152.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.152.txt"
+    },
+    {
+      "csv_line": 2109,
+      "source_id": "AET_LM-2.168",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.168.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.168.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.168.txt"
+    },
+    {
+      "csv_line": 2113,
+      "source_id": "AET_LM-2.172",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.172.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.172.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.172.txt"
+    },
+    {
+      "csv_line": 2124,
+      "source_id": "AET_LM-2.183",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.183.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.183.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.183.txt"
+    },
+    {
+      "csv_line": 2128,
+      "source_id": "AET_LM-2.187",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.187.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.187.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.187.txt"
+    },
+    {
+      "csv_line": 2130,
+      "source_id": "AET_LM-2.189",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.189.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.189.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.189.txt"
+    },
+    {
+      "csv_line": 2131,
+      "source_id": "AET_LM-2.190",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.190.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.190.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.190.txt"
+    },
+    {
+      "csv_line": 2132,
+      "source_id": "AET_LM-2.191",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.191.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.191.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.191.txt"
+    },
+    {
+      "csv_line": 2133,
+      "source_id": "AET_LM-2.192",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.192.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.192.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.192.txt"
+    },
+    {
+      "csv_line": 2134,
+      "source_id": "AET_LM-2.193",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.193.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.193.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.193.txt"
+    },
+    {
+      "csv_line": 2135,
+      "source_id": "AET_LM-2.194",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.194.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.194.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.194.txt"
+    },
+    {
+      "csv_line": 2136,
+      "source_id": "AET_LM-2.195",
+      "job_prompt": "outputs/vocab_entries_v3/entries_full_v3/jobs/20260303_172936_utc/AET_LM-2.195.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.195.json",
+      "error_txt": "outputs/vocab_entries_v3/entries_full_v3/errors/AET_LM-2.195.txt"
+    }
+  ]
+}

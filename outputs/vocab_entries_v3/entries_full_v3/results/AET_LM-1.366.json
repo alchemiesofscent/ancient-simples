@@ -1,0 +1,83 @@
+{
+  "source_id": "AET_LM-1.366",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμῆς",
+      "normalized": "θερμης",
+      "lemma_gr": "θερμός",
+      "lemma_normalized": "θερμος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "τμητικῆς δυνάμεως",
+      "normalized": "τμητικης δυναμεως",
+      "lemma_gr": "τμητικὴ δύναμις",
+      "lemma_normalized": "τμητικη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.66
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "σκίλλα",
+      "normalized": "σκιλλα",
+      "lemma_gr": "σκίλλα",
+      "lemma_normalized": "σκιλλα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "weak",
+      "hedge": "none",
+      "evidence_display": "οὐ μὴν ἰσχυρῶς γε θερμῆς, ἀλλὰ τῆς δευτέρας τάξεως τῶν θερμαινόντων",
+      "evidence_normalized": "ου μην ισχυρως γε θερμης, αλλα της δευτερας ταξεως των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "source_id": "ORIB_CM-15.1.4.9",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερεστέρας οὐσίας",
+      "normalized": "λεπτομερεστερας ουσιας",
+      "lemma_gr": "λεπτομερὴς οὐσία",
+      "lemma_normalized": "λεπτομερης ουσια",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "δικταμνον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "γλήχωνα",
+      "normalized": "γληχωνα",
+      "lemma_gr": "γλήχων",
+      "lemma_normalized": "γληχων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Δίκταμνον",
+      "normalized": "δικταμνον",
+      "lemma_gr": "Δίκταμνον",
+      "lemma_normalized": "δικταμνον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

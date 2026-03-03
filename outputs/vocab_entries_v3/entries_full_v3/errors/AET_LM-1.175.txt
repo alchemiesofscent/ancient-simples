@@ -5,24 +5,25 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+2026-03-03T03:16:24.721778Z ERROR codex_core::models_manager::manager: failed to refresh available models: stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/models?client_version=0.107.0)
+OpenAI Codex v0.107.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c2151-4a45-7a90-80c8-19c33e5bb759
+reasoning summaries: none
+session id: 019cb1b2-6613-7fe3-ae04-5d3d31b8a993
 --------
 user
 # Vocab extractor prompt
@@ -62,7 +63,7 @@ Use CONTEXT ONLY if the current TEXT explicitly signals a back-reference (e.g., 
 ### Normalization rules (mandatory)
 For every term provide:
 - `display`: representative Greek surface form from the text
-- `normalized`: lowercase + strip accents/breathings ONLY; preserve iota subscripts; keep Greek script (no transliteration)
+- `normalized`: lowercase + strip all combining marks U+0300-U+036F (including iota subscript); keep Greek script (no transliteration)
 If multiword, normalize each word and join with single spaces.
 
 ### Lemma rules (mandatory)
@@ -107,6 +108,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -320,8 +323,12 @@ TEXT:
 καλαμίνθη λεπτομερής ἐστι τὴν οὐσίαν καὶ θερμὴ καὶ ξηρὰ τὴν κρᾶσιν, ἐκ τῆς τρίτης που τάξεως καθ' ἑκατέρας τὰς ποιότητας. πινομένη δὲ αὐτὴ καθ' ἑαυτὴν ξηρὰ διὰ μελικράτου θερμαίνει τε σαφῶς καὶ ἱδρῶτας κινεῖ καὶ διαφορεῖ καὶ ξηραίνει τὸ σύμπαν σῶμα. διὰ τοῦτο γοῦν αὐτῇ τινες ἐχρήσαντο καὶ πρὸς τὰ κατὰ περίοδον ῥίγη, ἔξωθεν <μὲν> ἀφεψήσαντες ἐλαίῳ καὶ συναλείφοντες ὅλον τὸ σῶμα μετὰ τρίψεως γενναίας, ἔσωθεν δὲ λαμβάνοντες, ὡς εἴρηται. καὶ μέν γε καὶ κατὰ τῶν ἰσχίων καταπλάττουσὶ τινες αὐτὴν ἐπὶ τῶν ἰσχιαδικῶν ὡς γενναῖον βοήθημα· καὶ γὰρ ἕλκει τὰ ἐκ τοῦ βάθους εἰς τὴν ἐπιφάνειαν καὶ θερμαίνει σύμπαν τὸ ἄρθρον, ἐπικαίει τε σαφῶς τὸ δέρμα καὶ τὰ καταμήνια πινομένη τε καὶ προστιθεμένη προκαλεῖται δραστηρίως. ἀγαθὸν δὲ κἀπὶ τῶν ἐλεφαντιώντων τὸ φάρμακον, οὐ μόνον τῷ γενναίως διαφορεῖν τοὺς λεπτοὺς χυμούς, ἀλλὰ καὶ τῷ λεπτύνειν καὶ τέμνειν ἰσχυρῶς τοὺς παχεῖς, οἷοὶ πέρ εἰσιν οἱ καὶ τοῦτο τὸ νόσημα γεννῶντες· οὕτω δὲ καὶ οὐλὰς μελαίνας λαμπρύνει καὶ ὑπώπια διαφορεῖ. κάλλιον δὲ ἐπὶ τῶν τοιούτων ἕψοντας ἐν οἴνῳ καταπλάττειν αὐτήν, καὶ χλωρὰν μᾶλλον ἢ ξηράν· ἰσχυροτέρα γὰρ ξηρανθεῖσα γίγνεται καὶ καίειν ἑτοιμοτέρα. καταπλάσσεται δὲ καὶ κατὰ τῶν δηγμάτων τῶν ἰοβόλων, διὰ δὲ τὴν συνοῦσαν πικρότητα καὶ ἀσκαρίδας καὶ ἕλμινθας ἐνιέμενός τε καὶ πινόμενος ὁ χυλὸς αὐτῆς ἀναιρεῖν πέφυκε καὶ τοὺς ἐν ὠσὶ δὲ καὶ ἕλκεσι σκώληκας. ὀνίνησι δὲ καὶ τοὺς ἀσθματικοὺς καὶ τοὺς ἰκτερικοὺς τῷ ῥύπτειν τε καὶ διακαθαίρειν τὰς καθ' ἧπαρ ἐμφράξεις. ἐστὶ δὲ εἰς ἅπαντα τὰ εἰρημένα πρακτικωτέρα ἡ ὄρειος. Ὀρφεὺς δὲ φησιν ὅτι ὁ χυλὸς αὐτῆς σὺν ἴσῳ ῥοδίνῳ μετὰ ψιμμυθίου λειωθείς, ὡς γλοιοῦ ἔχειν πάχος, καὶ ἐπιχριόμενος τὰ πυρίκαυτα θεραπεύει. τὸ δὲ παράδοξον, ὅτι οὐδὲ οὐλὴ φαίνεται καὶ τριχοφυεῖ ὁ τόπος. σὺν κιμωλίᾳ δὲ καὶ ἀλόῃ ἴσως λειώσας τὸν χυλὸν καὶ ἐπιχρίσας μέτωπον καὶ κροτάφους παύσεις παραχρῆμα κεφαλῆς ὀδύνας.
 
 mcp startup: no servers
-2026-02-03T02:25:02.099264Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10903}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
+Reconnecting... 1/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 2/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 3/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 4/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+Reconnecting... 5/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))
+ERROR: stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
 Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-1.175.json.tmp
 
 

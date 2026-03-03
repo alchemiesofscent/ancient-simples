@@ -1,0 +1,66 @@
+{
+  "source_id": "AET_LM-2.119",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἄχρηστός",
+      "normalized": "αχρηστος",
+      "lemma_gr": "ἄχρηστος",
+      "lemma_normalized": "αχρηστος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κοπρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δυσπόριστος",
+      "normalized": "δυσποριστος",
+      "lemma_gr": "δυσπόριστος",
+      "lemma_normalized": "δυσποριστος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κοπρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "κόπρος",
+      "normalized": "κοπρος",
+      "lemma_gr": "κόπρος",
+      "lemma_normalized": "κοπρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

@@ -1,0 +1,86 @@
+{
+  "source_id": "GAL_SMT-7.10.44",
+  "terms": [
+    {
+      "label": "ADMINISTRATION",
+      "display": "ἐσθιομένη",
+      "normalized": "εσθιομενη",
+      "lemma_gr": "ἐσθίειν",
+      "lemma_normalized": "εσθιειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κορωνοπους",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.96,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "CONDITION",
+      "display": "κοιλιακοὺς",
+      "normalized": "κοιλιακους",
+      "lemma_gr": "κοιλιακός",
+      "lemma_normalized": "κοιλιακος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "κορωνόποδος",
+      "normalized": "κορωνοποδος",
+      "lemma_gr": "κορωνόπους",
+      "lemma_normalized": "κορωνοπους",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.76
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "κορωνόποδος ῥίζα",
+      "normalized": "κορωνοποδος ριζα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κορωνοπους",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.0
+    }
+  ],
+  "qualities": []
+}

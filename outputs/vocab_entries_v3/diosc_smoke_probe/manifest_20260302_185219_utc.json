@@ -1,0 +1,18 @@
+{
+  "run_id": "diosc_smoke_probe",
+  "session_id": "20260302_185219_utc",
+  "csv": "data-workbench/entries_diosc.csv",
+  "prompt": "docs/prompts/vocab_term_extractor_with_degrees_diosc.md",
+  "schema": "/home/seancoughlin/Projects/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 1,
+  "n_selected": 1,
+  "jobs": [
+    {
+      "csv_line": 2,
+      "source_id": "DIOSC_DMM-1.1",
+      "job_prompt": "outputs/vocab_entries_v3/diosc_smoke_probe/jobs/20260302_185219_utc/DIOSC_DMM-1.1.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/diosc_smoke_probe/results/DIOSC_DMM-1.1.json",
+      "error_txt": "outputs/vocab_entries_v3/diosc_smoke_probe/errors/DIOSC_DMM-1.1.txt"
+    }
+  ]
+}

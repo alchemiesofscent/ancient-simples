@@ -1,0 +1,79 @@
+{
+  "source_id": "ORIB_CM-15.1.1.92",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερεῖς",
+      "normalized": "λεπτομερεις",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρτεμισια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀρτεμισίαι",
+      "normalized": "αρτεμισιαι",
+      "lemma_gr": "Ἀρτεμισία",
+      "lemma_normalized": "αρτεμισια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "ἐν δὲ τῷ ξηραίνειν πρώτης ἐπιτεταμένης",
+      "evidence_normalized": "εν δε τω ξηραινειν πρωτης επιτεταμενης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρτεμισια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7
+    },
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἐν μὲν τῷ θερμαίνειν εἰσὶ δευτέρας ἀποστάσεως",
+      "evidence_normalized": "εν μεν τω θερμαινειν εισι δευτερας αποστασεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αρτεμισια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    }
+  ]
+}

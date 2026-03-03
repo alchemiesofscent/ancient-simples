@@ -1,0 +1,53 @@
+{
+  "run_id": "_prep_20260302_025700_utc",
+  "session_id": "_prep_20260302_025700_utc",
+  "csv": "/home/seancoughlin/Projects/ancient-simples/data-workbench/entries.csv",
+  "prompt": "/home/seancoughlin/Projects/ancient-simples/docs/prompts/vocab_term_extractor_with_degrees.md",
+  "schema": "/home/seancoughlin/Projects/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 5,
+  "n_selected": 6,
+  "jobs": [
+    {
+      "csv_line": 215,
+      "source_id": "GAL_SMT-7.10.44",
+      "job_prompt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/jobs/_prep_20260302_025700_utc/GAL_SMT-7.10.44.prompt.md",
+      "result_json": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/results/GAL_SMT-7.10.44.json",
+      "error_txt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/errors/GAL_SMT-7.10.44.txt"
+    },
+    {
+      "csv_line": 413,
+      "source_id": "GAL_SMT-8.18.34",
+      "job_prompt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/jobs/_prep_20260302_025700_utc/GAL_SMT-8.18.34.prompt.md",
+      "result_json": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/results/GAL_SMT-8.18.34.json",
+      "error_txt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/errors/GAL_SMT-8.18.34.txt"
+    },
+    {
+      "csv_line": 646,
+      "source_id": "GAL_ALIM-1.26",
+      "job_prompt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/jobs/_prep_20260302_025700_utc/GAL_ALIM-1.26.prompt.md",
+      "result_json": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/results/GAL_ALIM-1.26.json",
+      "error_txt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/errors/GAL_ALIM-1.26.txt"
+    },
+    {
+      "csv_line": 649,
+      "source_id": "GAL_ALIM-1.32",
+      "job_prompt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/jobs/_prep_20260302_025700_utc/GAL_ALIM-1.32.prompt.md",
+      "result_json": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/results/GAL_ALIM-1.32.json",
+      "error_txt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/errors/GAL_ALIM-1.32.txt"
+    },
+    {
+      "csv_line": 943,
+      "source_id": "ORIB_CM-15.1.10.28",
+      "job_prompt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/jobs/_prep_20260302_025700_utc/ORIB_CM-15.1.10.28.prompt.md",
+      "result_json": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/results/ORIB_CM-15.1.10.28.json",
+      "error_txt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/errors/ORIB_CM-15.1.10.28.txt"
+    },
+    {
+      "csv_line": 1013,
+      "source_id": "ORIB_CM-15.1.11.5",
+      "job_prompt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/jobs/_prep_20260302_025700_utc/ORIB_CM-15.1.11.5.prompt.md",
+      "result_json": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/results/ORIB_CM-15.1.11.5.json",
+      "error_txt": "/home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/model_eval/_prep_20260302_025700_utc/errors/ORIB_CM-15.1.11.5.txt"
+    }
+  ]
+}

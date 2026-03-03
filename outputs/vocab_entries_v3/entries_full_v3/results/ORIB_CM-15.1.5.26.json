@@ -1,0 +1,86 @@
+{
+  "source_id": "ORIB_CM-15.1.5.26",
+  "terms": [
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στρυφνὸν",
+      "normalized": "στρυφνον",
+      "lemma_gr": "στρυφνός",
+      "lemma_normalized": "στρυφνος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "επιμηλιον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀγρία μηλέα",
+      "normalized": "αγρια μηλεα",
+      "lemma_gr": "ἀγρία μηλέα",
+      "lemma_normalized": "αγρια μηλεα",
+      "is_multiword": true,
+      "head_lemma_normalized": "μηλεα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.66
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἐπιμήλιον",
+      "normalized": "επιμηλιον",
+      "lemma_gr": "ἐπιμήλιον",
+      "lemma_normalized": "επιμηλιον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μηλέα",
+      "normalized": "μηλεα",
+      "lemma_gr": "μηλέα",
+      "lemma_normalized": "μηλεα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.84
+    }
+  ],
+  "qualities": []
+}

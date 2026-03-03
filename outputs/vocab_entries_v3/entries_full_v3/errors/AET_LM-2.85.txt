@@ -5,24 +5,24 @@ STDOUT:
 
 STDERR:
 Traceback (most recent call last):
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 183, in <module>
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
     sys.exit(main())
              ^^^^^^
-  File "/home/seanm/github/ancient-simples/scripts/vocab_agent_runner.py", line 161, in main
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 302, in main
     raise RuntimeError(msg)
 RuntimeError: codex exec failed (exit=1).
 
 STDERR:
-OpenAI Codex v0.93.0 (research preview)
+OpenAI Codex v0.106.0 (research preview)
 --------
-workdir: /home/seanm/github/ancient-simples
+workdir: /home/seancoughlin/Projects/ancient-simples
 model: gpt-5.2
 provider: openai
 approval: never
 sandbox: read-only
 reasoning effort: high
-reasoning summaries: auto
-session id: 019c215a-6392-7e12-a62e-67efeb708b99
+reasoning summaries: none
+session id: 019cb037-5b0b-7d52-91a3-5c9532aa0799
 --------
 user
 # Vocab extractor prompt
@@ -107,6 +107,8 @@ CONDITION (diseases/clinical states; includes κεφαλαλγής when used as 
 
 QUALITY_PROPERTY (pharmacodynamic/sensory/theoretical properties)
 - Examples: θερμός/θερμότης, ψυχρός/ψυχρότης, ξηρός/ξηρότης, ὑγρός/ὑγρότης, δύναμις, κρᾶσις, στύψις, πικρός
+- `δύναμις`/`οὐσία` rule: extract as QUALITY_PROPERTY only when clearly pharmacodynamic/technical in context (e.g., with explicit effect predicates or quality framing such as θερμαίνει/ψύχει/ξηραίνει/ὑγραίνει, δραστικὴ ποιότης, specific therapeutic action).
+- Do NOT extract `δύναμις`/`οὐσία` when they are generic discourse uses (e.g., rhetorical summary like \"ἡ δύναμις αὐτῶν\" without concrete pharmacodynamic specification in the same clause/window).
 
 APPLICATION_SITE (bodily target site where remedy is applied/acts)
 - Examples: δέρμα, γλῶττα, γαστήρ, κεφαλή, ὑποχόνδρια, κνῆμαι, ἧπαρ, σπλήν
@@ -319,10 +321,11 @@ SOURCE_ID: AET_LM-2.85
 TEXT:
 περιστερᾶς αἷμα εἰώθασιν οἱ ἀνατιτρῶντες ὀστᾶ τῆς κεφαλῆς κατεαγότα καταχεῖν τῆς παχείας μήνιγγος, μὴ παρούσης δὲ περιστερᾶς ἐξὸν καὶ τῷ τῆς φάττης αἵματι χρῆσθαι ἢ τῷ τῆς τρυγόνος καὶ πρὸς ὑποσφάγματα δὲ κατὰ τοὺς ὀφθαλμοὺς γιγνόμενα χρῶνταὶ τινες αὐτῷ, θερμῷ δηλονότι ἐνσταζομένῳ ἢ σφαττομένου τοῦ ζῴου ἢ τῶν πτερύγων διαιρουμένων. ἐγὼ δὲ μυρίους οἶδα τῶν ἀνατρηθέντων ὀστᾶ κεφαλῆς οὐδὲν βλαβέντας ἐπὶ τῇ τοῦ ῥοδίνου χρήσει, χωρὶς αἵματος περιστερᾶς. ἐστὶ δὲ καὶ τῶν ὑποσφαγμάτων ἰατικὰ κολλύρια πάμπολλα, καὶ μάλιστα τὸ Δαμοκράτους διάσμυρνον καὶ τὸ διὰ λιβάνου καὶ τὰ διάκροκα· καὶ ὁ χυλὸς δὲ τῆς τήλεως ἀμείνων ἐστὶ περιστερᾶς αἵματος εἰς ταῦτα. τινὲς δὲ τὸ αἷμα τῆς αἰγὸς μετὰ μέλιτος τοῖς ὑδερώδεσιν ὡς φάρμακον ἔδοσαν, καὶ πρὸς ῥεύματα γαστρὸς ἢ δυσεντερίας ὀπτήσαντες ἐχρήσαντο. καὶ τὸ τράγειον δὲ αἷμα ξηράναντές τινες μεθ' ἑτέρων ἐπιτηδείων μιγνύντες διδόασι τοῖς λιθιῶσιν· ἔξεστι δὲ τῷ βουλομένῳ κατ' ἀγρόν ποτε τῶν ἄλλων ἀποροῦντι καὶ τούτῳ χρήσασθαι τὴν πεῖραν ἀκίνδυνον ἔχοντι καὶ τῷ ἐριφείῳ δὲ αἵματι περὶ οὗ ὁ Ξενοκράτης οὕτως ἔγραψεν· “ἐρίφου δὲ αἷμα πρὸς τοὺς αἱμοπτυικοὺς πάνυ ὠφέλιμον. χρὴ δὲ μήπω πεπηγότι ὅσον ἡμικοτυλίῳ παραμῖξαι ὄξους δριμέος ἶσον, ἔπειτα ἀναζέσαντα τριχῇ διανέμειν, διδόναι δὲ καταρροφεῖν ἑκάστης ἡμέρας μέρος <α>.” τῇ πείρᾳ δὲ βασανίσας τῶν νυκτερίδων τὸ αἷμα καὶ βατράχων καὶ κροτώνων ὡς τρίχας ψιλούντων, ψευδὲς εὗρον, ὥσπερ καὶ ἑτέρων ζῴων· οὐδὲ πειράζειν ἤμελλον ἔχων φάρμακα ἐπιτηδειότερα καὶ εὐποριστότερα πρὸς ἕκαστον πάθος. ἐφυλαττόμην δὲ καὶ γοητείας δόξαν ἀπενέγκασθαι.
 
+deprecated: `collab` is deprecated. Use `[features].multi_agent` instead.
+  Enable it with `--enable multi_agent` or `[features].multi_agent` in config.toml. See https://developers.openai.com/codex/config-basic#feature-flags for details.
 mcp startup: no servers
-2026-02-03T02:34:58.408453Z ERROR codex_api::endpoint::responses: error=http 429 Too Many Requests: Some("{\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"pro\",\"resets_at\":1770096405,\"eligible_promo\":null,\"resets_in_seconds\":10307}}")
-ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 6:26 AM.
-Warning: no last agent message; wrote empty content to outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.85.json.tmp
+ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:52 PM.
+Warning: no last agent message; wrote empty content to /home/seancoughlin/Projects/ancient-simples/outputs/vocab_entries_v3/entries_full_v3/results/AET_LM-2.85.json.tmp
 
 
 STDOUT:

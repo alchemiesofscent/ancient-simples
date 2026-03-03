@@ -1,0 +1,247 @@
+{
+  "run_id": "gpt_5_2_high_smoke_parallel10_20260302_160343_utc",
+  "session_id": "20260302_160343_utc",
+  "jobs": [
+    {
+      "source_id": "GAL_SMT-6.5.5",
+      "safe_id": "GAL_SMT-6.5.5",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/GAL_SMT-6.5.5/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-47-019caf4a-9600-74e3-9cc6-e8af9d737316.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 20840,
+          "cached_input_tokens": 11648,
+          "output_tokens": 1993,
+          "reasoning_output_tokens": 1461,
+          "total_tokens": 22833
+        },
+        "total_token_usage": {
+          "input_tokens": 20840,
+          "cached_input_tokens": 11648,
+          "output_tokens": 1993,
+          "reasoning_output_tokens": 1461,
+          "total_tokens": 22833
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-7.10.44",
+      "safe_id": "GAL_SMT-7.10.44",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/GAL_SMT-7.10.44/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-46-019caf4a-95cc-73a3-834a-a50ba3f22d1a.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 20652,
+          "cached_input_tokens": 12544,
+          "output_tokens": 2781,
+          "reasoning_output_tokens": 2239,
+          "total_tokens": 23433
+        },
+        "total_token_usage": {
+          "input_tokens": 20652,
+          "cached_input_tokens": 12544,
+          "output_tokens": 2781,
+          "reasoning_output_tokens": 2239,
+          "total_tokens": 23433
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-7.12.2",
+      "safe_id": "GAL_SMT-7.12.2",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/GAL_SMT-7.12.2/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-47-019caf4a-9605-70f2-aee2-8a8b55864dcb.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 17984,
+          "cached_input_tokens": 12800,
+          "output_tokens": 3389,
+          "reasoning_output_tokens": 2731,
+          "total_tokens": 21373
+        },
+        "total_token_usage": {
+          "input_tokens": 17984,
+          "cached_input_tokens": 12800,
+          "output_tokens": 3389,
+          "reasoning_output_tokens": 2731,
+          "total_tokens": 21373
+        }
+      }
+    },
+    {
+      "source_id": "GAL_SMT-8.18.34",
+      "safe_id": "GAL_SMT-8.18.34",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/GAL_SMT-8.18.34/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-46-019caf4a-9553-7bd3-b3ec-b675608071b5.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 17880,
+          "cached_input_tokens": 12800,
+          "output_tokens": 1956,
+          "reasoning_output_tokens": 1437,
+          "total_tokens": 19836
+        },
+        "total_token_usage": {
+          "input_tokens": 17880,
+          "cached_input_tokens": 12800,
+          "output_tokens": 1956,
+          "reasoning_output_tokens": 1437,
+          "total_tokens": 19836
+        }
+      }
+    },
+    {
+      "source_id": "GAL_ALIM-1.26",
+      "safe_id": "GAL_ALIM-1.26",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/GAL_ALIM-1.26/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-46-019caf4a-95c2-7263-b3d9-a9772e45091b.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 18909,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4947,
+          "reasoning_output_tokens": 3157,
+          "total_tokens": 23856
+        },
+        "total_token_usage": {
+          "input_tokens": 18909,
+          "cached_input_tokens": 3840,
+          "output_tokens": 4947,
+          "reasoning_output_tokens": 3157,
+          "total_tokens": 23856
+        }
+      }
+    },
+    {
+      "source_id": "GAL_ALIM-2.35",
+      "safe_id": "GAL_ALIM-2.35",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/GAL_ALIM-2.35/.codex/sessions/2026/03/02/rollout-2026-03-02T11-06-14-019caf4c-d889-74f3-a11c-d05def3e9972.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 18587,
+          "cached_input_tokens": 12544,
+          "output_tokens": 9784,
+          "reasoning_output_tokens": 7585,
+          "total_tokens": 28371
+        },
+        "total_token_usage": {
+          "input_tokens": 18587,
+          "cached_input_tokens": 12544,
+          "output_tokens": 9784,
+          "reasoning_output_tokens": 7585,
+          "total_tokens": 28371
+        }
+      }
+    },
+    {
+      "source_id": "ORIB_CM-15.1.10.28",
+      "safe_id": "ORIB_CM-15.1.10.28",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/ORIB_CM-15.1.10.28/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-46-019caf4a-95f8-7ef2-a92e-6d1153d04c5a.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 17639,
+          "cached_input_tokens": 12800,
+          "output_tokens": 1644,
+          "reasoning_output_tokens": 1046,
+          "total_tokens": 19283
+        },
+        "total_token_usage": {
+          "input_tokens": 17639,
+          "cached_input_tokens": 12800,
+          "output_tokens": 1644,
+          "reasoning_output_tokens": 1046,
+          "total_tokens": 19283
+        }
+      }
+    },
+    {
+      "source_id": "ORIB_CM-15.1.11.5",
+      "safe_id": "ORIB_CM-15.1.11.5",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/ORIB_CM-15.1.11.5/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-46-019caf4a-95df-7b52-80bf-b752e053ad4a.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 17644,
+          "cached_input_tokens": 12544,
+          "output_tokens": 1817,
+          "reasoning_output_tokens": 1405,
+          "total_tokens": 19461
+        },
+        "total_token_usage": {
+          "input_tokens": 17644,
+          "cached_input_tokens": 12544,
+          "output_tokens": 1817,
+          "reasoning_output_tokens": 1405,
+          "total_tokens": 19461
+        }
+      }
+    },
+    {
+      "source_id": "ORIB_CM-15.1.12.43",
+      "safe_id": "ORIB_CM-15.1.12.43",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/ORIB_CM-15.1.12.43/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-46-019caf4a-9455-7523-9da7-df76314c057b.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 17689,
+          "cached_input_tokens": 3328,
+          "output_tokens": 1470,
+          "reasoning_output_tokens": 947,
+          "total_tokens": 19159
+        },
+        "total_token_usage": {
+          "input_tokens": 17689,
+          "cached_input_tokens": 3328,
+          "output_tokens": 1470,
+          "reasoning_output_tokens": 947,
+          "total_tokens": 19159
+        }
+      }
+    },
+    {
+      "source_id": "ORIB_CM-15.1.14.1",
+      "safe_id": "ORIB_CM-15.1.14.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/model_eval/gpt_5_2_high_smoke_parallel10_20260302_160343_utc/_codex_home/ORIB_CM-15.1.14.1/.codex/sessions/2026/03/02/rollout-2026-03-02T11-03-47-019caf4a-9607-7720-9528-b4fa0a18ddf2.jsonl",
+        "start_secondary_used_percent": 7.0,
+        "end_secondary_used_percent": 7.0,
+        "last_token_usage": {
+          "input_tokens": 17605,
+          "cached_input_tokens": 12800,
+          "output_tokens": 3040,
+          "reasoning_output_tokens": 2282,
+          "total_tokens": 20645
+        },
+        "total_token_usage": {
+          "input_tokens": 17605,
+          "cached_input_tokens": 12800,
+          "output_tokens": 3040,
+          "reasoning_output_tokens": 2282,
+          "total_tokens": 20645
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 185429,
+    "cached_input_tokens": 107648,
+    "output_tokens": 32821,
+    "reasoning_output_tokens": 24290,
+    "total_tokens": 218250
+  },
+  "secondary_used_percent": {
+    "start_min": 7.0,
+    "end_max": 7.0
+  }
+}

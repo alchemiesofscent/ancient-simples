@@ -1,0 +1,27 @@
+Runner failed for source_id=GAL_ALIM-2.10
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 205, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 169, in main
+    proc = subprocess.run(
+           ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+

@@ -1,0 +1,20 @@
+Runner failed for source_id=GAL_ALIM-2.35
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 326, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 315, in main
+    _validate_extraction_obj(obj)
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 139, in _validate_extraction_obj
+    raise RuntimeError(
+RuntimeError: Post-validation failed: normalized fields and/or SUBSTANCE_PART consistency checks failed.
+- terms[4].normalized: must equal normalize(display); expected 'αλεξανδρεια', got 'αλεξανδρειᾳ'
+- terms[4].normalized: expected normalized form 'αλεξανδρεια', got 'αλεξανδρειᾳ'
+- terms[13].normalized: must equal normalize(display); expected 'συκω', got 'συκῳ'
+- terms[13].normalized: expected normalized form 'συκω', got 'συκῳ'
+
