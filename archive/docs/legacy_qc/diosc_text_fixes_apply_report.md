@@ -1,0 +1,67 @@
+# Dioscorides Text-Fixes Apply Report
+
+- Input CSV: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc.patched.csv`
+- Patch CSV: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc_text_fixes_patch.csv`
+- Output CSV: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc.build.csv`
+- Rows: **835**
+- Patches: **56**
+- Errors: **0**
+
+## Operations
+- AUTOFILL blank chapter_no_gr on *_RV rows: 2
+- LEMMA_GR_1_36: SET 1.36.lemma_gr
+- LEMMA_GR_2_10: SET 2.10.lemma_gr
+- EN_4_90_LEMMA: SET 4.90.lemma_en
+- EN_4_90_OR: REPLACE 4.90.entry_en (1 occurrence(s))
+- EN_4_90_FOOTNOTE: REPLACE 4.90.entry_en (1 occurrence(s))
+- EN_4_75_FOOTNOTE: REPLACE 4.75.entry_en (1 occurrence(s))
+- EN_4_164_FOOTNOTE: REPLACE 4.164.entry_en (1 occurrence(s))
+- EN_1_120_SORB: REPLACE 1.120.entry_en (1 occurrence(s))
+- EN_5_162_FOOTNOTE: REPLACE 5.162.entry_en (1 occurrence(s))
+- EN_5_162_AREIOS_DEDUP: REGEX_REPLACE 5.162.entry_en (1 match(es))
+- GR_5_74_SPAIN: REPLACE 5.74.entry_gr (1 occurrence(s))
+- GR_5_17_SIX: REPLACE 5.17.entry_gr (1 occurrence(s))
+- GR_5_42_SIX: REPLACE 5.42.entry_gr (1 occurrence(s))
+- GR_1_100_TAG: REGEX_REPLACE 1.100.entry_gr (1 match(es))
+- GR_2_23_ORCHIS: REPLACE 2.23.entry_gr (1 occurrence(s))
+- GR_2_47_HYDRO: REPLACE 2.47.entry_gr (1 occurrence(s))
+- GR_2_63_SPACE: REPLACE 2.63.entry_gr (1 occurrence(s))
+- GR_2_118_MALLOWS: REPLACE 2.118.entry_gr (1 occurrence(s))
+- GR_2_132_EYES: REPLACE 2.132.entry_gr (1 occurrence(s))
+- GR_4_68_USEFUL: REPLACE 4.68.entry_gr (1 occurrence(s))
+- GR_4_68_BREAK: REPLACE 4.68.entry_gr (1 occurrence(s))
+- GR_2_56_1: REPLACE 2.56.entry_gr (1 occurrence(s))
+- GR_2_56_2: REPLACE 2.56.entry_gr (1 occurrence(s))
+- GR_2_56_3: REPLACE 2.56.entry_gr (1 occurrence(s))
+- GR_2_56_4: REPLACE 2.56.entry_gr (1 occurrence(s))
+- GR_2_56_5: REPLACE 2.56.entry_gr (1 occurrence(s))
+- GR_2_56_6: REPLACE 2.56.entry_gr (1 occurrence(s))
+- GR_2_66_1: REPLACE 2.66.entry_gr (1 occurrence(s))
+- GR_2_66_2: REPLACE 2.66.entry_gr (1 occurrence(s))
+- GR_2_66_3: REPLACE 2.66.entry_gr (1 occurrence(s))
+- GR_2_76_1: REPLACE 2.76.entry_gr (1 occurrence(s))
+- GR_2_76_2: REPLACE 2.76.entry_gr (1 occurrence(s))
+- GR_2_76_3: REPLACE 2.76.entry_gr (1 occurrence(s))
+- GR_2_76_4: REPLACE 2.76.entry_gr (1 occurrence(s))
+- EN_1_64_ORPHAN_FOOTNOTE: REPLACE 1.64.entry_en (1 occurrence(s))
+- EN_2_110_WILD_TURNIP: REPLACE 2.110.entry_en (1 occurrence(s))
+- EN_4_164_FOOTNOTE_BROAD: REPLACE 4.164.entry_en (1 occurrence(s))
+- EN_4_164_FOOTNOTE_SUN: REPLACE 4.164.entry_en (1 occurrence(s))
+- EN_2_38_STRIP_MISPLACED_FOOTNOTES: REGEX_REPLACE 2.38.entry_en (1 match(es))
+- EN_2_50_REMOVE_MISPLACED_FOOTNOTE_19: REPLACE 2.50.entry_en (1 occurrence(s))
+- EN_2_55_STRIP_MISPLACED_SERPENT_FOOTNOTE: REGEX_REPLACE 2.55.entry_en (1 match(es))
+- EN_3_104_REPAIR_LILY_FOOTNOTE_INTRUSION: REPLACE 3.104.entry_en (1 occurrence(s))
+- EN_2_79_REMOVE_MASSIVE_ETYMOLOGY_FOOTNOTE_TAIL: REGEX_REPLACE 2.79.entry_en (1 match(es))
+- EN_1_68_BUM_TO_BURN: REGEX_REPLACE 1.68.entry_en (7 match(es))
+- EN_5_76_BUM_TO_BURN: REGEX_REPLACE 5.76.entry_en (2 match(es))
+- EN_5_108_BUM_TO_BURN: REGEX_REPLACE 5.108.entry_en (1 match(es))
+- EN_5_88_BUM_TO_BURN: REGEX_REPLACE 5.88.entry_en (1 match(es))
+- EN_1_43_IO_TO_10: REPLACE 1.43.entry_en (1 occurrence(s))
+- EN_1_47_LILRPI_TO_LITRAI: REPLACE 1.47.entry_en (1 occurrence(s))
+- EN_4_113_HOODED_TO_FLOODED_AND_DROP_QUOTE: REGEX_REPLACE 4.113.entry_en (1 match(es))
+- EN_5_75_POMHOLYX_TYPO: REPLACE 5.75.entry_en (1 occurrence(s))
+- EN_4_37_PRESTER_TYPO: REPLACE 4.37.entry_en (1 occurrence(s))
+- EN_1_112_NUMBERING_GLITCH: REGEX_REPLACE 1.112.entry_en (1 match(es))
+- EN_3_104_DOUBLE_THE_FIX: REPLACE 3.104.entry_en (1 occurrence(s))
+- GR_4_151_PRES_PREFIX: REGEX_REPLACE 4.151.entry_gr (1 match(es))
+- EN_4_151_FOOTNOTE: REGEX_REPLACE 4.151.entry_en (1 match(es))

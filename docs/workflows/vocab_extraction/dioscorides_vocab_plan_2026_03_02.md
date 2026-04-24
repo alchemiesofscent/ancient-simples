@@ -1,9 +1,14 @@
+---
+status: active
+owner: workflow
+---
+
 # Dioscorides Vocab Extraction Runbook (2026-03-02)
 
 ## Scope
 - Isolate likely Dioscorides row-alignment errors (RV markers + duplicate keys/text) into an editable review file.
 - Apply reviewed row fixes back to a patched Dioscorides CSV.
-- Build a Dioscorides `entries`-shaped CSV from `data-workbench/diosc.csv`.
+- Build a Dioscorides `entries`-shaped CSV from `data-workbench/diosc.build.csv` (preferred).
 - Validate the CSV before extraction.
 - Run vocab extraction with the Dioscorides prompt variant.
 - QC completeness and output profile.
@@ -14,11 +19,18 @@
 - Degrees/intensity are extracted only when explicit in the text.
 
 ## Inputs and outputs
-- Input: `data-workbench/diosc.csv`
+- Source CSV: `data-workbench/diosc.csv`
+- After missing-text patch: `data-workbench/diosc.patched.csv`
+- After text-fixes patch (build-ready): `data-workbench/diosc.build.csv`
+- Missing-text patch payloads: `data-workbench/diosc_missing_text_patch.csv`
+- Missing-text apply report: `archive/docs/legacy_qc/diosc_missing_text_apply_report.md`
+- Text-fixes patch payloads: `data-workbench/diosc_text_fixes_patch.csv`
+- Text-fixes apply report: `archive/docs/legacy_qc/diosc_text_fixes_apply_report.md`
+- Build audit summary: `data-workbench/diosc_build_audit.md`
+- Build review sheet: `data-workbench/diosc_build_review.csv`
 - Alignment review CSV: `data-workbench/diosc_alignment_review.csv`
 - Alignment context report: `data-workbench/diosc_alignment_context.md`
-- Patched CSV output (apply step): `data-workbench/diosc.patched.csv`
-- Alignment apply report: `data-workbench/diosc_alignment_apply_report.md`
+- Alignment apply report: `archive/docs/legacy_qc/diosc_alignment_apply_report.md`
 - Built entries CSV: `data-workbench/entries_diosc.csv`
 - Build QC: `data-workbench/entries_diosc_qc.md`
 - Prompt variant: `docs/prompts/vocab_term_extractor_with_degrees_diosc.md`
@@ -27,6 +39,37 @@
 - Run QC summary: `<run_dir>/qc_summary.md` + `<run_dir>/qc_summary.json`
 
 ## Procedure
+0. Apply recovered missing-text patch bundle (compact, text-first):
+```bash
+npm run diosc:text:apply
+```
+
+Outputs:
+- `archive/docs/legacy_qc/diosc_missing_text_apply_report.md`
+- `data-workbench/diosc.patched.csv`
+
+This step supersedes direct editing of the verbose `diosc_alignment_review.csv` when the objective is to restore missing Greek/English text and known RV-cascade errors.
+
+0.5 Apply targeted text-fixes (OCR cleanup, lemma heading fixes, translation de-dupes):
+```bash
+npm run diosc:textfix:apply
+```
+
+Outputs:
+- `archive/docs/legacy_qc/diosc_text_fixes_apply_report.md`
+- `data-workbench/diosc.build.csv`
+
+0.75 Audit the build-ready CSV before extraction:
+```bash
+npm run diosc:build:audit
+```
+
+Outputs:
+- `data-workbench/diosc_build_audit.md`
+- `data-workbench/diosc_build_review.csv`
+
+Use this step to review `lemma_gr`, `entry_gr`, `lemma_en`, `entry_en`, book/chapter consistency, and split integrity before rebuilding extraction inputs.
+
 1. Extract alignment-suspect rows for review:
 ```bash
 npm run diosc:align:extract
@@ -42,7 +85,7 @@ npm run diosc:align:extract
 npm run diosc:align:apply
 ```
 
-4. Promote `data-workbench/diosc.patched.csv` to `data-workbench/diosc.csv` after review.
+4. Optional: if alignment review produced improvements you want to bake into the source CSV, apply them and promote as needed (keep a clean source-of-truth in `data-workbench/diosc.csv`).
 
 5. Build Dioscorides entries CSV:
 ```bash

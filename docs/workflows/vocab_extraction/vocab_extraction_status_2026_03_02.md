@@ -1,3 +1,8 @@
+---
+status: active
+owner: workflow
+---
+
 # Vocab Extraction: Status + Accuracy Evaluation (2026-03-02)
 
 This note documents:
@@ -196,7 +201,7 @@ Current extractor inputs:
 
 Dioscorides is not present in `data-workbench/entries.csv`.
 To extract Dioscorides now (pre-TEI), we need to generate a Dioscorides “entries-like” CSV from:
-- `data-workbench/diosc.csv`
+- `data-workbench/diosc.build.csv` (preferred; see missing-text + text-fixes patch steps below)
 
 Proposed approach:
 - Create `data-workbench/entries_diosc.csv` with columns at least:
@@ -251,7 +256,7 @@ To operationalize the Dioscorides pre-TEI extraction path, the repo now includes
 
 ### Build/validation scripts
 - `scripts/make_entries_diosc.py`
-  - builds `data-workbench/entries_diosc.csv` from `data-workbench/diosc.csv`
+  - builds `data-workbench/entries_diosc.csv` from `data-workbench/diosc.build.csv` (default)
   - writes `data-workbench/entries_diosc_qc.md`
 - `scripts/validate_diosc_entries.py`
   - validates schema/normalization/invariants for `entries_diosc.csv`
@@ -262,6 +267,18 @@ To operationalize the Dioscorides pre-TEI extraction path, the repo now includes
 - `scripts/apply_diosc_alignment_patch.py`
   - applies edited review actions (`KEEP|REPLACE|DELETE|INSERT_AFTER`)
   - writes `data-workbench/diosc.patched.csv` and apply report
+- `scripts/apply_diosc_missing_text_patch.py`
+  - applies compact recovered-text patch payloads from `data-workbench/diosc_missing_text_patch.csv`
+  - splits embedded `RV` tails out of host rows into standalone `*_RV` rows when possible
+  - fills missing lemma/translation text for a small set of known gaps
+  - writes `archive/docs/legacy_qc/diosc_missing_text_apply_report.md` and `data-workbench/diosc.patched.csv`
+- `scripts/apply_diosc_text_fixes_patch.py`
+  - applies targeted OCR/footnote/lemma cleanup from `data-workbench/diosc_text_fixes_patch.csv`
+  - writes `archive/docs/legacy_qc/diosc_text_fixes_apply_report.md` and `data-workbench/diosc.build.csv`
+
+Patch payloads
+- `data-workbench/diosc_missing_text_patch.csv`
+- `data-workbench/diosc_text_fixes_patch.csv`
 
 ### Run-level QC
 - `scripts/qc_diosc_vocab_run.py`
@@ -275,14 +292,16 @@ To operationalize the Dioscorides pre-TEI extraction path, the repo now includes
   - degrees/intensity extracted only when explicit in text
 
 ### Runbook + QC notes
-- `docs/dioscorides_vocab_plan_2026_03_02.md`
-- `docs/dioscorides_vocab_qc_2026_03_02.md`
+- `docs/workflows/vocab_extraction/dioscorides_vocab_plan_2026_03_02.md`
+- `docs/workflows/vocab_extraction/dioscorides_vocab_qc_2026_03_02.md`
 
 ### NPM command wrappers
 - `npm run diosc:entries:build`
 - `npm run diosc:entries:validate`
 - `npm run diosc:align:extract`
 - `npm run diosc:align:apply`
+- `npm run diosc:text:apply`
+- `npm run diosc:textfix:apply`
 - `npm run diosc:vocab:probe`
 - `npm run diosc:vocab:smoke`
 - `npm run diosc:vocab:smoke:resume`
@@ -312,6 +331,10 @@ To operationalize the Dioscorides pre-TEI extraction path, the repo now includes
   - missing: 23
   - QC: `outputs/vocab_entries_v3/diosc_smoke_v3/qc_summary.json`
 
+### Execution status (2026-03-05 update)
+- Build-ready Dioscorides CSV: `data-workbench/diosc.build.csv` (835 rows).
+- `entries_diosc.csv` rebuild + validation passes cleanly (835 rows; missing translations: 0).
+
 ## 8) Dioscorides Alignment Repair Workflow (added 2026-03-03)
 
 Implemented a reviewer-driven correction flow before continuing extraction:
@@ -328,7 +351,7 @@ Implemented a reviewer-driven correction flow before continuing extraction:
   - verifies row identity using `original_row_hash`
   - writes:
     - `data-workbench/diosc.patched.csv`
-    - `data-workbench/diosc_alignment_apply_report.md`
+    - `archive/docs/legacy_qc/diosc_alignment_apply_report.md`
 
 Current extraction snapshot from latest generated review:
 - extracted rows: 44

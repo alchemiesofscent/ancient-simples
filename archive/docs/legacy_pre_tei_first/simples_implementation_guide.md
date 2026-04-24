@@ -1,3 +1,8 @@
+---
+status: historical
+owner: archive
+---
+
 # Ancient Simples Database – Implementation Guide
 *A practical walkthrough for the MVP stack: Next.js (App Router, TypeScript) + Supabase (PostgreSQL/Auth).*
 

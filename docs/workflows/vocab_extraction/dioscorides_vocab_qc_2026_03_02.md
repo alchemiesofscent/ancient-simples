@@ -1,3 +1,8 @@
+---
+status: active
+owner: workflow
+---
+
 # Dioscorides Vocab QC Notes (2026-03-02)
 
 ## Objective

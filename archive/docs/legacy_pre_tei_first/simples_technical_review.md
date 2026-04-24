@@ -1,3 +1,8 @@
+---
+status: historical
+owner: archive
+---
+
 # Ancient Simples Database – Technical Architecture Review
 *December 2025*  
 *Canonical rationale aligned with the PRD*

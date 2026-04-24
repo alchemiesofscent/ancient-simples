@@ -1,3 +1,8 @@
+---
+status: historical
+owner: archive
+---
+
 # Ancient Simples Comparative Database
 ## Product Requirements & Delivery Plan
 

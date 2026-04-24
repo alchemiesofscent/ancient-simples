@@ -1,3 +1,8 @@
+---
+status: historical
+owner: archive
+---
+
 ### Methodology for Extracting "Variety / Part / Product"
 
 The extraction logic follows a hierarchical analysis of the Greek text and its English translation to identify specific modifiers that narrow down the general **Lemma**.

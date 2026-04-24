@@ -1,3 +1,8 @@
+---
+status: historical
+owner: archive
+---
+
 # Overlap and sequencing assessment: Aëtius CMG Digital Corpus vs Ancient Simples (TEI‑first)
 
 status: preliminary technical evaluation (pre-build)

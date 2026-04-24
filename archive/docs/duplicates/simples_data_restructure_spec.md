@@ -1,3 +1,8 @@
+---
+status: historical
+owner: archive
+---
+
 # Ancient Simples Database: Data Restructuring Specification
 
 This document governs how the legacy Excel workbook (`Simples.xlsx`, ~1,699 entries) becomes normalized CSVs for import into Supabase/PostgreSQL. It aligns with the MVP architecture (Next.js + Supabase) and preserves a CSV-first workflow for scholarly review.
