@@ -1,3 +1,8 @@
+---
+status: reference
+owner: docs
+---
+
 # Ancient Simples TEI-First Platform — Technical Specification (D-01)
 
 Version: 1.0

@@ -1,3 +1,8 @@
+---
+status: reference
+owner: docs
+---
+
 # Product statement (plain English)
 
 This product is an internal scholarly database and web application that turns a set of TEI-encoded Greek medical texts into a queryable, citable, cross-linked corpus. It exists to let researchers reliably retrieve every passage (with full logical and physical references) that pertains to a single ingredient term or to a preparation formula (recipe), and to inspect how those ingredients and preparations are described across authors and recensions.

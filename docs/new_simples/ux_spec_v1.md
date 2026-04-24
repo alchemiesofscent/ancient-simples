@@ -1,3 +1,8 @@
+---
+status: reference
+owner: docs
+---
+
 # Ancient Simples TEI-First Platform — UX/UI Specification (D-02)
 
 Version: 1.0

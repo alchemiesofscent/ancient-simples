@@ -1,6 +1,7 @@
 -- 001_init.sql
--- Ancient Simples MVP schema (binding: docs/simples_prd.md, docs/simples_technical_review.md,
--- docs/simples_data_restructure_spec.md, docs/simples_implementation_guide.md)
+-- Ancient Simples MVP schema
+-- Historical binding docs are archived under:
+-- archive/docs/legacy_pre_tei_first/ and archive/docs/duplicates/
 
 begin;
 

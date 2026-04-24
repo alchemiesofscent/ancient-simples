@@ -1,3 +1,8 @@
+---
+status: reference
+owner: docs
+---
+
 # Ancient Simples TEI-First Platform — Work Breakdown Structure (D-03)
 
 Version: 1.0

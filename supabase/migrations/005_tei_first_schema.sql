@@ -1,6 +1,6 @@
 -- 005_tei_first_schema.sql
 -- TEI-first schema for Ancient Simples platform
--- Binding: docs/new_simples/tech_spec_v1.md, docs/contracts/
+-- Binding: docs/new_simples/tech_spec_v1.md, contracts/
 --
 -- Creates all TEI-first tables. Existing MVP tables (entries, lemmata, etc.
 -- from 001_init.sql) are NOT altered — both schemas coexist during transition.

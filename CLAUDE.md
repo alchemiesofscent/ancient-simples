@@ -21,7 +21,8 @@ This runs: data validation → app lint → app build.
 npm run data:validate          # Python: validate data-workbench CSVs
 npm run app:lint               # ESLint on the Next.js app
 npm run app:build              # Next.js production build
-npm run textutils:test         # Python: textutils library tests (35 tests)
+npm run textutils:test         # Python: textutils library tests (40 tests)
+python -m pipelines.validate   # Unified validation (--data, --tei, --all)
 ```
 
 ### TEI pipeline
@@ -50,15 +51,22 @@ npm --prefix app run dev       # Start Next.js dev server (localhost:3000)
 ```
 npm ci                         # Root (Supabase CLI)
 npm --prefix app ci            # App (Next.js + deps)
+pip install -e ".[dev]"        # Python: textutils + pipelines (editable install)
 ```
 
 ## Architecture
 
 ### Workspace layout
 - `app/` — Next.js 16 app (App Router, TypeScript, Tailwind v4, `@supabase/ssr`)
-- `packages/textutils/` — Shared Python library: normalize (v1.1), tokenize (v1.0), hashing, citations
-- `data-workbench/` — Source spreadsheet (`simples.xlsx`), Python `make_*.py` scripts that produce CSVs, and QC reports
-- `scripts/` — Python scripts:
+- `packages/textutils/` — Shared Python library: normalize (v1.1), tokenize (v1.0), hashing, citations. Installed as a proper package via `pyproject.toml`.
+- `pipelines/` — Structured Python pipeline modules (new, 2026-04-06):
+  - `validate/` — Unified validation entry point (`python -m pipelines.validate`)
+  - `tei_index/` — TEI XML → DB (placeholder, scripts still in `scripts/`)
+  - `vocab_extract/` — LLM extraction (placeholder, scripts still in `scripts/`)
+  - `alignment/` — Cross-author alignment (placeholder, scripts still in `scripts/`)
+- `contracts/` — Formal contracts (top-level since 2026-04-06): TEI indexing (C-01), normalization (C-02), anchoring (C-03), citation (C-04), export (C-05), alignment interchange (AL-01)
+- `data-workbench/` — CSV-first working surface and current operational data artifacts; see `data-workbench/README.md`
+- `scripts/` — Python scripts (being migrated to `pipelines/`):
   - `validate_data.py` — CSV validation
   - `import_supabase.py` — CSV → Supabase import
   - `validate_tei.py` — TEI XML validation against doc config
@@ -66,18 +74,22 @@ npm --prefix app ci            # App (Next.js + deps)
   - `import_vocab_v3.py` — Vocab v3 extraction results → assertions + lemma candidates
   - `import_alignments.py` — Cross-author alignment data → Supabase
   - `supabase_rest.py` — Zero-dependency Supabase REST client
-- `supabase/migrations/` — SQL migrations (001–006: MVP schema, TEI-first schema, RLS)
+- `supabase/migrations/` — SQL migrations (001–007: MVP schema, TEI-first schema, RLS, public read)
 - `config/` — TEI doc configs, test subset, entry ID bridge, alignment seed data
-- `tests/` — Python tests (35 tests) with fixtures for normalization, tokenization, TEI rules
-- `docs/` — Project specs and domain reference:
+- `tests/` — Python tests (40 tests) with fixtures for normalization, tokenization, TEI rules, and cross-language parity
+- `docs/` — Active project specs and workflow notes; see `docs/README.md`
   - `new_simples/tech_spec_v1.md` — TEI-first architecture and schema
   - `new_simples/ux_spec_v1.md` — Routes, screens, workflows
-  - `new_simples/wbs_v1.md` — Work breakdown structure with milestones
-  - `contracts/` — Formal contracts: TEI indexing (C-01), normalization (C-02), anchoring (C-03), citation (C-04), export (C-05), alignment interchange (AL-01)
+  - `new_simples/new_wbs.md` — canonical live workflow board
+  - `new_simples/session_log.md` — append-only handoff log
   - `lemma_rules.md` — Controlled vocabulary taxonomy
+  - `workflows/vocab_extraction/` — current vocab extraction process notes
   - `prompts/` — LLM prompt templates for vocab extraction
-- `outputs/` — Vocab extraction results (v1–v3), experiments, pilot runs
 - `schemas/` — JSON schemas for LLM-based vocab term extraction
+- `archive/` — Historical docs, legacy QC reports, and superseded output families (kept for traceability)
+- `outputs/` — LLM extraction results (critical data: 27,707 terms, 2,894 qualities). See `outputs/README.md`
+- `PRODUCT_PLAN.md` — 5-phase product development roadmap
+- `CHANGELOG.md` — Curated before→after transformation log (not a git log)
 
 ### Data flow (TEI-first)
 1. TEI XML files (from CMG submodule at `tei/cmg/`) are the canonical source
@@ -116,14 +128,16 @@ Key design decisions:
 - Routes: `/entries` (search/list), `/entries/[entry_id]` (detail + editor form)
 
 ### Greek normalization (v1.1)
-Three implementations that **must stay in sync**:
-- Python: `packages/textutils/normalize.py` (canonical) + `scripts/validate_data.py`
-- TypeScript: `app/src/lib/greek/normalize.ts`
+**Single source of truth**: `packages/textutils/normalize.py` is the canonical implementation. All Python consumers import from it — no local re-implementations.
+
+Three deployment targets that **must stay in sync**:
+- Python: `packages/textutils/normalize.py` (canonical). All scripts (`validate_data.py`, `make_entries.py`, `workbook_utils.py`) delegate to this via `from textutils.normalize import normalize`.
+- TypeScript: `app/src/lib/greek/normalize.ts` — parity-tested against Python via `tests/test_parity.py` → `tests/fixtures/normalization_parity.json`
 - SQL: `supabase/migrations/005_tei_first_schema.sql` (`normalize_greek_v1_1`)
 
 Rules: lowercase → NFD → strip ALL combining marks U+0300–U+036F (including iota subscript U+0345) → NFC. Key test: `normalize("τῇ") == "τη"`.
 
-See `docs/contracts/normalization_contract.md` for full specification.
+See `contracts/normalization_contract.md` for full specification.
 
 ### Vocab extraction tooling
 `scripts/vocab_agent_runner.py` and `scripts/vocab_multi_agent_pilot.py` run LLM-based term extraction. Results in `outputs/vocab_entries_v3/`. Import via `scripts/import_vocab_v3.py`.
@@ -141,4 +155,4 @@ See `docs/contracts/normalization_contract.md` for full specification.
 - Node.js 20+, Python 3.12+
 - Root `.env.local` — `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` (for import scripts)
 - `app/.env.local` — `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` (for Next.js)
-- Python scripts use stdlib only (no pip dependencies) plus local `supabase_rest.py`; TEI indexer requires `lxml`
+- Python deps managed via `pyproject.toml`: `pip install -e ".[dev]"` installs `textutils`, `pipelines`, `lxml`, and `pytest`. The `[workbench]` extra adds `pandas` and `openpyxl` for data-workbench scripts. `scripts/supabase_rest.py` remains zero-dependency.

@@ -4,7 +4,11 @@
 Ancient Simples is an internal scholarly database and web application for turning ancient Greek medical texts into a queryable, citable, cross-linked corpus. Researchers and editors should be able to answer questions like “where does ingredient X occur?”, “what preparations mention it?”, and “how is it described?” — with results that always include stable identifiers and complete references (logical refs like book/chapter/section and, where available, physical refs like edition volume/page/line).
 
 The longer-term direction (see `docs/new_simples/`) is **TEI-first**: TEI is the read-only authority for Greek base text and citation structure, and the system projects TEI into Supabase/Postgres for fast querying while keeping editorial work (translations, lemma IDs/aliases, links, evidence-backed assertions) in SQL and exportable.
-Start with `docs/new_simples/product_description.md` (plain-English product statement) and `docs/new_simples/new_wbs.md` (the working checklist).
+Start with:
+- `PRODUCT_PLAN.md`
+- `docs/new_simples/new_wbs.md`
+- the latest entry in `docs/new_simples/session_log.md`
+- `docs/new_simples/product_description.md`
 
 ### Aims
 - Make cross-author retrieval and comparison tractable via stable lemma identity (and aliases for variants).
@@ -25,9 +29,14 @@ Start with `docs/new_simples/product_description.md` (plain-English product stat
 - `lemma_ids` is import-only (used to populate `entry_lemmata`, not read by the app).
 
 Workspace layout:
-- `data-workbench/` — source spreadsheet + restructuring spec + CSV outputs.
-- `docs/` — project specs (unchanged copies).
-- `app/` — Next.js (App Router, TypeScript) MVP UI.
+- `app/` — Next.js (App Router, TypeScript) UI.
+- `contracts/` — formal contracts (TEI indexing, normalization, anchoring, citation, export, alignment).
+- `data-workbench/` — CSV entries and operational data artifacts for extraction.
+- `docs/` — TEI-first specs, workflow notes, prompts, and domain reference.
+- `outputs/` — LLM extraction results (critical data: 27,707 terms, 2,894 qualities across 2,135 entries).
+- `pipelines/` — structured Python pipeline modules.
+- `packages/textutils/` — shared Python library (normalization, tokenization, hashing).
+- `archive/` — historical docs and superseded output families (kept for traceability).
 
 ## Quick start (hosted Supabase)
 Prereqs: Node.js 20+, Python 3.12+, Supabase CLI auth (`npx supabase login`).
