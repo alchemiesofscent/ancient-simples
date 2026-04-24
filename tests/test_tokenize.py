@@ -1,12 +1,7 @@
 """Tests for textutils.tokenize — basic Greek tokenization and gap placeholder handling."""
 
-import sys
-import os
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
-from packages.textutils.tokenize import tokenize, TOKENIZER_VERSION
-from packages.textutils.normalize import normalize
+from textutils.tokenize import tokenize, TOKENIZER_VERSION
+from textutils.normalize import normalize
 
 
 class TestTokenizerVersion:

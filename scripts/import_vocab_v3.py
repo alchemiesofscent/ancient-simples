@@ -26,14 +26,11 @@ from pathlib import Path
 from typing import Any
 
 # ---------------------------------------------------------------------------
-# Path setup: allow importing from packages/textutils and scripts/
-# ---------------------------------------------------------------------------
 _REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(_REPO_ROOT / "packages"))
-sys.path.insert(0, str(_REPO_ROOT / "scripts"))
+sys.path.insert(0, str(_REPO_ROOT / "scripts"))  # for supabase_rest
 
-from textutils import normalize  # noqa: E402
-from supabase_rest import SupabaseRestClient, SupabaseRestError, env_required  # noqa: E402
+from textutils import normalize
+from supabase_rest import SupabaseRestClient, SupabaseRestError, env_required
 
 # ---------------------------------------------------------------------------
 # Constants

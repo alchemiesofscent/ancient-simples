@@ -1,11 +1,6 @@
 """Tests for normalization determinism — same input always yields same output."""
 
-import sys
-import os
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
-from packages.textutils.normalize import normalize
+from textutils.normalize import normalize
 
 
 class TestDeterminism:

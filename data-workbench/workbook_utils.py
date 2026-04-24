@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 import re
-import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
 import pandas as pd
+from textutils.normalize import normalize as _canonical_normalize
 
 
 EXPECTED_SHEETS = ["SMT", "Alim.Fac", "Oribasius CM 15", "Aetius I-II"]
@@ -74,11 +74,8 @@ def single_line_text(text: str, *, newline: str = "\\n") -> str:
 
 
 def normalize_greek_for_match(text: str) -> str:
-    text = text.strip().lower()
-    text = unicodedata.normalize("NFD", text)
-    # Remove accents/breathings, but preserve iota subscript (U+0345) per spec.
-    text = "".join(ch for ch in text if not unicodedata.combining(ch) or ch == "\u0345")
-    return unicodedata.normalize("NFC", text)
+    """Greek normalization v1.1 — delegates to canonical textutils.normalize."""
+    return _canonical_normalize(text.strip())
 
 
 _PROOIMION_NORM = normalize_greek_for_match("προοίμιον")

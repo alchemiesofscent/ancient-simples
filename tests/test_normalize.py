@@ -1,13 +1,8 @@
 """Tests for textutils.normalize — reference cases, idempotence, and NFC stability."""
 
 import unicodedata
-import sys
-import os
 
-# Ensure the packages directory is importable
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
-from packages.textutils.normalize import normalize, NORMALIZATION_VERSION
+from textutils.normalize import normalize, NORMALIZATION_VERSION
 
 
 class TestNormalizationVersion:

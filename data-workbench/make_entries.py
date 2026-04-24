@@ -5,7 +5,6 @@ import csv
 import random
 import re
 import sys
-import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -13,6 +12,8 @@ from pathlib import Path
 
 import pandas as pd
 
+# Ensure textutils is importable (installed via pyproject.toml editable install).
+from textutils.normalize import normalize as _canonical_normalize
 
 from workbook_utils import (
     EXPECTED_SHEETS,
@@ -48,13 +49,8 @@ class EntryRow:
 
 
 def normalize_greek(text: str) -> str:
-    text = text.lower()
-    text = unicodedata.normalize("NFD", text)
-    # Remove accents/breathings, but preserve iota subscript (U+0345).
-    text = "".join(
-        ch for ch in text if not unicodedata.combining(ch) or ch == "\u0345"
-    )
-    return unicodedata.normalize("NFC", text)
+    """Greek normalization v1.1 — delegates to canonical textutils.normalize."""
+    return _canonical_normalize(text)
 
 
 def word_count_simple(greek: str) -> int:

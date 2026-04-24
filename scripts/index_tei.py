@@ -25,13 +25,10 @@ import yaml
 from lxml import etree
 
 # ---------------------------------------------------------------------------
-# Path setup: allow imports from packages/textutils and scripts/
-# ---------------------------------------------------------------------------
 REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "packages"))
-sys.path.insert(0, str(REPO_ROOT / "scripts"))
+sys.path.insert(0, str(REPO_ROOT / "scripts"))  # for supabase_rest
 
-from textutils import (  # noqa: E402
+from textutils import (
     NORMALIZATION_VERSION,
     TOKENIZER_VERSION,
     dual_hash,

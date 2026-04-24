@@ -32,6 +32,59 @@ def _extract_json(text: str) -> dict:
     return json.loads(candidate)
 
 
+def _fix_normalized_fields(obj: dict[str, Any]) -> None:
+    """Re-normalize all normalized fields in-place so LLM output
+    that is close-but-not-quite (e.g. retained iota subscripts) is
+    corrected before validation instead of rejected."""
+
+    _TERM_NORM_KEYS = [
+        "normalized", "lemma_normalized", "head_lemma_normalized",
+        "substance_lemma_normalized", "part_lemma_normalized",
+        "variant_place_lemma_normalized",
+    ]
+    _APPLIES_TO_KEYS = [
+        "lemma_normalized", "substance_lemma_normalized", "part_lemma_normalized",
+    ]
+
+    for term in obj.get("terms") or []:
+        # Fix display→normalized
+        display = term.get("display", "")
+        if display:
+            term["normalized"] = normalize_greek(display)
+        # Fix lemma_gr→lemma_normalized
+        lemma_gr = term.get("lemma_gr", "")
+        if lemma_gr.strip():
+            term["lemma_normalized"] = normalize_greek(lemma_gr)
+        # Fix all other normalized keys
+        for key in _TERM_NORM_KEYS:
+            val = term.get(key)
+            if isinstance(val, str) and val:
+                term[key] = normalize_greek(val)
+        # Fix applies_to
+        applies_to = term.get("applies_to") or {}
+        for key in _APPLIES_TO_KEYS:
+            val = applies_to.get(key)
+            if isinstance(val, str) and val:
+                applies_to[key] = normalize_greek(val)
+
+    for quality in obj.get("qualities") or []:
+        # Fix evidence_display→evidence_normalized
+        ev_display = quality.get("evidence_display", "")
+        if ev_display:
+            quality["evidence_normalized"] = normalize_greek(ev_display)
+        # Fix other normalized keys
+        for key in ["evidence_normalized", "variant_place_lemma_normalized"]:
+            val = quality.get(key)
+            if isinstance(val, str) and val:
+                quality[key] = normalize_greek(val)
+        # Fix applies_to
+        applies_to = quality.get("applies_to") or {}
+        for key in _APPLIES_TO_KEYS:
+            val = applies_to.get(key)
+            if isinstance(val, str) and val:
+                applies_to[key] = normalize_greek(val)
+
+
 def _validate_normalized_value(path: str, value: str, issues: list[str]) -> None:
     expected = normalize_greek(value)
     if value != expected:
@@ -312,6 +365,7 @@ def main() -> int:
             f"source_id mismatch: expected {args.expected_source_id}, got {obj.get('source_id')}"
         )
 
+    _fix_normalized_fields(obj)
     _validate_extraction_obj(obj)
 
     out_path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

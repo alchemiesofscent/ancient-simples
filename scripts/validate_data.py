@@ -5,21 +5,14 @@ import csv
 import sys
 from collections import Counter
 from pathlib import Path
-import unicodedata
+
+from textutils.normalize import normalize as normalize_greek_for_match
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         return [dict(r) for r in reader]
-
-
-def normalize_greek_for_match(text: str) -> str:
-    """Greek normalization v1.1: strip ALL combining marks U+0300-U+036F including iota subscript."""
-    lowered = (text or "").lower()
-    decomposed = unicodedata.normalize("NFD", lowered)
-    stripped = "".join(ch for ch in decomposed if not (0x0300 <= ord(ch) <= 0x036F))
-    return unicodedata.normalize("NFC", stripped)
 
 
 def main() -> int:

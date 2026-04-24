@@ -116,7 +116,7 @@ def main() -> int:
     )
     ap.add_argument(
         "--outdir",
-        default=str(_repo_root() / "outputs/vocab_pilot"),
+        default=str(_repo_root() / "outputs/vocab_entries_v3/pilot_runs"),
         help="Output directory root.",
     )
     ap.add_argument("--run-id", default=None, help="Optional run id (folder name).")

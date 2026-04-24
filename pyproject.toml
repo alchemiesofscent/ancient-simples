@@ -1,0 +1,25 @@
+[project]
+name = "ancient-simples"
+version = "0.1.0"
+description = "Scholarly platform for ancient Greek medical texts"
+requires-python = ">=3.12"
+dependencies = [
+    "lxml>=5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+workbench = [
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["packages", "."]
+include = ["textutils*", "pipelines*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["packages"]

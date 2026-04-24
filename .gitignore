@@ -27,10 +27,17 @@ app/.env.local
 
 # Codex session state (large, not useful to share)
 _codex_home/
+.codex
+**/_codex_home/
 
 # TEI indexer (lxml compiled artifacts)
 *.so
 
+# Python package build metadata
+*.egg-info/
+
+# Incomplete extraction scratch files
+outputs/**/*.tmp
+
 # CMG submodule working tree does not pollute ancient-simples status
 # (submodule itself is tracked via .gitmodules)
-
