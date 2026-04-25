@@ -11,9 +11,6 @@ import sys
 
 
 _THIS_REPO_ROOT = Path(__file__).resolve().parents[1]
-_PACKAGES_PATH = _THIS_REPO_ROOT / "packages"
-if str(_PACKAGES_PATH) not in sys.path:
-    sys.path.insert(0, str(_PACKAGES_PATH))
 
 from textutils.normalize import normalize as normalize_greek
 
@@ -75,11 +72,11 @@ def _build_ref(row: dict[str, str], *, row_index_1_based: int) -> str:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Build data-workbench/entries_diosc.csv from diosc.csv.")
+    ap = argparse.ArgumentParser(description="Build data-workbench/entries_diosc.csv from diosc CSV.")
     ap.add_argument(
         "--in-csv",
-        default=str(_THIS_REPO_ROOT / "data-workbench" / "diosc.csv"),
-        help="Input diosc.csv path.",
+        default=str(_THIS_REPO_ROOT / "data-workbench" / "diosc.build.csv"),
+        help="Input diosc CSV path (default: data-workbench/diosc.build.csv).",
     )
     ap.add_argument(
         "--out-csv",

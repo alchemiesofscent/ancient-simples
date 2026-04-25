@@ -1,0 +1,10 @@
+Runner failed for source_id=DIOSC_DMM-1.43
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/seancoughlin/Projects/ancient-simples/scripts/vocab_agent_runner.py", line 15, in <module>
+    from textutils import normalize as normalize_greek
+ModuleNotFoundError: No module named 'textutils'

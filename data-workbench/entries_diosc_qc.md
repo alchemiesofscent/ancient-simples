@@ -1,25 +1,28 @@
 # entries_diosc.csv QC report
 
-- Generated: `2026-03-02T18:51:54+00:00`
-- Input: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc.csv`
+- Generated: `2026-04-06T00:11:34+00:00`
+- Input: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc.build.csv`
 - Output: `/home/seancoughlin/Projects/ancient-simples/data-workbench/entries_diosc.csv`
-- Total rows: **829**
+- Total rows: **835**
 
 ## Duplicate structural refs
-- `2.178` occurs 2 times
+- _(none)_
 
 ## Duplicate entry_id base deduping
-- `DIOSC_DMM-2.178` -> `DIOSC_DMM-2.178~2`
+- _(none)_
 
 ## Non-numeric chapter_no values
-- line 389: chapter_no=`73_RV` ref=`3.73_RV`
-- line 533: chapter_no=`58_RV` ref=`4.58_RV`
-- line 666: chapter_no=`190_RV` ref=`4.190_RV`
+- line 308: chapter_no=`178_RV` ref=`2.178_RV`
+- line 381: chapter_no=`64_RV` ref=`3.64_RV`
+- line 391: chapter_no=`73_RV` ref=`3.73_RV`
+- line 493: chapter_no=`16_RV` ref=`4.16_RV`
+- line 536: chapter_no=`58_RV` ref=`4.58_RV`
+- line 607: chapter_no=`127_RV` ref=`4.127_RV`
+- line 618: chapter_no=`137_RV` ref=`4.137_RV`
+- line 671: chapter_no=`190_RV` ref=`4.190_RV`
 
 ## Missing translations
-- Count: 2
-- `DIOSC_DMM-3.73_RV`
-- `DIOSC_DMM-4.58_RV`
+- Count: 0
 
 ## Sample rows (first 10)
 - `DIOSC_DMM-1.1` ref=1.1 words=264

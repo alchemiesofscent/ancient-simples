@@ -1,0 +1,201 @@
+# Dioscorides Build Audit
+
+- Generated: `2026-04-24T23:58:00+00:00`
+- Input: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc.build.csv`
+- Review CSV: `/home/seancoughlin/Projects/ancient-simples/data-workbench/diosc_build_review.csv`
+- Total rows: **835**
+- Current assessment: manual review still required before treating `diosc.build.csv` as fully trusted.
+
+## Summary
+- High-priority rows: **0**
+- Medium-priority rows: **166**
+- Low-priority rows: **0**
+- Rows with no automated flags: **669**
+- `_RV` rows flagged for split review: **8**
+
+## Issue Counts
+- `ENTRY_EN_FOOTNOTE_MARKER`: 148
+- `ENTRY_EN_UNBALANCED_BRACKETS`: 6
+- `ENTRY_GR_UNBALANCED_BRACKETS`: 6
+- `LEMMA_EN_TOO_LONG`: 4
+- `LEMMA_GR_TOO_LONG`: 1
+- `RV_ROW_REVIEW`: 8
+
+## High Priority Rows
+- _(none)_
+
+## Medium Priority Rows
+- line 32 `1.31` flags=`ENTRY_EN_UNBALANCED_BRACKETS` lemma=`Olive tree sweet gum` entry=`Olive tree sweet gum flows from the trunk of olive trees throughout Palmyra, in Syria; it is thicker than honey and s...`
+- line 124 `1.123` flags=`ENTRY_EN_UNBALANCED_BRACKETS` lemma=`Almond` entry=`1. The root of the bitter almond ground up and boiled removes facial freckles; the almonds themselves also do the sam...`
+- line 189 `2.59` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Hart’s horn` entry=`An amount of two spoonsful of hart’s horn burned and washed is a suitable drink for people who spit blood, dysenterie...`
+- line 192 `2.62` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Salamander` entry=`Salamander is a kind of lizard that is sluggish, colorful, and wrongly thought to be incombustible. It has septic, ul...`
+- line 196 `2.66` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Skink` entry=`The skink: there is an Egyptian skink, an Indian, which is indigenous to the Indian Ocean, and another that is found ...`
+- line 200 `2.70` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Milk` entry=`1. In general, all milk is wholesome, nutritious, softens the stool, and produces stomach and intestinal gases. Sprin...`
+- line 205 `2.75` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Rennet` entry=`1. A weight of three oboloi of hare’s^’ rennet taken with wine is suitable for those bitten by wild animals, for dyse...`
+- line 206 `2.76` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Fat` entry=`1. Well suited for uterine conditions are goose fat and chicken fat that are fresh and that were not treated with sal...`
+- line 208 `2.78` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Bile` entry=`1. All biles are stored in this manner: taking a bile that is fresh and after tying its mouth with a linen thread, dr...`
+- line 209 `2.79` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Blood` entry=`1. Goose, kid, and duck blood are beneficially mixed with antidotes; fresh blood of wild pigeon, turtledove, pigeon, ...`
+- line 211 `2.81` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Urine` entry=`1. Man’s own urine is a suitable potion for viper bites, for deadly poisons, for incipient edemata and a rinse for th...`
+- line 212 `2.82` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Honey` entry=`1. The best honey is the Attic, and of this the one called Hymettan ranks first; honey from the Cyclades and from Sic...`
+- line 214 `2.84` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Bee glue` entry=`You must choose bee glue that is yellow, aromatic, resembling storax, soft when very dry, and that is drawn the way m...`
+- line 215 `2.85` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wheat` entry=`1. Wheat 41 is excellent for health use if it is new, fully ripe, and quince-yellow in color; next to this one ranks ...`
+- line 217 `2.87` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Beer` entry=`Beer is made from barley. It is diuretic, it affects the kidneys and tendons, it is especially hurtful to the membran...`
+- line 222 `2.92` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Gruel` entry=`Gruel is made from finely milled zea. It is a concoction resembling liquid porridge and it is a suitable thing to giv...`
+- line 231 `2.101` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Starch` entry=`1. Starch has been named amylotd'' because it is made without a mill. The best is made from setanios wheat,be it eith...`
+- line 233 `2.103` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Linseed` entry=`Linseed has the same properties as fenugreek, dispersing and softening all internal and external inflammations when m...`
+- line 235 `2.105` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Greek bean` entry=`1. The Greek bean causes distension and flatulence, is difficult to digest, and causes bad dreams, but it is good for...`
+- line 236 `2.106` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Egyptian bean` entry=`1. The Egyptian bean, which some call Pontic, grows abundantly in Egypt and it is found both in Asia and in Cilicia, ...`
+- line 237 `2.107` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Lentil` entry=`1. Lentils, as a steady diet, dull the vision, are hard to digest, bad for the stomach, produce stomach and intestina...`
+- line 240 `2.110` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Turnip` entry=`1. When boiled, the root of the turnip is nutritious, causes flatulence, makes the flesh flabby, and is aphrodisiac. ...`
+- line 255 `2.125` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Asparagus` entry=`Asparagus or myacanthos. Some call it horminon. Its small stem softens the bowel and provokes micturition when eaten ...`
+- line 256 `2.126` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Plantain` entry=`1. The plantain, but some call it heptapleuron and others polypleuron. There are two kinds: one is small and the othe...`
+- line 258 `2.128` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Watercress` entry=`The watercress; but some call it cardamine and some call this plant, too, sion. It is a water plant that grows in the...`
+- line 265 `2.135` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Cucumber` entry=`1. The cucumber eases the bowel, it is wholesome, it cools if it is not spoiled, it is appropriate to use for the bla...`
+- line 275 `2.145` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Truffle` entry=`The truffle is a globular root that has no leaves, no stalks, and that is dug up in the spring. It is edible. It is c...`
+- line 279 `2.149` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Leek` entry=`1. The leek causes flatulence, it is unwholesome, it causes nightmares, it is diuretic, it eases the bowel, it attenu...`
+- line 284 `2.154` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Mustard` entry=`1. Choose it not dry and brittle but round and green inside when crushed, as if juicy, and gleaming. For this kind is...`
+- line 286 `2.156` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Shepherd’s-purse` entry=`1. Shepherd’s-purse*’’ is a little herb with narrow leaves, about a finger’s length, bending on the ground, cloven at...`
+- line 296 `2.166` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Dragon arum` entry=`1. The dragon arumTM has large ivy-like leaves that have white spots, and a stem that is upright, two cubits tall, pi...`
+- line 301 `2.171` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Squill or Scilla` entry=`1. The squill has sharp and heating properties; it becomes extremely useful after it has been baked. It is wrapped in...`
+- line 306 `2.176` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Poppy anemone` entry=`1. The poppy anemone: some call it argemonion and some eremion. It is of two kinds: one kind is wild^'* and the other...`
+- line 308 `2.178_RV` flags=`RV_ROW_REVIEW` lemma=`Another argemone` entry=`Another argemone; some call it male argemone, others sarcocolla, the Romans argemonia. This one also resembles the wi...`
+- line 310 `2.179` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Ivy` entry=`1. The ivy has many characteristics that distinguish one species from the next, but the,principal characteristics are...`
+- line 311 `2.180` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Celandine` entry=`1. The celandine: some call this plant othonna and others crimnon. It has a thin stem, about a cubit tall or even tal...`
+- line 313 `2.182` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Othonna` entry=`1. Some say that othonna is the juice of celandine, others that it is the juice of the homed poppy, others that it is...`
+- line 316 `2.185` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wild woad` entry=`The wild woad, which closely resembles the one dyers use, has leaves that are larger in relation to the leaves of the...`
+- line 317 `2.186` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Telephonion` entry=`Telephonion, but some call it aeizoon agrion, others andrachne agria, and others bryon. It resembles the purslane bot...`
+- line 318 `3.1` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Agaric` entry=`1. Agaric is said to be a root resembling the laserwort; it is not compact on the surface as is the laserwort but it ...`
+- line 319 `3.2` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Rhubarb` entry=`1. The rhubarb: but some call it rheon. It grows in the lands above the Bosporus from where it is brought. The root i...`
+- line 323 `3.6` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Centaury` entry=`1. The centaury, but some call it narce and others gentiane: it has leaves similar to the leaves of the walnut tree, ...`
+- line 325 `3.8` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Pine thistle` entry=`1. Pine thistle,” which some people call ixia'\" because in some places a sticky substance is found near its roots, w...`
+- line 329 `3.12` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Fish thistle` entry=`1. Fish thistle grows on mountains and in wooded areas; it has leaves that resemble the leaves of pine thistle but th...`
+- line 335 `3.18` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Rest harrow` entry=`Rest harrow, but some call it ononis. The sprays are a span long or even longer, shrubby, and highly articulated; the...`
+- line 340 `3.23` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wormwood` entry=`1. Wormwood: this herb is familiar. The best grows in the Pontic region and in Cappadocia, on the mountain called Tau...`
+- line 342 `3.25` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Hyssop` entry=`1. Hyssop: it is a well-known herb, which comes in two kinds; for one grows on mountains and the other in gardens; th...`
+- line 344 `3.27` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Oregano` entry=`1. Oregano: but some call it conile. The leaf is similar to that of hyssop and the flower head is not wheel-like, but...`
+- line 347 `3.30` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Goat’s marjoram` entry=`1. Goat’s marjoram: it is a small shrub the leaves and small stems of which resemble wild tufted thyme. Yet, dependin...`
+- line 348 `3.31` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Pennyroyal` entry=`1. Pennyroyal: it is a familiar herb, warming, thinning, and promoting digestion. When drunk it draws the menses, aft...`
+- line 350 `3.33` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Sage` entry=`1. Sage: but some call it elaphoboscon and others sphagnon. It is a somewhat tall shrub, much branched, having twigs ...`
+- line 352 `3.35` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Catmint` entry=`1. Catmint: there is a kind that prefers mountains; it has leaves like those of basil and somewhat white, little spra...`
+- line 353 `3.36` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Cretan thyme` entry=`1. Cretan thyme: everybody knows it. It is a small plant belonging to the class of underbrush; it is covered with man...`
+- line 356 `3.39` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Marjoram` entry=`1. Marjoram: the best are the Cyzician and the Cyprian; the Egyptian ranks second to them. The people in Sicily and C...`
+- line 358 `3.41` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Bergamot` entry=`mint Bergamot mint: but some call it herpylos agrios megas. It grows on dry soils, it resembles green mint, although ...`
+- line 361 `3.44` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Sowbread` entry=`1. Sowbread: it is an aromatic herb used for garlands. Its leaves are rough, in size between those of the violet and ...`
+- line 374 `3.57` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Caraway` entry=`Caraway: it is a well-known seedlet, diuretic, tasty, warming, wholesome, and it promotes digestion; it is combined b...`
+- line 377 `3.60` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wild cumin` entry=`1. Wild cumin: it grows in very large quantities and quite vigorously in Carthage of Spain. It has a delicate little ...`
+- line 381 `3.64_RV` flags=`RV_ROW_REVIEW` lemma=`Hierakion` entry=`Greater hierakion; some call it sonchites; the Romans lactuca erratica; the Africans sithilesade. It sends up a stem ...`
+- line 382 `3.64` flags=`ENTRY_GR_UNBALANCED_BRACKETS` lemma=`Garden celery` entry=`1. Garden celery: this herb is suitable for all the things for which coriander is also suitable, as well as for infla...`
+- line 383 `3.65` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Mountain parsley` entry=`Mountain parsley: it is a stalk, one-span tall, growing from a slender root, surrounded by little sprays and tiny hea...`
+- line 390 `3.72` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Daucos` entry=`1. Daucos: there is one kind called Cretan, having leaves like those of fennel but smaller and finer, a stem that is ...`
+- line 391 `3.73_RV` flags=`RV_ROW_REVIEW` lemma=`Delphinium` entry=`Delphinion; some call it diachytos, others diachysis, others paralysis, others kammaros, others hyacinthos, others hy...`
+- line 394 `3.75` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Rosemary` entry=`Rosemary which the Romans call rosmarinum and which wreath­ makers use: it has slender shoots surrounded by leaves th...`
+- line 399 `3.80` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Laserwort` entry=`1. Laserwort: it grows in places around Syria, Armenia, Media, and Libya. Its stem is called maspetorf, it resembles ...`
+- line 400 `3.81` flags=`ENTRY_EN_FOOTNOTE_MARKER|ENTRY_EN_UNBALANCED_BRACKETS` lemma=`Sagapenon` entry=`1. Sagapenon'\"'' is the juice'^^of an herb that resembles the giant fennel and that grows in Media. The best is clea...`
+- line 401 `3.82` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Spurge` entry=`1. Spurge; it is a Libyan plant that resembles the giant fennel, growing in Autololia'*^ next to Mauretania, full of ...`
+- line 402 `3.83` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Galbanum` entry=`1. Galbanum: it is the juice of a giant fennel {Ferula galbaniflua Boiss. and Buhse) growing in Syria; some call this...`
+- line 404 `3.85` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Sarcocolla` entry=`Sarcocolla is the resin of a tree that grows in Persia. It resembles fine frankincense, it is yellowish, and it is bi...`
+- line 410 `3.91` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Madwort` entry=`Madwort: it is a small undershrub, somewhat rough, single-stalked, having round leaves. Adjacent to them is the fruit...`
+- line 414 `3.95` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Horse thyme` entry=`Horse thyme; but some call it cleonicon, others ocimoides, and others Zopyrion. It, too, is a small shrub belonging t...`
+- line 417 `3.98` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wall germander` entry=`1. Wall germander or chamaidrys or linodrys'. but some call this plant, too, Teucrion because it maintains a degree o...`
+- line 421 `3.102` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Lily` entry=`1. The lily,55 whose flower is used for making garlands, which some call leirion and from which the unguent that some...`
+- line 424 `3.105` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Horehound` entry=`1. Horehound, but some call it philophares-. it is a shrub that has many branches growing from a single root. It is s...`
+- line 431 `3.112` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Colt’s foot` entry=`1. Colt’s foot; but some call it pithion, others pechion, and others petronion. It has leaves like those of ivy but b...`
+- line 446 `3.127` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Another orchid` entry=`Another orchid which some people call serapias,^'\" as does Andreas, because its root is highly useful. It has leaves...`
+- line 449 `3.130` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Axweed` entry=`The axweed which unguent makers call pelecinos'!\"^ it is a shrub having little leaves like the leaves of the chick-p...`
+- line 454 `3.135` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Mule fern` entry=`Mule fem, but some call it splenion. It sends out a leaf like that of edderwort, crescent-shaped. It has many delicat...`
+- line 456 `3.137` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Camomile` entry=`1. Camomile; but some call it leucanthemon, others eranthemon, because it blossoms in spring,^26 others chamaemelon, ...`
+- line 458 `3.139` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Oxeye` entry=`Oxeye: but some people call it cachla. It puts out a tender stem and leaves like those of fennel, quince-yellow flowe...`
+- line 460 `3.141` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Groomwell` entry=`Groomwell: but some call it aetonychon, others exonychon, others Dios pyros, and others Heracleia on account of the t...`
+- line 462 `3.143` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Madder` entry=`1. Madder, but some call it teuthrion. The root is red and suitable for dyeing. One kind is wild and the other cultiv...`
+- line 465 `3.146` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Marsh mallow` entry=`1. Marsh mallow, which some call ebiscos, is a kind of wild mallow; it has rounded leaves like the cyclamen and they ...`
+- line 468 `3.149` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Hemp mallow` entry=`Hemp mallow: it has little shoots resembling those of elm, although they are darker, smaller, and one-cubit tall. Its...`
+- line 476 `3.157` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`St. John’s wort` entry=`St. John’s wort: but some call this plant also hypericon. It has a leaf nearly resembling that of heath, except it is...`
+- line 478 `4.1` flags=`ENTRY_EN_FOOTNOTE_MARKER|ENTRY_GR_UNBALANCED_BRACKETS` lemma=`Betony` entry=`1. The betony, which is called psychrotrophon because it is found in very cold places and which the Romans call betto...`
+- line 481 `4.4` flags=`ENTRY_GR_UNBALANCED_BRACKETS` lemma=`Knotgrass` entry=`1. Knotgrass: but some call it carcinothron, others teuthalis, others clema, others myrtopetalon, and others polycarp...`
+- line 483 `4.6` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Solomon’s seal` entry=`Solomon’s seal: it grows on mountains. The shrub is taller than a cubit. It has leaves like those of sweet bay but wi...`
+- line 485 `4.8` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Jacob’s ladder` entry=`1. Jacob’s ladder; but some call it Philetairion and the Cappadocians chiliodynamon. It has slender sprays, pinnatifi...`
+- line 493 `4.16_RV` flags=`ENTRY_GR_UNBALANCED_BRACKETS|RV_ROW_REVIEW` lemma=`Saxifrage` entry=`Saxifrage; some call it saxifragos, others empetron, some also scolopendrion, others brouchon; the Romans saxifragam,...`
+- line 495 `4.17` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Hare’s foot trefoil` entry=`Hare’s foot trefoil; when drunk with wine its property stops diarrhea, but people who run a fever should drink it wit...`
+- line 498 `4.20` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Corn flag` entry=`1. Com flag: but some call it phasganion and others machairionj on account of the shape of its leaf; for it does rese...`
+- line 507 `4.29` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Dogs-tooth grass` entry=`Dog’s-tooth grass: it is a familiar plant; it has small, articulated runners that creep on the ground and that sprout...`
+- line 511 `4.33` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Iron wort` entry=`Ironwort, but some call it Heracleia. It is an herb having leaves like those of horehound, but more elongated compare...`
+- line 518 `4.40` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Cankerwort` entry=`Cankerwort: it has leaves similar to the bindweed but smaller, rounder, and downy, and delicate sprays, a span long, ...`
+- line 520 `4.42` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Cinquefoil` entry=`1. Cinquefoil; but some call it pentapetes, others pentatomon, others pentadactylon, others pseudoselinon, others cal...`
+- line 522 `4.44` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Idaia rhiza` entry=`Idaia rhiza has leaves like those of butcher’s broom and next to them grow, as it were, long tendrils from which grow...`
+- line 533 `4.55` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Immortelle` entry=`Immortelle; but some call it chrysitis. It is a little shoot the size of a span, having foliage in clusters, resembli...`
+- line 536 `4.58_RV` flags=`RV_ROW_REVIEW` lemma=`Chrysanthemum` entry=`Chrysanthemum, or chalkas; some call it chrysanthemis, others chalkitis, others chalkanthos, others chalkanthemon, ot...`
+- line 537 `4.58` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Pot marjoram` entry=`Pot marjoram; it is a bush that belongs to the class of undershrubs, measuring two-spans; it is low, plain, resemblin...`
+- line 540 `4.61` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Milk vetch` entry=`Milk vetch; it is a small shrub, a ground cover, resembling the chick­ pea in foliage and sprigs. The flowers are pur...`
+- line 542 `4.63` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Corn poppy` entry=`1. Com poppy: it has been so named because it quickly loses its flower. It grows on tilled fields in the spring, at w...`
+- line 543 `4.64` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Opium poppy` entry=`1. Opium poppy: there is one kind that is cultivated and that is grown in gardens; its seed is used roasted for a hea...`
+- line 546 `4.67` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Horned cumin` entry=`Homed cumin: it grows among grains and on tilled lands. The leaf is like that of rue and the sprigs are small. It has...`
+- line 558 `4.79` flags=`ENTRY_EN_UNBALANCED_BRACKETS` lemma=`Yew` entry=`Yew: but some call it smilos, others [tithymalos,} and the Romans taxus. It is a tree that nearly resembles the fir i...`
+- line 566 `4.87` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Duckweed` entry=`The duckweed that is on marshlands is found on stagnant waters; it is a plant like the lentil, and, since it has a co...`
+- line 572 `4.93` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Stinging nettle` entry=`1. Stinging nettle, but some call it cnidc. there are two types of this plant. For one is wilder, it has rougher, wid...`
+- line 574 `4.95` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Bedstraw` entry=`Bedstraw: but some call it galairion and others galalion. It was named so because it coagulates milk as well as renne...`
+- line 578 `4.99` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Seaweed` entry=`Seaweed: there is one kind that is broad, another that is longish and somewhat purple, and another that is curly, gro...`
+- line 583 `4.104` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Silver sage` entry=`Silver sage; it, too, has leaves closely resembling the mullein, very rough and thick, growing in a circle around the...`
+- line 594 `4.115` flags=`ENTRY_EN_FOOTNOTE_MARKER|ENTRY_EN_UNBALANCED_BRACKETS` lemma=`Sweet cicely` entry=`Sweet cicely, but some call it myrra'. in stem and foliage it is like the hemlock, but it has a root that is somewhat...`
+- line 598 `4.119` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Blue daisy` entry=`Blue daisy: but some call it boubonion. It is a woody little shoot, having at the top a purple or quince-yellow flowe...`
+- line 601 `4.122` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Caccalia` entry=`Caccalia'. but some call it leantice'. it has large white leaves; their stem, however, is middling, upright, and whit...`
+- line 607 `4.127_RV` flags=`RV_ROW_REVIEW` lemma=`Cynoglossum` entry=`Cynoglossum; some call it phyton, others kaballation, others splenion, others skolymos; the Romans lingua canis, othe...`
+- line 610 `4.130` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Calf's snout` entry=`Calf’s snout, but some people have called it anarrinon and others have called this one, too, lychnis agria. It is an ...`
+- line 613 `4.133` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Cemos` entry=`Cemos: it is a tiny herb, two fingers tall, having narrow, strong little leaves, about four- or three-fingers long, a...`
+- line 618 `4.137_RV` flags=`ENTRY_GR_UNBALANCED_BRACKETS|RV_ROW_REVIEW` lemma=`Bromos` entry=`Bromos; some call it siphonion, others akrospellos; the Romans abenam; the Africans gummath. It is a herb resembling ...`
+- line 625 `4.144` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Butcher’s broom` entry=`1. Butcher’s broom: but some call it oxymyrsine, others myrtacanthos, others acairon, others cine, others leichene, o...`
+- line 629 `4.148` flags=`ENTRY_EN_FOOTNOTE_MARKER|ENTRY_EN_UNBALANCED_BRACKETS` lemma=`White hellebore` entry=`1. White hellebore: it has leaves similar to the leaves of the plantain or of the wild beet but shorter, darker, and ...`
+- line 631 `4.150` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Squirting cucumber` entry=`1. Squirting cucumber, which some call pherombron, differs from the cultivated cucumber only in its fruit, which is a...`
+- line 632 `4.151` flags=`ENTRY_GR_UNBALANCED_BRACKETS` lemma=`Root of the cultivated cucumber` entry=`One drachma of ground cultivated cucumber root drunk with hydromel causes vomiting; and if one wishes a mild after-di...`
+- line 638 `4.157` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Ben` entry=`1. Ben; it is the fruit of a tree that resembles the tamarisk and it is similar to the nut called Pontic. Its inner p...`
+- line 642 `4.161` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Castor oil tree` entry=`1. Castor oil tree: but some people call it sesamon agrion, others seseli Cyprion, and others croton^^ because of the...`
+- line 647 `4.166` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Caper spurge` entry=`1. Caper spurge: some people count even this one among the spurges. It sends up a stem a cubit tall, hollow, thick as...`
+- line 649 `4.168` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wild purslane` entry=`Wild purslane: but some call it andrachne agria and Hippocrates*’’ calls it peplion. It is a widespread shrub growing...`
+- line 651 `4.170` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Scammony` entry=`1. Scammony: it sends up many twigs from a single root that are three-cubits tall, greasy, and that seem to be somewh...`
+- line 654 `4.173` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Elder` entry=`1. Elder: it is of two kinds. For one is tree-like, having reed-like branches that are round, whitish, and quite long...`
+- line 655 `4.174` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Motherwort` entry=`Motherwort: it has leaves similar to the rocket’s, rough, pungent, and thicker, a quadrangular stem, a flower that is...`
+- line 660 `4.179` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Sea heath` entry=`Sea heath: but some call it phacoeides. It grows on mountainous and maritime rocks. It is salty in taste, but the one...`
+- line 670 `4.189` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Mercury` entry=`1. Mercury: but some call it parthenion and others Hermou botanion. Its leaf is similar to that of basil, tending tow...`
+- line 671 `4.190_RV` flags=`RV_ROW_REVIEW` lemma=`Kunea` entry=`Kunea, or kynokrambe; some call it wild male linozostis, the Africans harmas, others asoumeslabon. It sends up a stem...`
+- line 672 `4.190` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Large heliotrope` entry=`1. Large heliotrope that some call scorpiouron^ from the shape of its flower and heliotropion because its leaves foll...`
+- line 677 `5.3` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Grape` entry=`1. Grape: all fresh grapes trouble the belly and produce stomach gas, but grapes that have been hanging for some time...`
+- line 680 `5.6` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wines` entry=`1. Wines; old wines are harmful to the nerves and to the other sense organs although they taste very pleasant; it is ...`
+- line 681 `5.7` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Melitites` entry=`1. The wine called melitites is given in cases of chronic fevers to those who have a weak stomach: for it gently soft...`
+- line 683 `5.9` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Mixture of honey and water, Hydromel` entry=`1. Mixture of honey and water = hydromel has the same properties as mixture of wine and honey. We use it not boiled d...`
+- line 687 `5.13` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Vinegar` entry=`1. Vinegar cools and contracts; it is good for the stomach, it stimulates the appetite, and it staunches all hemorrha...`
+- line 694 `5.20` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wine flavored with quinces` entry=`Wine that is flavored with quinces, which some call melites, is prepared as follows: after removing the seed of quinc...`
+- line 710 `5.36` flags=`LEMMA_EN_TOO_LONG|LEMMA_GR_TOO_LONG` lemma=`Wine flavored with cedar or juniper or cypress ...` entry=`1. Wine flavored with cedar or juniper or cypress or sweet bay or pitys pine or fir is prepare the same way: having s...`
+- line 717 `5.43` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`French lavender vinegar` entry=`They even make vinegar with French lavender that is good for the above conditions by soaking the plant in vinegar, as...`
+- line 731 `5.57` flags=`LEMMA_EN_TOO_LONG` lemma=`Wine flavored with Syrian spikenard, Celtic spi...` entry=`Wine flavored with Syrian spikenard, Celtic spikenard, and leaf of malabar is prepared this way: take of each of thes...`
+- line 736 `5.62` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wine flavored with allheal` entry=`Wine flavored with allheal. Cast 10 drachmai of allheal into one chous must then decant the same way. It is good for ...`
+- line 737 `5.63` flags=`LEMMA_EN_TOO_LONG` lemma=`Wine flavored with yellow flag and wine flavore...` entry=`Wine flavored with yellow flag and wine flavored with licorice are made the same way. For after soaking 80 drachmai o...`
+- line 739 `5.65` flags=`LEMMA_EN_TOO_LONG` lemma=`Wine flavored with fennel, wine flavored dill, ...` entry=`Also wines flavored with fennel, dill, and parsley are similarly prepared and effective for the same purposes.`
+- line 746 `5.72` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Wine flavored with hellebore` entry=`1. Wine flavored with hellebore. Place 12 drachmai of ground black hellebore, wrapped in a loosely woven linen cloth,...`
+- line 749 `5.75` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Pompholyx` entry=`1. Pompholyx differs from spodos in form/’ for there is no generic difference between them. For spodos, on the one ha...`
+- line 753 `5.79` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Verdigris` entry=`1. You must prepare verdigris this way: after pouring very sharp vinegar into a cask or into another similar containe...`
+- line 763 `5.89` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Basic copper carbonate` entry=`1. The best basic copper carbonate^26 is the Armenian, being intensely green in color; second best is the Macedonian,...`
+- line 766 `5.92` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Indigo` entry=`Of the so called indigo, some occurs naturally, as if it were an excretion of Indian reeds,but the so called haphicon...`
+- line 768 `5.94` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Cinnabar` entry=`1. Some are wrong in thinking that cinnabar is the same as that which is called minion: for minion is made in Spain f...`
+- line 773 `5.99` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Rock alum` entry=`1. You must choose rock alum that is copper-colored and easily breakable, free of stones and not old; moreover, you m...`
+- line 774 `5.100` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Misy` entry=`You must choose misy that is Cyprian, shining like gold, hard, and when broken into pieces golden and shining like a ...`
+- line 776 `5.102` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Melanterite` entry=`1. Some assumed wrongly that melanterite is shoemakers’ black; for melanterite is sui generis, although somewhat like...`
+- line 778 `5.104` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Yellow orpiment` entry=`Yellow orpiment is formed in the same mines as red sulfide of arsenic. That which is laminated, golden in color, with...`
+- line 780 `5.106` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Alum` entry=`1. Nearly every kind of alum is found in the same mines in Egypt. But alum also occurs in other places, as in Melos, ...`
+- line 783 `5.109` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Salt` entry=`1. The most effective salt is that which is mined and of this kind, in general, that which is white, free of stones, ...`
+- line 787 `5.113` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Soda` entry=`1. One must choose soda that is light and either rosy or white in color, having holes, as if it were a spongy substan...`
+- line 792 `5.118` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Alcyonion` entry=`1. You must know that there are five kinds of alcyonia. One kind is thick, sponge-like in structure and heavy; moreov...`
+- line 793 `5.119` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Adarces` entry=`What they call adarces occurs in Galatia; it is an incrustation, as it were, somewhat salty, forming in wet and marsh...`
+- line 795 `5.121` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Coral` entry=`1. It seems that the coral, which some have called lithodendron,^^ is a sea plant and becomes hard when pulled from t...`
+- line 798 `5.124` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Assian stone` entry=`1. You must use Assian stone of a pumice color, porous and light, crumbly, and with deep, quince-yellow crevices. Its...`
+- line 799 `5.125` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Copper pyrites` entry=`1. Copper pyrites is a type of stone from which copper is mined. You must choose that which is copper-colored and whi...`
+- line 800 `5.126` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Hematite` entry=`1. Hematite is of excellent quality when it breaks easily as if of its own accord and when it is hard, uniformly stro...`
+- line 804 `5.130` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Magnet` entry=`The best magnet attracts iron easily, is bluish in color, dense, and not too heavy. It has a property that drives out...`
+- line 814 `5.140` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Memphitic stone` entry=`Memphitic stone is found in Egypt, around Memphis. It is of the size of a pebble, shiny, and pied. Ground up and smea...`
+- line 820 `5.146` flags=`ENTRY_EN_FOOTNOTE_MARKER` lemma=`Clay stone` entry=`Clay stone is like a shell, it is easy to split, and it is flaky. Women use it instead of pumice for hair removal. An...`
+
+## Low Priority Rows
+- _(none)_
+
+## Review Workflow
+- Use `data-workbench/diosc_build_review.csv` as the working review sheet.
+- Route row fixes back into `diosc_missing_text_patch.csv` or `diosc_text_fixes_patch.csv`, then regenerate `diosc.build.csv`.
+- Re-run this audit after every patch batch and keep the review sheet in sync.
