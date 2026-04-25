@@ -116,7 +116,7 @@ V-04: Import validation report
 
 Track D: Alignment
 
-AL-01: Interchange format spec (`docs/contracts/alignment_interchange_spec.md`)
+AL-01: Interchange format spec (`contracts/alignment_interchange_spec.md`)
 - JSONL schema: `{source_a_entry_id, source_b_entry_id, alignment_type, confidence, evidence, curator}`
 - Alignment types: chapter_parallel, excerpt, rearrangement, independent
 
