@@ -1,0 +1,126 @@
+{
+  "source_id": "PAUL_AEG-7.3.146",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Γῆς ἔντερα λεῖα",
+      "normalized": "γης εντερα λεια",
+      "lemma_gr": "ἔντερα γῆς λεῖα",
+      "lemma_normalized": "εντερα γης λεια",
+      "is_multiword": true,
+      "head_lemma_normalized": "εντερον",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Γῆς ἔντερα",
+      "normalized": "γης εντερα",
+      "lemma_gr": "ἔντερα γῆς",
+      "lemma_normalized": "εντερα γης",
+      "is_multiword": true,
+      "head_lemma_normalized": "εντερον",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.76
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἔντερα",
+      "normalized": "εντερα",
+      "lemma_gr": "ἔντερον",
+      "lemma_normalized": "εντερον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεῖα",
+      "normalized": "λεια",
+      "lemma_gr": "λεῖος",
+      "lemma_normalized": "λειος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "εντερα γης",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "CONDITION",
+      "display": "νευροτρώτοις",
+      "normalized": "νευροτρωτοις",
+      "lemma_gr": "νευρότρωτος",
+      "lemma_normalized": "νευροτρωτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.68
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἐπιτιθέμενα",
+      "normalized": "επιτιθεμενα",
+      "lemma_gr": "ἐπιτίθεσθαι",
+      "lemma_normalized": "επιτιθεσθαι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "εντερα γης λεια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.76
+    }
+  ],
+  "qualities": []
+}

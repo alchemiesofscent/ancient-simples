@@ -1,0 +1,50 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/paul_smoke_v3",
+  "manifest_path": "outputs/vocab_entries_v3/paul_smoke_v3/manifest_20260427_195239_utc.json",
+  "run_id": "paul_smoke_v3",
+  "corpus_label": "Paul smoke",
+  "degree_profile": "paul",
+  "expected_jobs": 5,
+  "result_files": 5,
+  "valid_results": 5,
+  "missing_results": 0,
+  "missing_result_ids": [],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 0,
+  "completeness_ok": true,
+  "term_label_counts": {
+    "ADMINISTRATION": 9,
+    "APPLICATION_SITE": 18,
+    "CONDITION": 43,
+    "PLACE": 4,
+    "PREPARATION": 11,
+    "PROCESS": 13,
+    "QUALITY_PROPERTY": 29,
+    "SUBSTANCE": 73,
+    "SUBSTANCE_PART": 4,
+    "TOOL_CONTAINER": 1
+  },
+  "axis_counts": {
+    "COLD": 4,
+    "DRY": 17,
+    "HOT": 3,
+    "WET": 1
+  },
+  "intensity_counts": {
+    "extreme": 1,
+    "moderate": 1,
+    "none": 21,
+    "strong": 2
+  },
+  "qualities_total": 25,
+  "qualities_with_degree": 4,
+  "entries_with_quality": 5,
+  "entries_with_degree": 2,
+  "degree_ratio": 0.16,
+  "generic_quality_property_count": 0,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 0,
+  "alerts": []
+}

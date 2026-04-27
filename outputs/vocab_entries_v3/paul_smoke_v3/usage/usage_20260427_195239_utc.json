@@ -1,0 +1,132 @@
+{
+  "run_id": "paul_smoke_v3",
+  "session_id": "20260427_195239_utc",
+  "jobs": [
+    {
+      "source_id": "PAUL_AEG-7.3.1",
+      "safe_id": "PAUL_AEG-7.3.1",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_smoke_v3/_codex_home/PAUL_AEG-7.3.1/.codex/sessions/2026/04/27/rollout-2026-04-27T21-52-43-019dd080-4da3-7040-9cca-841afdeee6d1.jsonl",
+        "start_secondary_used_percent": 39.0,
+        "end_secondary_used_percent": 39.0,
+        "last_token_usage": {
+          "input_tokens": 20127,
+          "cached_input_tokens": 14080,
+          "output_tokens": 10681,
+          "reasoning_output_tokens": 7877,
+          "total_tokens": 30808
+        },
+        "total_token_usage": {
+          "input_tokens": 20127,
+          "cached_input_tokens": 14080,
+          "output_tokens": 10681,
+          "reasoning_output_tokens": 7877,
+          "total_tokens": 30808
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.5",
+      "safe_id": "PAUL_AEG-7.3.5",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_smoke_v3/_codex_home/PAUL_AEG-7.3.5/.codex/sessions/2026/04/27/rollout-2026-04-27T21-55-19-019dd082-b3cc-74f2-ae4a-84f1a36e14da.jsonl",
+        "start_secondary_used_percent": 40.0,
+        "end_secondary_used_percent": 40.0,
+        "last_token_usage": {
+          "input_tokens": 23144,
+          "cached_input_tokens": 3328,
+          "output_tokens": 6503,
+          "reasoning_output_tokens": 3662,
+          "total_tokens": 29647
+        },
+        "total_token_usage": {
+          "input_tokens": 23144,
+          "cached_input_tokens": 3328,
+          "output_tokens": 6503,
+          "reasoning_output_tokens": 3662,
+          "total_tokens": 29647
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.144",
+      "safe_id": "PAUL_AEG-7.3.144",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_smoke_v3/_codex_home/PAUL_AEG-7.3.144/.codex/sessions/2026/04/27/rollout-2026-04-27T21-52-43-019dd080-4d4b-7591-9ea5-9ba6394e9513.jsonl",
+        "start_secondary_used_percent": 39.0,
+        "end_secondary_used_percent": 39.0,
+        "last_token_usage": {
+          "input_tokens": 39370,
+          "cached_input_tokens": 21760,
+          "output_tokens": 12313,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 51683
+        },
+        "total_token_usage": {
+          "input_tokens": 39370,
+          "cached_input_tokens": 21760,
+          "output_tokens": 12313,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 51683
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.371",
+      "safe_id": "PAUL_AEG-7.3.371",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_smoke_v3/_codex_home/PAUL_AEG-7.3.371/.codex/sessions/2026/04/27/rollout-2026-04-27T21-52-45-019dd080-4fb1-7261-97eb-6053faca8689.jsonl",
+        "start_secondary_used_percent": 39.0,
+        "end_secondary_used_percent": 39.0,
+        "last_token_usage": {
+          "input_tokens": 21951,
+          "cached_input_tokens": 3840,
+          "output_tokens": 36168,
+          "reasoning_output_tokens": 18236,
+          "total_tokens": 58119
+        },
+        "total_token_usage": {
+          "input_tokens": 21951,
+          "cached_input_tokens": 3840,
+          "output_tokens": 36168,
+          "reasoning_output_tokens": 18236,
+          "total_tokens": 58119
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.678",
+      "safe_id": "PAUL_AEG-7.3.678",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_smoke_v3/_codex_home/PAUL_AEG-7.3.678/.codex/sessions/2026/04/27/rollout-2026-04-27T21-52-44-019dd080-4dad-7d50-9c20-46a0415ad5c0.jsonl",
+        "start_secondary_used_percent": 39.0,
+        "end_secondary_used_percent": 39.0,
+        "last_token_usage": {
+          "input_tokens": 20630,
+          "cached_input_tokens": 14464,
+          "output_tokens": 12649,
+          "reasoning_output_tokens": 7330,
+          "total_tokens": 33279
+        },
+        "total_token_usage": {
+          "input_tokens": 20630,
+          "cached_input_tokens": 14464,
+          "output_tokens": 12649,
+          "reasoning_output_tokens": 7330,
+          "total_tokens": 33279
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 125222,
+    "cached_input_tokens": 57472,
+    "output_tokens": 78314,
+    "reasoning_output_tokens": 37105,
+    "total_tokens": 203536
+  },
+  "secondary_used_percent": {
+    "start_min": 39.0,
+    "end_max": 40.0
+  }
+}

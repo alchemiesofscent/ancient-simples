@@ -1,0 +1,386 @@
+{
+  "source_id": "PAUL_AEG-7.3.111",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Βαλάνου μυρεψικῆς",
+      "normalized": "βαλανου μυρεψικης",
+      "lemma_gr": "βάλανος μυρεψική",
+      "lemma_normalized": "βαλανος μυρεψικη",
+      "is_multiword": true,
+      "head_lemma_normalized": "βαλανος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Βαλάνου",
+      "normalized": "βαλανου",
+      "lemma_gr": "βάλανος",
+      "lemma_normalized": "βαλανος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ ἔνδον",
+      "normalized": "το ενδον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βαλανος",
+      "part_lemma_normalized": "ενδον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "σαρκῶδες",
+      "normalized": "σαρκωδες",
+      "lemma_gr": "σαρκώδης",
+      "lemma_normalized": "σαρκωδης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλανος",
+        "part_lemma_normalized": "ενδον"
+      },
+      "confidence": 0.63,
+      "lemma_confidence": 0.77
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικήν",
+      "normalized": "ρυπτικην",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλανος",
+        "part_lemma_normalized": "ενδον"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.84
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "τμητικὴν",
+      "normalized": "τμητικην",
+      "lemma_gr": "τμητικός",
+      "lemma_normalized": "τμητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλανος",
+        "part_lemma_normalized": "ενδον"
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.84
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύψει",
+      "normalized": "στυψει",
+      "lemma_gr": "στύψις",
+      "lemma_normalized": "στυψις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλανος",
+        "part_lemma_normalized": "ενδον"
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μελικράτου",
+      "normalized": "μελικρατου",
+      "lemma_gr": "μελίκρατον",
+      "lemma_normalized": "μελικρατον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πινόμενον",
+      "normalized": "πινομενον",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "βαλανος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἔμετόν",
+      "normalized": "εμετον",
+      "lemma_gr": "ἔμετος",
+      "lemma_normalized": "εμετος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.58,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "τὴν κάτω κοιλίαν",
+      "normalized": "την κατω κοιλιαν",
+      "lemma_gr": "κάτω κοιλία",
+      "lemma_normalized": "κατω κοιλια",
+      "is_multiword": true,
+      "head_lemma_normalized": "κοιλια",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.81,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ὀξυκράτῳ",
+      "normalized": "οξυκρατω",
+      "lemma_gr": "ὀξύκρατον",
+      "lemma_normalized": "οξυκρατον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "σπλάγχνων",
+      "normalized": "σπλαγχνων",
+      "lemma_gr": "σπλάγχνον",
+      "lemma_normalized": "σπλαγχνον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.73,
+      "lemma_confidence": 0.73
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἐμφράξεις",
+      "normalized": "εμφραξεις",
+      "lemma_gr": "ἔμφραξις",
+      "lemma_normalized": "εμφραξις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.77,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "τὸ δέρμα",
+      "normalized": "το δερμα",
+      "lemma_gr": "δέρμα",
+      "lemma_normalized": "δερμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ὄξει",
+      "normalized": "οξει",
+      "lemma_gr": "ὄξος",
+      "lemma_normalized": "οξος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.89,
+      "lemma_confidence": 0.89
+    },
+    {
+      "label": "PROCESS",
+      "display": "καταχριόμενον",
+      "normalized": "καταχριομενον",
+      "lemma_gr": "καταχρίειν",
+      "lemma_normalized": "καταχριειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "βαλανος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.73,
+      "lemma_confidence": 0.68
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ φλοιὸς",
+      "normalized": "ο φλοιος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βαλανος",
+      "part_lemma_normalized": "φλοιος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύφει",
+      "normalized": "στυφει",
+      "lemma_gr": "στύφειν",
+      "lemma_normalized": "στυφειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλανος",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.72
+    }
+  ],
+  "qualities": []
+}

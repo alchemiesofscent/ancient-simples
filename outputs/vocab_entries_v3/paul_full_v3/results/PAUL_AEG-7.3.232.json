@@ -1,0 +1,103 @@
+{
+  "source_id": "PAUL_AEG-7.3.232",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Θαλίητρον",
+      "normalized": "θαλιητρον",
+      "lemma_gr": "θαλίητρον",
+      "lemma_normalized": "θαλιητρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.84
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικὴν",
+      "normalized": "ξηραντικην",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "θαλιητρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δήξεως",
+      "normalized": "δηξεως",
+      "lemma_gr": "δῆξις",
+      "lemma_normalized": "δηξις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "θαλιητρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.96
+    },
+    {
+      "label": "CONDITION",
+      "display": "χρόνια ἕλκη",
+      "normalized": "χρονια ελκη",
+      "lemma_gr": "χρόνιον ἕλκος",
+      "lemma_normalized": "χρονιον ελκος",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "θαλιητρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.82
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραντικὴν χωρὶς δήξεως",
+      "evidence_normalized": "ξηραντικην χωρις δηξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "θαλιητρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95
+    }
+  ]
+}

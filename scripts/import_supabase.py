@@ -53,6 +53,11 @@ def main() -> int:
         action="store_true",
         help="Do not append data-workbench/entries_diosc.csv to the entries import.",
     )
+    parser.add_argument(
+        "--skip-paul",
+        action="store_true",
+        help="Do not append data-workbench/entries_paul.csv to the entries import.",
+    )
     args = parser.parse_args()
 
     supabase_url = env_required("SUPABASE_URL")
@@ -65,6 +70,7 @@ def main() -> int:
     lemmata_path = wb / "lemmata.csv"
     entries_path = wb / "entries.csv"
     entries_diosc_path = wb / "entries_diosc.csv"
+    entries_paul_path = wb / "entries_paul.csv"
     entry_preps_path = wb / "entry_preparations.csv"
 
     missing = [p for p in [parts_path, preps_path, lemmata_path, entries_path, entry_preps_path] if not p.exists()]
@@ -80,6 +86,8 @@ def main() -> int:
     entries = read_csv(entries_path)
     if not args.skip_diosc and entries_diosc_path.exists():
         entries.extend(read_csv(entries_diosc_path))
+    if not args.skip_paul and entries_paul_path.exists():
+        entries.extend(read_csv(entries_paul_path))
     entry_preps = read_csv(entry_preps_path)
 
     print(f"Importing parts: {len(parts)}")

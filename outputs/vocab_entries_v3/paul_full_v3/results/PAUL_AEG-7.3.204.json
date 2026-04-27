@@ -1,0 +1,186 @@
+{
+  "source_id": "PAUL_AEG-7.3.204",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἔρινος",
+      "normalized": "ερινος",
+      "lemma_gr": "ἔρινος",
+      "lemma_normalized": "ερινος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἔφυδρός",
+      "normalized": "εφυδρος",
+      "lemma_gr": "ἔφυδρος",
+      "lemma_normalized": "εφυδρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ερινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PART",
+      "display": "τοῦ καρποῦ",
+      "normalized": "του καρπου",
+      "lemma_gr": "καρπός",
+      "lemma_normalized": "καρπος",
+      "is_multiword": true,
+      "head_lemma_normalized": "καρπος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ερινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μέλιτος",
+      "normalized": "μελιτος",
+      "lemma_gr": "μέλι",
+      "lemma_normalized": "μελι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἐγχριόμεναι",
+      "normalized": "εγχριομεναι",
+      "lemma_gr": "ἐγχρίειν",
+      "lemma_normalized": "εγχριειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "CONDITION",
+      "display": "ῥεῦμα ὀφθαλμῶν",
+      "normalized": "ρευμα οφθαλμων",
+      "lemma_gr": "ῥεῦμα ὀφθαλμῶν",
+      "lemma_normalized": "ρευμα οφθαλμων",
+      "is_multiword": true,
+      "head_lemma_normalized": "ρευμα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.77,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "ὀφθαλμῶν",
+      "normalized": "οφθαλμων",
+      "lemma_gr": "ὀφθαλμός",
+      "lemma_normalized": "οφθαλμος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ὁ δὲ χυλὸς",
+      "normalized": "ο δε χυλος",
+      "lemma_gr": "χυλός",
+      "lemma_normalized": "χυλος",
+      "is_multiword": true,
+      "head_lemma_normalized": "χυλος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ερινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "CONDITION",
+      "display": "ὠταλγίαν",
+      "normalized": "ωταλγιαν",
+      "lemma_gr": "ὠταλγία",
+      "lemma_normalized": "ωταλγια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    }
+  ],
+  "qualities": []
+}

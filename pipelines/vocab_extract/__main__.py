@@ -17,6 +17,8 @@ OUTPUT_ROOT = REPO_ROOT / "outputs" / "vocab_entries_v3"
 LEGACY_RUN = OUTPUT_ROOT / "entries_full_v3"
 DIOSC_RUN = OUTPUT_ROOT / "diosc_full_v3"
 DIOSC_SMOKE_RUN = OUTPUT_ROOT / "diosc_smoke_v3"
+PAUL_RUN = OUTPUT_ROOT / "paul_full_v3"
+PAUL_SMOKE_RUN = OUTPUT_ROOT / "paul_smoke_v3"
 STATUS_JSON = OUTPUT_ROOT / "status.json"
 STATUS_MD = OUTPUT_ROOT / "status.md"
 ENTRY_ID_ALIASES = REPO_ROOT / "config" / "vocab_entry_id_aliases.csv"
@@ -119,6 +121,7 @@ def build_status() -> dict[str, Any]:
     entry_id_aliases = _load_aliases()
     legacy_expected_ids = _load_csv_ids(REPO_ROOT / "data-workbench" / "entries.csv")
     diosc_expected_ids = _load_csv_ids(REPO_ROOT / "data-workbench" / "entries_diosc.csv")
+    paul_expected_ids = _load_csv_ids(REPO_ROOT / "data-workbench" / "entries_paul.csv")
     legacy = _scan_run(
         LEGACY_RUN,
         expected_ids=legacy_expected_ids,
@@ -134,8 +137,20 @@ def build_status() -> dict[str, Any]:
         expected_ids=set(),
         entry_id_aliases=entry_id_aliases,
     )
+    paul = _scan_run(
+        PAUL_RUN,
+        expected_ids=paul_expected_ids,
+        entry_id_aliases=entry_id_aliases,
+    )
+    paul_smoke = _scan_run(
+        PAUL_SMOKE_RUN,
+        expected_ids=set(),
+        entry_id_aliases=entry_id_aliases,
+    )
     diosc["qc"] = _load_qc(DIOSC_RUN)
     smoke["qc"] = _load_qc(DIOSC_SMOKE_RUN)
+    paul["qc"] = _load_qc(PAUL_RUN)
+    paul_smoke["qc"] = _load_qc(PAUL_SMOKE_RUN)
 
     blockers: list[str] = []
     if not legacy["complete"]:
@@ -148,13 +163,24 @@ def build_status() -> dict[str, Any]:
         blockers.append("Dioscorides results.jsonl is stale or missing")
     if diosc.get("qc") and not diosc["qc"].get("completeness_ok", False):
         blockers.append("Dioscorides QC did not pass completeness")
+    if paul_expected_ids:
+        if not paul["complete"]:
+            blockers.append("Paul full extraction is incomplete")
+        if paul["complete"] and paul["results_jsonl_lines"] != paul["unique_result_ids"]:
+            blockers.append("Paul results.jsonl is stale or missing")
+        if paul.get("qc") and not paul["qc"].get("completeness_ok", False):
+            blockers.append("Paul QC did not pass completeness")
 
     if not diosc["exists"]:
         next_action = "run npm run diosc:vocab:run"
     elif not diosc["complete"]:
         next_action = "resume npm run diosc:vocab:run"
+    elif paul_expected_ids and not paul["exists"]:
+        next_action = "run npm run paul:vocab:run"
+    elif paul_expected_ids and not paul["complete"]:
+        next_action = "resume npm run paul:vocab:run"
     elif blockers:
-        next_action = "run npm run vocab:consolidate and npm run diosc:vocab:qc"
+        next_action = "run npm run vocab:consolidate and corpus QC"
     else:
         next_action = "run npm run vocab:import -- --target legacy --dry-run"
 
@@ -163,6 +189,8 @@ def build_status() -> dict[str, Any]:
         "legacy": legacy,
         "dioscorides": diosc,
         "dioscorides_smoke": smoke,
+        "paul": paul,
+        "paul_smoke": paul_smoke,
         "entry_id_aliases": {
             "path": str(ENTRY_ID_ALIASES),
             "count": len(entry_id_aliases),
@@ -185,7 +213,13 @@ def write_status(status: dict[str, Any]) -> None:
         "| Corpus | Expected | Results | JSONL lines | Terms | Qualities | Complete |",
         "| --- | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
-    for label, key in [("Legacy", "legacy"), ("Dioscorides", "dioscorides"), ("Dioscorides smoke", "dioscorides_smoke")]:
+    for label, key in [
+        ("Legacy", "legacy"),
+        ("Dioscorides", "dioscorides"),
+        ("Dioscorides smoke", "dioscorides_smoke"),
+        ("Paul", "paul"),
+        ("Paul smoke", "paul_smoke"),
+    ]:
         item = status[key]
         lines.append(
             f"| {label} | {item['expected']} | {item['unique_result_ids']} | "
@@ -206,7 +240,7 @@ def cmd_status(_args: argparse.Namespace) -> int:
 
 def cmd_consolidate(_args: argparse.Namespace) -> int:
     summaries = []
-    for run_dir in [LEGACY_RUN, DIOSC_RUN]:
+    for run_dir in [LEGACY_RUN, DIOSC_RUN, PAUL_RUN]:
         if run_dir.exists() and (run_dir / "results").exists():
             summaries.append(consolidate(run_dir))
     status = build_status()
@@ -224,8 +258,11 @@ def cmd_complete(_args: argparse.Namespace) -> int:
     _run(["python", "-m", "pytest", "tests/", "-q"])
     _run(["npm", "run", "data:validate"])
     _run(["npm", "run", "diosc:entries:validate"])
+    _run(["npm", "run", "paul:entries:validate"])
     _run(["npm", "run", "diosc:vocab:run"])
     _run(["npm", "run", "diosc:vocab:qc"])
+    _run(["npm", "run", "paul:vocab:run"])
+    _run(["npm", "run", "paul:vocab:qc"])
     cmd_consolidate(_args)
     _run([
         "python",
@@ -244,6 +281,16 @@ def cmd_complete(_args: argparse.Namespace) -> int:
             "legacy",
             "--results",
             str(DIOSC_RUN / "results.jsonl"),
+            "--dry-run",
+        ])
+    if (PAUL_RUN / "results.jsonl").exists():
+        _run([
+            "python",
+            "scripts/import_vocab_v3.py",
+            "--target",
+            "legacy",
+            "--results",
+            str(PAUL_RUN / "results.jsonl"),
             "--dry-run",
         ])
     return 0

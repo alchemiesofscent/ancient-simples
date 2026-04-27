@@ -1,0 +1,219 @@
+{
+  "source_id": "PAUL_AEG-7.3.153",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Γλυκύριζον",
+      "normalized": "γλυκυριζον",
+      "lemma_gr": "γλυκύριζον",
+      "lemma_normalized": "γλυκυριζον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.96,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "χλιαρᾶς κράσεως",
+      "normalized": "χλιαρας κρασεως",
+      "lemma_gr": "χλιαρὰ κρᾶσις",
+      "lemma_normalized": "χλιαρα κρασις",
+      "is_multiword": true,
+      "head_lemma_normalized": "κρασις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὑγρᾶς κράσεως",
+      "normalized": "υγρας κρασεως",
+      "lemma_gr": "ὑγρὰ κρᾶσις",
+      "lemma_normalized": "υγρα κρασις",
+      "is_multiword": true,
+      "head_lemma_normalized": "κρασις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύψεως",
+      "normalized": "στυψεως",
+      "lemma_gr": "στῦψις",
+      "lemma_normalized": "στυψις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "CONDITION",
+      "display": "τραχύτητας",
+      "normalized": "τραχυτητας",
+      "lemma_gr": "τραχύτης",
+      "lemma_normalized": "τραχυτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.87,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "ἀρτηρίᾳ",
+      "normalized": "αρτηρια",
+      "lemma_gr": "ἀρτηρία",
+      "lemma_normalized": "αρτηρια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "κύστει",
+      "normalized": "κυστει",
+      "lemma_gr": "κύστις",
+      "lemma_normalized": "κυστις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "ψωρώδει κύστει",
+      "normalized": "ψωρωδει κυστει",
+      "lemma_gr": "ψωρώδης κύστις",
+      "lemma_normalized": "ψωρωδης κυστις",
+      "is_multiword": true,
+      "head_lemma_normalized": "κυστις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.68
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἄδιψον",
+      "normalized": "αδιψον",
+      "lemma_gr": "ἄδιψος",
+      "lemma_normalized": "αδιψος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.86
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "weak",
+      "hedge": "none",
+      "evidence_display": "χλιαρᾶς ἐστι",
+      "evidence_normalized": "χλιαρας εστι",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.83
+    },
+    {
+      "axis": "WET",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὑγρᾶς κράσεως",
+      "evidence_normalized": "υγρας κρασεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλυκυριζον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88
+    }
+  ]
+}

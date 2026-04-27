@@ -1,0 +1,175 @@
+{
+  "source_id": "PAUL_AEG-7.3.220",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ζύμη",
+      "normalized": "ζυμη",
+      "lemma_gr": "ζύμη",
+      "lemma_normalized": "ζυμη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.99,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὀξύτητος",
+      "normalized": "οξυτητος",
+      "lemma_gr": "ὀξύτης",
+      "lemma_normalized": "οξυτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζυμη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "σηπεδονώδους θερμότητος",
+      "normalized": "σηπεδονωδους θερμοτητος",
+      "lemma_gr": "σηπεδονώδης θερμότης",
+      "lemma_normalized": "σηπεδονωδης θερμοτης",
+      "is_multiword": true,
+      "head_lemma_normalized": "θερμοτης",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζυμη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἁλῶν",
+      "normalized": "αλων",
+      "lemma_gr": "ἅλς",
+      "lemma_normalized": "αλς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀλεύρου",
+      "normalized": "αλευρου",
+      "lemma_gr": "ἄλευρον",
+      "lemma_normalized": "αλευρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητική",
+      "normalized": "διαφορητικη",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζυμη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.82
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὀξύτητος μετέχει ψυχρᾶς",
+      "evidence_normalized": "οξυτητος μετεχει ψυχρας",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζυμη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "σηπεδονώδους θερμότητος",
+      "evidence_normalized": "σηπεδονωδους θερμοτητος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζυμη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "οὐ μετρίως θερμὴ",
+      "evidence_normalized": "ου μετριως θερμη",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ζυμη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86
+    }
+  ]
+}

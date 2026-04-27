@@ -1,0 +1,139 @@
+{
+  "source_id": "PAUL_AEG-7.3.141",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Γάρος",
+      "normalized": "γαρος",
+      "lemma_gr": "γάρος",
+      "lemma_normalized": "γαρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "σηπεδονώδη τῶν ἑλκῶν",
+      "normalized": "σηπεδονωδη των ελκων",
+      "lemma_gr": "ἕλκος",
+      "lemma_normalized": "ελκος",
+      "is_multiword": true,
+      "head_lemma_normalized": "ελκος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "ἔξωθεν",
+      "normalized": "εξωθεν",
+      "lemma_gr": "ἔξωθεν",
+      "lemma_normalized": "εξωθεν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "CONDITION",
+      "display": "δυσεντερικοῖς ἐνιᾶσι",
+      "normalized": "δυσεντερικοις ενιασι",
+      "lemma_gr": "δυσεντερικός",
+      "lemma_normalized": "δυσεντερικος",
+      "is_multiword": true,
+      "head_lemma_normalized": "δυσεντερικος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἰσχιαδικοῖς",
+      "normalized": "ισχιαδικοις",
+      "lemma_gr": "ἰσχιαδικός",
+      "lemma_normalized": "ισχιαδικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.6
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "Γάρος θερμαίνει ... δυνατῶς",
+      "evidence_normalized": "γαρος θερμαινει ... δυνατως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γαρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει δυνατῶς",
+      "evidence_normalized": "ξηραινει δυνατως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γαρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92
+    }
+  ]
+}

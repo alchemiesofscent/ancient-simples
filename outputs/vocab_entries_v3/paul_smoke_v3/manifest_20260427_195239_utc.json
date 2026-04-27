@@ -1,0 +1,46 @@
+{
+  "run_id": "paul_smoke_v3",
+  "session_id": "20260427_195239_utc",
+  "csv": "data-workbench/entries_paul.csv",
+  "prompt": "docs/prompts/vocab_term_extractor_with_degrees_paul.md",
+  "schema": "/home/seanm/github/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 100000,
+  "n_selected": 5,
+  "jobs": [
+    {
+      "csv_line": 2,
+      "source_id": "PAUL_AEG-7.3.1",
+      "job_prompt": "outputs/vocab_entries_v3/paul_smoke_v3/jobs/20260427_195239_utc/PAUL_AEG-7.3.1.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_smoke_v3/results/PAUL_AEG-7.3.1.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_smoke_v3/errors/PAUL_AEG-7.3.1.txt"
+    },
+    {
+      "csv_line": 6,
+      "source_id": "PAUL_AEG-7.3.5",
+      "job_prompt": "outputs/vocab_entries_v3/paul_smoke_v3/jobs/20260427_195239_utc/PAUL_AEG-7.3.5.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_smoke_v3/results/PAUL_AEG-7.3.5.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_smoke_v3/errors/PAUL_AEG-7.3.5.txt"
+    },
+    {
+      "csv_line": 145,
+      "source_id": "PAUL_AEG-7.3.144",
+      "job_prompt": "outputs/vocab_entries_v3/paul_smoke_v3/jobs/20260427_195239_utc/PAUL_AEG-7.3.144.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_smoke_v3/results/PAUL_AEG-7.3.144.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_smoke_v3/errors/PAUL_AEG-7.3.144.txt"
+    },
+    {
+      "csv_line": 372,
+      "source_id": "PAUL_AEG-7.3.371",
+      "job_prompt": "outputs/vocab_entries_v3/paul_smoke_v3/jobs/20260427_195239_utc/PAUL_AEG-7.3.371.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_smoke_v3/results/PAUL_AEG-7.3.371.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_smoke_v3/errors/PAUL_AEG-7.3.371.txt"
+    },
+    {
+      "csv_line": 679,
+      "source_id": "PAUL_AEG-7.3.678",
+      "job_prompt": "outputs/vocab_entries_v3/paul_smoke_v3/jobs/20260427_195239_utc/PAUL_AEG-7.3.678.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_smoke_v3/results/PAUL_AEG-7.3.678.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_smoke_v3/errors/PAUL_AEG-7.3.678.txt"
+    }
+  ]
+}

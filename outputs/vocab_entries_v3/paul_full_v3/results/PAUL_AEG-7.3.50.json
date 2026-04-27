@@ -1,0 +1,143 @@
+{
+  "source_id": "PAUL_AEG-7.3.50",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀμίαντον",
+      "normalized": "αμιαντον",
+      "lemma_gr": "ἀμίαντον",
+      "lemma_normalized": "αμιαντον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": "κυπρος",
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "PLACE",
+      "display": "Κύπρῳ",
+      "normalized": "κυπρω",
+      "lemma_gr": "Κύπρος",
+      "lemma_normalized": "κυπρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "στυπτηρίᾳ σχιστῇ",
+      "normalized": "στυπτηρια σχιστη",
+      "lemma_gr": "στυπτηρία σχιστή",
+      "lemma_normalized": "στυπτηρια σχιστη",
+      "is_multiword": true,
+      "head_lemma_normalized": "στυπτηρια",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "στυπτηρίᾳ",
+      "normalized": "στυπτηρια",
+      "lemma_gr": "στυπτηρία",
+      "lemma_normalized": "στυπτηρια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ξηραντικοῖς ψιλώθροις",
+      "normalized": "ξηραντικοις ψιλωθροις",
+      "lemma_gr": "ξηραντικὸν ψιλώθρον",
+      "lemma_normalized": "ξηραντικον ψιλωθρον",
+      "is_multiword": true,
+      "head_lemma_normalized": "ψιλωθρον",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ψιλώθροις",
+      "normalized": "ψιλωθροις",
+      "lemma_gr": "ψιλώθρον",
+      "lemma_normalized": "ψιλωθρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἐν τοῖς ξηραντικοῖς ψιλώθροις",
+      "evidence_normalized": "εν τοις ξηραντικοις ψιλωθροις",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "ξηραντικον ψιλωθρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7
+    }
+  ]
+}

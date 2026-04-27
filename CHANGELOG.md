@@ -81,6 +81,22 @@ Curated record of structural transformations. Not a git log — tracks *what bec
 
 ---
 
+### 2026-04-27 — Paul vocab pipeline
+
+**Why**: `data-workbench/paul.csv` is prepared enough for the `vocab_entries_v3` workflow, but it needed a first-class bridge into the same autonomous build, QC, consolidation, and import path as legacy and Dioscorides.
+
+| Before | After | Why |
+|--------|-------|-----|
+| `data-workbench/paul.csv` had no generated legacy entry surface | `scripts/make_entries_paul.py` emits `data-workbench/entries_paul.csv` plus QC | Give the LLM runner stable `PAUL_AEG-*` entry IDs and normalized Greek text |
+| No Paul entry validator | `scripts/validate_paul_entries.py` | Catch numbering, normalization, page, and source drift before extraction |
+| Dioscorides-only vocab QC command | `scripts/qc_vocab_run.py` with source-specific degree profiles | Reuse completeness and schema checks for Paul without Dioscorides degree heuristics |
+| `vocab_extract` controller knew only legacy + Dioscorides | Controller now tracks Paul full/smoke runs and consolidates Paul JSONL | Let autonomous status/complete cover all active corpora |
+| Imports appended only `entries_diosc.csv` | `scripts/import_supabase.py` appends `entries_paul.csv`; `scripts/import_vocab_v3.py` dry-run checks Paul IDs | Ensure Paul entries exist before legacy vocab assertions attach |
+| DB/app source lists lacked Paul | `supabase/migrations/009_paul_source.sql`; `/entries` source filter includes `PAUL_AEG` | Make Paul selectable and FK-valid |
+| No Paul-specific extraction prompt/scripts | `docs/prompts/vocab_term_extractor_with_degrees_paul.md` and `npm run paul:*` scripts | Capture Paul’s explicit degree language and provide repeatable commands |
+
+---
+
 ### 2026-04-06 — Documentation updates
 
 **Why**: CLAUDE.md and AGENTS.md were out of date after the restructure changes.

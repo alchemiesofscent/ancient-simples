@@ -1,0 +1,166 @@
+{
+  "source_id": "PAUL_AEG-7.3.142",
+  "terms": [
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Γεντιανῆς ῥίζα",
+      "normalized": "γεντιανης ριζα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "γεντιανη",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.94,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Γεντιανῆς",
+      "normalized": "γεντιανης",
+      "lemma_gr": "γεντιανή",
+      "lemma_normalized": "γεντιανη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "PART",
+      "display": "ῥίζα",
+      "normalized": "ριζα",
+      "lemma_gr": "ῥίζα",
+      "lemma_normalized": "ριζα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δραστήριος",
+      "normalized": "δραστηριος",
+      "lemma_gr": "δραστήριος",
+      "lemma_normalized": "δραστηριος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "γεντιανη",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "PROCESS",
+      "display": "λεπτῦναι",
+      "normalized": "λεπτυναι",
+      "lemma_gr": "λεπτύνειν",
+      "lemma_normalized": "λεπτυνειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "γεντιανη",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.76
+    },
+    {
+      "label": "PROCESS",
+      "display": "διακαθῆραι",
+      "normalized": "διακαθηραι",
+      "lemma_gr": "διακαθαίρειν",
+      "lemma_normalized": "διακαθαιρειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "γεντιανη",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἀπορρύψαι",
+      "normalized": "απορρυψαι",
+      "lemma_gr": "ἀπορρύπτειν",
+      "lemma_normalized": "απορρυπτειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "γεντιανη",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἐκφράξαι",
+      "normalized": "εκφραξαι",
+      "lemma_gr": "ἐκφράσσειν",
+      "lemma_normalized": "εκφρασσειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "γεντιανη",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.62
+    }
+  ],
+  "qualities": []
+}

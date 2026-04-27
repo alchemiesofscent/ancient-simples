@@ -164,6 +164,7 @@ export default async function EntriesPage({
             <option value="GAL_ALIM">GAL_ALIM</option>
             <option value="GAL_SMT">GAL_SMT</option>
             <option value="ORIB_CM">ORIB_CM</option>
+            <option value="PAUL_AEG">PAUL_AEG</option>
           </select>
           <select name="axis" defaultValue={axisFilter} className="rounded-md border px-3 py-2">
             <option value="">Any quality</option>

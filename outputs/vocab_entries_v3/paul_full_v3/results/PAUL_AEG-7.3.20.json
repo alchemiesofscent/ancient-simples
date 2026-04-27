@@ -1,0 +1,146 @@
+{
+  "source_id": "PAUL_AEG-7.3.20",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ἀκαλλὶς",
+      "normalized": "ακαλλις",
+      "lemma_gr": "ἀκαλλίς",
+      "lemma_normalized": "ακαλλις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PART",
+      "display": "καρπός",
+      "normalized": "καρπος",
+      "lemma_gr": "καρπός",
+      "lemma_normalized": "καρπος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "PLACE",
+      "display": "Αἰγύπτῳ",
+      "normalized": "αιγυπτω",
+      "lemma_gr": "αἴγυπτος",
+      "lemma_normalized": "αιγυπτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ακαλλις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ἀπόβρεγμα",
+      "normalized": "αποβρεγμα",
+      "lemma_gr": "ἀπόβρεγμα",
+      "lemma_normalized": "αποβρεγμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ακαλλις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "CONDITION",
+      "display": "ὀξυδορκίαν",
+      "normalized": "οξυδορκιαν",
+      "lemma_gr": "ὀξυδορκία",
+      "lemma_normalized": "οξυδορκια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "PREPARATION",
+      "display": "κολλουρίοις",
+      "normalized": "κολλουριοις",
+      "lemma_gr": "κολλούριον",
+      "lemma_normalized": "κολλουριον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "μίγνυται",
+      "normalized": "μιγνυται",
+      "lemma_gr": "μιγνύναι",
+      "lemma_normalized": "μιγνυναι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "αποβρεγμα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.6
+    }
+  ],
+  "qualities": []
+}

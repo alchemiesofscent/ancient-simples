@@ -1,0 +1,159 @@
+{
+  "source_id": "PAUL_AEG-7.3.114",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Βαλσάμου",
+      "normalized": "βαλσαμου",
+      "lemma_gr": "βάλσαμον",
+      "lemma_normalized": "βαλσαμον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ξύλον",
+      "normalized": "ξυλον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βαλσαμον",
+      "part_lemma_normalized": "ξυλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὀπὸς",
+      "normalized": "οπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βαλσαμον",
+      "part_lemma_normalized": "οπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "καρπὸς",
+      "normalized": "καρπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βαλσαμον",
+      "part_lemma_normalized": "καρπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερές",
+      "normalized": "λεπτομερες",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλσαμον",
+        "part_lemma_normalized": "ξυλον"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερέστερος",
+      "normalized": "λεπτομερεστερος",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλσαμον",
+        "part_lemma_normalized": "οπος"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.74
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει καὶ θερμαίνει κατὰ τὴν δευτέραν ἀπόστασιν",
+      "evidence_normalized": "ξηραινει και θερμαινει κατα την δευτεραν αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλσαμον",
+        "part_lemma_normalized": "ξυλον"
+      },
+      "confidence": 0.83
+    },
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει καὶ θερμαίνει κατὰ τὴν δευτέραν ἀπόστασιν",
+      "evidence_normalized": "ξηραινει και θερμαινει κατα την δευτεραν αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "βαλσαμον",
+        "part_lemma_normalized": "ξυλον"
+      },
+      "confidence": 0.83
+    }
+  ]
+}

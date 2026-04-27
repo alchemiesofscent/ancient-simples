@@ -1,0 +1,86 @@
+{
+  "source_id": "PAUL_AEG-7.3.136",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Βρυωνία",
+      "normalized": "βρυωνια",
+      "lemma_gr": "βρυωνία",
+      "lemma_normalized": "βρυωνια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἄμπελος λευκή",
+      "normalized": "αμπελος λευκη",
+      "lemma_gr": "ἄμπελος λευκή",
+      "lemma_normalized": "αμπελος λευκη",
+      "is_multiword": true,
+      "head_lemma_normalized": "αμπελος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἄμπελος",
+      "normalized": "αμπελος",
+      "lemma_gr": "ἄμπελος",
+      "lemma_normalized": "αμπελος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λευκή",
+      "normalized": "λευκη",
+      "lemma_gr": "λευκός",
+      "lemma_normalized": "λευκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αμπελος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.78
+    }
+  ],
+  "qualities": []
+}

@@ -480,6 +480,7 @@ def main() -> int:
                 [
                     _REPO_ROOT / "data-workbench" / "entries.csv",
                     _REPO_ROOT / "data-workbench" / "entries_diosc.csv",
+                    _REPO_ROOT / "data-workbench" / "entries_paul.csv",
                 ]
             )
         report, lemma_form_rows, entry_lemma_form_rows, assertion_rows = build_legacy_rows(

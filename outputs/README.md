@@ -12,6 +12,7 @@ This directory contains the LLM extraction results that power search, computatio
 ```
 data-workbench/entries.csv (2,135 entries)
 data-workbench/entries_diosc.csv (835 entries)
+data-workbench/entries_paul.csv (680 entries)
     ↓
 scripts/vocab_multi_agent_pilot.py (orchestrator)
     ↓
@@ -30,6 +31,9 @@ NER training corpus (future)
 
 - `vocab_entries_v3/`
   - `entries_full_v3/` — complete legacy corpus extraction (2,135/2,135 entries, 27,707 terms, 2,894 qualities)
+  - `diosc_full_v3/` — full Dioscorides extraction run, when present
+  - `paul_full_v3/` — full Paul Book 7.3 extraction run, when present
+  - `paul_smoke_v3/` — source-specific Paul smoke run over long and degree-heavy rows
   - `diosc_smoke_v3/` — Dioscorides smoke run (partial, ~51 results)
   - `diosc_smoke_v3_net/` — Dioscorides network smoke (partial, ~20 results)
   - `accuracy_eval/` — model accuracy evaluation (gpt-5.2 + high selected)
@@ -48,5 +52,7 @@ Superseded output families (v2, pilot, experiments) are in `archive/outputs/`.
 - Rebuild JSONL: `npm run vocab:consolidate`
 - Resume autonomous completion: `npm run vocab:complete`
 - Legacy import dry-run: `npm run vocab:import -- --target legacy --results outputs/vocab_entries_v3/entries_full_v3/results.jsonl --dry-run`
+- Build/validate Paul entries: `npm run paul:entries:build && npm run paul:entries:validate`
+- Paul extraction: `npm run paul:vocab:smoke`, then `npm run paul:vocab:run`, `npm run paul:vocab:qc`, and `npm run vocab:consolidate`
 
 Current status artifacts are written to `outputs/vocab_entries_v3/status.json` and `outputs/vocab_entries_v3/status.md`.

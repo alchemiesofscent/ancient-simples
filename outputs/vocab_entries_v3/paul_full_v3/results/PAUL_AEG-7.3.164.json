@@ -1,0 +1,319 @@
+{
+  "source_id": "PAUL_AEG-7.3.164",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Δάφνης",
+      "normalized": "δαφνης",
+      "lemma_gr": "δάφνη",
+      "lemma_normalized": "δαφνη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὰ φύλλα",
+      "normalized": "τα φυλλα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "δαφνη",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ καρπός",
+      "normalized": "ο καρπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "δαφνη",
+      "part_lemma_normalized": "καρπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ τῆς ῥίζης φλοιός",
+      "normalized": "ο της ριζης φλοιος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "δαφνη",
+      "part_lemma_normalized": "φλοιος ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.58
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "πικρός",
+      "normalized": "πικρος",
+      "lemma_gr": "πικρός",
+      "lemma_normalized": "πικρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φλοιος ριζα"
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὑποστύφων",
+      "normalized": "υποστυφων",
+      "lemma_gr": "ὑποστύφων",
+      "lemma_normalized": "υποστυφων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φλοιος ριζα"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "PROCESS",
+      "display": "ξηραίνειν",
+      "normalized": "ξηραινειν",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "θερμαίνειν",
+      "normalized": "θερμαινειν",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "θρύπτειν",
+      "normalized": "θρυπτειν",
+      "lemma_gr": "θρύπτειν",
+      "lemma_normalized": "θρυπτειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φλοιος ριζα"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οἴνῳ εὐώδει",
+      "normalized": "οινω ευωδει",
+      "lemma_gr": "οἶνος",
+      "lemma_normalized": "οινος",
+      "is_multiword": true,
+      "head_lemma_normalized": "οινος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "εὐώδης",
+      "normalized": "ευωδης",
+      "lemma_gr": "εὐώδης",
+      "lemma_normalized": "ευωδης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πινόμενος",
+      "normalized": "πινομενος",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φλοιος ριζα"
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "CONDITION",
+      "display": "λίθους",
+      "normalized": "λιθους",
+      "lemma_gr": "λίθος",
+      "lemma_normalized": "λιθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἡπατικούς",
+      "normalized": "ηπατικους",
+      "lemma_gr": "ἡπατικός",
+      "lemma_normalized": "ηπατικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.58,
+      "lemma_confidence": 0.66
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τὰ μὲν φύλλα ξηραίνει",
+      "evidence_normalized": "τα μεν φυλλα ξηραινει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.86
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει σφοδρῶς",
+      "evidence_normalized": "θερμαινει σφοδρως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "δαφνη",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.86
+    }
+  ]
+}
