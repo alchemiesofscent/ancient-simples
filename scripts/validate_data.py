@@ -6,6 +6,11 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+_THIS_REPO_ROOT = Path(__file__).resolve().parents[1]
+_PACKAGES_PATH = _THIS_REPO_ROOT / "packages"
+if str(_PACKAGES_PATH) not in sys.path:
+    sys.path.insert(0, str(_PACKAGES_PATH))
+
 from textutils.normalize import normalize as normalize_greek_for_match
 
 

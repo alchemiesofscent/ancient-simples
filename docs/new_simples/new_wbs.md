@@ -36,7 +36,7 @@ This file is the canonical live tracker for the repo.
 | `M0` Contracts and textutils determinism | `partial` | Contracts exist (top-level `contracts/`); Python normalization/tokenizer tests pass (40 tests); Python parity fixture generated (`tests/fixtures/normalization_parity.json`); TS/SQL parity test runners still missing. |
 | `M1` TEI-first schema deployed | `partial` | `005`/`006`/`007` migrations exist, but no fresh-project validation evidence is tracked here. |
 | `M2` Indexer validated on test subset | `blocked` | TEI configs exist, but `tei/cmg` is absent and `scripts/index_tei.py` is out of sync with `005`. |
-| `M3` Imports validated on test subset | `blocked` | `scripts/import_vocab_v3.py` still targets legacy tables and the bridge file is a stub. |
+| `M3` Imports validated on test subset | `partial` | Legacy-ID vocab import now dry-runs against consolidated v3 output; live DB import still needs migration `008` applied and Dioscorides full output completed. |
 | `M4` Phase 2 gate passes | `blocked` | Test subset IDs and alignment seed data are placeholders/stubs; no facet-gate harness exists. |
 | `M5` Core UI delivered | `partial` | Legacy `/entries` list/detail/editing exists; TEI-first citations and tables are not wired into the app. |
 | `M6` Facet query UI delivered | `not_started` | No `/assertions/*` UI routes yet. |
@@ -50,13 +50,16 @@ This file is the canonical live tracker for the repo.
 - `BLK-TEI-04` `[TEI]` `blocked`: `config/entry_id_bridge.csv` and `config/test_subset.txt` are scaffolding, not validated runtime inputs.
 - `BLK-TEI-05` `[TEI]` `partial`: Python parity test and fixture generator exist (`tests/test_parity.py`); TS and SQL runners not yet wired.
 - `BLK-UI-01` `[UI]` `blocked`: the Next.js app still reads legacy MVP tables instead of TEI-first tables.
+- `BLK-LEGACY-01` `[LEGACY]` `blocked`: `outputs/vocab_entries_v3/diosc_full_v3/` does not exist yet; full Dioscorides extraction must be run/resumed before corpus-wide import is complete.
 
 ## Now
 
-- `TEI-INDEX-01` `[TEI]` Reconcile `scripts/index_tei.py` with the TEI-first schema in `005_tei_first_schema.sql`, including table names, payload shapes, key strategy, import-run fields, and stale/deactivation behavior. Status: `not_started`
+- `LEGACY-DIOSC-FULL-01` `[LEGACY]` Run/resume the full Dioscorides vocab extraction with `npm run diosc:vocab:run`, then run `npm run diosc:vocab:qc`, `npm run vocab:consolidate`, and legacy import dry-runs. Status: `not_started`
 
 ## Next
 
+- `LEGACY-VOCAB-IMPORT-01` `[LEGACY]` Apply migration `008`, run `npm run vocab:import -- --target legacy` for legacy and completed Dioscorides JSONL outputs, then confirm app filters read imported rows. Status: `not_started`
+- `TEI-INDEX-01` `[TEI]` Reconcile `scripts/index_tei.py` with the TEI-first schema in `005_tei_first_schema.sql`, including table names, payload shapes, key strategy, import-run fields, and stale/deactivation behavior. Status: `not_started`
 - `TEI-IMPORT-01` `[TEI]` Reconcile `scripts/import_vocab_v3.py` with `tei_lemma_forms`, `tei_entry_lemma_forms`, and `tei_assertions`, then document any remaining bridge prerequisites. Status: `not_started`
 - `TEI-SOURCE-01` `[TEI]` Restore or link the CMG TEI checkout at `tei/cmg`, then verify all three TEI doc config paths against real files. Status: `blocked`
 - `TEI-TEST-01` `[TEI]` Add automated Python/TS/SQL normalization parity coverage and executable tests for the TEI rule fixtures under `tests/fixtures/tei_rules/`. Status: `partial` (Python parity corpus + fixture generator implemented in `tests/test_parity.py`; TS and SQL test runners still needed)
@@ -74,10 +77,11 @@ This file is the canonical live tracker for the repo.
 - `OPS-RESTRUCTURE-01` `[OPS]` Greenfield-inspired repo restructure: `pyproject.toml` (proper Python packaging, editable install), consolidated normalization (all consumers delegate to `textutils.normalize`), re-normalized `entries.csv` v1.1, parity test suite (`tests/test_parity.py`), contracts elevated to top-level `contracts/`, structured `pipelines/` modules, sys.path hacking removed from 8+ files. Status: `implemented`
 - `LEGACY-DATA-AUDIT-01` `[LEGACY]` Ref-sequence audit of `entries.csv`: fixed GAL_SMT-10.1.0→10.1, documented confirmed structural patterns (ORIB_CM depth variation, GAL_SMT book 6-8 continuous numbering, AET_LM ~N duplicates), deferred GAL_ALIM/PAUL_RM to TEI pipeline. Status: `implemented`
 - `OPS-CLEANUP-01` `[OPS]` Repo cleanup for TEI-first focus: moved 13 legacy QC/analysis docs to `archive/`, wrote `PRODUCT_PLAN.md` (5-phase roadmap: org → extraction → import → search → NER), added 3-role autonomous architecture to `AGENTS.md`, updated all READMEs and doc maps. Status: `implemented`
+- `LEGACY-VOCAB-AUTO-01` `[LEGACY]` Added repo-local autonomous vocab controls: status/consolidation/complete commands, explicit v3 entry-id aliases, legacy-ID import tables, importer `--target legacy`, and first-pass extraction filters/detail panels in the app. Status: `implemented`
 
 ## Resume Here
 
-- `TEI-INDEX-01` `[TEI]` Reconcile `scripts/index_tei.py` with the TEI-first schema in `005_tei_first_schema.sql`, including table names, payload shapes, key strategy, import-run fields, and stale/deactivation behavior. Status: `not_started`
+- `LEGACY-DIOSC-FULL-01` `[LEGACY]` Run/resume the full Dioscorides vocab extraction with `npm run diosc:vocab:run`, then run `npm run diosc:vocab:qc`, `npm run vocab:consolidate`, and legacy import dry-runs. Status: `not_started`
 
 ## Notes
 

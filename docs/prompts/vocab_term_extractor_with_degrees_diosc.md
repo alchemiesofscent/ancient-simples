@@ -42,7 +42,7 @@ Use CONTEXT ONLY if the current TEXT explicitly signals a back-reference (e.g., 
 ### Normalization rules (mandatory)
 For every term provide:
 - `display`: representative Greek surface form from the text
-- `normalized`: lowercase + strip accents/breathings ONLY; preserve iota subscripts; keep Greek script (no transliteration)
+- `normalized`: lowercase + strip all combining marks U+0300-U+036F (including iota subscript); keep Greek script (no transliteration)
 If multiword, normalize each word and join with single spaces.
 
 ### Lemma rules (mandatory)

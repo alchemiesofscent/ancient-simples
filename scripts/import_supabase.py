@@ -4,18 +4,16 @@ from __future__ import annotations
 import argparse
 import csv
 import sys
-import unicodedata
 from pathlib import Path
 from typing import Any
 
+_THIS_REPO_ROOT = Path(__file__).resolve().parents[1]
+_PACKAGES_PATH = _THIS_REPO_ROOT / "packages"
+if str(_PACKAGES_PATH) not in sys.path:
+    sys.path.insert(0, str(_PACKAGES_PATH))
+
+from textutils.normalize import normalize as normalize_greek_for_match
 from supabase_rest import SupabaseRestClient, env_required
-
-
-def normalize_greek_for_match(text: str) -> str:
-    lowered = (text or "").lower()
-    decomposed = unicodedata.normalize("NFD", lowered)
-    stripped = "".join(ch for ch in decomposed if not unicodedata.combining(ch) or ch == "\u0345")
-    return unicodedata.normalize("NFC", stripped)
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -50,6 +48,11 @@ def main() -> int:
     parser.add_argument("--batch-lemmata", type=int, default=500)
     parser.add_argument("--batch-entries", type=int, default=10)
     parser.add_argument("--batch-links", type=int, default=2000)
+    parser.add_argument(
+        "--skip-diosc",
+        action="store_true",
+        help="Do not append data-workbench/entries_diosc.csv to the entries import.",
+    )
     args = parser.parse_args()
 
     supabase_url = env_required("SUPABASE_URL")
@@ -61,6 +64,7 @@ def main() -> int:
     preps_path = wb / "preparations.csv"
     lemmata_path = wb / "lemmata.csv"
     entries_path = wb / "entries.csv"
+    entries_diosc_path = wb / "entries_diosc.csv"
     entry_preps_path = wb / "entry_preparations.csv"
 
     missing = [p for p in [parts_path, preps_path, lemmata_path, entries_path, entry_preps_path] if not p.exists()]
@@ -74,6 +78,8 @@ def main() -> int:
     preps = read_csv(preps_path)
     lemmata = read_csv(lemmata_path)
     entries = read_csv(entries_path)
+    if not args.skip_diosc and entries_diosc_path.exists():
+        entries.extend(read_csv(entries_diosc_path))
     entry_preps = read_csv(entry_preps_path)
 
     print(f"Importing parts: {len(parts)}")

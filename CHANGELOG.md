@@ -116,3 +116,21 @@ Curated record of structural transformations. Not a git log — tracks *what bec
 | `docs/README.md` had "Historical" section pointing to archive | Replaced with "See also" section linking contracts, PRODUCT_PLAN, archive | Cleaner navigation |
 | `data-workbench/README.md` listed all QC files inline | Simplified: canonical inputs, Dioscorides ops, active QC only; archived QC noted | Reflect moved files |
 | Workflow docs referenced `data-workbench/diosc_*_apply_report.md` paths | Updated to `archive/docs/legacy_qc/diosc_*_apply_report.md` | Paths moved |
+
+---
+
+### 2026-04-25 — Autonomous vocab outputs-to-search path
+
+**Why**: Legacy extraction output was complete but not ingestible, Dioscorides full extraction had not been launched, and direct repo commands failed without pytest's Python path.
+
+| Before | After | Why |
+|--------|-------|-----|
+| `outputs/vocab_entries_v3/entries_full_v3/results.jsonl` was empty | Rebuilt from 2,135 per-entry JSON files | Import needs canonical JSONL input |
+| No repo-local vocab controller | `pipelines/vocab_extract/__main__.py` with `status`, `consolidate`, and `complete` commands | Durable autonomous resume/status workflow |
+| No explicit mapping for stale v3 extraction IDs | `config/vocab_entry_id_aliases.csv` | Auditable remap from old result IDs to current `entries.csv` IDs |
+| `scripts/import_vocab_v3.py` was TEI/bridge-first | Importer supports `--target legacy` by default and keeps `--target tei` bridge-gated | Unblock search before TEI indexing is ready |
+| No legacy-keyed extraction tables | `supabase/migrations/008_legacy_vocab_import.sql` | Store imported terms/assertions against current legacy entries |
+| MVP `sources` seed lacked `DIOSC_DMM` for legacy tables | Migration `008` seeds `DIOSC_DMM` in `public.sources` | Let Dioscorides entries and vocab rows satisfy legacy FKs |
+| `scripts/import_supabase.py` imported only `entries.csv` | Appends `entries_diosc.csv` by default, with `--skip-diosc` escape hatch | Ensure completed Dioscorides output can attach to `entries.entry_id` |
+| `/entries` only supported Greek prefix search | Added source, quality, degree, and substance filters plus extraction panels on entry detail | First usable search surface over imported vocab output |
+| Several direct scripts assumed installed `textutils` | Added repo-local `packages/` path bootstrap to direct script entrypoints | Make npm/Python commands work in this checkout |

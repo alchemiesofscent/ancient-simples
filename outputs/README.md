@@ -17,7 +17,9 @@ scripts/vocab_multi_agent_pilot.py (orchestrator)
     ↓
 vocab_entries_v3/{run_id}/results/*.json
     ↓
-scripts/import_vocab_v3.py → DB (assertions, lemma_forms)
+python -m pipelines.vocab_extract consolidate
+    ↓
+scripts/import_vocab_v3.py --target legacy → DB (legacy vocab assertions/forms)
     ↓
 App: faceted search, lemma browser
     ↓
@@ -39,3 +41,12 @@ NER training corpus (future)
 ## Historical
 
 Superseded output families (v2, pilot, experiments) are in `archive/outputs/`.
+
+## Operational Commands
+
+- Status: `npm run vocab:status`
+- Rebuild JSONL: `npm run vocab:consolidate`
+- Resume autonomous completion: `npm run vocab:complete`
+- Legacy import dry-run: `npm run vocab:import -- --target legacy --results outputs/vocab_entries_v3/entries_full_v3/results.jsonl --dry-run`
+
+Current status artifacts are written to `outputs/vocab_entries_v3/status.json` and `outputs/vocab_entries_v3/status.md`.

@@ -98,3 +98,14 @@ Use this template for every session entry:
 - Blockers: Dioscorides extraction at 8.5% (71/835). Bridge CSV is a stub. App has no faceted search, no assertion UI, no lemma browser.
 - Exact next task: Phase 2 — complete Dioscorides extraction (resume smoke run, then full 835-entry run).
 - Resume note: `PRODUCT_PLAN.md` is the roadmap. All Phase 1 changes are unstaged. Phase 2 requires Codex model access for `vocab_multi_agent_pilot.py`.
+
+### 2026-04-25 - Codex
+
+- Starting context: User chose the outputs-to-search path over resuming TEI indexer first. Live inspection found legacy extraction complete by JSON count, legacy `results.jsonl` empty, Dioscorides full extraction absent, and direct script commands failing on `textutils` imports outside pytest.
+- Tasks moved: Added `LEGACY-VOCAB-AUTO-01` to `Done`. Set `LEGACY-DIOSC-FULL-01` as the sole `Now` and `Resume Here` task. Moved `TEI-INDEX-01` back to `Next`.
+- Decisions: Keep TEI import bridge-gated, but unblock search through legacy-ID extraction tables keyed to `entries.entry_id`. Use an explicit alias CSV for v3 extraction IDs that predate ref cleanup rather than burying remaps in code.
+- Transformations: `outputs/vocab_entries_v3/entries_full_v3/results/*.json` → fresh `outputs/vocab_entries_v3/entries_full_v3/results.jsonl`; no repo vocab controller → `python -m pipelines.vocab_extract {status,consolidate,complete}`; no legacy extraction tables → `supabase/migrations/008_legacy_vocab_import.sql`; TEI-only importer → `scripts/import_vocab_v3.py --target legacy|tei`; implicit stale result IDs → `config/vocab_entry_id_aliases.csv`; `scripts/import_supabase.py` entries-only import → appends `entries_diosc.csv` by default; `/entries` prefix-only UI → source/quality/degree/substance filters plus extraction detail panels.
+- Evidence checked: `git status`, `PRODUCT_PLAN.md`, `docs/new_simples/new_wbs.md`, `outputs/vocab_entries_v3/*`, `scripts/vocab_multi_agent_pilot.py`, `scripts/qc_diosc_vocab_run.py`, `scripts/import_vocab_v3.py`, `package.json`, `app/src/app/entries/*`, `supabase/migrations/`.
+- Blockers: `outputs/vocab_entries_v3/diosc_full_v3/` is still absent; full Dioscorides extraction requires Codex model access and was not launched in this implementation pass.
+- Exact next task: `LEGACY-DIOSC-FULL-01` `[LEGACY]` Run/resume the full Dioscorides vocab extraction with `npm run diosc:vocab:run`, then run `npm run diosc:vocab:qc`, `npm run vocab:consolidate`, and legacy import dry-runs.
+- Resume note: Start with `npm run vocab:status`; legacy output is consolidated and imports cleanly in dry-run with 2,135 entries. Then run the full Dioscorides extraction command and re-run `npm run vocab:complete` if interrupted.

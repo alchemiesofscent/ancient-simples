@@ -1,0 +1,52 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/diosc_full_v3",
+  "manifest_path": "outputs/vocab_entries_v3/diosc_full_v3/manifest_20260426_114418_utc.json",
+  "run_id": "diosc_full_v3",
+  "expected_jobs": 819,
+  "result_files": 835,
+  "valid_results": 819,
+  "missing_results": 0,
+  "missing_result_ids": [],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 0,
+  "completeness_ok": true,
+  "term_label_counts": {
+    "ADMINISTRATION": 888,
+    "APPLICATION_SITE": 1461,
+    "CONDITION": 3910,
+    "PART": 515,
+    "PLACE": 501,
+    "PREPARATION": 1160,
+    "PROCESS": 3410,
+    "QUALITY_PROPERTY": 3803,
+    "SUBSTANCE": 6161,
+    "SUBSTANCE_PART": 1711,
+    "TOOL_CONTAINER": 571
+  },
+  "axis_counts": {
+    "COLD": 64,
+    "DRY": 85,
+    "HOT": 167,
+    "WET": 22
+  },
+  "intensity_counts": {
+    "balanced": 2,
+    "moderate": 2,
+    "none": 316,
+    "strong": 12,
+    "weak": 6
+  },
+  "qualities_total": 338,
+  "qualities_with_degree": 0,
+  "entries_with_quality": 256,
+  "entries_with_degree": 0,
+  "degree_ratio": 0.0,
+  "generic_quality_property_count": 271,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 0,
+  "alerts": [
+    "Generic QUALITY_PROPERTY terms (δυναμις/ουσια) detected; spot-check context."
+  ]
+}

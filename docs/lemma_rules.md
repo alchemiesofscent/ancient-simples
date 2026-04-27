@@ -206,7 +206,7 @@ Critical disambiguation:
 Every term record must carry:
 
 - `display`: representative surface form as it appears in the text
-- `normalized`: lowercase + strip accents/breathings only; preserve iota subscript; keep Greek script (no transliteration)
+- `normalized`: lowercase + strip all combining marks U+0300-U+036F, including iota subscript; keep Greek script (no transliteration)
 - `lemma_gr`: best lemma candidate (polytonic Greek), dictionary form
 - `lemma_normalized`: normalization applied to lemma_gr
 
@@ -660,4 +660,3 @@ Extract:
 - SUBSTANCE: οἶνος
 Optional relation:
 - preparation_output_of(settling/fermentation) only if explicitly described; otherwise keep as PREPARATION term.
-

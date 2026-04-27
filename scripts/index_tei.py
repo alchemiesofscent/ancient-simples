@@ -26,6 +26,7 @@ from lxml import etree
 
 # ---------------------------------------------------------------------------
 REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "packages"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))  # for supabase_rest
 
 from textutils import (
