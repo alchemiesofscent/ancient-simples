@@ -23,10 +23,15 @@ export default async function RootLayout({
       <body className="antialiased">
         <div className="min-h-screen bg-zinc-50">
           <header className="border-b bg-white">
-            <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-3">
-              <Link href="/entries" className="font-semibold">
-                Ancient Simples
-              </Link>
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+              <nav className="flex items-center gap-4">
+                <Link href="/entries" className="font-semibold">
+                  Ancient Simples
+                </Link>
+                <Link href="/simples" className="text-sm text-zinc-700 hover:text-black">
+                  Simples
+                </Link>
+              </nav>
               <div className="flex items-center gap-3 text-sm">
                 {user ? (
                   <>

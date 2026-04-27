@@ -109,3 +109,14 @@ Use this template for every session entry:
 - Blockers: `outputs/vocab_entries_v3/diosc_full_v3/` is still absent; full Dioscorides extraction requires Codex model access and was not launched in this implementation pass.
 - Exact next task: `LEGACY-DIOSC-FULL-01` `[LEGACY]` Run/resume the full Dioscorides vocab extraction with `npm run diosc:vocab:run`, then run `npm run diosc:vocab:qc`, `npm run vocab:consolidate`, and legacy import dry-runs.
 - Resume note: Start with `npm run vocab:status`; legacy output is consolidated and imports cleanly in dry-run with 2,135 entries. Then run the full Dioscorides extraction command and re-run `npm run vocab:complete` if interrupted.
+
+### 2026-04-27 - Codex
+
+- Starting context: User asked for a frontend over `vocab_entries_v3` that can search by every extracted category while keeping simples as the primary comparison target.
+- Tasks moved: Added `UI-SIMPLES-STATIC-01` to `Done`. Updated `M6` and `M7` to `partial` because the new route is static-output-backed, not DB/TEI-backed.
+- Decisions: Build v1 as static JSON instead of waiting for Supabase import. Treat `SUBSTANCE` and `SUBSTANCE_PART` as result simples; treat condition, administration, preparation, process, place, quality property, tool/container, part, application site, and quality assertions as searchable facets. Include complete full-output run directories present in the checkout: legacy, Dioscorides, and Paul.
+- Transformations: no static vocab viewer -> `scripts/build_vocab_frontend_index.py`, `app/public/vocab/vocab-index.json`, `app/src/app/simples/`, and `app/src/lib/vocab/`; app header entries-only nav -> includes `/simples`; no rebuild command -> `npm run vocab:frontend-index`.
+- Evidence checked: `npm run vocab:frontend-index` wrote 4,446 simples from 3,061 result entries; `python3 -m py_compile scripts/build_vocab_frontend_index.py tests/test_vocab_pipeline.py` passed; `python3 -m pytest tests/test_vocab_pipeline.py -q` passed (5 tests); `npm run app:lint` passed; `npm run app:build` passed.
+- Blockers: The `/simples` viewer loads a large static JSON index (~63 MB uncompressed); this is acceptable for local/research use but should become paged/server-backed before public deployment.
+- Exact next task: Keep `LEGACY-PAUL-FULL-01` as the active pipeline resume task unless the next session is explicitly UI-focused.
+- Resume note: To refresh the static viewer after more extraction output lands, run `npm run vocab:frontend-index`, then `npm run app:build`.

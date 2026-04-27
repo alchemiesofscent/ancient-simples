@@ -39,8 +39,8 @@ This file is the canonical live tracker for the repo.
 | `M3` Imports validated on test subset | `partial` | Legacy-ID vocab import now dry-runs against consolidated v3 output; live DB import still needs migration `008` applied and Dioscorides full output completed. |
 | `M4` Phase 2 gate passes | `blocked` | Test subset IDs and alignment seed data are placeholders/stubs; no facet-gate harness exists. |
 | `M5` Core UI delivered | `partial` | Legacy `/entries` list/detail/editing exists; TEI-first citations and tables are not wired into the app. |
-| `M6` Facet query UI delivered | `not_started` | No `/assertions/*` UI routes yet. |
-| `M7` Lemma UI delivered | `not_started` | No `/lemmata` UI routes yet. |
+| `M6` Facet query UI delivered | `partial` | Static `/simples` route supports all vocab-v3 labels as facets over generated JSON; DB-backed assertion routes still not built. |
+| `M7` Lemma UI delivered | `partial` | Static `/simples` route provides normalized-lemma browsing and comparison; curated `/lemmata` routes still not built. |
 
 ## Current Blockers
 
@@ -78,6 +78,7 @@ This file is the canonical live tracker for the repo.
 - `LEGACY-DATA-AUDIT-01` `[LEGACY]` Ref-sequence audit of `entries.csv`: fixed GAL_SMT-10.1.0→10.1, documented confirmed structural patterns (ORIB_CM depth variation, GAL_SMT book 6-8 continuous numbering, AET_LM ~N duplicates), deferred GAL_ALIM/PAUL_RM to TEI pipeline. Status: `implemented`
 - `OPS-CLEANUP-01` `[OPS]` Repo cleanup for TEI-first focus: moved 13 legacy QC/analysis docs to `archive/`, wrote `PRODUCT_PLAN.md` (5-phase roadmap: org → extraction → import → search → NER), added 3-role autonomous architecture to `AGENTS.md`, updated all READMEs and doc maps. Status: `implemented`
 - `LEGACY-VOCAB-AUTO-01` `[LEGACY]` Added repo-local autonomous vocab controls: status/consolidation/complete commands, explicit v3 entry-id aliases, legacy-ID import tables, importer `--target legacy`, and first-pass extraction filters/detail panels in the app. Status: `implemented`
+- `UI-SIMPLES-STATIC-01` `[UI]` Added a static generated `/simples` viewer over vocab v3 outputs with all extracted labels searchable as facets and normalized-simple comparison. Status: `implemented`
 
 ## Resume Here
 

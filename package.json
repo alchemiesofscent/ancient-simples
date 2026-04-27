@@ -13,6 +13,7 @@
     "vocab:status": "python -m pipelines.vocab_extract status",
     "vocab:consolidate": "python -m pipelines.vocab_extract consolidate",
     "vocab:complete": "python -m pipelines.vocab_extract complete",
+    "vocab:frontend-index": "python scripts/build_vocab_frontend_index.py",
     "vocab:import": "python scripts/import_vocab_v3.py",
     "diosc:entries:build": "python scripts/make_entries_diosc.py",
     "diosc:entries:validate": "python scripts/validate_diosc_entries.py",

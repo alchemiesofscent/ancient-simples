@@ -4,6 +4,21 @@ Curated record of structural transformations. Not a git log — tracks *what bec
 
 ---
 
+### 2026-04-27 — Static simples vocab viewer
+
+**Why**: The vocab v3 outputs now contain enough cross-corpus extraction data to support local search and comparison before Supabase/TEI import is complete.
+
+| Before | After | Why |
+|--------|-------|-----|
+| No generated browser index for `outputs/vocab_entries_v3` | `scripts/build_vocab_frontend_index.py` emits `app/public/vocab/vocab-index.json` | Make completed extraction output browsable without DB import |
+| No route for lemma-centered simple comparison | `app/src/app/simples/` static viewer route | Search, display, and compare normalized simples |
+| Search UI did not expose every extracted label | `/simples` filters condition, administration, preparation, process, place, quality property, tool/container, part, application site, source, quality axis/degree, confidence, and cross-corpus coverage | Let all gathered extraction categories drive research queries |
+| No shared frontend vocab types/helpers | `app/src/lib/vocab/types.ts` and `app/src/lib/vocab/filter.ts` | Keep the generated index contract and client filtering explicit |
+| App header only linked the entries workflow | Header includes `/simples` | Surface the new research view |
+| No rebuild command for the static viewer index | `npm run vocab:frontend-index` | Repeatable local refresh after extraction runs |
+
+---
+
 ### 2026-04-06 — Normalization consolidation + Python packaging
 
 **Why**: Three independent implementations of Greek normalization had drifted (v1.0 vs v1.1 iota subscript handling). Scripts used `sys.path` hacking instead of proper packaging.
