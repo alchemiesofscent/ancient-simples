@@ -1,0 +1,183 @@
+{
+  "source_id": "PAUL_AEG-7.3.429",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Νάρθηκος",
+      "normalized": "ναρθηκος",
+      "lemma_gr": "νάρθηκος",
+      "lemma_normalized": "ναρθηκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "σπέρμα",
+      "normalized": "σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "ναρθηκος",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 1.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ ἐντὸς χλωρὸν",
+      "normalized": "το εντος χλωρον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "ναρθηκος",
+      "part_lemma_normalized": "εντος χλωρον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 1.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτύνει",
+      "normalized": "λεπτυνει",
+      "lemma_gr": "λεπτύνειν",
+      "lemma_normalized": "λεπτυνειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ναρθηκος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαίνει",
+      "normalized": "θερμαινει",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ναρθηκος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύφει",
+      "normalized": "στυφει",
+      "lemma_gr": "στύφειν",
+      "lemma_normalized": "στυφειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ναρθηκος",
+        "part_lemma_normalized": "εντος χλωρον"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "CONDITION",
+      "display": "αἱμοπτυικοῖς",
+      "normalized": "αιμοπτυικοις",
+      "lemma_gr": "αἱμοπτυικός",
+      "lemma_normalized": "αιμοπτυικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "CONDITION",
+      "display": "κοιλιακοῖς",
+      "normalized": "κοιλιακοις",
+      "lemma_gr": "κοιλιακός",
+      "lemma_normalized": "κοιλιακος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει",
+      "evidence_normalized": "θερμαινει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "ναρθηκος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.9
+    }
+  ]
+}

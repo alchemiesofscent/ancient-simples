@@ -1,0 +1,143 @@
+{
+  "source_id": "PAUL_AEG-7.3.369",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Λιγυστικοῦ",
+      "normalized": "λιγυστικου",
+      "lemma_gr": "λιγυστικόν",
+      "lemma_normalized": "λιγυστικον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ἡ ῥίζα",
+      "normalized": "η ριζα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λιγυστικον",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ σπέρμα",
+      "normalized": "το σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λιγυστικον",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἔμμηνά",
+      "normalized": "εμμηνα",
+      "lemma_gr": "ἔμμηνα",
+      "lemma_normalized": "εμμηνα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.66
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οὖρα",
+      "normalized": "ουρα",
+      "lemma_gr": "οὖρον",
+      "lemma_normalized": "ουρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἄφυσα",
+      "normalized": "αφυσα",
+      "lemma_gr": "ἄφυσος",
+      "lemma_normalized": "αφυσος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "λιγυστικον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.6
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῶν θερμαινόντων",
+      "evidence_normalized": "των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "λιγυστικον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86
+    }
+  ]
+}

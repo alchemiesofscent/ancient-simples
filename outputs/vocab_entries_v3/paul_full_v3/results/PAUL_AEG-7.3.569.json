@@ -1,0 +1,139 @@
+{
+  "source_id": "PAUL_AEG-7.3.569",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σκόρδον",
+      "normalized": "σκορδον",
+      "lemma_gr": "σκόρδον",
+      "lemma_normalized": "σκορδον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ὀφιόσκορδον",
+      "normalized": "οφιοσκορδον",
+      "lemma_gr": "ὀφιόσκορδον",
+      "lemma_normalized": "οφιοσκορδον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀγριόσκορδον",
+      "normalized": "αγριοσκορδον",
+      "lemma_gr": "ἀγριόσκορδον",
+      "lemma_normalized": "αγριοσκορδον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἰσχυρότερον",
+      "normalized": "ισχυροτερον",
+      "lemma_gr": "ἰσχυρός",
+      "lemma_normalized": "ισχυρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αγριοσκορδον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἡμέρου",
+      "normalized": "ημερου",
+      "lemma_gr": "ἥμερος",
+      "lemma_normalized": "ημερος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκορδον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.55
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 4,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Σκόρδον θερμαίνει ... κατὰ τὴν τετάρτην ἀπόστασιν",
+      "evidence_normalized": "σκορδον θερμαινει ... κατα την τεταρτην αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκορδον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.96
+    },
+    {
+      "axis": "DRY",
+      "degree": 4,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Σκόρδον ... ξηραίνει κατὰ τὴν τετάρτην ἀπόστασιν",
+      "evidence_normalized": "σκορδον ... ξηραινει κατα την τεταρτην αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκορδον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.96
+    }
+  ]
+}

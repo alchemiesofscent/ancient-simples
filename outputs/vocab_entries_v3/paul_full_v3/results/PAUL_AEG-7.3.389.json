@@ -1,0 +1,119 @@
+{
+  "source_id": "PAUL_AEG-7.3.389",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Μάραθρον",
+      "normalized": "μαραθρον",
+      "lemma_gr": "μάραθρον",
+      "lemma_normalized": "μαραθρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "γάλακτός",
+      "normalized": "γαλακτος",
+      "lemma_gr": "γάλα",
+      "lemma_normalized": "γαλα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "γεννητικὸν",
+      "normalized": "γεννητικον",
+      "lemma_gr": "γεννητικός",
+      "lemma_normalized": "γεννητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μαραθρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "CONDITION",
+      "display": "τοῖς ὑποχεομένοις",
+      "normalized": "τοις υποχεομενοις",
+      "lemma_gr": "ὑπόχυμα",
+      "lemma_normalized": "υποχυμα",
+      "is_multiword": true,
+      "head_lemma_normalized": "υποχυμα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.55
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει μὲν κατὰ τὴν τρίτην τάξιν",
+      "evidence_normalized": "θερμαινει μεν κατα την τριτην ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μαραθρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95
+    },
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει δὲ κατὰ τὴν πρώτην",
+      "evidence_normalized": "ξηραινει δε κατα την πρωτην",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μαραθρον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95
+    }
+  ]
+}

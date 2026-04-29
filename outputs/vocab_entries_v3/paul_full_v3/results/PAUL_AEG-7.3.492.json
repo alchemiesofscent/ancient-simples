@@ -1,0 +1,266 @@
+{
+  "source_id": "PAUL_AEG-7.3.492",
+  "terms": [
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Πίτυος ὁ φλοιὸς",
+      "normalized": "πιτυος ο φλοιος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "πιτυς",
+      "part_lemma_normalized": "φλοιος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Πίτυος",
+      "normalized": "πιτυος",
+      "lemma_gr": "πίτυς",
+      "lemma_normalized": "πιτυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PART",
+      "display": "φλοιὸς",
+      "normalized": "φλοιος",
+      "lemma_gr": "φλοιός",
+      "lemma_normalized": "φλοιος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πιτυς",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στυπτικὴν δύναμιν",
+      "normalized": "στυπτικην δυναμιν",
+      "lemma_gr": "στυπτικός",
+      "lemma_normalized": "στυπτικος",
+      "is_multiword": true,
+      "head_lemma_normalized": "δυναμις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.68
+    },
+    {
+      "label": "PREPARATION",
+      "display": "παρατρίμματά",
+      "normalized": "παρατριμματα",
+      "lemma_gr": "παρατρίμμα",
+      "lemma_normalized": "παρατριμμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "CONDITION",
+      "display": "κατακαύματα",
+      "normalized": "κατακαυματα",
+      "lemma_gr": "κατάκαυμα",
+      "lemma_normalized": "κατακαυμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "καταπλαττόμενος",
+      "normalized": "καταπλαττομενος",
+      "lemma_gr": "καταπλάσσειν",
+      "lemma_normalized": "καταπλασσειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἐπέχειν",
+      "normalized": "επεχειν",
+      "lemma_gr": "ἐπέχειν",
+      "lemma_normalized": "επεχειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.55,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "ποθείη",
+      "normalized": "ποθειη",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.58,
+      "lemma_confidence": 0.46
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "κοιλίαν",
+      "normalized": "κοιλιαν",
+      "lemma_gr": "κοιλία",
+      "lemma_normalized": "κοιλια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "PART",
+      "display": "φύλλα",
+      "normalized": "φυλλα",
+      "lemma_gr": "φύλλον",
+      "lemma_normalized": "φυλλον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πιτυς",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.66
+    },
+    {
+      "label": "CONDITION",
+      "display": "τραύματα",
+      "normalized": "τραυματα",
+      "lemma_gr": "τραῦμα",
+      "lemma_normalized": "τραυμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "κολλᾷ",
+      "normalized": "κολλα",
+      "lemma_gr": "κολλᾶν",
+      "lemma_normalized": "κολλαν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.6
+    }
+  ],
+  "qualities": []
+}

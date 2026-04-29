@@ -1,0 +1,206 @@
+{
+  "source_id": "PAUL_AEG-7.3.439",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ὀθόνναν",
+      "normalized": "οθονναν",
+      "lemma_gr": "ὀθόννα",
+      "lemma_normalized": "οθοννα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "PREPARATION",
+      "display": "χυλὸν",
+      "normalized": "χυλον",
+      "lemma_gr": "χυλός",
+      "lemma_normalized": "χυλος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λίθον Αἰγύπτιον",
+      "normalized": "λιθον αιγυπτιον",
+      "lemma_gr": "λίθος Αἰγύπτιος",
+      "lemma_normalized": "λιθος αιγυπτιος",
+      "is_multiword": true,
+      "head_lemma_normalized": "λιθος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": "αιγυπτος",
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "λίθον",
+      "normalized": "λιθον",
+      "lemma_gr": "λίθος",
+      "lemma_normalized": "λιθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "PLACE",
+      "display": "Αἴγυπτον",
+      "normalized": "αιγυπτον",
+      "lemma_gr": "Αἴγυπτος",
+      "lemma_normalized": "αιγυπτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "PLACE",
+      "display": "Ἀραβίᾳ",
+      "normalized": "αραβια",
+      "lemma_gr": "Ἀραβία",
+      "lemma_normalized": "αραβια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥύπτει",
+      "normalized": "ρυπτει",
+      "lemma_gr": "ῥύπτειν",
+      "lemma_normalized": "ρυπτειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δάκνει",
+      "normalized": "δακνει",
+      "lemma_gr": "δάκνειν",
+      "lemma_normalized": "δακνειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀποσμήχουσα",
+      "normalized": "αποσμηχουσα",
+      "lemma_gr": "ἀποσμήχειν",
+      "lemma_normalized": "αποσμηχειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "κόραις",
+      "normalized": "κοραις",
+      "lemma_gr": "κόρη",
+      "lemma_normalized": "κορη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οθοννα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

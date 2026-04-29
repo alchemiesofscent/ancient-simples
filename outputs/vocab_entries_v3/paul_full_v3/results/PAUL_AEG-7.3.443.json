@@ -1,0 +1,166 @@
+{
+  "source_id": "PAUL_AEG-7.3.443",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ὄλυνθοι",
+      "normalized": "ολυνθοι",
+      "lemma_gr": "ὄλυνθος",
+      "lemma_normalized": "ολυνθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ὀπόν",
+      "normalized": "οπον",
+      "lemma_gr": "ὀπός",
+      "lemma_normalized": "οπος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ολυνθος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δριμείας",
+      "normalized": "δριμειας",
+      "lemma_gr": "δριμύς",
+      "lemma_normalized": "δριμυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ολυνθος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.66
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικῆς δυνάμεως",
+      "normalized": "διαφορητικης δυναμεως",
+      "lemma_gr": "διαφορητικός δύναμις",
+      "lemma_normalized": "διαφορητικος δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": "δυναμις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ολυνθος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἑψηθέντες",
+      "normalized": "εψηθεντες",
+      "lemma_gr": "ἕψῆναι",
+      "lemma_normalized": "εψηναι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ολυνθος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.58
+    },
+    {
+      "label": "CONDITION",
+      "display": "σκληροὺς ὄγκους",
+      "normalized": "σκληρους ογκους",
+      "lemma_gr": "σκληρός ὄγκος",
+      "lemma_normalized": "σκληρος ογκος",
+      "is_multiword": true,
+      "head_lemma_normalized": "ογκος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "CONDITION",
+      "display": "μυρμηκίας",
+      "normalized": "μυρμηκιας",
+      "lemma_gr": "μυρμηκία",
+      "lemma_normalized": "μυρμηκια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "CONDITION",
+      "display": "θύμους",
+      "normalized": "θυμους",
+      "lemma_gr": "θύμος",
+      "lemma_normalized": "θυμος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.62
+    }
+  ],
+  "qualities": []
+}

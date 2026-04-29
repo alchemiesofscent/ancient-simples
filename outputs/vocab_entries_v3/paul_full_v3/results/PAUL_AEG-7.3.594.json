@@ -1,0 +1,263 @@
+{
+  "source_id": "PAUL_AEG-7.3.594",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Συκῆ",
+      "normalized": "συκη",
+      "lemma_gr": "συκῆ",
+      "lemma_normalized": "συκη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὀπόν",
+      "normalized": "οπον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "συκη",
+      "part_lemma_normalized": "οπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "χυλὸν τῶν φύλλων",
+      "normalized": "χυλον των φυλλων",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "συκη",
+      "part_lemma_normalized": "χυλος φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομεροῦς",
+      "normalized": "λεπτομερους",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "συκη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "καθαρτικόν",
+      "normalized": "καθαρτικον",
+      "lemma_gr": "καθαρτικός",
+      "lemma_normalized": "καθαρτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "συκη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "ῥύπτειν",
+      "normalized": "ρυπτειν",
+      "lemma_gr": "ῥύπτειν",
+      "lemma_normalized": "ρυπτειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "συκη",
+        "part_lemma_normalized": "οπος"
+      },
+      "confidence": 0.58,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἑλκοῦν",
+      "normalized": "ελκουν",
+      "lemma_gr": "ἑλκοῦν",
+      "lemma_normalized": "ελκουν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "συκη",
+        "part_lemma_normalized": "οπος"
+      },
+      "confidence": 0.56,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἀναστομοῦν",
+      "normalized": "αναστομουν",
+      "lemma_gr": "ἀναστομοῦν",
+      "lemma_normalized": "αναστομουν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "συκη",
+        "part_lemma_normalized": "οπος"
+      },
+      "confidence": 0.52,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἐκβάλλειν",
+      "normalized": "εκβαλλειν",
+      "lemma_gr": "ἐκβάλλειν",
+      "lemma_normalized": "εκβαλλειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "συκη",
+        "part_lemma_normalized": "οπος"
+      },
+      "confidence": 0.5,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "CONDITION",
+      "display": "μυρμηκίας",
+      "normalized": "μυρμηκιας",
+      "lemma_gr": "μυρμηκία",
+      "lemma_normalized": "μυρμηκια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀγρία συκῆ",
+      "normalized": "αγρια συκη",
+      "lemma_gr": "ἄγριος συκῆ",
+      "lemma_normalized": "αγριος συκη",
+      "is_multiword": true,
+      "head_lemma_normalized": "συκη",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἐρινεὸν",
+      "normalized": "ερινεον",
+      "lemma_gr": "ἐρινεός",
+      "lemma_normalized": "ερινεος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "αγριος συκη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.88
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Συκῆ θερμῆς καὶ λεπτομεροῦς ἐστι κράσεως",
+      "evidence_normalized": "συκη θερμης και λεπτομερους εστι κρασεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "συκη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

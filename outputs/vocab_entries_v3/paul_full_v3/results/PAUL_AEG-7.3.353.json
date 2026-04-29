@@ -1,0 +1,126 @@
+{
+  "source_id": "PAUL_AEG-7.3.353",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Λαθυρίς",
+      "normalized": "λαθυρις",
+      "lemma_gr": "λαθυρίς",
+      "lemma_normalized": "λαθυρις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "τιθυμάλλου",
+      "normalized": "τιθυμαλλου",
+      "lemma_gr": "τιθύμαλλος",
+      "lemma_normalized": "τιθυμαλλος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ ὀπὸς αὐτῆς",
+      "normalized": "ο οπος αυτης",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λαθυρις",
+      "part_lemma_normalized": "οπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ σπέρμα ταύτης",
+      "normalized": "το σπερμα ταυτης",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λαθυρις",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "καθαρτικὴν δύναμιν",
+      "normalized": "καθαρτικην δυναμιν",
+      "lemma_gr": "καθαρτικός",
+      "lemma_normalized": "καθαρτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λαθυρις",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PROCESS",
+      "display": "καθαίρει",
+      "normalized": "καθαιρει",
+      "lemma_gr": "καθαίρειν",
+      "lemma_normalized": "καθαιρειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λαθυρις",
+        "part_lemma_normalized": "οπος"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.78
+    }
+  ],
+  "qualities": []
+}

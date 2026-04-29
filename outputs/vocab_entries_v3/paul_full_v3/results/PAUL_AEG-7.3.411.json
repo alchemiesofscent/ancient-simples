@@ -1,0 +1,323 @@
+{
+  "source_id": "PAUL_AEG-7.3.411",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Μορέας",
+      "normalized": "μορεας",
+      "lemma_gr": "μορέα",
+      "lemma_normalized": "μορεα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Μορέας ὁ καρπὸς",
+      "normalized": "μορεας ο καρπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μορεα",
+      "part_lemma_normalized": "καρπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "γαστέρα",
+      "normalized": "γαστερα",
+      "lemma_gr": "γαστήρ",
+      "lemma_normalized": "γαστηρ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "CONDITION",
+      "display": "στομαχικοῖς",
+      "normalized": "στομαχικοις",
+      "lemma_gr": "στομαχικός",
+      "lemma_normalized": "στομαχικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύψεως",
+      "normalized": "στυψεως",
+      "lemma_gr": "στῦψις",
+      "lemma_normalized": "στυψις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "ξηρανθεὶς",
+      "normalized": "ξηρανθεις",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μορεα",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στεγνωτικὸν",
+      "normalized": "στεγνωτικον",
+      "lemma_gr": "στεγνωτικός",
+      "lemma_normalized": "στεγνωτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μορεα",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ φλοιὸς τῆς ῥίζης",
+      "normalized": "ο φλοιος της ριζης",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μορεα",
+      "part_lemma_normalized": "φλοιος ριζης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "καθαρτικός",
+      "normalized": "καθαρτικος",
+      "lemma_gr": "καθαρτικός",
+      "lemma_normalized": "καθαρτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μορεα",
+        "part_lemma_normalized": "φλοιος ριζης"
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "πικρότητος",
+      "normalized": "πικροτητος",
+      "lemma_gr": "πικρότης",
+      "lemma_normalized": "πικροτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μορεα",
+        "part_lemma_normalized": "φλοιος ριζης"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "CONDITION",
+      "display": "πλατεῖαν ἕλμιν",
+      "normalized": "πλατειαν ελμιν",
+      "lemma_gr": "πλατύς ἕλμινς",
+      "lemma_normalized": "πλατυς ελμινς",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τῶν φύλλων",
+      "normalized": "των φυλλων",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μορεα",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τῶν βλαστῶν",
+      "normalized": "των βλαστων",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μορεα",
+      "part_lemma_normalized": "βλαστος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ὑπαγόντων",
+      "normalized": "υπαγοντων",
+      "lemma_gr": "ὑπάγειν",
+      "lemma_normalized": "υπαγειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἐπεχόντων",
+      "normalized": "επεχοντων",
+      "lemma_gr": "ἐπέχειν",
+      "lemma_normalized": "επεχειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.55
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὁ δὲ ἄωρος ξηρανθεὶς στεγνωτικὸν ἱκανῶς",
+      "evidence_normalized": "ο δε αωρος ξηρανθεις στεγνωτικον ικανως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μορεα",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.75
+    }
+  ]
+}

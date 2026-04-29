@@ -1,0 +1,219 @@
+{
+  "source_id": "PAUL_AEG-7.3.330",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Κρανίας",
+      "normalized": "κρανιας",
+      "lemma_gr": "Κρανία",
+      "lemma_normalized": "κρανια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "καρπὸς",
+      "normalized": "καρπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κρανια",
+      "part_lemma_normalized": "καρπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "φύλλα",
+      "normalized": "φυλλα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κρανια",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "βλαστοὶ",
+      "normalized": "βλαστοι",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κρανια",
+      "part_lemma_normalized": "βλαστος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στρυφνὸς",
+      "normalized": "στρυφνος",
+      "lemma_gr": "στρυφνός",
+      "lemma_normalized": "στρυφνος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κρανια",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στρυφνότητι",
+      "normalized": "στρυφνοτητι",
+      "lemma_gr": "στρυφνότης",
+      "lemma_normalized": "στρυφνοτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "γαστέρα",
+      "normalized": "γαστερα",
+      "lemma_gr": "γαστήρ",
+      "lemma_normalized": "γαστηρ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "τραύματα",
+      "normalized": "τραυματα",
+      "lemma_gr": "τραῦμα",
+      "lemma_normalized": "τραυμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "ἐσθιόμενος",
+      "normalized": "εσθιομενος",
+      "lemma_gr": "ἐσθίειν",
+      "lemma_normalized": "εσθιειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κρανια",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.78
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "τὰ φύλλα δὲ καὶ οἱ βλαστοὶ τῇ στρυφνότητι ξηραίνουσιν ἰσχυρῶς",
+      "evidence_normalized": "τα φυλλα δε και οι βλαστοι τη στρυφνοτητι ξηραινουσιν ισχυρως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κρανια",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "τὰ φύλλα δὲ καὶ οἱ βλαστοὶ τῇ στρυφνότητι ξηραίνουσιν ἰσχυρῶς",
+      "evidence_normalized": "τα φυλλα δε και οι βλαστοι τη στρυφνοτητι ξηραινουσιν ισχυρως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κρανια",
+        "part_lemma_normalized": "βλαστος"
+      },
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "source_id": "PAUL_AEG-7.3.567",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σκόλυμον",
+      "normalized": "σκολυμον",
+      "lemma_gr": "σκόλυμον",
+      "lemma_normalized": "σκολυμον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ῥίζα",
+      "normalized": "ριζα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "σκολυμον",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οἴνῳ",
+      "normalized": "οινω",
+      "lemma_gr": "οἶνος",
+      "lemma_normalized": "οινος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "PROCESS",
+      "display": "καθεψηθεῖσα",
+      "normalized": "καθεψηθεισα",
+      "lemma_gr": "καθέψειν",
+      "lemma_normalized": "καθεψειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σκολυμον",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "ποθεῖσα",
+      "normalized": "ποθεισα",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σκολυμον",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οὔρων",
+      "normalized": "ουρων",
+      "lemma_gr": "οὖρον",
+      "lemma_normalized": "ουρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "CONDITION",
+      "display": "δυςωδίας",
+      "normalized": "δυςωδιας",
+      "lemma_gr": "δυσωδία",
+      "lemma_normalized": "δυσωδια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "μασχαλῶν",
+      "normalized": "μασχαλων",
+      "lemma_gr": "μασχάλη",
+      "lemma_normalized": "μασχαλη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "σώματος",
+      "normalized": "σωματος",
+      "lemma_gr": "σῶμα",
+      "lemma_normalized": "σωμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.95
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει καὶ ξηραίνει κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "θερμαινει και ξηραινει κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκολυμον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει καὶ ξηραίνει κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "θερμαινει και ξηραινει κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκολυμον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

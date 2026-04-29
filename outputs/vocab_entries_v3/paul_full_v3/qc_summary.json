@@ -1,0 +1,55 @@
+{
+  "run_dir": "outputs/vocab_entries_v3/paul_full_v3",
+  "manifest_path": "outputs/vocab_entries_v3/paul_full_v3/manifest_20260427_200412_utc.json",
+  "run_id": "paul_full_v3",
+  "corpus_label": "Paul",
+  "degree_profile": "paul",
+  "expected_jobs": 680,
+  "result_files": 680,
+  "valid_results": 680,
+  "missing_results": 0,
+  "missing_result_ids": [],
+  "invalid_json": 0,
+  "invalid_examples": [],
+  "source_id_mismatches": 0,
+  "error_files": 0,
+  "completeness_ok": true,
+  "term_label_counts": {
+    "ADMINISTRATION": 227,
+    "APPLICATION_SITE": 348,
+    "CONDITION": 917,
+    "PART": 63,
+    "PLACE": 85,
+    "PREPARATION": 199,
+    "PROCESS": 564,
+    "QUALITY_PROPERTY": 1672,
+    "SUBSTANCE": 1941,
+    "SUBSTANCE_PART": 476,
+    "TOOL_CONTAINER": 21
+  },
+  "axis_counts": {
+    "COLD": 108,
+    "DRY": 347,
+    "HOT": 260,
+    "WET": 59
+  },
+  "intensity_counts": {
+    "balanced": 24,
+    "extreme": 15,
+    "moderate": 52,
+    "none": 620,
+    "strong": 38,
+    "weak": 25
+  },
+  "qualities_total": 774,
+  "qualities_with_degree": 261,
+  "entries_with_quality": 413,
+  "entries_with_degree": 143,
+  "degree_ratio": 0.3372093023255814,
+  "generic_quality_property_count": 13,
+  "substance_part_anomalies": 0,
+  "normalization_anomalies": 0,
+  "alerts": [
+    "Generic QUALITY_PROPERTY terms (δυναμις/ουσια) detected; spot-check context."
+  ]
+}

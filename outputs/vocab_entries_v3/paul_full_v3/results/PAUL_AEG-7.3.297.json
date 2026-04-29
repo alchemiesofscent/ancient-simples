@@ -1,0 +1,159 @@
+{
+  "source_id": "PAUL_AEG-7.3.297",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Κινάμωμον",
+      "normalized": "κιναμωμον",
+      "lemma_gr": "κινάμωμον",
+      "lemma_normalized": "κιναμωμον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.99,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἄκρως ... λεπτομερές",
+      "normalized": "ακρως ... λεπτομερες",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κιναμωμον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PROCESS",
+      "display": "ξηραίνει",
+      "normalized": "ξηραινει",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κιναμωμον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "PROCESS",
+      "display": "θερμαινόντων",
+      "normalized": "θερμαινοντων",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "κιναμωμὶς",
+      "normalized": "κιναμωμις",
+      "lemma_gr": "κιναμωμίς",
+      "lemma_normalized": "κιναμωμις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ψευδοκινάμωμον",
+      "normalized": "ψευδοκιναμωμον",
+      "lemma_gr": "ψευδοκινάμωμον",
+      "lemma_normalized": "ψευδοκιναμωμον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.82
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "που",
+      "evidence_display": "οὐ μὴν ἄκρως γε θερμόν, ἀλλ' ἐκ τῆς τρίτης που τάξεως",
+      "evidence_normalized": "ου μην ακρως γε θερμον, αλλ' εκ της τριτης που ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κιναμωμον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "strong",
+      "hedge": "none",
+      "evidence_display": "οὐδὲν δὲ οὕτω ξηραίνει",
+      "evidence_normalized": "ουδεν δε ουτω ξηραινει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κιναμωμον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74
+    }
+  ]
+}

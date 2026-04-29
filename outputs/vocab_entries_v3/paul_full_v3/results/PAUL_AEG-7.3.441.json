@@ -1,0 +1,143 @@
+{
+  "source_id": "PAUL_AEG-7.3.441",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Οἶνος",
+      "normalized": "οινος",
+      "lemma_gr": "οἶνος",
+      "lemma_normalized": "οινος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "γλευκινίτης",
+      "normalized": "γλευκινιτης",
+      "lemma_gr": "γλευκινίτης",
+      "lemma_normalized": "γλευκινιτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Οἶνος ἐκ τῆς δευτέρας τάξεώς ἐστι τῶν θερμαινόντων",
+      "evidence_normalized": "οινος εκ της δευτερας ταξεως εστι των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "Οἶνος ἐκ τῆς δευτέρας τάξεώς ἐστι τῶν … ξηραινόντων",
+      "evidence_normalized": "οινος εκ της δευτερας ταξεως εστι των … ξηραινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὁ δὲ ἱκανῶς παλαιὸς τῆς τρίτης",
+      "evidence_normalized": "ο δε ικανως παλαιος της τριτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72
+    },
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὁ δὲ ἱκανῶς παλαιὸς τῆς τρίτης",
+      "evidence_normalized": "ο δε ικανως παλαιος της τριτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οινος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72
+    },
+    {
+      "axis": "HOT",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὁ δὲ γλευκινίτης τῆς πρώτης",
+      "evidence_normalized": "ο δε γλευκινιτης της πρωτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλευκινιτης",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78
+    },
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὁ δὲ γλευκινίτης τῆς πρώτης",
+      "evidence_normalized": "ο δε γλευκινιτης της πρωτης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "γλευκινιτης",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78
+    }
+  ]
+}

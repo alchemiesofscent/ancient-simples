@@ -1,0 +1,126 @@
+{
+  "source_id": "PAUL_AEG-7.3.386",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Μαμιρὰς",
+      "normalized": "μαμιρας",
+      "lemma_gr": "μαμιράς",
+      "lemma_normalized": "μαμιρας",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "PART",
+      "display": "ῥιζίον",
+      "normalized": "ριζιον",
+      "lemma_gr": "ῥίζιον",
+      "lemma_normalized": "ριζιον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μαμιρας",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "PART",
+      "display": "κονδύλους",
+      "normalized": "κονδυλους",
+      "lemma_gr": "κόνδυλος",
+      "lemma_normalized": "κονδυλος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μαμιρας",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "CONDITION",
+      "display": "οὐλάς",
+      "normalized": "ουλας",
+      "lemma_gr": "οὐλή",
+      "lemma_normalized": "ουλη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "λευκώματα",
+      "normalized": "λευκωματα",
+      "lemma_gr": "λεύκωμα",
+      "lemma_normalized": "λευκωμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικῆς δυνάμεως",
+      "normalized": "ρυπτικης δυναμεως",
+      "lemma_gr": "ῥυπτικὴ δύναμις",
+      "lemma_normalized": "ρυπτικη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μαμιρας",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.82
+    }
+  ],
+  "qualities": []
+}

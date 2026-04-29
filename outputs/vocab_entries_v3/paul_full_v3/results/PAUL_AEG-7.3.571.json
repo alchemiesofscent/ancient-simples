@@ -1,0 +1,59 @@
+{
+  "source_id": "PAUL_AEG-7.3.571",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σκορπιοειδὲς",
+      "normalized": "σκορπιοειδες",
+      "lemma_gr": "σκορπιοειδές",
+      "lemma_normalized": "σκορπιοειδες",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93,
+      "lemma_confidence": 0.88
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει μὲν κατὰ τὴν τρίτην τάξιν",
+      "evidence_normalized": "θερμαινει μεν κατα την τριτην ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκορπιοειδες",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει δὲ κατὰ τὴν δευτέραν",
+      "evidence_normalized": "ξηραινει δε κατα την δευτεραν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκορπιοειδες",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93
+    }
+  ]
+}

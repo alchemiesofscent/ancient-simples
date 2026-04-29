@@ -1,0 +1,283 @@
+{
+  "source_id": "PAUL_AEG-7.3.382",
+  "terms": [
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Λωτὸς τὸ δένδρον",
+      "normalized": "λωτος το δενδρον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "λωτος",
+      "part_lemma_normalized": "δενδρον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Λωτὸς",
+      "normalized": "λωτος",
+      "lemma_gr": "λωτός",
+      "lemma_normalized": "λωτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερές",
+      "normalized": "λεπτομερες",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος",
+        "part_lemma_normalized": "δενδρον"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικόν",
+      "normalized": "ξηραντικον",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος",
+        "part_lemma_normalized": "δενδρον"
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στυπτικὸν",
+      "normalized": "στυπτικον",
+      "lemma_gr": "στυπτικός",
+      "lemma_normalized": "στυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος",
+        "part_lemma_normalized": "δενδρον"
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "ῥοῦν γυναικεῖον",
+      "normalized": "ρουν γυναικειον",
+      "lemma_gr": "ῥοῦς γυναικεῖος",
+      "lemma_normalized": "ρους γυναικειος",
+      "is_multiword": true,
+      "head_lemma_normalized": "ρους",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "CONDITION",
+      "display": "τὰ κατὰ κοιλίαν ῥεύματα",
+      "normalized": "τα κατα κοιλιαν ρευματα",
+      "lemma_gr": "ῥεῦμα κατὰ κοιλίαν",
+      "lemma_normalized": "ρευμα κατα κοιλιαν",
+      "is_multiword": true,
+      "head_lemma_normalized": "ρευμα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "κοιλίαν",
+      "normalized": "κοιλιαν",
+      "lemma_gr": "κοιλία",
+      "lemma_normalized": "κοιλια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πινόμενος",
+      "normalized": "πινομενος",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος",
+        "part_lemma_normalized": "δενδρον"
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οἴνου",
+      "normalized": "οινου",
+      "lemma_gr": "οἶνος",
+      "lemma_normalized": "οινος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ὕδατος",
+      "normalized": "υδατος",
+      "lemma_gr": "ὕδωρ",
+      "lemma_normalized": "υδωρ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "ἐνιέμενος",
+      "normalized": "ενιεμενος",
+      "lemma_gr": "ἐνιέναι",
+      "lemma_normalized": "ενιεναι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος",
+        "part_lemma_normalized": "δενδρον"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "τρίχας",
+      "normalized": "τριχας",
+      "lemma_gr": "θρίξ",
+      "lemma_normalized": "θριξ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.7
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "moderate",
+      "hedge": "none",
+      "evidence_display": "ξηραντικόν ἐστι καὶ στυπτικὸν μετρίως",
+      "evidence_normalized": "ξηραντικον εστι και στυπτικον μετριως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "λωτος",
+        "part_lemma_normalized": "δενδρον"
+      },
+      "confidence": 0.85
+    }
+  ]
+}

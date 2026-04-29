@@ -1,0 +1,99 @@
+{
+  "source_id": "PAUL_AEG-7.3.338",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Κρόκος",
+      "normalized": "κροκος",
+      "lemma_gr": "κρόκος",
+      "lemma_normalized": "κροκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύφει",
+      "normalized": "στυφει",
+      "lemma_gr": "στύφειν",
+      "lemma_normalized": "στυφειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κροκος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "συμπέττει",
+      "normalized": "συμπεττει",
+      "lemma_gr": "συμπέττειν",
+      "lemma_normalized": "συμπεττειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κροκος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.75
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "δευτέρας μέν ἐστι τάξεως τῶν θερμαινόντων",
+      "evidence_normalized": "δευτερας μεν εστι ταξεως των θερμαινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κροκος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95
+    },
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "πρώτης δὲ τῶν ξηραινόντων",
+      "evidence_normalized": "πρωτης δε των ξηραινοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κροκος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95
+    }
+  ]
+}

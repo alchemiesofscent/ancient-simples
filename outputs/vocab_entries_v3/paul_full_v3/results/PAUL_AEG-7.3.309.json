@@ -1,0 +1,243 @@
+{
+  "source_id": "PAUL_AEG-7.3.309",
+  "terms": [
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Κοιλίαν αἰθυίας",
+      "normalized": "κοιλιαν αιθυιας",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "αιθυια",
+      "part_lemma_normalized": "κοιλια",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 1
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἑφθὴν",
+      "normalized": "εφθην",
+      "lemma_gr": "ἕψειν",
+      "lemma_normalized": "εψειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αιθυια",
+        "part_lemma_normalized": "κοιλια"
+      },
+      "confidence": 0.65,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "PROCESS",
+      "display": "σκελετευθεῖσαν",
+      "normalized": "σκελετευθεισαν",
+      "lemma_gr": "σκελετεύειν",
+      "lemma_normalized": "σκελετευειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αιθυια",
+        "part_lemma_normalized": "κοιλια"
+      },
+      "confidence": 0.55,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "εὐστόμαχον",
+      "normalized": "ευστομαχον",
+      "lemma_gr": "εὐστόμαχος",
+      "lemma_normalized": "ευστομαχος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αιθυια",
+        "part_lemma_normalized": "κοιλια"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸν τῶν ἀλεκτορίδων ἔνδον τῆς κοιλίας χιτῶνα",
+      "normalized": "τον των αλεκτοριδων ενδον της κοιλιας χιτωνα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "αλεκτορις",
+      "part_lemma_normalized": "χιτων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 1
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πινόμενον",
+      "normalized": "πινομενον",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὴν δὲ τῆς φήνης τοῦ ὀρνέου κοιλίαν",
+      "normalized": "την δε της φηνης του ορνεου κοιλιαν",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "φηνι",
+      "part_lemma_normalized": "κοιλια",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 1
+    },
+    {
+      "label": "PROCESS",
+      "display": "ποτιζομένην",
+      "normalized": "ποτιζομενην",
+      "lemma_gr": "ποτίζειν",
+      "lemma_normalized": "ποτιζειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "φηνι",
+        "part_lemma_normalized": "κοιλια"
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "CONDITION",
+      "display": "λίθους",
+      "normalized": "λιθους",
+      "lemma_gr": "λίθος",
+      "lemma_normalized": "λιθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ἡ δὲ τῆς γαλῆς κοιλία",
+      "normalized": "η δε της γαλης κοιλια",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "γαλη",
+      "part_lemma_normalized": "κοιλια",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 1
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀλεξιφάρμακον",
+      "normalized": "αλεξιφαρμακον",
+      "lemma_gr": "ἀλεξιφάρμακον",
+      "lemma_normalized": "αλεξιφαρμακον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "γαλη",
+        "part_lemma_normalized": "κοιλια"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηρὸν πινόμενον",
+      "evidence_normalized": "ξηρον πινομενον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "αλεκτορις",
+        "part_lemma_normalized": "χιτων"
+      },
+      "confidence": 0.8
+    }
+  ]
+}

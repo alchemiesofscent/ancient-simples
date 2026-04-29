@@ -1,0 +1,103 @@
+{
+  "source_id": "PAUL_AEG-7.3.343",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Κύμινον",
+      "normalized": "κυμινον",
+      "lemma_gr": "κύμινον",
+      "lemma_normalized": "κυμινον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμαντικῆς δυνάμεως",
+      "normalized": "θερμαντικης δυναμεως",
+      "lemma_gr": "θερμαντικὴ δύναμις",
+      "lemma_normalized": "θερμαντικη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": "δυναμις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κυμινον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "οὐρητικόν",
+      "normalized": "ουρητικον",
+      "lemma_gr": "οὐρητικός",
+      "lemma_normalized": "ουρητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κυμινον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.76
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἄφυσον",
+      "normalized": "αφυσον",
+      "lemma_gr": "ἄφυσον",
+      "lemma_normalized": "αφυσον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κυμινον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.6
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "που",
+      "evidence_display": "θερμαντικῆς ἐστι δυνάμεως κατὰ τὴν τρίτην που τάξιν",
+      "evidence_normalized": "θερμαντικης εστι δυναμεως κατα την τριτην που ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "κυμινον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

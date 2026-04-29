@@ -1,0 +1,66 @@
+{
+  "source_id": "PAUL_AEG-7.3.574",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σμῖλαξ",
+      "normalized": "σμιλαξ",
+      "lemma_gr": "σμῖλαξ",
+      "lemma_normalized": "σμιλαξ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "κάκτος",
+      "normalized": "κακτος",
+      "lemma_gr": "κάκτος",
+      "lemma_normalized": "κακτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.84
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δηλητηρίου δυνάμεως",
+      "normalized": "δηλητηριου δυναμεως",
+      "lemma_gr": "δηλητήριος δύναμις",
+      "lemma_normalized": "δηλητηριος δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": "δυναμις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σμιλαξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.78
+    }
+  ],
+  "qualities": []
+}

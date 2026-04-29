@@ -1,0 +1,106 @@
+{
+  "source_id": "PAUL_AEG-7.3.464",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ὄσιρις",
+      "normalized": "οσιρις",
+      "lemma_gr": "ὄσιρις",
+      "lemma_normalized": "οσιρις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "PREPARATION",
+      "display": "τὰ κορήματα",
+      "normalized": "τα κορηματα",
+      "lemma_gr": "κόρημα",
+      "lemma_normalized": "κορημα",
+      "is_multiword": true,
+      "head_lemma_normalized": "κορημα",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οσιρις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.68,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "πικρὰ",
+      "normalized": "πικρα",
+      "lemma_gr": "πικρός",
+      "lemma_normalized": "πικρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οσιρις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἐκφρακτικὴ",
+      "normalized": "εκφρακτικη",
+      "lemma_gr": "ἐκφρακτικός",
+      "lemma_normalized": "εκφρακτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οσιρις",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "ἧπάρ",
+      "normalized": "ηπαρ",
+      "lemma_gr": "ἧπαρ",
+      "lemma_normalized": "ηπαρ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.72
+    }
+  ],
+  "qualities": []
+}

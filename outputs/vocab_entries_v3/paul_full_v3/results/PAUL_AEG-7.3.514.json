@@ -1,0 +1,266 @@
+{
+  "source_id": "PAUL_AEG-7.3.514",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Πυκνόκοκκον",
+      "normalized": "πυκνοκοκκον",
+      "lemma_gr": "πυκνόκοκκον",
+      "lemma_normalized": "πυκνοκοκκον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικῆς",
+      "normalized": "διαφορητικης",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πυκνοκοκκον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἑλκτικῆς",
+      "normalized": "ελκτικης",
+      "lemma_gr": "ἑλκτικός",
+      "lemma_normalized": "ελκτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πυκνοκοκκον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δριμείας",
+      "normalized": "δριμειας",
+      "lemma_gr": "δριμύς",
+      "lemma_normalized": "δριμυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πυκνοκοκκον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "PART",
+      "display": "φύλλα",
+      "normalized": "φυλλα",
+      "lemma_gr": "φύλλον",
+      "lemma_normalized": "φυλλον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πυκνοκοκκον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "CONDITION",
+      "display": "φύματα",
+      "normalized": "φυματα",
+      "lemma_gr": "φῦμα",
+      "lemma_normalized": "φυμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "δοθιῆνας",
+      "normalized": "δοθιηνας",
+      "lemma_gr": "δοθιήν",
+      "lemma_normalized": "δοθιην",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PART",
+      "display": "καρπὸς",
+      "normalized": "καρπος",
+      "lemma_gr": "καρπός",
+      "lemma_normalized": "καρπος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πυκνοκοκκον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "σκόλοπας",
+      "normalized": "σκολοπας",
+      "lemma_gr": "σκόλοψ",
+      "lemma_normalized": "σκολοψ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "PART",
+      "display": "ῥίζα",
+      "normalized": "ριζα",
+      "lemma_gr": "ῥίζα",
+      "lemma_normalized": "ριζα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πυκνοκοκκον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "χολῆς τῆς ξανθῆς",
+      "normalized": "χολης της ξανθης",
+      "lemma_gr": "χολὴ ξανθή",
+      "lemma_normalized": "χολη ξανθη",
+      "is_multiword": true,
+      "head_lemma_normalized": "χολη",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "χολῆς",
+      "normalized": "χολης",
+      "lemma_gr": "χολή",
+      "lemma_normalized": "χολη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "καθαρτική",
+      "normalized": "καθαρτικη",
+      "lemma_gr": "καθαρτικός",
+      "lemma_normalized": "καθαρτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PART",
+        "lemma_normalized": "ριζα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

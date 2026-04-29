@@ -1,0 +1,2685 @@
+{
+  "run_id": "paul_full_v3",
+  "session_id": "20260428_160023_utc",
+  "jobs": [
+    {
+      "source_id": "PAUL_AEG-7.3.565",
+      "safe_id": "PAUL_AEG-7.3.565",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.565/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-26-019dd4d2-0085-74a3-b750-bde0b47620af.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 23049,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2024,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25073
+        },
+        "total_token_usage": {
+          "input_tokens": 23049,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2024,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25073
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.566",
+      "safe_id": "PAUL_AEG-7.3.566",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.566/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-25-019dd4d1-ffaa-70d0-8c4c-2f1b35a4a8cb.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 22984,
+          "cached_input_tokens": 3840,
+          "output_tokens": 941,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23925
+        },
+        "total_token_usage": {
+          "input_tokens": 22984,
+          "cached_input_tokens": 3840,
+          "output_tokens": 941,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23925
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.567",
+      "safe_id": "PAUL_AEG-7.3.567",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.567/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-25-019dd4d1-ff86-78b3-99d5-37666ac871d4.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 60849,
+          "cached_input_tokens": 14592,
+          "output_tokens": 5582,
+          "reasoning_output_tokens": 4180,
+          "total_tokens": 66431
+        },
+        "total_token_usage": {
+          "input_tokens": 60849,
+          "cached_input_tokens": 14592,
+          "output_tokens": 5582,
+          "reasoning_output_tokens": 4180,
+          "total_tokens": 66431
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.568",
+      "safe_id": "PAUL_AEG-7.3.568",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.568/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-26-019dd4d2-0093-7523-8151-5ffe25347178.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 58550,
+          "cached_input_tokens": 3840,
+          "output_tokens": 8278,
+          "reasoning_output_tokens": 5164,
+          "total_tokens": 66828
+        },
+        "total_token_usage": {
+          "input_tokens": 58550,
+          "cached_input_tokens": 3840,
+          "output_tokens": 8278,
+          "reasoning_output_tokens": 5164,
+          "total_tokens": 66828
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.569",
+      "safe_id": "PAUL_AEG-7.3.569",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.569/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-25-019dd4d1-ff8b-7260-b33f-e0a9fa07cff2.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 20239,
+          "cached_input_tokens": 5376,
+          "output_tokens": 1833,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22072
+        },
+        "total_token_usage": {
+          "input_tokens": 20239,
+          "cached_input_tokens": 5376,
+          "output_tokens": 1833,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22072
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.570",
+      "safe_id": "PAUL_AEG-7.3.570",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.570/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-39-019dd4d2-35a8-7c90-a312-0e03332e64ef.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 27848,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2323,
+          "reasoning_output_tokens": 1631,
+          "total_tokens": 30171
+        },
+        "total_token_usage": {
+          "input_tokens": 27848,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2323,
+          "reasoning_output_tokens": 1631,
+          "total_tokens": 30171
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.571",
+      "safe_id": "PAUL_AEG-7.3.571",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.571/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-47-019dd4d2-5599-7833-8899-3fec0a3ec843.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 23003,
+          "cached_input_tokens": 14592,
+          "output_tokens": 1067,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24070
+        },
+        "total_token_usage": {
+          "input_tokens": 23003,
+          "cached_input_tokens": 14592,
+          "output_tokens": 1067,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24070
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.572",
+      "safe_id": "PAUL_AEG-7.3.572",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.572/.codex/sessions/2026/04/28/rollout-2026-04-28T18-00-47-019dd4d2-5570-7ee0-8d4f-b281971451d7.jsonl",
+        "start_secondary_used_percent": 0.0,
+        "end_secondary_used_percent": 0.0,
+        "last_token_usage": {
+          "input_tokens": 65338,
+          "cached_input_tokens": 5376,
+          "output_tokens": 8876,
+          "reasoning_output_tokens": 7625,
+          "total_tokens": 74214
+        },
+        "total_token_usage": {
+          "input_tokens": 65338,
+          "cached_input_tokens": 5376,
+          "output_tokens": 8876,
+          "reasoning_output_tokens": 7625,
+          "total_tokens": 74214
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.573",
+      "safe_id": "PAUL_AEG-7.3.573",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.573/.codex/sessions/2026/04/28/rollout-2026-04-28T18-01-04-019dd4d2-973e-7a92-a9dc-f38107bb42ad.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 63250,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7676,
+          "reasoning_output_tokens": 5748,
+          "total_tokens": 70926
+        },
+        "total_token_usage": {
+          "input_tokens": 63250,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7676,
+          "reasoning_output_tokens": 5748,
+          "total_tokens": 70926
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.574",
+      "safe_id": "PAUL_AEG-7.3.574",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.574/.codex/sessions/2026/04/28/rollout-2026-04-28T18-01-14-019dd4d2-bf44-7d52-81f7-603667c6c707.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 24499,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1678,
+          "reasoning_output_tokens": 1089,
+          "total_tokens": 26177
+        },
+        "total_token_usage": {
+          "input_tokens": 24499,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1678,
+          "reasoning_output_tokens": 1089,
+          "total_tokens": 26177
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.575",
+      "safe_id": "PAUL_AEG-7.3.575",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.575/.codex/sessions/2026/04/28/rollout-2026-04-28T18-01-34-019dd4d3-0aa6-75a3-99a7-1d0ebf2308f6.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 50851,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7531,
+          "reasoning_output_tokens": 5223,
+          "total_tokens": 58382
+        },
+        "total_token_usage": {
+          "input_tokens": 50851,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7531,
+          "reasoning_output_tokens": 5223,
+          "total_tokens": 58382
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.576",
+      "safe_id": "PAUL_AEG-7.3.576",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.576/.codex/sessions/2026/04/28/rollout-2026-04-28T18-01-45-019dd4d3-381f-7ea2-951e-d99e0f7e03aa.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20398,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1711,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22109
+        },
+        "total_token_usage": {
+          "input_tokens": 20398,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1711,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22109
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.577",
+      "safe_id": "PAUL_AEG-7.3.577",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.577/.codex/sessions/2026/04/28/rollout-2026-04-28T18-02-01-019dd4d3-74a5-7df0-b581-0c241e3c316d.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20216,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1733,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21949
+        },
+        "total_token_usage": {
+          "input_tokens": 20216,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1733,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21949
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.578",
+      "safe_id": "PAUL_AEG-7.3.578",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.578/.codex/sessions/2026/04/28/rollout-2026-04-28T18-02-07-019dd4d3-8d9f-7e42-9212-4cffe3567d68.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20095,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1090,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21185
+        },
+        "total_token_usage": {
+          "input_tokens": 20095,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1090,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21185
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.579",
+      "safe_id": "PAUL_AEG-7.3.579",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.579/.codex/sessions/2026/04/28/rollout-2026-04-28T18-02-17-019dd4d3-b671-7390-86d5-77897a001e78.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 64310,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7954,
+          "reasoning_output_tokens": 6372,
+          "total_tokens": 72264
+        },
+        "total_token_usage": {
+          "input_tokens": 64310,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7954,
+          "reasoning_output_tokens": 6372,
+          "total_tokens": 72264
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.580",
+      "safe_id": "PAUL_AEG-7.3.580",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.580/.codex/sessions/2026/04/28/rollout-2026-04-28T18-02-18-019dd4d3-ba01-75c0-9516-f1912e5994d2.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 63046,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7676,
+          "reasoning_output_tokens": 6157,
+          "total_tokens": 70722
+        },
+        "total_token_usage": {
+          "input_tokens": 63046,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7676,
+          "reasoning_output_tokens": 6157,
+          "total_tokens": 70722
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.581",
+      "safe_id": "PAUL_AEG-7.3.581",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.581/.codex/sessions/2026/04/28/rollout-2026-04-28T18-02-29-019dd4d3-e5a8-78b2-acd7-bca1dfab0b40.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20344,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4299,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24643
+        },
+        "total_token_usage": {
+          "input_tokens": 20344,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4299,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24643
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.582",
+      "safe_id": "PAUL_AEG-7.3.582",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.582/.codex/sessions/2026/04/28/rollout-2026-04-28T18-02-56-019dd4d4-4bbb-7e13-b0e7-d80d3139ce98.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20234,
+          "cached_input_tokens": 14080,
+          "output_tokens": 913,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21147
+        },
+        "total_token_usage": {
+          "input_tokens": 20234,
+          "cached_input_tokens": 14080,
+          "output_tokens": 913,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21147
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.583",
+      "safe_id": "PAUL_AEG-7.3.583",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.583/.codex/sessions/2026/04/28/rollout-2026-04-28T18-03-04-019dd4d4-6acf-7db3-9fb9-04718c07c96f.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 25585,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7204,
+          "reasoning_output_tokens": 5186,
+          "total_tokens": 32789
+        },
+        "total_token_usage": {
+          "input_tokens": 25585,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7204,
+          "reasoning_output_tokens": 5186,
+          "total_tokens": 32789
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.584",
+      "safe_id": "PAUL_AEG-7.3.584",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.584/.codex/sessions/2026/04/28/rollout-2026-04-28T18-03-10-019dd4d4-81b1-7242-8e42-c24d5512f597.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20252,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2286,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22538
+        },
+        "total_token_usage": {
+          "input_tokens": 20252,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2286,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22538
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.585",
+      "safe_id": "PAUL_AEG-7.3.585",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.585/.codex/sessions/2026/04/28/rollout-2026-04-28T18-03-31-019dd4d4-d58c-7341-a2ee-7708b1117d1e.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 140541,
+          "cached_input_tokens": 14080,
+          "output_tokens": 20036,
+          "reasoning_output_tokens": 14593,
+          "total_tokens": 160577
+        },
+        "total_token_usage": {
+          "input_tokens": 140541,
+          "cached_input_tokens": 14080,
+          "output_tokens": 20036,
+          "reasoning_output_tokens": 14593,
+          "total_tokens": 160577
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.586",
+      "safe_id": "PAUL_AEG-7.3.586",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.586/.codex/sessions/2026/04/28/rollout-2026-04-28T18-03-44-019dd4d5-0751-7b40-a60b-e63e0b38b6ca.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20757,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1600,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22357
+        },
+        "total_token_usage": {
+          "input_tokens": 20757,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1600,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22357
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.587",
+      "safe_id": "PAUL_AEG-7.3.587",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.587/.codex/sessions/2026/04/28/rollout-2026-04-28T18-03-58-019dd4d5-3f78-7752-b7c7-e717369db520.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 59799,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8147,
+          "reasoning_output_tokens": 5667,
+          "total_tokens": 67946
+        },
+        "total_token_usage": {
+          "input_tokens": 59799,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8147,
+          "reasoning_output_tokens": 5667,
+          "total_tokens": 67946
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.588",
+      "safe_id": "PAUL_AEG-7.3.588",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.588/.codex/sessions/2026/04/28/rollout-2026-04-28T18-04-01-019dd4d5-4afa-78a3-a427-41ad663b785d.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 55490,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5298,
+          "reasoning_output_tokens": 4364,
+          "total_tokens": 60788
+        },
+        "total_token_usage": {
+          "input_tokens": 55490,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5298,
+          "reasoning_output_tokens": 4364,
+          "total_tokens": 60788
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.589",
+      "safe_id": "PAUL_AEG-7.3.589",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.589/.codex/sessions/2026/04/28/rollout-2026-04-28T18-04-04-019dd4d5-580d-77e0-8486-da6428e4318b.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 23539,
+          "cached_input_tokens": 22272,
+          "output_tokens": 1769,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25308
+        },
+        "total_token_usage": {
+          "input_tokens": 88324,
+          "cached_input_tokens": 72704,
+          "output_tokens": 3924,
+          "reasoning_output_tokens": 2064,
+          "total_tokens": 92248
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.590",
+      "safe_id": "PAUL_AEG-7.3.590",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.590/.codex/sessions/2026/04/28/rollout-2026-04-28T18-04-09-019dd4d5-6abb-77e3-ab66-711b258b2a32.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 107419,
+          "cached_input_tokens": 14080,
+          "output_tokens": 14942,
+          "reasoning_output_tokens": 10105,
+          "total_tokens": 122361
+        },
+        "total_token_usage": {
+          "input_tokens": 107419,
+          "cached_input_tokens": 14080,
+          "output_tokens": 14942,
+          "reasoning_output_tokens": 10105,
+          "total_tokens": 122361
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.591",
+      "safe_id": "PAUL_AEG-7.3.591",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.591/.codex/sessions/2026/04/28/rollout-2026-04-28T18-04-44-019dd4d5-f2f1-70d0-834d-8b1127cee220.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 21909,
+          "cached_input_tokens": 14592,
+          "output_tokens": 1942,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23851
+        },
+        "total_token_usage": {
+          "input_tokens": 42464,
+          "cached_input_tokens": 28672,
+          "output_tokens": 2581,
+          "reasoning_output_tokens": 1032,
+          "total_tokens": 45045
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.592",
+      "safe_id": "PAUL_AEG-7.3.592",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.592/.codex/sessions/2026/04/28/rollout-2026-04-28T18-05-07-019dd4d6-4b7d-7631-aa2d-652d615a86be.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 23861,
+          "cached_input_tokens": 22784,
+          "output_tokens": 1931,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25792
+        },
+        "total_token_usage": {
+          "input_tokens": 111954,
+          "cached_input_tokens": 95488,
+          "output_tokens": 4394,
+          "reasoning_output_tokens": 2294,
+          "total_tokens": 116348
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.593",
+      "safe_id": "PAUL_AEG-7.3.593",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.593/.codex/sessions/2026/04/28/rollout-2026-04-28T18-05-09-019dd4d6-53ed-7793-9855-c1b8c6e7cb18.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 86619,
+          "cached_input_tokens": 14080,
+          "output_tokens": 11948,
+          "reasoning_output_tokens": 8850,
+          "total_tokens": 98567
+        },
+        "total_token_usage": {
+          "input_tokens": 86619,
+          "cached_input_tokens": 14080,
+          "output_tokens": 11948,
+          "reasoning_output_tokens": 8850,
+          "total_tokens": 98567
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.594",
+      "safe_id": "PAUL_AEG-7.3.594",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.594/.codex/sessions/2026/04/28/rollout-2026-04-28T18-05-14-019dd4d6-68b8-7422-916c-d2801cc0bb98.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 21112,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3419,
+          "reasoning_output_tokens": 1058,
+          "total_tokens": 24531
+        },
+        "total_token_usage": {
+          "input_tokens": 21112,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3419,
+          "reasoning_output_tokens": 1058,
+          "total_tokens": 24531
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.595",
+      "safe_id": "PAUL_AEG-7.3.595",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.595/.codex/sessions/2026/04/28/rollout-2026-04-28T18-05-47-019dd4d6-e985-7c30-bf99-6c160b45b542.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 55569,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8135,
+          "reasoning_output_tokens": 4909,
+          "total_tokens": 63704
+        },
+        "total_token_usage": {
+          "input_tokens": 55569,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8135,
+          "reasoning_output_tokens": 4909,
+          "total_tokens": 63704
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.596",
+      "safe_id": "PAUL_AEG-7.3.596",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.596/.codex/sessions/2026/04/28/rollout-2026-04-28T18-05-55-019dd4d7-07b4-7931-a046-21f839a1426c.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20516,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4248,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24764
+        },
+        "total_token_usage": {
+          "input_tokens": 20516,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4248,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24764
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.597",
+      "safe_id": "PAUL_AEG-7.3.597",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.597/.codex/sessions/2026/04/28/rollout-2026-04-28T18-06-26-019dd4d7-7fdc-7b10-9c40-c44511e20de5.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 21523,
+          "cached_input_tokens": 14592,
+          "output_tokens": 3796,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25319
+        },
+        "total_token_usage": {
+          "input_tokens": 21523,
+          "cached_input_tokens": 14592,
+          "output_tokens": 3796,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25319
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.598",
+      "safe_id": "PAUL_AEG-7.3.598",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.598/.codex/sessions/2026/04/28/rollout-2026-04-28T18-06-57-019dd4d7-f8e6-7bc2-b4d1-c2230be9bcec.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 20356,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2127,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22483
+        },
+        "total_token_usage": {
+          "input_tokens": 20356,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2127,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22483
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.599",
+      "safe_id": "PAUL_AEG-7.3.599",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.599/.codex/sessions/2026/04/28/rollout-2026-04-28T18-07-09-019dd4d8-28fa-7ab3-aff6-22dc33335db4.jsonl",
+        "start_secondary_used_percent": 1.0,
+        "end_secondary_used_percent": 1.0,
+        "last_token_usage": {
+          "input_tokens": 73521,
+          "cached_input_tokens": 14080,
+          "output_tokens": 9671,
+          "reasoning_output_tokens": 7813,
+          "total_tokens": 83192
+        },
+        "total_token_usage": {
+          "input_tokens": 73521,
+          "cached_input_tokens": 14080,
+          "output_tokens": 9671,
+          "reasoning_output_tokens": 7813,
+          "total_tokens": 83192
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.600",
+      "safe_id": "PAUL_AEG-7.3.600",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.600/.codex/sessions/2026/04/28/rollout-2026-04-28T18-07-17-019dd4d8-47fa-76a0-a089-7f7777279236.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 24837,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2925,
+          "reasoning_output_tokens": 1104,
+          "total_tokens": 27762
+        },
+        "total_token_usage": {
+          "input_tokens": 24837,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2925,
+          "reasoning_output_tokens": 1104,
+          "total_tokens": 27762
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.601",
+      "safe_id": "PAUL_AEG-7.3.601",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.601/.codex/sessions/2026/04/28/rollout-2026-04-28T18-07-18-019dd4d8-4ea3-7b90-98b5-2c6fa9cdc87b.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 22058,
+          "cached_input_tokens": 21248,
+          "output_tokens": 825,
+          "reasoning_output_tokens": 424,
+          "total_tokens": 22883
+        },
+        "total_token_usage": {
+          "input_tokens": 64047,
+          "cached_input_tokens": 49920,
+          "output_tokens": 1777,
+          "reasoning_output_tokens": 1070,
+          "total_tokens": 65824
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.602",
+      "safe_id": "PAUL_AEG-7.3.602",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.602/.codex/sessions/2026/04/28/rollout-2026-04-28T18-07-40-019dd4d8-a1fd-77b1-93db-42e867cfe9f7.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20246,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3564,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23810
+        },
+        "total_token_usage": {
+          "input_tokens": 20246,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3564,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23810
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.603",
+      "safe_id": "PAUL_AEG-7.3.603",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.603/.codex/sessions/2026/04/28/rollout-2026-04-28T18-07-41-019dd4d8-a500-7483-b6b3-3571e95ee089.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 51910,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7479,
+          "reasoning_output_tokens": 5024,
+          "total_tokens": 59389
+        },
+        "total_token_usage": {
+          "input_tokens": 51910,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7479,
+          "reasoning_output_tokens": 5024,
+          "total_tokens": 59389
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.604",
+      "safe_id": "PAUL_AEG-7.3.604",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.604/.codex/sessions/2026/04/28/rollout-2026-04-28T18-07-56-019dd4d8-dfef-7972-9462-5a708720b510.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 64640,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8433,
+          "reasoning_output_tokens": 6073,
+          "total_tokens": 73073
+        },
+        "total_token_usage": {
+          "input_tokens": 64640,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8433,
+          "reasoning_output_tokens": 6073,
+          "total_tokens": 73073
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.605",
+      "safe_id": "PAUL_AEG-7.3.605",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.605/.codex/sessions/2026/04/28/rollout-2026-04-28T18-08-05-019dd4d9-042b-7031-8f0d-833da6f38f06.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 38957,
+          "cached_input_tokens": 14080,
+          "output_tokens": 6097,
+          "reasoning_output_tokens": 4671,
+          "total_tokens": 45054
+        },
+        "total_token_usage": {
+          "input_tokens": 38957,
+          "cached_input_tokens": 14080,
+          "output_tokens": 6097,
+          "reasoning_output_tokens": 4671,
+          "total_tokens": 45054
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.606",
+      "safe_id": "PAUL_AEG-7.3.606",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.606/.codex/sessions/2026/04/28/rollout-2026-04-28T18-08-17-019dd4d9-3186-7403-ae0e-7e9a42394944.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20297,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1556,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21853
+        },
+        "total_token_usage": {
+          "input_tokens": 20297,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1556,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21853
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.607",
+      "safe_id": "PAUL_AEG-7.3.607",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.607/.codex/sessions/2026/04/28/rollout-2026-04-28T18-08-32-019dd4d9-6ec6-7460-ab4a-e43ec24d8f2d.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20242,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2380,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22622
+        },
+        "total_token_usage": {
+          "input_tokens": 20242,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2380,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22622
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.608",
+      "safe_id": "PAUL_AEG-7.3.608",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.608/.codex/sessions/2026/04/28/rollout-2026-04-28T18-08-50-019dd4d9-b59c-7500-8e1d-287f20631e12.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20210,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1297,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21507
+        },
+        "total_token_usage": {
+          "input_tokens": 20210,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1297,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21507
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.609",
+      "safe_id": "PAUL_AEG-7.3.609",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.609/.codex/sessions/2026/04/28/rollout-2026-04-28T18-08-54-019dd4d9-c2d4-7ee1-8928-6260103e000d.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 27041,
+          "cached_input_tokens": 21760,
+          "output_tokens": 2763,
+          "reasoning_output_tokens": 1076,
+          "total_tokens": 29804
+        },
+        "total_token_usage": {
+          "input_tokens": 69225,
+          "cached_input_tokens": 50432,
+          "output_tokens": 3950,
+          "reasoning_output_tokens": 2108,
+          "total_tokens": 73175
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.610",
+      "safe_id": "PAUL_AEG-7.3.610",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.610/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-03-019dd4d9-e7d3-7bd0-b945-7a413c6c303d.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20398,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2106,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22504
+        },
+        "total_token_usage": {
+          "input_tokens": 20398,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2106,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22504
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.611",
+      "safe_id": "PAUL_AEG-7.3.611",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.611/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-05-019dd4d9-edc4-7090-ba98-00d2546c0f73.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 29036,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2320,
+          "reasoning_output_tokens": 1673,
+          "total_tokens": 31356
+        },
+        "total_token_usage": {
+          "input_tokens": 29036,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2320,
+          "reasoning_output_tokens": 1673,
+          "total_tokens": 31356
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.612",
+      "safe_id": "PAUL_AEG-7.3.612",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.612/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-13-019dd4da-0cc9-74b2-939c-12a35d277fb4.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20680,
+          "cached_input_tokens": 14080,
+          "output_tokens": 6273,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 26953
+        },
+        "total_token_usage": {
+          "input_tokens": 20680,
+          "cached_input_tokens": 14080,
+          "output_tokens": 6273,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 26953
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.613",
+      "safe_id": "PAUL_AEG-7.3.613",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.613/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-23-019dd4da-334f-7a20-9fb0-be0671231972.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 91661,
+          "cached_input_tokens": 14592,
+          "output_tokens": 10044,
+          "reasoning_output_tokens": 8638,
+          "total_tokens": 101705
+        },
+        "total_token_usage": {
+          "input_tokens": 91661,
+          "cached_input_tokens": 14592,
+          "output_tokens": 10044,
+          "reasoning_output_tokens": 8638,
+          "total_tokens": 101705
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.614",
+      "safe_id": "PAUL_AEG-7.3.614",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.614/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-31-019dd4da-5408-7912-9615-3df5e4f3803a.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20223,
+          "cached_input_tokens": 14080,
+          "output_tokens": 908,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21131
+        },
+        "total_token_usage": {
+          "input_tokens": 20223,
+          "cached_input_tokens": 14080,
+          "output_tokens": 908,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21131
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.615",
+      "safe_id": "PAUL_AEG-7.3.615",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.615/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-43-019dd4da-843b-71e0-9d26-fdb6bbb6522b.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 28071,
+          "cached_input_tokens": 26880,
+          "output_tokens": 2332,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 30403
+        },
+        "total_token_usage": {
+          "input_tokens": 247930,
+          "cached_input_tokens": 225280,
+          "output_tokens": 8279,
+          "reasoning_output_tokens": 4986,
+          "total_tokens": 256209
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.616",
+      "safe_id": "PAUL_AEG-7.3.616",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.616/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-55-019dd4da-b1a1-7b70-8ca8-704d06137efe.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20311,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1095,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21406
+        },
+        "total_token_usage": {
+          "input_tokens": 20311,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1095,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21406
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.617",
+      "safe_id": "PAUL_AEG-7.3.617",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.617/.codex/sessions/2026/04/28/rollout-2026-04-28T18-09-56-019dd4da-b5db-72d3-a4d5-735a891521cb.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 33180,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3101,
+          "reasoning_output_tokens": 2285,
+          "total_tokens": 36281
+        },
+        "total_token_usage": {
+          "input_tokens": 33180,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3101,
+          "reasoning_output_tokens": 2285,
+          "total_tokens": 36281
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.618",
+      "safe_id": "PAUL_AEG-7.3.618",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.618/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-10-019dd4da-eace-7421-a800-d6ca89128106.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20823,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2925,
+          "reasoning_output_tokens": 1062,
+          "total_tokens": 23748
+        },
+        "total_token_usage": {
+          "input_tokens": 20823,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2925,
+          "reasoning_output_tokens": 1062,
+          "total_tokens": 23748
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.619",
+      "safe_id": "PAUL_AEG-7.3.619",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.619/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-18-019dd4db-0d05-7be3-bbd7-b46f3b98b253.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20301,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2516,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22817
+        },
+        "total_token_usage": {
+          "input_tokens": 20301,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2516,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22817
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.620",
+      "safe_id": "PAUL_AEG-7.3.620",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.620/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-31-019dd4db-3d4a-7ef0-9d3b-92ac2265cfc9.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20167,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1483,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21650
+        },
+        "total_token_usage": {
+          "input_tokens": 20167,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1483,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21650
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.621",
+      "safe_id": "PAUL_AEG-7.3.621",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.621/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-33-019dd4db-4646-7681-8061-518c559a1913.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 45948,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3807,
+          "reasoning_output_tokens": 3226,
+          "total_tokens": 49755
+        },
+        "total_token_usage": {
+          "input_tokens": 45948,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3807,
+          "reasoning_output_tokens": 3226,
+          "total_tokens": 49755
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.622",
+      "safe_id": "PAUL_AEG-7.3.622",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.622/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-36-019dd4db-51c3-7450-8904-fc87efee6569.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20111,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1637,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21748
+        },
+        "total_token_usage": {
+          "input_tokens": 20111,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1637,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21748
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.623",
+      "safe_id": "PAUL_AEG-7.3.623",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.623/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-44-019dd4db-72ec-7950-85e4-f4d803fb6f67.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 26423,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8482,
+          "reasoning_output_tokens": 5664,
+          "total_tokens": 34905
+        },
+        "total_token_usage": {
+          "input_tokens": 26423,
+          "cached_input_tokens": 14080,
+          "output_tokens": 8482,
+          "reasoning_output_tokens": 5664,
+          "total_tokens": 34905
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.624",
+      "safe_id": "PAUL_AEG-7.3.624",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.624/.codex/sessions/2026/04/28/rollout-2026-04-28T18-10-52-019dd4db-9192-75d3-b597-92042fb21d23.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20653,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2755,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23408
+        },
+        "total_token_usage": {
+          "input_tokens": 20653,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2755,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23408
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.625",
+      "safe_id": "PAUL_AEG-7.3.625",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.625/.codex/sessions/2026/04/28/rollout-2026-04-28T18-11-11-019dd4db-da34-7a20-ae0b-80d1cb07b608.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 33982,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5503,
+          "reasoning_output_tokens": 2217,
+          "total_tokens": 39485
+        },
+        "total_token_usage": {
+          "input_tokens": 33982,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5503,
+          "reasoning_output_tokens": 2217,
+          "total_tokens": 39485
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.626",
+      "safe_id": "PAUL_AEG-7.3.626",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.626/.codex/sessions/2026/04/28/rollout-2026-04-28T18-11-20-019dd4db-ff3f-7903-a6c5-0049ea0dedcf.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 39270,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5292,
+          "reasoning_output_tokens": 3666,
+          "total_tokens": 44562
+        },
+        "total_token_usage": {
+          "input_tokens": 39270,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5292,
+          "reasoning_output_tokens": 3666,
+          "total_tokens": 44562
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.627",
+      "safe_id": "PAUL_AEG-7.3.627",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.627/.codex/sessions/2026/04/28/rollout-2026-04-28T18-11-33-019dd4dc-3196-7840-8bd5-771c59956b1a.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20295,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2120,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22415
+        },
+        "total_token_usage": {
+          "input_tokens": 20295,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2120,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22415
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.628",
+      "safe_id": "PAUL_AEG-7.3.628",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.628/.codex/sessions/2026/04/28/rollout-2026-04-28T18-11-51-019dd4dc-7671-7c83-8187-6464659364be.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 21643,
+          "cached_input_tokens": 14592,
+          "output_tokens": 1486,
+          "reasoning_output_tokens": 1065,
+          "total_tokens": 23129
+        },
+        "total_token_usage": {
+          "input_tokens": 21643,
+          "cached_input_tokens": 14592,
+          "output_tokens": 1486,
+          "reasoning_output_tokens": 1065,
+          "total_tokens": 23129
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.629",
+      "safe_id": "PAUL_AEG-7.3.629",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.629/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-04-019dd4dc-a810-7302-894c-7ab4ba212bf3.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20185,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1986,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22171
+        },
+        "total_token_usage": {
+          "input_tokens": 20185,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1986,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22171
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.630",
+      "safe_id": "PAUL_AEG-7.3.630",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.630/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-08-019dd4dc-bacd-7b73-88e1-f6a843dddaea.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20239,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2157,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22396
+        },
+        "total_token_usage": {
+          "input_tokens": 20239,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2157,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22396
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.631",
+      "safe_id": "PAUL_AEG-7.3.631",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.631/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-12-019dd4dc-c8c5-7463-b5a0-cc4423b1a152.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20416,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2777,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23193
+        },
+        "total_token_usage": {
+          "input_tokens": 20416,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2777,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23193
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.632",
+      "safe_id": "PAUL_AEG-7.3.632",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.632/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-21-019dd4dc-edb7-7503-8e71-5b02a8472690.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 21027,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2139,
+          "reasoning_output_tokens": 1058,
+          "total_tokens": 23166
+        },
+        "total_token_usage": {
+          "input_tokens": 21027,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2139,
+          "reasoning_output_tokens": 1058,
+          "total_tokens": 23166
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.633",
+      "safe_id": "PAUL_AEG-7.3.633",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.633/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-24-019dd4dc-f7c1-7ef3-a684-fd0d1fa0c3bb.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 67640,
+          "cached_input_tokens": 14080,
+          "output_tokens": 9924,
+          "reasoning_output_tokens": 7089,
+          "total_tokens": 77564
+        },
+        "total_token_usage": {
+          "input_tokens": 67640,
+          "cached_input_tokens": 14080,
+          "output_tokens": 9924,
+          "reasoning_output_tokens": 7089,
+          "total_tokens": 77564
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.634",
+      "safe_id": "PAUL_AEG-7.3.634",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.634/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-25-019dd4dc-fc7e-7683-b6e8-3811e43e85c9.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20289,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1061,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21350
+        },
+        "total_token_usage": {
+          "input_tokens": 20289,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1061,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21350
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.635",
+      "safe_id": "PAUL_AEG-7.3.635",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.635/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-30-019dd4dd-0d16-7d90-b6de-5936d14c59c8.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20105,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1493,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21598
+        },
+        "total_token_usage": {
+          "input_tokens": 20105,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1493,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21598
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.636",
+      "safe_id": "PAUL_AEG-7.3.636",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.636/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-38-019dd4dd-2d61-7aa0-a766-e4a191614113.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20876,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2480,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23356
+        },
+        "total_token_usage": {
+          "input_tokens": 20876,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2480,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23356
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.637",
+      "safe_id": "PAUL_AEG-7.3.637",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.637/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-45-019dd4dd-4bea-75f2-9d3c-5b4b449f1bbc.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 25491,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3527,
+          "reasoning_output_tokens": 1646,
+          "total_tokens": 29018
+        },
+        "total_token_usage": {
+          "input_tokens": 25491,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3527,
+          "reasoning_output_tokens": 1646,
+          "total_tokens": 29018
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.638",
+      "safe_id": "PAUL_AEG-7.3.638",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.638/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-47-019dd4dd-5236-7313-a862-1799abd6b290.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20235,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1246,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21481
+        },
+        "total_token_usage": {
+          "input_tokens": 20235,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1246,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21481
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.639",
+      "safe_id": "PAUL_AEG-7.3.639",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.639/.codex/sessions/2026/04/28/rollout-2026-04-28T18-12-58-019dd4dd-7b57-72d3-ba60-5a64bed4f78c.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 20233,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1639,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21872
+        },
+        "total_token_usage": {
+          "input_tokens": 20233,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1639,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21872
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.640",
+      "safe_id": "PAUL_AEG-7.3.640",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.640/.codex/sessions/2026/04/28/rollout-2026-04-28T18-13-03-019dd4dd-8e8d-7a83-b5a4-f1b708b5a99f.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 28970,
+          "cached_input_tokens": 27904,
+          "output_tokens": 910,
+          "reasoning_output_tokens": 204,
+          "total_tokens": 29880
+        },
+        "total_token_usage": {
+          "input_tokens": 179216,
+          "cached_input_tokens": 154368,
+          "output_tokens": 5398,
+          "reasoning_output_tokens": 3874,
+          "total_tokens": 184614
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.641",
+      "safe_id": "PAUL_AEG-7.3.641",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.641/.codex/sessions/2026/04/28/rollout-2026-04-28T18-13-06-019dd4dd-9a7c-7470-8c42-047f0ce4444d.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 28963,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6485,
+          "reasoning_output_tokens": 5218,
+          "total_tokens": 35448
+        },
+        "total_token_usage": {
+          "input_tokens": 28963,
+          "cached_input_tokens": 3840,
+          "output_tokens": 6485,
+          "reasoning_output_tokens": 5218,
+          "total_tokens": 35448
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.642",
+      "safe_id": "PAUL_AEG-7.3.642",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.642/.codex/sessions/2026/04/28/rollout-2026-04-28T18-13-16-019dd4dd-c3e5-7051-8d1c-adb17d5ecfb9.jsonl",
+        "start_secondary_used_percent": 2.0,
+        "end_secondary_used_percent": 2.0,
+        "last_token_usage": {
+          "input_tokens": 33571,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3068,
+          "reasoning_output_tokens": 2279,
+          "total_tokens": 36639
+        },
+        "total_token_usage": {
+          "input_tokens": 33571,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3068,
+          "reasoning_output_tokens": 2279,
+          "total_tokens": 36639
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.643",
+      "safe_id": "PAUL_AEG-7.3.643",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.643/.codex/sessions/2026/04/28/rollout-2026-04-28T18-13-27-019dd4dd-ed00-7741-8264-c7ef96c12612.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 78741,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7853,
+          "reasoning_output_tokens": 6409,
+          "total_tokens": 86594
+        },
+        "total_token_usage": {
+          "input_tokens": 78741,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7853,
+          "reasoning_output_tokens": 6409,
+          "total_tokens": 86594
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.644",
+      "safe_id": "PAUL_AEG-7.3.644",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.644/.codex/sessions/2026/04/28/rollout-2026-04-28T18-13-57-019dd4de-637f-7050-a992-ecf7907adf53.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 34164,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4816,
+          "reasoning_output_tokens": 2487,
+          "total_tokens": 38980
+        },
+        "total_token_usage": {
+          "input_tokens": 34164,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4816,
+          "reasoning_output_tokens": 2487,
+          "total_tokens": 38980
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.645",
+      "safe_id": "PAUL_AEG-7.3.645",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.645/.codex/sessions/2026/04/28/rollout-2026-04-28T18-13-58-019dd4de-673f-7251-8687-b53e8286bf44.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20358,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2734,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23092
+        },
+        "total_token_usage": {
+          "input_tokens": 20358,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2734,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23092
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.646",
+      "safe_id": "PAUL_AEG-7.3.646",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.646/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-02-019dd4de-78b6-7ef2-8ca6-3b95b4eddcdc.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 42544,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4182,
+          "reasoning_output_tokens": 3133,
+          "total_tokens": 46726
+        },
+        "total_token_usage": {
+          "input_tokens": 42544,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4182,
+          "reasoning_output_tokens": 3133,
+          "total_tokens": 46726
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.647",
+      "safe_id": "PAUL_AEG-7.3.647",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.647/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-13-019dd4de-a319-7570-81e0-9a0a828b193a.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 29420,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4619,
+          "reasoning_output_tokens": 2236,
+          "total_tokens": 34039
+        },
+        "total_token_usage": {
+          "input_tokens": 29420,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4619,
+          "reasoning_output_tokens": 2236,
+          "total_tokens": 34039
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.648",
+      "safe_id": "PAUL_AEG-7.3.648",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.648/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-28-019dd4de-dc61-7d90-b9a3-3f690faac44a.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20301,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1970,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22271
+        },
+        "total_token_usage": {
+          "input_tokens": 20301,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1970,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22271
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.649",
+      "safe_id": "PAUL_AEG-7.3.649",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.649/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-44-019dd4df-1b52-7681-820d-e0e8aa4a7c01.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 58761,
+          "cached_input_tokens": 14592,
+          "output_tokens": 5868,
+          "reasoning_output_tokens": 4973,
+          "total_tokens": 64629
+        },
+        "total_token_usage": {
+          "input_tokens": 58761,
+          "cached_input_tokens": 14592,
+          "output_tokens": 5868,
+          "reasoning_output_tokens": 4973,
+          "total_tokens": 64629
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.650",
+      "safe_id": "PAUL_AEG-7.3.650",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.650/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-47-019dd4df-25ee-7100-9857-b66d11a4f235.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 26163,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2078,
+          "reasoning_output_tokens": 1566,
+          "total_tokens": 28241
+        },
+        "total_token_usage": {
+          "input_tokens": 26163,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2078,
+          "reasoning_output_tokens": 1566,
+          "total_tokens": 28241
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.651",
+      "safe_id": "PAUL_AEG-7.3.651",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.651/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-52-019dd4df-3be6-7320-b84d-59ddcfdb3b13.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 21244,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2560,
+          "reasoning_output_tokens": 1608,
+          "total_tokens": 23804
+        },
+        "total_token_usage": {
+          "input_tokens": 21244,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2560,
+          "reasoning_output_tokens": 1608,
+          "total_tokens": 23804
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.652",
+      "safe_id": "PAUL_AEG-7.3.652",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.652/.codex/sessions/2026/04/28/rollout-2026-04-28T18-14-55-019dd4df-441f-7701-8660-9e190ea1c717.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 24289,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1990,
+          "reasoning_output_tokens": 1074,
+          "total_tokens": 26279
+        },
+        "total_token_usage": {
+          "input_tokens": 24289,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1990,
+          "reasoning_output_tokens": 1074,
+          "total_tokens": 26279
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.653",
+      "safe_id": "PAUL_AEG-7.3.653",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.653/.codex/sessions/2026/04/28/rollout-2026-04-28T18-15-13-019dd4df-8ddb-7940-b750-b163d784cc7e.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20206,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2531,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22737
+        },
+        "total_token_usage": {
+          "input_tokens": 20206,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2531,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22737
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.654",
+      "safe_id": "PAUL_AEG-7.3.654",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.654/.codex/sessions/2026/04/28/rollout-2026-04-28T18-15-17-019dd4df-9c1c-7502-9c04-688c872793af.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 21247,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2878,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24125
+        },
+        "total_token_usage": {
+          "input_tokens": 21247,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2878,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 24125
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.655",
+      "safe_id": "PAUL_AEG-7.3.655",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.655/.codex/sessions/2026/04/28/rollout-2026-04-28T18-15-19-019dd4df-a25a-77d0-9bad-0387d182300f.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 43250,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5106,
+          "reasoning_output_tokens": 3901,
+          "total_tokens": 48356
+        },
+        "total_token_usage": {
+          "input_tokens": 43250,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5106,
+          "reasoning_output_tokens": 3901,
+          "total_tokens": 48356
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.656",
+      "safe_id": "PAUL_AEG-7.3.656",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.656/.codex/sessions/2026/04/28/rollout-2026-04-28T18-15-40-019dd4df-f680-78f1-8958-1011e9ab528f.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20241,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2556,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22797
+        },
+        "total_token_usage": {
+          "input_tokens": 20241,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2556,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 22797
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.657",
+      "safe_id": "PAUL_AEG-7.3.657",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.657/.codex/sessions/2026/04/28/rollout-2026-04-28T18-15-55-019dd4e0-3037-7d51-959d-a56cf4d6641e.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 29012,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3097,
+          "reasoning_output_tokens": 1650,
+          "total_tokens": 32109
+        },
+        "total_token_usage": {
+          "input_tokens": 29012,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3097,
+          "reasoning_output_tokens": 1650,
+          "total_tokens": 32109
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.658",
+      "safe_id": "PAUL_AEG-7.3.658",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.658/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-00-019dd4e0-440e-79c2-9c73-f8200936c910.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 41341,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3772,
+          "reasoning_output_tokens": 2831,
+          "total_tokens": 45113
+        },
+        "total_token_usage": {
+          "input_tokens": 41341,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3772,
+          "reasoning_output_tokens": 2831,
+          "total_tokens": 45113
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.659",
+      "safe_id": "PAUL_AEG-7.3.659",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.659/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-10-019dd4e0-696f-76d0-a8ae-7c6790cd8b12.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20123,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1041,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21164
+        },
+        "total_token_usage": {
+          "input_tokens": 20123,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1041,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21164
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.660",
+      "safe_id": "PAUL_AEG-7.3.660",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.660/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-21-019dd4e0-968e-76d2-b439-e2d82cd930d4.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 99514,
+          "cached_input_tokens": 14080,
+          "output_tokens": 13840,
+          "reasoning_output_tokens": 9513,
+          "total_tokens": 113354
+        },
+        "total_token_usage": {
+          "input_tokens": 99514,
+          "cached_input_tokens": 14080,
+          "output_tokens": 13840,
+          "reasoning_output_tokens": 9513,
+          "total_tokens": 113354
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.661",
+      "safe_id": "PAUL_AEG-7.3.661",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.661/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-24-019dd4e0-a03f-7111-b4eb-550149e29ed2.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 38537,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4856,
+          "reasoning_output_tokens": 3423,
+          "total_tokens": 43393
+        },
+        "total_token_usage": {
+          "input_tokens": 38537,
+          "cached_input_tokens": 14080,
+          "output_tokens": 4856,
+          "reasoning_output_tokens": 3423,
+          "total_tokens": 43393
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.662",
+      "safe_id": "PAUL_AEG-7.3.662",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.662/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-27-019dd4e0-add8-7103-96d7-c092a0f29537.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 24525,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2908,
+          "reasoning_output_tokens": 1070,
+          "total_tokens": 27433
+        },
+        "total_token_usage": {
+          "input_tokens": 24525,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2908,
+          "reasoning_output_tokens": 1070,
+          "total_tokens": 27433
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.663",
+      "safe_id": "PAUL_AEG-7.3.663",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.663/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-40-019dd4e0-de47-7703-b982-19002cdcc76a.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20268,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1058,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21326
+        },
+        "total_token_usage": {
+          "input_tokens": 20268,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1058,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21326
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.664",
+      "safe_id": "PAUL_AEG-7.3.664",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.664/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-52-019dd4e1-0dc1-71c3-b120-f0d7f187521b.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 32765,
+          "cached_input_tokens": 27392,
+          "output_tokens": 2900,
+          "reasoning_output_tokens": 1066,
+          "total_tokens": 35665
+        },
+        "total_token_usage": {
+          "input_tokens": 108310,
+          "cached_input_tokens": 84480,
+          "output_tokens": 5911,
+          "reasoning_output_tokens": 3133,
+          "total_tokens": 114221
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.665",
+      "safe_id": "PAUL_AEG-7.3.665",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.665/.codex/sessions/2026/04/28/rollout-2026-04-28T18-16-54-019dd4e1-17a6-7643-827c-d65ab02b85f3.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 21373,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2713,
+          "reasoning_output_tokens": 1600,
+          "total_tokens": 24086
+        },
+        "total_token_usage": {
+          "input_tokens": 21373,
+          "cached_input_tokens": 14080,
+          "output_tokens": 2713,
+          "reasoning_output_tokens": 1600,
+          "total_tokens": 24086
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.666",
+      "safe_id": "PAUL_AEG-7.3.666",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.666/.codex/sessions/2026/04/28/rollout-2026-04-28T18-17-11-019dd4e1-5959-7460-8060-b7c42f6faba4.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20393,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5014,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25407
+        },
+        "total_token_usage": {
+          "input_tokens": 20393,
+          "cached_input_tokens": 14080,
+          "output_tokens": 5014,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 25407
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.667",
+      "safe_id": "PAUL_AEG-7.3.667",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.667/.codex/sessions/2026/04/28/rollout-2026-04-28T18-17-18-019dd4e1-765d-7a33-a6d3-0f8873e6625d.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 67635,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7720,
+          "reasoning_output_tokens": 6057,
+          "total_tokens": 75355
+        },
+        "total_token_usage": {
+          "input_tokens": 67635,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7720,
+          "reasoning_output_tokens": 6057,
+          "total_tokens": 75355
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.668",
+      "safe_id": "PAUL_AEG-7.3.668",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.668/.codex/sessions/2026/04/28/rollout-2026-04-28T18-17-37-019dd4e1-bdae-7443-bbb5-399d2a86dbd4.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 28901,
+          "cached_input_tokens": 14080,
+          "output_tokens": 15408,
+          "reasoning_output_tokens": 8100,
+          "total_tokens": 44309
+        },
+        "total_token_usage": {
+          "input_tokens": 28901,
+          "cached_input_tokens": 14080,
+          "output_tokens": 15408,
+          "reasoning_output_tokens": 8100,
+          "total_tokens": 44309
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.669",
+      "safe_id": "PAUL_AEG-7.3.669",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.669/.codex/sessions/2026/04/28/rollout-2026-04-28T18-17-47-019dd4e1-e4a4-7d33-8436-00a872dc8483.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20756,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1233,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21989
+        },
+        "total_token_usage": {
+          "input_tokens": 20756,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1233,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21989
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.670",
+      "safe_id": "PAUL_AEG-7.3.670",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.670/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-00-019dd4e2-16aa-7d52-9b7c-f8a37590077b.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20250,
+          "cached_input_tokens": 3840,
+          "output_tokens": 1087,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21337
+        },
+        "total_token_usage": {
+          "input_tokens": 20250,
+          "cached_input_tokens": 3840,
+          "output_tokens": 1087,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21337
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.671",
+      "safe_id": "PAUL_AEG-7.3.671",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.671/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-11-019dd4e2-44dc-78f1-845d-017072dbdc89.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 136629,
+          "cached_input_tokens": 14080,
+          "output_tokens": 16452,
+          "reasoning_output_tokens": 12654,
+          "total_tokens": 153081
+        },
+        "total_token_usage": {
+          "input_tokens": 136629,
+          "cached_input_tokens": 14080,
+          "output_tokens": 16452,
+          "reasoning_output_tokens": 12654,
+          "total_tokens": 153081
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.672",
+      "safe_id": "PAUL_AEG-7.3.672",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.672/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-15-019dd4e2-5323-7a71-8623-ec5d0d05c874.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 21383,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2379,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23762
+        },
+        "total_token_usage": {
+          "input_tokens": 21383,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2379,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23762
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.673",
+      "safe_id": "PAUL_AEG-7.3.673",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.673/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-40-019dd4e2-b5c1-71e0-892c-47d3a460dbd6.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20423,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3184,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23607
+        },
+        "total_token_usage": {
+          "input_tokens": 20423,
+          "cached_input_tokens": 3840,
+          "output_tokens": 3184,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 23607
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.674",
+      "safe_id": "PAUL_AEG-7.3.674",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.674/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-43-019dd4e2-c14a-7801-9599-fa71d4f9eff1.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20167,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1125,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21292
+        },
+        "total_token_usage": {
+          "input_tokens": 20167,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1125,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21292
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.675",
+      "safe_id": "PAUL_AEG-7.3.675",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.675/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-51-019dd4e2-deb2-7c73-9697-ce9267e6710d.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20069,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1064,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21133
+        },
+        "total_token_usage": {
+          "input_tokens": 20069,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1064,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21133
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.676",
+      "safe_id": "PAUL_AEG-7.3.676",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.676/.codex/sessions/2026/04/28/rollout-2026-04-28T18-18-56-019dd4e2-f26c-7451-b692-bdc24fcf504f.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 20113,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1466,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21579
+        },
+        "total_token_usage": {
+          "input_tokens": 20113,
+          "cached_input_tokens": 14080,
+          "output_tokens": 1466,
+          "reasoning_output_tokens": 516,
+          "total_tokens": 21579
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.677",
+      "safe_id": "PAUL_AEG-7.3.677",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.677/.codex/sessions/2026/04/28/rollout-2026-04-28T18-19-04-019dd4e3-137c-7323-98fc-4bd22835cea4.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 51384,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7441,
+          "reasoning_output_tokens": 5038,
+          "total_tokens": 58825
+        },
+        "total_token_usage": {
+          "input_tokens": 51384,
+          "cached_input_tokens": 14080,
+          "output_tokens": 7441,
+          "reasoning_output_tokens": 5038,
+          "total_tokens": 58825
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.678",
+      "safe_id": "PAUL_AEG-7.3.678",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.678/.codex/sessions/2026/04/28/rollout-2026-04-28T18-19-07-019dd4e3-1edb-7773-b689-afe0df115337.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 143700,
+          "cached_input_tokens": 14080,
+          "output_tokens": 18610,
+          "reasoning_output_tokens": 12788,
+          "total_tokens": 162310
+        },
+        "total_token_usage": {
+          "input_tokens": 143700,
+          "cached_input_tokens": 14080,
+          "output_tokens": 18610,
+          "reasoning_output_tokens": 12788,
+          "total_tokens": 162310
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.679",
+      "safe_id": "PAUL_AEG-7.3.679",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.679/.codex/sessions/2026/04/28/rollout-2026-04-28T18-19-10-019dd4e3-2989-7bf1-8f21-6f69986f6d31.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 22372,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3143,
+          "reasoning_output_tokens": 1839,
+          "total_tokens": 25515
+        },
+        "total_token_usage": {
+          "input_tokens": 22372,
+          "cached_input_tokens": 14080,
+          "output_tokens": 3143,
+          "reasoning_output_tokens": 1839,
+          "total_tokens": 25515
+        }
+      }
+    },
+    {
+      "source_id": "PAUL_AEG-7.3.680",
+      "safe_id": "PAUL_AEG-7.3.680",
+      "usage": {
+        "rollout": "outputs/vocab_entries_v3/paul_full_v3/_codex_home/PAUL_AEG-7.3.680/.codex/sessions/2026/04/28/rollout-2026-04-28T18-19-46-019dd4e3-b5e5-7370-8500-cdf4b1158c66.jsonl",
+        "start_secondary_used_percent": 3.0,
+        "end_secondary_used_percent": 3.0,
+        "last_token_usage": {
+          "input_tokens": 26250,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2845,
+          "reasoning_output_tokens": 1647,
+          "total_tokens": 29095
+        },
+        "total_token_usage": {
+          "input_tokens": 26250,
+          "cached_input_tokens": 14592,
+          "output_tokens": 2845,
+          "reasoning_output_tokens": 1647,
+          "total_tokens": 29095
+        }
+      }
+    }
+  ],
+  "totals": {
+    "input_tokens": 4128137,
+    "cached_input_tokens": 1643520,
+    "output_tokens": 502177,
+    "reasoning_output_tokens": 295623,
+    "total_tokens": 4630314
+  },
+  "secondary_used_percent": {
+    "start_min": 0.0,
+    "end_max": 3.0
+  }
+}

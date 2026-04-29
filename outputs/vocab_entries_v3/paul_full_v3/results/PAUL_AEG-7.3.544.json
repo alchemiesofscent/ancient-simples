@@ -1,0 +1,143 @@
+{
+  "source_id": "PAUL_AEG-7.3.544",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σησαμοειδοῦς τοῦ λευκοῦ",
+      "normalized": "σησαμοειδους του λευκου",
+      "lemma_gr": "σησαμοειδές λευκόν",
+      "lemma_normalized": "σησαμοειδες λευκον",
+      "is_multiword": true,
+      "head_lemma_normalized": "σησαμοειδες",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Σησαμοειδοῦς",
+      "normalized": "σησαμοειδους",
+      "lemma_gr": "σησαμοειδές",
+      "lemma_normalized": "σησαμοειδες",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ σπέρμα",
+      "normalized": "το σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "σησαμοειδες",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PROCESS",
+      "display": "θερμαίνειν",
+      "normalized": "θερμαινειν",
+      "lemma_gr": "θερμαίνειν",
+      "lemma_normalized": "θερμαινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σησαμοειδες",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "ῥύπτειν",
+      "normalized": "ρυπτειν",
+      "lemma_gr": "ῥύπτειν",
+      "lemma_normalized": "ρυπτειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σησαμοειδες",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "PROCESS",
+      "display": "ῥήσσειν",
+      "normalized": "ρησσειν",
+      "lemma_gr": "ῥήσσειν",
+      "lemma_normalized": "ρησσειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σησαμοειδες",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.68,
+      "lemma_confidence": 0.72
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει",
+      "evidence_normalized": "θερμαινει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σησαμοειδες",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.82
+    }
+  ]
+}

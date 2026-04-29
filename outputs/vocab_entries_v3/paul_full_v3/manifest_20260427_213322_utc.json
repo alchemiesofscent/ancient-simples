@@ -1,0 +1,2860 @@
+{
+  "run_id": "paul_full_v3",
+  "session_id": "20260427_213322_utc",
+  "csv": "data-workbench/entries_paul.csv",
+  "prompt": "docs/prompts/vocab_term_extractor_with_degrees_paul.md",
+  "schema": "/home/seanm/github/ancient-simples/schemas/vocab_term_extractor_with_degrees.schema.json",
+  "n_requested": 100000,
+  "n_selected": 407,
+  "jobs": [
+    {
+      "csv_line": 272,
+      "source_id": "PAUL_AEG-7.3.271",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.271.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.271.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.271.txt"
+    },
+    {
+      "csv_line": 276,
+      "source_id": "PAUL_AEG-7.3.275",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.275.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.275.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.275.txt"
+    },
+    {
+      "csv_line": 277,
+      "source_id": "PAUL_AEG-7.3.276",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.276.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.276.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.276.txt"
+    },
+    {
+      "csv_line": 278,
+      "source_id": "PAUL_AEG-7.3.277",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.277.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.277.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.277.txt"
+    },
+    {
+      "csv_line": 279,
+      "source_id": "PAUL_AEG-7.3.278",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.278.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.278.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.278.txt"
+    },
+    {
+      "csv_line": 280,
+      "source_id": "PAUL_AEG-7.3.279",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.279.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.279.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.279.txt"
+    },
+    {
+      "csv_line": 281,
+      "source_id": "PAUL_AEG-7.3.280",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.280.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.280.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.280.txt"
+    },
+    {
+      "csv_line": 282,
+      "source_id": "PAUL_AEG-7.3.281",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.281.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.281.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.281.txt"
+    },
+    {
+      "csv_line": 283,
+      "source_id": "PAUL_AEG-7.3.282",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.282.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.282.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.282.txt"
+    },
+    {
+      "csv_line": 284,
+      "source_id": "PAUL_AEG-7.3.283",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.283.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.283.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.283.txt"
+    },
+    {
+      "csv_line": 285,
+      "source_id": "PAUL_AEG-7.3.284",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.284.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.284.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.284.txt"
+    },
+    {
+      "csv_line": 286,
+      "source_id": "PAUL_AEG-7.3.285",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.285.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.285.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.285.txt"
+    },
+    {
+      "csv_line": 287,
+      "source_id": "PAUL_AEG-7.3.286",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.286.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.286.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.286.txt"
+    },
+    {
+      "csv_line": 288,
+      "source_id": "PAUL_AEG-7.3.287",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.287.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.287.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.287.txt"
+    },
+    {
+      "csv_line": 289,
+      "source_id": "PAUL_AEG-7.3.288",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.288.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.288.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.288.txt"
+    },
+    {
+      "csv_line": 290,
+      "source_id": "PAUL_AEG-7.3.289",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.289.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.289.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.289.txt"
+    },
+    {
+      "csv_line": 291,
+      "source_id": "PAUL_AEG-7.3.290",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.290.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.290.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.290.txt"
+    },
+    {
+      "csv_line": 292,
+      "source_id": "PAUL_AEG-7.3.291",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.291.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.291.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.291.txt"
+    },
+    {
+      "csv_line": 293,
+      "source_id": "PAUL_AEG-7.3.292",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.292.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.292.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.292.txt"
+    },
+    {
+      "csv_line": 294,
+      "source_id": "PAUL_AEG-7.3.293",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.293.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.293.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.293.txt"
+    },
+    {
+      "csv_line": 295,
+      "source_id": "PAUL_AEG-7.3.294",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.294.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.294.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.294.txt"
+    },
+    {
+      "csv_line": 296,
+      "source_id": "PAUL_AEG-7.3.295",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.295.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.295.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.295.txt"
+    },
+    {
+      "csv_line": 297,
+      "source_id": "PAUL_AEG-7.3.296",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.296.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.296.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.296.txt"
+    },
+    {
+      "csv_line": 298,
+      "source_id": "PAUL_AEG-7.3.297",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.297.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.297.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.297.txt"
+    },
+    {
+      "csv_line": 299,
+      "source_id": "PAUL_AEG-7.3.298",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.298.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.298.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.298.txt"
+    },
+    {
+      "csv_line": 300,
+      "source_id": "PAUL_AEG-7.3.299",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.299.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.299.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.299.txt"
+    },
+    {
+      "csv_line": 301,
+      "source_id": "PAUL_AEG-7.3.300",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.300.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.300.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.300.txt"
+    },
+    {
+      "csv_line": 302,
+      "source_id": "PAUL_AEG-7.3.301",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.301.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.301.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.301.txt"
+    },
+    {
+      "csv_line": 303,
+      "source_id": "PAUL_AEG-7.3.302",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.302.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.302.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.302.txt"
+    },
+    {
+      "csv_line": 304,
+      "source_id": "PAUL_AEG-7.3.303",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.303.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.303.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.303.txt"
+    },
+    {
+      "csv_line": 305,
+      "source_id": "PAUL_AEG-7.3.304",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.304.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.304.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.304.txt"
+    },
+    {
+      "csv_line": 306,
+      "source_id": "PAUL_AEG-7.3.305",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.305.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.305.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.305.txt"
+    },
+    {
+      "csv_line": 307,
+      "source_id": "PAUL_AEG-7.3.306",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.306.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.306.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.306.txt"
+    },
+    {
+      "csv_line": 308,
+      "source_id": "PAUL_AEG-7.3.307",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.307.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.307.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.307.txt"
+    },
+    {
+      "csv_line": 309,
+      "source_id": "PAUL_AEG-7.3.308",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.308.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.308.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.308.txt"
+    },
+    {
+      "csv_line": 310,
+      "source_id": "PAUL_AEG-7.3.309",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.309.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.309.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.309.txt"
+    },
+    {
+      "csv_line": 311,
+      "source_id": "PAUL_AEG-7.3.310",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.310.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.310.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.310.txt"
+    },
+    {
+      "csv_line": 312,
+      "source_id": "PAUL_AEG-7.3.311",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.311.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.311.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.311.txt"
+    },
+    {
+      "csv_line": 313,
+      "source_id": "PAUL_AEG-7.3.312",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.312.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.312.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.312.txt"
+    },
+    {
+      "csv_line": 314,
+      "source_id": "PAUL_AEG-7.3.313",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.313.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.313.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.313.txt"
+    },
+    {
+      "csv_line": 315,
+      "source_id": "PAUL_AEG-7.3.314",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.314.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.314.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.314.txt"
+    },
+    {
+      "csv_line": 316,
+      "source_id": "PAUL_AEG-7.3.315",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.315.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.315.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.315.txt"
+    },
+    {
+      "csv_line": 317,
+      "source_id": "PAUL_AEG-7.3.316",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.316.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.316.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.316.txt"
+    },
+    {
+      "csv_line": 318,
+      "source_id": "PAUL_AEG-7.3.317",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.317.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.317.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.317.txt"
+    },
+    {
+      "csv_line": 319,
+      "source_id": "PAUL_AEG-7.3.318",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.318.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.318.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.318.txt"
+    },
+    {
+      "csv_line": 320,
+      "source_id": "PAUL_AEG-7.3.319",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.319.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.319.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.319.txt"
+    },
+    {
+      "csv_line": 321,
+      "source_id": "PAUL_AEG-7.3.320",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.320.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.320.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.320.txt"
+    },
+    {
+      "csv_line": 322,
+      "source_id": "PAUL_AEG-7.3.321",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.321.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.321.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.321.txt"
+    },
+    {
+      "csv_line": 323,
+      "source_id": "PAUL_AEG-7.3.322",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.322.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.322.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.322.txt"
+    },
+    {
+      "csv_line": 324,
+      "source_id": "PAUL_AEG-7.3.323",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.323.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.323.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.323.txt"
+    },
+    {
+      "csv_line": 325,
+      "source_id": "PAUL_AEG-7.3.324",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.324.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.324.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.324.txt"
+    },
+    {
+      "csv_line": 326,
+      "source_id": "PAUL_AEG-7.3.325",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.325.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.325.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.325.txt"
+    },
+    {
+      "csv_line": 327,
+      "source_id": "PAUL_AEG-7.3.326",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.326.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.326.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.326.txt"
+    },
+    {
+      "csv_line": 328,
+      "source_id": "PAUL_AEG-7.3.327",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.327.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.327.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.327.txt"
+    },
+    {
+      "csv_line": 329,
+      "source_id": "PAUL_AEG-7.3.328",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.328.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.328.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.328.txt"
+    },
+    {
+      "csv_line": 330,
+      "source_id": "PAUL_AEG-7.3.329",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.329.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.329.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.329.txt"
+    },
+    {
+      "csv_line": 331,
+      "source_id": "PAUL_AEG-7.3.330",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.330.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.330.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.330.txt"
+    },
+    {
+      "csv_line": 332,
+      "source_id": "PAUL_AEG-7.3.331",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.331.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.331.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.331.txt"
+    },
+    {
+      "csv_line": 333,
+      "source_id": "PAUL_AEG-7.3.332",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.332.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.332.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.332.txt"
+    },
+    {
+      "csv_line": 334,
+      "source_id": "PAUL_AEG-7.3.333",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.333.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.333.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.333.txt"
+    },
+    {
+      "csv_line": 335,
+      "source_id": "PAUL_AEG-7.3.334",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.334.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.334.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.334.txt"
+    },
+    {
+      "csv_line": 336,
+      "source_id": "PAUL_AEG-7.3.335",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.335.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.335.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.335.txt"
+    },
+    {
+      "csv_line": 337,
+      "source_id": "PAUL_AEG-7.3.336",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.336.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.336.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.336.txt"
+    },
+    {
+      "csv_line": 338,
+      "source_id": "PAUL_AEG-7.3.337",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.337.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.337.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.337.txt"
+    },
+    {
+      "csv_line": 339,
+      "source_id": "PAUL_AEG-7.3.338",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.338.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.338.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.338.txt"
+    },
+    {
+      "csv_line": 340,
+      "source_id": "PAUL_AEG-7.3.339",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.339.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.339.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.339.txt"
+    },
+    {
+      "csv_line": 341,
+      "source_id": "PAUL_AEG-7.3.340",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.340.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.340.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.340.txt"
+    },
+    {
+      "csv_line": 342,
+      "source_id": "PAUL_AEG-7.3.341",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.341.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.341.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.341.txt"
+    },
+    {
+      "csv_line": 343,
+      "source_id": "PAUL_AEG-7.3.342",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.342.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.342.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.342.txt"
+    },
+    {
+      "csv_line": 344,
+      "source_id": "PAUL_AEG-7.3.343",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.343.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.343.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.343.txt"
+    },
+    {
+      "csv_line": 345,
+      "source_id": "PAUL_AEG-7.3.344",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.344.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.344.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.344.txt"
+    },
+    {
+      "csv_line": 346,
+      "source_id": "PAUL_AEG-7.3.345",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.345.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.345.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.345.txt"
+    },
+    {
+      "csv_line": 347,
+      "source_id": "PAUL_AEG-7.3.346",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.346.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.346.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.346.txt"
+    },
+    {
+      "csv_line": 348,
+      "source_id": "PAUL_AEG-7.3.347",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.347.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.347.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.347.txt"
+    },
+    {
+      "csv_line": 349,
+      "source_id": "PAUL_AEG-7.3.348",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.348.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.348.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.348.txt"
+    },
+    {
+      "csv_line": 350,
+      "source_id": "PAUL_AEG-7.3.349",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.349.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.349.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.349.txt"
+    },
+    {
+      "csv_line": 351,
+      "source_id": "PAUL_AEG-7.3.350",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.350.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.350.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.350.txt"
+    },
+    {
+      "csv_line": 352,
+      "source_id": "PAUL_AEG-7.3.351",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.351.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.351.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.351.txt"
+    },
+    {
+      "csv_line": 353,
+      "source_id": "PAUL_AEG-7.3.352",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.352.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.352.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.352.txt"
+    },
+    {
+      "csv_line": 354,
+      "source_id": "PAUL_AEG-7.3.353",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.353.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.353.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.353.txt"
+    },
+    {
+      "csv_line": 355,
+      "source_id": "PAUL_AEG-7.3.354",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.354.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.354.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.354.txt"
+    },
+    {
+      "csv_line": 356,
+      "source_id": "PAUL_AEG-7.3.355",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.355.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.355.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.355.txt"
+    },
+    {
+      "csv_line": 357,
+      "source_id": "PAUL_AEG-7.3.356",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.356.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.356.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.356.txt"
+    },
+    {
+      "csv_line": 358,
+      "source_id": "PAUL_AEG-7.3.357",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.357.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.357.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.357.txt"
+    },
+    {
+      "csv_line": 359,
+      "source_id": "PAUL_AEG-7.3.358",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.358.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.358.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.358.txt"
+    },
+    {
+      "csv_line": 360,
+      "source_id": "PAUL_AEG-7.3.359",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.359.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.359.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.359.txt"
+    },
+    {
+      "csv_line": 361,
+      "source_id": "PAUL_AEG-7.3.360",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.360.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.360.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.360.txt"
+    },
+    {
+      "csv_line": 362,
+      "source_id": "PAUL_AEG-7.3.361",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.361.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.361.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.361.txt"
+    },
+    {
+      "csv_line": 363,
+      "source_id": "PAUL_AEG-7.3.362",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.362.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.362.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.362.txt"
+    },
+    {
+      "csv_line": 364,
+      "source_id": "PAUL_AEG-7.3.363",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.363.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.363.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.363.txt"
+    },
+    {
+      "csv_line": 365,
+      "source_id": "PAUL_AEG-7.3.364",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.364.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.364.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.364.txt"
+    },
+    {
+      "csv_line": 366,
+      "source_id": "PAUL_AEG-7.3.365",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.365.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.365.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.365.txt"
+    },
+    {
+      "csv_line": 367,
+      "source_id": "PAUL_AEG-7.3.366",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.366.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.366.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.366.txt"
+    },
+    {
+      "csv_line": 368,
+      "source_id": "PAUL_AEG-7.3.367",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.367.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.367.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.367.txt"
+    },
+    {
+      "csv_line": 369,
+      "source_id": "PAUL_AEG-7.3.368",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.368.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.368.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.368.txt"
+    },
+    {
+      "csv_line": 370,
+      "source_id": "PAUL_AEG-7.3.369",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.369.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.369.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.369.txt"
+    },
+    {
+      "csv_line": 371,
+      "source_id": "PAUL_AEG-7.3.370",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.370.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.370.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.370.txt"
+    },
+    {
+      "csv_line": 372,
+      "source_id": "PAUL_AEG-7.3.371",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.371.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.371.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.371.txt"
+    },
+    {
+      "csv_line": 373,
+      "source_id": "PAUL_AEG-7.3.372",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.372.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.372.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.372.txt"
+    },
+    {
+      "csv_line": 374,
+      "source_id": "PAUL_AEG-7.3.373",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.373.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.373.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.373.txt"
+    },
+    {
+      "csv_line": 375,
+      "source_id": "PAUL_AEG-7.3.374",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.374.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.374.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.374.txt"
+    },
+    {
+      "csv_line": 376,
+      "source_id": "PAUL_AEG-7.3.375",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.375.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.375.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.375.txt"
+    },
+    {
+      "csv_line": 377,
+      "source_id": "PAUL_AEG-7.3.376",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.376.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.376.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.376.txt"
+    },
+    {
+      "csv_line": 378,
+      "source_id": "PAUL_AEG-7.3.377",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.377.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.377.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.377.txt"
+    },
+    {
+      "csv_line": 379,
+      "source_id": "PAUL_AEG-7.3.378",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.378.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.378.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.378.txt"
+    },
+    {
+      "csv_line": 380,
+      "source_id": "PAUL_AEG-7.3.379",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.379.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.379.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.379.txt"
+    },
+    {
+      "csv_line": 381,
+      "source_id": "PAUL_AEG-7.3.380",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.380.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.380.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.380.txt"
+    },
+    {
+      "csv_line": 382,
+      "source_id": "PAUL_AEG-7.3.381",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.381.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.381.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.381.txt"
+    },
+    {
+      "csv_line": 383,
+      "source_id": "PAUL_AEG-7.3.382",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.382.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.382.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.382.txt"
+    },
+    {
+      "csv_line": 384,
+      "source_id": "PAUL_AEG-7.3.383",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.383.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.383.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.383.txt"
+    },
+    {
+      "csv_line": 385,
+      "source_id": "PAUL_AEG-7.3.384",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.384.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.384.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.384.txt"
+    },
+    {
+      "csv_line": 386,
+      "source_id": "PAUL_AEG-7.3.385",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.385.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.385.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.385.txt"
+    },
+    {
+      "csv_line": 387,
+      "source_id": "PAUL_AEG-7.3.386",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.386.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.386.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.386.txt"
+    },
+    {
+      "csv_line": 388,
+      "source_id": "PAUL_AEG-7.3.387",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.387.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.387.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.387.txt"
+    },
+    {
+      "csv_line": 389,
+      "source_id": "PAUL_AEG-7.3.388",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.388.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.388.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.388.txt"
+    },
+    {
+      "csv_line": 390,
+      "source_id": "PAUL_AEG-7.3.389",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.389.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.389.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.389.txt"
+    },
+    {
+      "csv_line": 391,
+      "source_id": "PAUL_AEG-7.3.390",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.390.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.390.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.390.txt"
+    },
+    {
+      "csv_line": 392,
+      "source_id": "PAUL_AEG-7.3.391",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.391.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.391.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.391.txt"
+    },
+    {
+      "csv_line": 393,
+      "source_id": "PAUL_AEG-7.3.392",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.392.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.392.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.392.txt"
+    },
+    {
+      "csv_line": 394,
+      "source_id": "PAUL_AEG-7.3.393",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.393.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.393.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.393.txt"
+    },
+    {
+      "csv_line": 395,
+      "source_id": "PAUL_AEG-7.3.394",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.394.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.394.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.394.txt"
+    },
+    {
+      "csv_line": 396,
+      "source_id": "PAUL_AEG-7.3.395",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.395.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.395.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.395.txt"
+    },
+    {
+      "csv_line": 397,
+      "source_id": "PAUL_AEG-7.3.396",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.396.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.396.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.396.txt"
+    },
+    {
+      "csv_line": 398,
+      "source_id": "PAUL_AEG-7.3.397",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.397.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.397.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.397.txt"
+    },
+    {
+      "csv_line": 399,
+      "source_id": "PAUL_AEG-7.3.398",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.398.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.398.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.398.txt"
+    },
+    {
+      "csv_line": 400,
+      "source_id": "PAUL_AEG-7.3.399",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.399.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.399.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.399.txt"
+    },
+    {
+      "csv_line": 401,
+      "source_id": "PAUL_AEG-7.3.400",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.400.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.400.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.400.txt"
+    },
+    {
+      "csv_line": 402,
+      "source_id": "PAUL_AEG-7.3.401",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.401.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.401.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.401.txt"
+    },
+    {
+      "csv_line": 403,
+      "source_id": "PAUL_AEG-7.3.402",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.402.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.402.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.402.txt"
+    },
+    {
+      "csv_line": 404,
+      "source_id": "PAUL_AEG-7.3.403",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.403.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.403.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.403.txt"
+    },
+    {
+      "csv_line": 405,
+      "source_id": "PAUL_AEG-7.3.404",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.404.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.404.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.404.txt"
+    },
+    {
+      "csv_line": 406,
+      "source_id": "PAUL_AEG-7.3.405",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.405.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.405.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.405.txt"
+    },
+    {
+      "csv_line": 407,
+      "source_id": "PAUL_AEG-7.3.406",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.406.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.406.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.406.txt"
+    },
+    {
+      "csv_line": 408,
+      "source_id": "PAUL_AEG-7.3.407",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.407.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.407.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.407.txt"
+    },
+    {
+      "csv_line": 409,
+      "source_id": "PAUL_AEG-7.3.408",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.408.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.408.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.408.txt"
+    },
+    {
+      "csv_line": 410,
+      "source_id": "PAUL_AEG-7.3.409",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.409.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.409.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.409.txt"
+    },
+    {
+      "csv_line": 411,
+      "source_id": "PAUL_AEG-7.3.410",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.410.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.410.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.410.txt"
+    },
+    {
+      "csv_line": 412,
+      "source_id": "PAUL_AEG-7.3.411",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.411.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.411.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.411.txt"
+    },
+    {
+      "csv_line": 413,
+      "source_id": "PAUL_AEG-7.3.412",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.412.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.412.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.412.txt"
+    },
+    {
+      "csv_line": 414,
+      "source_id": "PAUL_AEG-7.3.413",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.413.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.413.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.413.txt"
+    },
+    {
+      "csv_line": 415,
+      "source_id": "PAUL_AEG-7.3.414",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.414.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.414.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.414.txt"
+    },
+    {
+      "csv_line": 416,
+      "source_id": "PAUL_AEG-7.3.415",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.415.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.415.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.415.txt"
+    },
+    {
+      "csv_line": 417,
+      "source_id": "PAUL_AEG-7.3.416",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.416.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.416.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.416.txt"
+    },
+    {
+      "csv_line": 418,
+      "source_id": "PAUL_AEG-7.3.417",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.417.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.417.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.417.txt"
+    },
+    {
+      "csv_line": 419,
+      "source_id": "PAUL_AEG-7.3.418",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.418.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.418.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.418.txt"
+    },
+    {
+      "csv_line": 420,
+      "source_id": "PAUL_AEG-7.3.419",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.419.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.419.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.419.txt"
+    },
+    {
+      "csv_line": 421,
+      "source_id": "PAUL_AEG-7.3.420",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.420.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.420.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.420.txt"
+    },
+    {
+      "csv_line": 422,
+      "source_id": "PAUL_AEG-7.3.421",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.421.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.421.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.421.txt"
+    },
+    {
+      "csv_line": 423,
+      "source_id": "PAUL_AEG-7.3.422",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.422.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.422.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.422.txt"
+    },
+    {
+      "csv_line": 424,
+      "source_id": "PAUL_AEG-7.3.423",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.423.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.423.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.423.txt"
+    },
+    {
+      "csv_line": 425,
+      "source_id": "PAUL_AEG-7.3.424",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.424.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.424.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.424.txt"
+    },
+    {
+      "csv_line": 426,
+      "source_id": "PAUL_AEG-7.3.425",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.425.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.425.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.425.txt"
+    },
+    {
+      "csv_line": 427,
+      "source_id": "PAUL_AEG-7.3.426",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.426.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.426.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.426.txt"
+    },
+    {
+      "csv_line": 428,
+      "source_id": "PAUL_AEG-7.3.427",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.427.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.427.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.427.txt"
+    },
+    {
+      "csv_line": 429,
+      "source_id": "PAUL_AEG-7.3.428",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.428.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.428.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.428.txt"
+    },
+    {
+      "csv_line": 430,
+      "source_id": "PAUL_AEG-7.3.429",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.429.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.429.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.429.txt"
+    },
+    {
+      "csv_line": 431,
+      "source_id": "PAUL_AEG-7.3.430",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.430.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.430.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.430.txt"
+    },
+    {
+      "csv_line": 432,
+      "source_id": "PAUL_AEG-7.3.431",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.431.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.431.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.431.txt"
+    },
+    {
+      "csv_line": 433,
+      "source_id": "PAUL_AEG-7.3.432",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.432.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.432.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.432.txt"
+    },
+    {
+      "csv_line": 434,
+      "source_id": "PAUL_AEG-7.3.433",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.433.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.433.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.433.txt"
+    },
+    {
+      "csv_line": 435,
+      "source_id": "PAUL_AEG-7.3.434",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.434.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.434.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.434.txt"
+    },
+    {
+      "csv_line": 436,
+      "source_id": "PAUL_AEG-7.3.435",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.435.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.435.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.435.txt"
+    },
+    {
+      "csv_line": 437,
+      "source_id": "PAUL_AEG-7.3.436",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.436.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.436.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.436.txt"
+    },
+    {
+      "csv_line": 438,
+      "source_id": "PAUL_AEG-7.3.437",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.437.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.437.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.437.txt"
+    },
+    {
+      "csv_line": 439,
+      "source_id": "PAUL_AEG-7.3.438",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.438.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.438.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.438.txt"
+    },
+    {
+      "csv_line": 440,
+      "source_id": "PAUL_AEG-7.3.439",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.439.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.439.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.439.txt"
+    },
+    {
+      "csv_line": 441,
+      "source_id": "PAUL_AEG-7.3.440",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.440.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.440.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.440.txt"
+    },
+    {
+      "csv_line": 442,
+      "source_id": "PAUL_AEG-7.3.441",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.441.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.441.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.441.txt"
+    },
+    {
+      "csv_line": 443,
+      "source_id": "PAUL_AEG-7.3.442",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.442.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.442.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.442.txt"
+    },
+    {
+      "csv_line": 444,
+      "source_id": "PAUL_AEG-7.3.443",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.443.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.443.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.443.txt"
+    },
+    {
+      "csv_line": 445,
+      "source_id": "PAUL_AEG-7.3.444",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.444.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.444.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.444.txt"
+    },
+    {
+      "csv_line": 446,
+      "source_id": "PAUL_AEG-7.3.445",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.445.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.445.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.445.txt"
+    },
+    {
+      "csv_line": 447,
+      "source_id": "PAUL_AEG-7.3.446",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.446.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.446.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.446.txt"
+    },
+    {
+      "csv_line": 448,
+      "source_id": "PAUL_AEG-7.3.447",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.447.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.447.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.447.txt"
+    },
+    {
+      "csv_line": 449,
+      "source_id": "PAUL_AEG-7.3.448",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.448.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.448.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.448.txt"
+    },
+    {
+      "csv_line": 450,
+      "source_id": "PAUL_AEG-7.3.449",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.449.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.449.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.449.txt"
+    },
+    {
+      "csv_line": 451,
+      "source_id": "PAUL_AEG-7.3.450",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.450.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.450.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.450.txt"
+    },
+    {
+      "csv_line": 452,
+      "source_id": "PAUL_AEG-7.3.451",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.451.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.451.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.451.txt"
+    },
+    {
+      "csv_line": 453,
+      "source_id": "PAUL_AEG-7.3.452",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.452.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.452.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.452.txt"
+    },
+    {
+      "csv_line": 454,
+      "source_id": "PAUL_AEG-7.3.453",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.453.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.453.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.453.txt"
+    },
+    {
+      "csv_line": 455,
+      "source_id": "PAUL_AEG-7.3.454",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.454.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.454.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.454.txt"
+    },
+    {
+      "csv_line": 456,
+      "source_id": "PAUL_AEG-7.3.455",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.455.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.455.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.455.txt"
+    },
+    {
+      "csv_line": 457,
+      "source_id": "PAUL_AEG-7.3.456",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.456.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.456.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.456.txt"
+    },
+    {
+      "csv_line": 458,
+      "source_id": "PAUL_AEG-7.3.457",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.457.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.457.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.457.txt"
+    },
+    {
+      "csv_line": 459,
+      "source_id": "PAUL_AEG-7.3.458",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.458.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.458.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.458.txt"
+    },
+    {
+      "csv_line": 460,
+      "source_id": "PAUL_AEG-7.3.459",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.459.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.459.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.459.txt"
+    },
+    {
+      "csv_line": 461,
+      "source_id": "PAUL_AEG-7.3.460",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.460.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.460.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.460.txt"
+    },
+    {
+      "csv_line": 462,
+      "source_id": "PAUL_AEG-7.3.461",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.461.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.461.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.461.txt"
+    },
+    {
+      "csv_line": 463,
+      "source_id": "PAUL_AEG-7.3.462",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.462.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.462.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.462.txt"
+    },
+    {
+      "csv_line": 464,
+      "source_id": "PAUL_AEG-7.3.463",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.463.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.463.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.463.txt"
+    },
+    {
+      "csv_line": 465,
+      "source_id": "PAUL_AEG-7.3.464",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.464.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.464.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.464.txt"
+    },
+    {
+      "csv_line": 466,
+      "source_id": "PAUL_AEG-7.3.465",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.465.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.465.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.465.txt"
+    },
+    {
+      "csv_line": 467,
+      "source_id": "PAUL_AEG-7.3.466",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.466.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.466.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.466.txt"
+    },
+    {
+      "csv_line": 468,
+      "source_id": "PAUL_AEG-7.3.467",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.467.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.467.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.467.txt"
+    },
+    {
+      "csv_line": 469,
+      "source_id": "PAUL_AEG-7.3.468",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.468.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.468.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.468.txt"
+    },
+    {
+      "csv_line": 470,
+      "source_id": "PAUL_AEG-7.3.469",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.469.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.469.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.469.txt"
+    },
+    {
+      "csv_line": 471,
+      "source_id": "PAUL_AEG-7.3.470",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.470.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.470.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.470.txt"
+    },
+    {
+      "csv_line": 472,
+      "source_id": "PAUL_AEG-7.3.471",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.471.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.471.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.471.txt"
+    },
+    {
+      "csv_line": 473,
+      "source_id": "PAUL_AEG-7.3.472",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.472.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.472.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.472.txt"
+    },
+    {
+      "csv_line": 474,
+      "source_id": "PAUL_AEG-7.3.473",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.473.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.473.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.473.txt"
+    },
+    {
+      "csv_line": 475,
+      "source_id": "PAUL_AEG-7.3.474",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.474.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.474.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.474.txt"
+    },
+    {
+      "csv_line": 476,
+      "source_id": "PAUL_AEG-7.3.475",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.475.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.475.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.475.txt"
+    },
+    {
+      "csv_line": 477,
+      "source_id": "PAUL_AEG-7.3.476",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.476.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.476.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.476.txt"
+    },
+    {
+      "csv_line": 478,
+      "source_id": "PAUL_AEG-7.3.477",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.477.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.477.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.477.txt"
+    },
+    {
+      "csv_line": 479,
+      "source_id": "PAUL_AEG-7.3.478",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.478.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.478.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.478.txt"
+    },
+    {
+      "csv_line": 480,
+      "source_id": "PAUL_AEG-7.3.479",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.479.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.479.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.479.txt"
+    },
+    {
+      "csv_line": 481,
+      "source_id": "PAUL_AEG-7.3.480",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.480.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.480.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.480.txt"
+    },
+    {
+      "csv_line": 482,
+      "source_id": "PAUL_AEG-7.3.481",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.481.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.481.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.481.txt"
+    },
+    {
+      "csv_line": 483,
+      "source_id": "PAUL_AEG-7.3.482",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.482.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.482.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.482.txt"
+    },
+    {
+      "csv_line": 484,
+      "source_id": "PAUL_AEG-7.3.483",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.483.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.483.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.483.txt"
+    },
+    {
+      "csv_line": 485,
+      "source_id": "PAUL_AEG-7.3.484",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.484.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.484.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.484.txt"
+    },
+    {
+      "csv_line": 486,
+      "source_id": "PAUL_AEG-7.3.485",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.485.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.485.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.485.txt"
+    },
+    {
+      "csv_line": 487,
+      "source_id": "PAUL_AEG-7.3.486",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.486.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.486.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.486.txt"
+    },
+    {
+      "csv_line": 488,
+      "source_id": "PAUL_AEG-7.3.487",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.487.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.487.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.487.txt"
+    },
+    {
+      "csv_line": 489,
+      "source_id": "PAUL_AEG-7.3.488",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.488.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.488.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.488.txt"
+    },
+    {
+      "csv_line": 490,
+      "source_id": "PAUL_AEG-7.3.489",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.489.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.489.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.489.txt"
+    },
+    {
+      "csv_line": 491,
+      "source_id": "PAUL_AEG-7.3.490",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.490.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.490.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.490.txt"
+    },
+    {
+      "csv_line": 492,
+      "source_id": "PAUL_AEG-7.3.491",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.491.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.491.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.491.txt"
+    },
+    {
+      "csv_line": 493,
+      "source_id": "PAUL_AEG-7.3.492",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.492.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.492.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.492.txt"
+    },
+    {
+      "csv_line": 494,
+      "source_id": "PAUL_AEG-7.3.493",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.493.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.493.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.493.txt"
+    },
+    {
+      "csv_line": 495,
+      "source_id": "PAUL_AEG-7.3.494",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.494.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.494.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.494.txt"
+    },
+    {
+      "csv_line": 496,
+      "source_id": "PAUL_AEG-7.3.495",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.495.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.495.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.495.txt"
+    },
+    {
+      "csv_line": 497,
+      "source_id": "PAUL_AEG-7.3.496",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.496.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.496.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.496.txt"
+    },
+    {
+      "csv_line": 498,
+      "source_id": "PAUL_AEG-7.3.497",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.497.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.497.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.497.txt"
+    },
+    {
+      "csv_line": 499,
+      "source_id": "PAUL_AEG-7.3.498",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.498.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.498.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.498.txt"
+    },
+    {
+      "csv_line": 500,
+      "source_id": "PAUL_AEG-7.3.499",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.499.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.499.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.499.txt"
+    },
+    {
+      "csv_line": 501,
+      "source_id": "PAUL_AEG-7.3.500",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.500.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.500.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.500.txt"
+    },
+    {
+      "csv_line": 502,
+      "source_id": "PAUL_AEG-7.3.501",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.501.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.501.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.501.txt"
+    },
+    {
+      "csv_line": 503,
+      "source_id": "PAUL_AEG-7.3.502",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.502.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.502.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.502.txt"
+    },
+    {
+      "csv_line": 504,
+      "source_id": "PAUL_AEG-7.3.503",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.503.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.503.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.503.txt"
+    },
+    {
+      "csv_line": 505,
+      "source_id": "PAUL_AEG-7.3.504",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.504.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.504.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.504.txt"
+    },
+    {
+      "csv_line": 506,
+      "source_id": "PAUL_AEG-7.3.505",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.505.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.505.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.505.txt"
+    },
+    {
+      "csv_line": 507,
+      "source_id": "PAUL_AEG-7.3.506",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.506.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.506.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.506.txt"
+    },
+    {
+      "csv_line": 508,
+      "source_id": "PAUL_AEG-7.3.507",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.507.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.507.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.507.txt"
+    },
+    {
+      "csv_line": 509,
+      "source_id": "PAUL_AEG-7.3.508",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.508.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.508.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.508.txt"
+    },
+    {
+      "csv_line": 510,
+      "source_id": "PAUL_AEG-7.3.509",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.509.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.509.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.509.txt"
+    },
+    {
+      "csv_line": 511,
+      "source_id": "PAUL_AEG-7.3.510",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.510.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.510.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.510.txt"
+    },
+    {
+      "csv_line": 512,
+      "source_id": "PAUL_AEG-7.3.511",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.511.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.511.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.511.txt"
+    },
+    {
+      "csv_line": 513,
+      "source_id": "PAUL_AEG-7.3.512",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.512.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.512.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.512.txt"
+    },
+    {
+      "csv_line": 514,
+      "source_id": "PAUL_AEG-7.3.513",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.513.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.513.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.513.txt"
+    },
+    {
+      "csv_line": 515,
+      "source_id": "PAUL_AEG-7.3.514",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.514.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.514.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.514.txt"
+    },
+    {
+      "csv_line": 516,
+      "source_id": "PAUL_AEG-7.3.515",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.515.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.515.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.515.txt"
+    },
+    {
+      "csv_line": 517,
+      "source_id": "PAUL_AEG-7.3.516",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.516.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.516.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.516.txt"
+    },
+    {
+      "csv_line": 518,
+      "source_id": "PAUL_AEG-7.3.517",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.517.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.517.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.517.txt"
+    },
+    {
+      "csv_line": 519,
+      "source_id": "PAUL_AEG-7.3.518",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.518.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.518.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.518.txt"
+    },
+    {
+      "csv_line": 520,
+      "source_id": "PAUL_AEG-7.3.519",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.519.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.519.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.519.txt"
+    },
+    {
+      "csv_line": 521,
+      "source_id": "PAUL_AEG-7.3.520",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.520.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.520.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.520.txt"
+    },
+    {
+      "csv_line": 522,
+      "source_id": "PAUL_AEG-7.3.521",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.521.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.521.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.521.txt"
+    },
+    {
+      "csv_line": 523,
+      "source_id": "PAUL_AEG-7.3.522",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.522.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.522.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.522.txt"
+    },
+    {
+      "csv_line": 524,
+      "source_id": "PAUL_AEG-7.3.523",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.523.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.523.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.523.txt"
+    },
+    {
+      "csv_line": 525,
+      "source_id": "PAUL_AEG-7.3.524",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.524.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.524.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.524.txt"
+    },
+    {
+      "csv_line": 526,
+      "source_id": "PAUL_AEG-7.3.525",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.525.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.525.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.525.txt"
+    },
+    {
+      "csv_line": 527,
+      "source_id": "PAUL_AEG-7.3.526",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.526.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.526.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.526.txt"
+    },
+    {
+      "csv_line": 528,
+      "source_id": "PAUL_AEG-7.3.527",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.527.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.527.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.527.txt"
+    },
+    {
+      "csv_line": 529,
+      "source_id": "PAUL_AEG-7.3.528",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.528.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.528.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.528.txt"
+    },
+    {
+      "csv_line": 530,
+      "source_id": "PAUL_AEG-7.3.529",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.529.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.529.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.529.txt"
+    },
+    {
+      "csv_line": 531,
+      "source_id": "PAUL_AEG-7.3.530",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.530.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.530.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.530.txt"
+    },
+    {
+      "csv_line": 532,
+      "source_id": "PAUL_AEG-7.3.531",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.531.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.531.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.531.txt"
+    },
+    {
+      "csv_line": 533,
+      "source_id": "PAUL_AEG-7.3.532",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.532.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.532.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.532.txt"
+    },
+    {
+      "csv_line": 534,
+      "source_id": "PAUL_AEG-7.3.533",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.533.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.533.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.533.txt"
+    },
+    {
+      "csv_line": 535,
+      "source_id": "PAUL_AEG-7.3.534",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.534.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.534.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.534.txt"
+    },
+    {
+      "csv_line": 536,
+      "source_id": "PAUL_AEG-7.3.535",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.535.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.535.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.535.txt"
+    },
+    {
+      "csv_line": 537,
+      "source_id": "PAUL_AEG-7.3.536",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.536.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.536.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.536.txt"
+    },
+    {
+      "csv_line": 538,
+      "source_id": "PAUL_AEG-7.3.537",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.537.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.537.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.537.txt"
+    },
+    {
+      "csv_line": 539,
+      "source_id": "PAUL_AEG-7.3.538",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.538.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.538.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.538.txt"
+    },
+    {
+      "csv_line": 540,
+      "source_id": "PAUL_AEG-7.3.539",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.539.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.539.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.539.txt"
+    },
+    {
+      "csv_line": 541,
+      "source_id": "PAUL_AEG-7.3.540",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.540.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.540.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.540.txt"
+    },
+    {
+      "csv_line": 542,
+      "source_id": "PAUL_AEG-7.3.541",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.541.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.541.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.541.txt"
+    },
+    {
+      "csv_line": 543,
+      "source_id": "PAUL_AEG-7.3.542",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.542.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.542.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.542.txt"
+    },
+    {
+      "csv_line": 544,
+      "source_id": "PAUL_AEG-7.3.543",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.543.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.543.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.543.txt"
+    },
+    {
+      "csv_line": 545,
+      "source_id": "PAUL_AEG-7.3.544",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.544.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.544.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.544.txt"
+    },
+    {
+      "csv_line": 546,
+      "source_id": "PAUL_AEG-7.3.545",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.545.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.545.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.545.txt"
+    },
+    {
+      "csv_line": 547,
+      "source_id": "PAUL_AEG-7.3.546",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.546.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.546.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.546.txt"
+    },
+    {
+      "csv_line": 548,
+      "source_id": "PAUL_AEG-7.3.547",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.547.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.547.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.547.txt"
+    },
+    {
+      "csv_line": 549,
+      "source_id": "PAUL_AEG-7.3.548",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.548.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.548.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.548.txt"
+    },
+    {
+      "csv_line": 550,
+      "source_id": "PAUL_AEG-7.3.549",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.549.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.549.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.549.txt"
+    },
+    {
+      "csv_line": 551,
+      "source_id": "PAUL_AEG-7.3.550",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.550.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.550.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.550.txt"
+    },
+    {
+      "csv_line": 552,
+      "source_id": "PAUL_AEG-7.3.551",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.551.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.551.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.551.txt"
+    },
+    {
+      "csv_line": 553,
+      "source_id": "PAUL_AEG-7.3.552",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.552.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.552.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.552.txt"
+    },
+    {
+      "csv_line": 554,
+      "source_id": "PAUL_AEG-7.3.553",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.553.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.553.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.553.txt"
+    },
+    {
+      "csv_line": 555,
+      "source_id": "PAUL_AEG-7.3.554",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.554.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.554.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.554.txt"
+    },
+    {
+      "csv_line": 556,
+      "source_id": "PAUL_AEG-7.3.555",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.555.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.555.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.555.txt"
+    },
+    {
+      "csv_line": 557,
+      "source_id": "PAUL_AEG-7.3.556",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.556.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.556.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.556.txt"
+    },
+    {
+      "csv_line": 558,
+      "source_id": "PAUL_AEG-7.3.557",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.557.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.557.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.557.txt"
+    },
+    {
+      "csv_line": 559,
+      "source_id": "PAUL_AEG-7.3.558",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.558.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.558.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.558.txt"
+    },
+    {
+      "csv_line": 560,
+      "source_id": "PAUL_AEG-7.3.559",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.559.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.559.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.559.txt"
+    },
+    {
+      "csv_line": 561,
+      "source_id": "PAUL_AEG-7.3.560",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.560.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.560.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.560.txt"
+    },
+    {
+      "csv_line": 562,
+      "source_id": "PAUL_AEG-7.3.561",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.561.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.561.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.561.txt"
+    },
+    {
+      "csv_line": 563,
+      "source_id": "PAUL_AEG-7.3.562",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.562.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.562.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.562.txt"
+    },
+    {
+      "csv_line": 564,
+      "source_id": "PAUL_AEG-7.3.563",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.563.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.563.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.563.txt"
+    },
+    {
+      "csv_line": 565,
+      "source_id": "PAUL_AEG-7.3.564",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.564.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.564.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.564.txt"
+    },
+    {
+      "csv_line": 566,
+      "source_id": "PAUL_AEG-7.3.565",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.565.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.565.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.565.txt"
+    },
+    {
+      "csv_line": 567,
+      "source_id": "PAUL_AEG-7.3.566",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.566.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.566.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.566.txt"
+    },
+    {
+      "csv_line": 568,
+      "source_id": "PAUL_AEG-7.3.567",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.567.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.567.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.567.txt"
+    },
+    {
+      "csv_line": 569,
+      "source_id": "PAUL_AEG-7.3.568",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.568.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.568.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.568.txt"
+    },
+    {
+      "csv_line": 570,
+      "source_id": "PAUL_AEG-7.3.569",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.569.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.569.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.569.txt"
+    },
+    {
+      "csv_line": 571,
+      "source_id": "PAUL_AEG-7.3.570",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.570.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.570.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.570.txt"
+    },
+    {
+      "csv_line": 572,
+      "source_id": "PAUL_AEG-7.3.571",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.571.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.571.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.571.txt"
+    },
+    {
+      "csv_line": 573,
+      "source_id": "PAUL_AEG-7.3.572",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.572.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.572.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.572.txt"
+    },
+    {
+      "csv_line": 574,
+      "source_id": "PAUL_AEG-7.3.573",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.573.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.573.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.573.txt"
+    },
+    {
+      "csv_line": 575,
+      "source_id": "PAUL_AEG-7.3.574",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.574.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.574.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.574.txt"
+    },
+    {
+      "csv_line": 576,
+      "source_id": "PAUL_AEG-7.3.575",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.575.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.575.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.575.txt"
+    },
+    {
+      "csv_line": 577,
+      "source_id": "PAUL_AEG-7.3.576",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.576.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.576.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.576.txt"
+    },
+    {
+      "csv_line": 578,
+      "source_id": "PAUL_AEG-7.3.577",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.577.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.577.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.577.txt"
+    },
+    {
+      "csv_line": 579,
+      "source_id": "PAUL_AEG-7.3.578",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.578.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.578.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.578.txt"
+    },
+    {
+      "csv_line": 580,
+      "source_id": "PAUL_AEG-7.3.579",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.579.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.579.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.579.txt"
+    },
+    {
+      "csv_line": 581,
+      "source_id": "PAUL_AEG-7.3.580",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.580.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.580.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.580.txt"
+    },
+    {
+      "csv_line": 582,
+      "source_id": "PAUL_AEG-7.3.581",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.581.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.581.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.581.txt"
+    },
+    {
+      "csv_line": 583,
+      "source_id": "PAUL_AEG-7.3.582",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.582.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.582.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.582.txt"
+    },
+    {
+      "csv_line": 584,
+      "source_id": "PAUL_AEG-7.3.583",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.583.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.583.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.583.txt"
+    },
+    {
+      "csv_line": 585,
+      "source_id": "PAUL_AEG-7.3.584",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.584.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.584.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.584.txt"
+    },
+    {
+      "csv_line": 586,
+      "source_id": "PAUL_AEG-7.3.585",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.585.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.585.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.585.txt"
+    },
+    {
+      "csv_line": 587,
+      "source_id": "PAUL_AEG-7.3.586",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.586.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.586.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.586.txt"
+    },
+    {
+      "csv_line": 588,
+      "source_id": "PAUL_AEG-7.3.587",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.587.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.587.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.587.txt"
+    },
+    {
+      "csv_line": 589,
+      "source_id": "PAUL_AEG-7.3.588",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.588.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.588.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.588.txt"
+    },
+    {
+      "csv_line": 590,
+      "source_id": "PAUL_AEG-7.3.589",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.589.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.589.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.589.txt"
+    },
+    {
+      "csv_line": 591,
+      "source_id": "PAUL_AEG-7.3.590",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.590.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.590.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.590.txt"
+    },
+    {
+      "csv_line": 592,
+      "source_id": "PAUL_AEG-7.3.591",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.591.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.591.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.591.txt"
+    },
+    {
+      "csv_line": 593,
+      "source_id": "PAUL_AEG-7.3.592",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.592.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.592.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.592.txt"
+    },
+    {
+      "csv_line": 594,
+      "source_id": "PAUL_AEG-7.3.593",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.593.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.593.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.593.txt"
+    },
+    {
+      "csv_line": 595,
+      "source_id": "PAUL_AEG-7.3.594",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.594.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.594.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.594.txt"
+    },
+    {
+      "csv_line": 596,
+      "source_id": "PAUL_AEG-7.3.595",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.595.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.595.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.595.txt"
+    },
+    {
+      "csv_line": 597,
+      "source_id": "PAUL_AEG-7.3.596",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.596.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.596.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.596.txt"
+    },
+    {
+      "csv_line": 598,
+      "source_id": "PAUL_AEG-7.3.597",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.597.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.597.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.597.txt"
+    },
+    {
+      "csv_line": 599,
+      "source_id": "PAUL_AEG-7.3.598",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.598.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.598.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.598.txt"
+    },
+    {
+      "csv_line": 600,
+      "source_id": "PAUL_AEG-7.3.599",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.599.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.599.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.599.txt"
+    },
+    {
+      "csv_line": 601,
+      "source_id": "PAUL_AEG-7.3.600",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.600.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.600.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.600.txt"
+    },
+    {
+      "csv_line": 602,
+      "source_id": "PAUL_AEG-7.3.601",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.601.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.601.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.601.txt"
+    },
+    {
+      "csv_line": 603,
+      "source_id": "PAUL_AEG-7.3.602",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.602.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.602.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.602.txt"
+    },
+    {
+      "csv_line": 604,
+      "source_id": "PAUL_AEG-7.3.603",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.603.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.603.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.603.txt"
+    },
+    {
+      "csv_line": 605,
+      "source_id": "PAUL_AEG-7.3.604",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.604.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.604.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.604.txt"
+    },
+    {
+      "csv_line": 606,
+      "source_id": "PAUL_AEG-7.3.605",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.605.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.605.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.605.txt"
+    },
+    {
+      "csv_line": 607,
+      "source_id": "PAUL_AEG-7.3.606",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.606.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.606.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.606.txt"
+    },
+    {
+      "csv_line": 608,
+      "source_id": "PAUL_AEG-7.3.607",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.607.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.607.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.607.txt"
+    },
+    {
+      "csv_line": 609,
+      "source_id": "PAUL_AEG-7.3.608",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.608.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.608.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.608.txt"
+    },
+    {
+      "csv_line": 610,
+      "source_id": "PAUL_AEG-7.3.609",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.609.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.609.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.609.txt"
+    },
+    {
+      "csv_line": 611,
+      "source_id": "PAUL_AEG-7.3.610",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.610.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.610.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.610.txt"
+    },
+    {
+      "csv_line": 612,
+      "source_id": "PAUL_AEG-7.3.611",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.611.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.611.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.611.txt"
+    },
+    {
+      "csv_line": 613,
+      "source_id": "PAUL_AEG-7.3.612",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.612.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.612.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.612.txt"
+    },
+    {
+      "csv_line": 614,
+      "source_id": "PAUL_AEG-7.3.613",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.613.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.613.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.613.txt"
+    },
+    {
+      "csv_line": 615,
+      "source_id": "PAUL_AEG-7.3.614",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.614.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.614.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.614.txt"
+    },
+    {
+      "csv_line": 616,
+      "source_id": "PAUL_AEG-7.3.615",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.615.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.615.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.615.txt"
+    },
+    {
+      "csv_line": 617,
+      "source_id": "PAUL_AEG-7.3.616",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.616.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.616.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.616.txt"
+    },
+    {
+      "csv_line": 618,
+      "source_id": "PAUL_AEG-7.3.617",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.617.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.617.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.617.txt"
+    },
+    {
+      "csv_line": 619,
+      "source_id": "PAUL_AEG-7.3.618",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.618.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.618.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.618.txt"
+    },
+    {
+      "csv_line": 620,
+      "source_id": "PAUL_AEG-7.3.619",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.619.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.619.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.619.txt"
+    },
+    {
+      "csv_line": 621,
+      "source_id": "PAUL_AEG-7.3.620",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.620.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.620.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.620.txt"
+    },
+    {
+      "csv_line": 622,
+      "source_id": "PAUL_AEG-7.3.621",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.621.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.621.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.621.txt"
+    },
+    {
+      "csv_line": 623,
+      "source_id": "PAUL_AEG-7.3.622",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.622.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.622.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.622.txt"
+    },
+    {
+      "csv_line": 624,
+      "source_id": "PAUL_AEG-7.3.623",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.623.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.623.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.623.txt"
+    },
+    {
+      "csv_line": 625,
+      "source_id": "PAUL_AEG-7.3.624",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.624.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.624.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.624.txt"
+    },
+    {
+      "csv_line": 626,
+      "source_id": "PAUL_AEG-7.3.625",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.625.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.625.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.625.txt"
+    },
+    {
+      "csv_line": 627,
+      "source_id": "PAUL_AEG-7.3.626",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.626.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.626.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.626.txt"
+    },
+    {
+      "csv_line": 628,
+      "source_id": "PAUL_AEG-7.3.627",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.627.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.627.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.627.txt"
+    },
+    {
+      "csv_line": 629,
+      "source_id": "PAUL_AEG-7.3.628",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.628.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.628.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.628.txt"
+    },
+    {
+      "csv_line": 630,
+      "source_id": "PAUL_AEG-7.3.629",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.629.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.629.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.629.txt"
+    },
+    {
+      "csv_line": 631,
+      "source_id": "PAUL_AEG-7.3.630",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.630.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.630.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.630.txt"
+    },
+    {
+      "csv_line": 632,
+      "source_id": "PAUL_AEG-7.3.631",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.631.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.631.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.631.txt"
+    },
+    {
+      "csv_line": 633,
+      "source_id": "PAUL_AEG-7.3.632",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.632.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.632.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.632.txt"
+    },
+    {
+      "csv_line": 634,
+      "source_id": "PAUL_AEG-7.3.633",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.633.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.633.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.633.txt"
+    },
+    {
+      "csv_line": 635,
+      "source_id": "PAUL_AEG-7.3.634",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.634.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.634.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.634.txt"
+    },
+    {
+      "csv_line": 636,
+      "source_id": "PAUL_AEG-7.3.635",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.635.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.635.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.635.txt"
+    },
+    {
+      "csv_line": 637,
+      "source_id": "PAUL_AEG-7.3.636",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.636.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.636.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.636.txt"
+    },
+    {
+      "csv_line": 638,
+      "source_id": "PAUL_AEG-7.3.637",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.637.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.637.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.637.txt"
+    },
+    {
+      "csv_line": 639,
+      "source_id": "PAUL_AEG-7.3.638",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.638.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.638.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.638.txt"
+    },
+    {
+      "csv_line": 640,
+      "source_id": "PAUL_AEG-7.3.639",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.639.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.639.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.639.txt"
+    },
+    {
+      "csv_line": 641,
+      "source_id": "PAUL_AEG-7.3.640",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.640.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.640.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.640.txt"
+    },
+    {
+      "csv_line": 642,
+      "source_id": "PAUL_AEG-7.3.641",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.641.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.641.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.641.txt"
+    },
+    {
+      "csv_line": 643,
+      "source_id": "PAUL_AEG-7.3.642",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.642.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.642.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.642.txt"
+    },
+    {
+      "csv_line": 644,
+      "source_id": "PAUL_AEG-7.3.643",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.643.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.643.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.643.txt"
+    },
+    {
+      "csv_line": 645,
+      "source_id": "PAUL_AEG-7.3.644",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.644.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.644.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.644.txt"
+    },
+    {
+      "csv_line": 646,
+      "source_id": "PAUL_AEG-7.3.645",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.645.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.645.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.645.txt"
+    },
+    {
+      "csv_line": 647,
+      "source_id": "PAUL_AEG-7.3.646",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.646.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.646.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.646.txt"
+    },
+    {
+      "csv_line": 648,
+      "source_id": "PAUL_AEG-7.3.647",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.647.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.647.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.647.txt"
+    },
+    {
+      "csv_line": 649,
+      "source_id": "PAUL_AEG-7.3.648",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.648.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.648.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.648.txt"
+    },
+    {
+      "csv_line": 650,
+      "source_id": "PAUL_AEG-7.3.649",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.649.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.649.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.649.txt"
+    },
+    {
+      "csv_line": 651,
+      "source_id": "PAUL_AEG-7.3.650",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.650.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.650.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.650.txt"
+    },
+    {
+      "csv_line": 652,
+      "source_id": "PAUL_AEG-7.3.651",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.651.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.651.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.651.txt"
+    },
+    {
+      "csv_line": 653,
+      "source_id": "PAUL_AEG-7.3.652",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.652.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.652.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.652.txt"
+    },
+    {
+      "csv_line": 654,
+      "source_id": "PAUL_AEG-7.3.653",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.653.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.653.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.653.txt"
+    },
+    {
+      "csv_line": 655,
+      "source_id": "PAUL_AEG-7.3.654",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.654.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.654.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.654.txt"
+    },
+    {
+      "csv_line": 656,
+      "source_id": "PAUL_AEG-7.3.655",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.655.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.655.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.655.txt"
+    },
+    {
+      "csv_line": 657,
+      "source_id": "PAUL_AEG-7.3.656",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.656.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.656.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.656.txt"
+    },
+    {
+      "csv_line": 658,
+      "source_id": "PAUL_AEG-7.3.657",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.657.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.657.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.657.txt"
+    },
+    {
+      "csv_line": 659,
+      "source_id": "PAUL_AEG-7.3.658",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.658.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.658.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.658.txt"
+    },
+    {
+      "csv_line": 660,
+      "source_id": "PAUL_AEG-7.3.659",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.659.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.659.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.659.txt"
+    },
+    {
+      "csv_line": 661,
+      "source_id": "PAUL_AEG-7.3.660",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.660.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.660.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.660.txt"
+    },
+    {
+      "csv_line": 662,
+      "source_id": "PAUL_AEG-7.3.661",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.661.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.661.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.661.txt"
+    },
+    {
+      "csv_line": 663,
+      "source_id": "PAUL_AEG-7.3.662",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.662.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.662.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.662.txt"
+    },
+    {
+      "csv_line": 664,
+      "source_id": "PAUL_AEG-7.3.663",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.663.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.663.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.663.txt"
+    },
+    {
+      "csv_line": 665,
+      "source_id": "PAUL_AEG-7.3.664",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.664.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.664.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.664.txt"
+    },
+    {
+      "csv_line": 666,
+      "source_id": "PAUL_AEG-7.3.665",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.665.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.665.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.665.txt"
+    },
+    {
+      "csv_line": 667,
+      "source_id": "PAUL_AEG-7.3.666",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.666.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.666.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.666.txt"
+    },
+    {
+      "csv_line": 668,
+      "source_id": "PAUL_AEG-7.3.667",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.667.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.667.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.667.txt"
+    },
+    {
+      "csv_line": 669,
+      "source_id": "PAUL_AEG-7.3.668",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.668.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.668.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.668.txt"
+    },
+    {
+      "csv_line": 670,
+      "source_id": "PAUL_AEG-7.3.669",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.669.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.669.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.669.txt"
+    },
+    {
+      "csv_line": 671,
+      "source_id": "PAUL_AEG-7.3.670",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.670.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.670.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.670.txt"
+    },
+    {
+      "csv_line": 672,
+      "source_id": "PAUL_AEG-7.3.671",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.671.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.671.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.671.txt"
+    },
+    {
+      "csv_line": 673,
+      "source_id": "PAUL_AEG-7.3.672",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.672.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.672.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.672.txt"
+    },
+    {
+      "csv_line": 674,
+      "source_id": "PAUL_AEG-7.3.673",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.673.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.673.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.673.txt"
+    },
+    {
+      "csv_line": 675,
+      "source_id": "PAUL_AEG-7.3.674",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.674.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.674.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.674.txt"
+    },
+    {
+      "csv_line": 676,
+      "source_id": "PAUL_AEG-7.3.675",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.675.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.675.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.675.txt"
+    },
+    {
+      "csv_line": 677,
+      "source_id": "PAUL_AEG-7.3.676",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.676.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.676.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.676.txt"
+    },
+    {
+      "csv_line": 678,
+      "source_id": "PAUL_AEG-7.3.677",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.677.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.677.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.677.txt"
+    },
+    {
+      "csv_line": 679,
+      "source_id": "PAUL_AEG-7.3.678",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.678.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.678.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.678.txt"
+    },
+    {
+      "csv_line": 680,
+      "source_id": "PAUL_AEG-7.3.679",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.679.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.679.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.679.txt"
+    },
+    {
+      "csv_line": 681,
+      "source_id": "PAUL_AEG-7.3.680",
+      "job_prompt": "outputs/vocab_entries_v3/paul_full_v3/jobs/20260427_213322_utc/PAUL_AEG-7.3.680.prompt.md",
+      "result_json": "outputs/vocab_entries_v3/paul_full_v3/results/PAUL_AEG-7.3.680.json",
+      "error_txt": "outputs/vocab_entries_v3/paul_full_v3/errors/PAUL_AEG-7.3.680.txt"
+    }
+  ]
+}

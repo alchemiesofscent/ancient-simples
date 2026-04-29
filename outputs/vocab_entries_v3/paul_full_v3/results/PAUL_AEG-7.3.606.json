@@ -1,0 +1,166 @@
+{
+  "source_id": "PAUL_AEG-7.3.606",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Τέττιγας",
+      "normalized": "τεττιγας",
+      "lemma_gr": "τέττιξ",
+      "lemma_normalized": "τεττιξ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "PROCESS",
+      "display": "ξηράναντες",
+      "normalized": "ξηραναντες",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "τεττιξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πίνειν",
+      "normalized": "πινειν",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "τεττιξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πεπέρεως",
+      "normalized": "πεπερεως",
+      "lemma_gr": "πέπερι",
+      "lemma_normalized": "πεπερι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "κόκκων",
+      "normalized": "κοκκων",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "πεπερι",
+      "part_lemma_normalized": "κοκκος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.67,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PROCESS",
+      "display": "ὀπτῶντες",
+      "normalized": "οπτωντες",
+      "lemma_gr": "ὀπτᾶν",
+      "lemma_normalized": "οπταν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "τεττιξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "CONDITION",
+      "display": "κωλικοῖς",
+      "normalized": "κωλικοις",
+      "lemma_gr": "κωλικός",
+      "lemma_normalized": "κωλικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "κύστιν",
+      "normalized": "κυστιν",
+      "lemma_gr": "κύστις",
+      "lemma_normalized": "κυστις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

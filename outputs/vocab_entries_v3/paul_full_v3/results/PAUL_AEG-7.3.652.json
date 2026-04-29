@@ -1,0 +1,99 @@
+{
+  "source_id": "PAUL_AEG-7.3.652",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Χαλβάνη",
+      "normalized": "χαλβανη",
+      "lemma_gr": "χαλβάνη",
+      "lemma_normalized": "χαλβανη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "μαλακτικῆς",
+      "normalized": "μαλακτικης",
+      "lemma_gr": "μαλακτικός",
+      "lemma_normalized": "μαλακτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλβανη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικῆς",
+      "normalized": "διαφορητικης",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλβανη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.8
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "θερμαίνει μὲν πλησίον τῆς τρίτης ἀποστάσεως",
+      "evidence_normalized": "θερμαινει μεν πλησιον της τριτης αποστασεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλβανη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "ξηραίνει δὲ πλησίον τῆς δευτέρας",
+      "evidence_normalized": "ξηραινει δε πλησιον της δευτερας",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλβανη",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

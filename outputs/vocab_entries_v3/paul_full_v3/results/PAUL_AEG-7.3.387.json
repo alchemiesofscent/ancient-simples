@@ -1,0 +1,227 @@
+{
+  "source_id": "PAUL_AEG-7.3.387",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Μανδραγόρας",
+      "normalized": "μανδραγορας",
+      "lemma_gr": "μανδραγόρας",
+      "lemma_normalized": "μανδραγορας",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὰ μῆλα",
+      "normalized": "τα μηλα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μανδραγορας",
+      "part_lemma_normalized": "μηλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ φλοιὸς τῆς ῥίζης",
+      "normalized": "ο φλοιος της ριζης",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μανδραγορας",
+      "part_lemma_normalized": "φλοιος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ ἔνδον αὐτῆς",
+      "normalized": "το ενδον αυτης",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "μανδραγορας",
+      "part_lemma_normalized": "ενδον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "κωματώδη",
+      "normalized": "κωματωδη",
+      "lemma_gr": "κωματώδης",
+      "lemma_normalized": "κωματωδης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "μηλον"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἰσχυρότατος",
+      "normalized": "ισχυροτατος",
+      "lemma_gr": "ἰσχυρότατος",
+      "lemma_normalized": "ισχυροτατος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀσθενὲς",
+      "normalized": "ασθενες",
+      "lemma_gr": "ἀσθενής",
+      "lemma_normalized": "ασθενης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "ενδον"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.85
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τῆς τρίτης ἐστὶ τῶν ψυχόντων τάξεως",
+      "evidence_normalized": "της τριτης εστι των ψυχοντων ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "μανδραγορας",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "τὰ δὲ μῆλα αὐτοῦ καὶ θερμότητός τινος μετέχει",
+      "evidence_normalized": "τα δε μηλα αυτου και θερμοτητος τινος μετεχει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "μηλον"
+      },
+      "confidence": 0.75
+    },
+    {
+      "axis": "WET",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "τὰ δὲ μῆλα αὐτοῦ καὶ ὑγρότητος",
+      "evidence_normalized": "τα δε μηλα αυτου και υγροτητος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "μηλον"
+      },
+      "confidence": 0.74
+    },
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "extreme",
+      "hedge": "none",
+      "evidence_display": "τῆς ῥίζης δὲ ὁ φλοιὸς ἰσχυρότατος ὢν οὐ ψύχει μόνον",
+      "evidence_normalized": "της ριζης δε ο φλοιος ισχυροτατος ων ου ψυχει μονον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.86
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "extreme",
+      "hedge": "none",
+      "evidence_display": "ὁ φλοιὸς ἰσχυρότατος ὢν οὐ ψύχει μόνον ἀλλὰ καὶ ξηραίνει",
+      "evidence_normalized": "ο φλοιος ισχυροτατος ων ου ψυχει μονον αλλα και ξηραινει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "μανδραγορας",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.85
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "source_id": "PAUL_AEG-7.3.564",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σκίλλα",
+      "normalized": "σκιλλα",
+      "lemma_gr": "Σκίλλα",
+      "lemma_normalized": "σκιλλα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.96,
+      "lemma_confidence": 0.96
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "τμητικῆς δυνάμεως",
+      "normalized": "τμητικης δυναμεως",
+      "lemma_gr": "τμητικὴ δύναμις",
+      "lemma_normalized": "τμητικη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": "δυναμις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "PROCESS",
+      "display": "ὀπτὴν",
+      "normalized": "οπτην",
+      "lemma_gr": "ὀπτᾶν",
+      "lemma_normalized": "οπταν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "PROCESS",
+      "display": "ἑψηθεῖσαν",
+      "normalized": "εψηθεισαν",
+      "lemma_gr": "ἕψειν",
+      "lemma_normalized": "εψειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "λαμβάνειν",
+      "normalized": "λαμβανειν",
+      "lemma_gr": "λαμβάνειν",
+      "lemma_normalized": "λαμβανειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει δὲ καὶ ξηραίνει κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "θερμαινει δε και ξηραινει κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει δὲ καὶ ξηραίνει κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "θερμαινει δε και ξηραινει κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκιλλα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

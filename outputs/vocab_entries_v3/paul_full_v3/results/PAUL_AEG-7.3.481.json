@@ -1,0 +1,123 @@
+{
+  "source_id": "PAUL_AEG-7.3.481",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Περσαία",
+      "normalized": "περσαια",
+      "lemma_gr": "Περσαία",
+      "lemma_normalized": "περσαια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὰ φύλλα",
+      "normalized": "τα φυλλα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "περσαια",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PLACE",
+      "display": "Αἰγύπτιον",
+      "normalized": "αιγυπτιον",
+      "lemma_gr": "Αἴγυπτος",
+      "lemma_normalized": "αιγυπτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "περσαια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύφει",
+      "normalized": "στυφει",
+      "lemma_gr": "στύφειν",
+      "lemma_normalized": "στυφειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "περσαια",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "CONDITION",
+      "display": "αἱμορραγίαν",
+      "normalized": "αιμορραγιαν",
+      "lemma_gr": "αἱμορραγία",
+      "lemma_normalized": "αιμορραγια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.88
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τὰ φύλλα ξηραίνει",
+      "evidence_normalized": "τα φυλλα ξηραινει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "περσαια",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.86
+    }
+  ]
+}

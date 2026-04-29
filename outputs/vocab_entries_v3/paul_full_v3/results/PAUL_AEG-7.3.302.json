@@ -1,0 +1,363 @@
+{
+  "source_id": "PAUL_AEG-7.3.302",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Κίτριον",
+      "normalized": "κιτριον",
+      "lemma_gr": "κίτριον",
+      "lemma_normalized": "κιτριον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μῆλον Μηδικόν",
+      "normalized": "μηλον μηδικον",
+      "lemma_gr": "μῆλον Μηδικόν",
+      "lemma_normalized": "μηλον μηδικον",
+      "is_multiword": true,
+      "head_lemma_normalized": "μηλον",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ μὲν μέσον αὐτοῦ",
+      "normalized": "το μεν μεσον αυτου",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κιτριον",
+      "part_lemma_normalized": "μεσον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὁ δὲ φλοιὸς",
+      "normalized": "ο δε φλοιος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κιτριον",
+      "part_lemma_normalized": "φλοιος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δριμύς",
+      "normalized": "δριμυς",
+      "lemma_gr": "δριμύς",
+      "lemma_normalized": "δριμυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ἡ δὲ σὰρξ αὐτοῦ",
+      "normalized": "η δε σαρξ αυτου",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κιτριον",
+      "part_lemma_normalized": "σαρξ",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "παχύχυμός",
+      "normalized": "παχυχυμος",
+      "lemma_gr": "παχύχυμος",
+      "lemma_normalized": "παχυχυμος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "σαρξ"
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "φλεγμαντική",
+      "normalized": "φλεγμαντικη",
+      "lemma_gr": "φλεγμαντικός",
+      "lemma_normalized": "φλεγμαντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "σαρξ"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ δὲ σπέρμα",
+      "normalized": "το δε σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κιτριον",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PROCESS",
+      "display": "διαφορεῖ",
+      "normalized": "διαφορει",
+      "lemma_gr": "διαφορεῖν",
+      "lemma_normalized": "διαφορειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὰ φύλλα δὲ τοῦ δένδρου",
+      "normalized": "τα φυλλα δε του δενδρου",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "κιτριον",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικής",
+      "normalized": "ξηραντικης",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.66
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικής",
+      "normalized": "διαφορητικης",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.6
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τρίτης ἐστὶ τῶν ψυχόντων",
+      "evidence_normalized": "τριτης εστι των ψυχοντων",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "μεσον"
+      },
+      "confidence": 0.92
+    },
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τρίτης ἐστὶ ... ξηραινόντων τάξεως",
+      "evidence_normalized": "τριτης εστι ... ξηραινοντων ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "μεσον"
+      },
+      "confidence": 0.92
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ὁ δὲ φλοιὸς ξηραίνει μὲν κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "ο δε φλοιος ξηραινει μεν κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "οὐκέτι δὲ ψύχει",
+      "evidence_normalized": "ουκετι δε ψυχει",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "φλοιος"
+      },
+      "confidence": 0.65
+    },
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ἡ δὲ σὰρξ ... ψυχρά",
+      "evidence_normalized": "η δε σαρξ ... ψυχρα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "σαρξ"
+      },
+      "confidence": 0.8
+    },
+    {
+      "axis": "DRY",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "τὸ δὲ σπέρμα ... ξηραίνει κατὰ τὴν δευτέραν ἀπόστασιν",
+      "evidence_normalized": "το δε σπερμα ... ξηραινει κατα την δευτεραν αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "κιτριον",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "source_id": "PAUL_AEG-7.3.550",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σίκυος",
+      "normalized": "σικυος",
+      "lemma_gr": "σίκυος",
+      "lemma_normalized": "σικυος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.98,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Σίκυος ἐδώδιμος χλωρός",
+      "normalized": "σικυος εδωδιμος χλωρος",
+      "lemma_gr": "σίκυος ἐδώδιμος χλωρός",
+      "lemma_normalized": "σικυος εδωδιμος χλωρος",
+      "is_multiword": true,
+      "head_lemma_normalized": "σικυος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.93,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Σίκυος ξηρός",
+      "normalized": "σικυος ξηρος",
+      "lemma_gr": "σίκυος ξηρός",
+      "lemma_normalized": "σικυος ξηρος",
+      "is_multiword": true,
+      "head_lemma_normalized": "σικυος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ἡ σὰρξ αὐτοῦ",
+      "normalized": "η σαρξ αυτου",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "σικυος",
+      "part_lemma_normalized": "σαρξ",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὸ σπέρμα",
+      "normalized": "το σπερμα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "σικυος",
+      "part_lemma_normalized": "σπερμα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ἡ ῥίζα",
+      "normalized": "η ριζα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "σικυος",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτικόν",
+      "normalized": "ρυπτικον",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σικυος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "τμητικόν",
+      "normalized": "τμητικον",
+      "lemma_gr": "τμητικός",
+      "lemma_normalized": "τμητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σικυος",
+        "part_lemma_normalized": "σπερμα"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "PROCESS",
+      "display": "παραμυθεῖται",
+      "normalized": "παραμυθειται",
+      "lemma_gr": "παραμυθεῖσθαι",
+      "lemma_normalized": "παραμυθεισθαι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "σικυος",
+        "part_lemma_normalized": "σαρξ"
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "CONDITION",
+      "display": "φλεγμονάς",
+      "normalized": "φλεγμονας",
+      "lemma_gr": "φλεγμονή",
+      "lemma_normalized": "φλεγμονη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ζεούσας",
+      "normalized": "ζεουσας",
+      "lemma_gr": "ζέων",
+      "lemma_normalized": "ζεων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "PROCESS",
+      "display": "ῥύπτει",
+      "normalized": "ρυπτει",
+      "lemma_gr": "ῥύπτειν",
+      "lemma_normalized": "ρυπτειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος ξηρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "PROCESS",
+      "display": "ξηραίνει",
+      "normalized": "ξηραινει",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος ξηρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "PROCESS",
+      "display": "κινεῖ",
+      "normalized": "κινει",
+      "lemma_gr": "κινεῖν",
+      "lemma_normalized": "κινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.58,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οὖρα",
+      "normalized": "ουρα",
+      "lemma_gr": "οὖρον",
+      "lemma_normalized": "ουρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "PROCESS",
+      "display": "λαμπρύνει",
+      "normalized": "λαμπρυνει",
+      "lemma_gr": "λαμπρύνειν",
+      "lemma_normalized": "λαμπρυνειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.55,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "τὸ σῶμα",
+      "normalized": "το σωμα",
+      "lemma_gr": "σῶμα",
+      "lemma_normalized": "σωμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.8
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ψύχει τε καὶ ὑγραίνει κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "ψυχει τε και υγραινει κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος εδωδιμος χλωρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92
+    },
+    {
+      "axis": "WET",
+      "degree": 2,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ψύχει τε καὶ ὑγραίνει κατὰ τὴν δευτέραν τάξιν",
+      "evidence_normalized": "ψυχει τε και υγραινει κατα την δευτεραν ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος εδωδιμος χλωρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92
+    },
+    {
+      "axis": "DRY",
+      "degree": 1,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραίνει κατὰ τὴν πρώτην τάξιν",
+      "evidence_normalized": "ξηραινει κατα την πρωτην ταξιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σικυος ξηρος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88
+    }
+  ]
+}

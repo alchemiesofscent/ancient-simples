@@ -1,0 +1,459 @@
+{
+  "source_id": "PAUL_AEG-7.3.660",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Χαμαιλέοντος",
+      "normalized": "χαμαιλεοντος",
+      "lemma_gr": "χαμαιλέων",
+      "lemma_normalized": "χαμαιλεων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "Χαμαιλέοντος μέλανος",
+      "normalized": "χαμαιλεοντος μελανος",
+      "lemma_gr": "χαμαιλέων μέλας",
+      "lemma_normalized": "χαμαιλεων μελας",
+      "is_multiword": true,
+      "head_lemma_normalized": "χαμαιλεων",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ῥίζα χαμαιλέοντος μέλανος",
+      "normalized": "ριζα χαμαιλεοντος μελανος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "χαμαιλεων μελας",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ῥυπτική",
+      "normalized": "ρυπτικη",
+      "lemma_gr": "ῥυπτικός",
+      "lemma_normalized": "ρυπτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικὴ",
+      "normalized": "διαφορητικη",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "μαλακτικὴ",
+      "normalized": "μαλακτικη",
+      "lemma_gr": "μαλακτικός",
+      "lemma_normalized": "μαλακτικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "δέρμα",
+      "normalized": "δερμα",
+      "lemma_gr": "δέρμα",
+      "lemma_normalized": "δερμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.92,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "CONDITION",
+      "display": "ὄγκων",
+      "normalized": "ογκων",
+      "lemma_gr": "ὄγκος",
+      "lemma_normalized": "ογκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "φαγεδαινικά",
+      "normalized": "φαγεδαινικα",
+      "lemma_gr": "φαγέδαινα",
+      "lemma_normalized": "φαγεδαινα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "PREPARATION",
+      "display": "καταπλασθεῖσα",
+      "normalized": "καταπλασθεισα",
+      "lemma_gr": "κατάπλασμα",
+      "lemma_normalized": "καταπλασμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "εἴσω λαμβανομένη",
+      "normalized": "εισω λαμβανομενη",
+      "lemma_gr": "εἴσω λαμβάνειν",
+      "lemma_normalized": "εισω λαμβανειν",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δηλητηριώδης",
+      "normalized": "δηλητηριωδης",
+      "lemma_gr": "δηλητηριώδης",
+      "lemma_normalized": "δηλητηριωδης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "χαμαιλέοντος λευκοῦ",
+      "normalized": "χαμαιλεοντος λευκου",
+      "lemma_gr": "χαμαιλέων λευκός",
+      "lemma_normalized": "χαμαιλεων λευκος",
+      "is_multiword": true,
+      "head_lemma_normalized": "χαμαιλεων",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ῥίζα χαμαιλέοντος λευκοῦ",
+      "normalized": "ριζα χαμαιλεοντος λευκου",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "χαμαιλεων λευκος",
+      "part_lemma_normalized": "ριζα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.88,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "πικροτέρα",
+      "normalized": "πικροτερα",
+      "lemma_gr": "πικρός",
+      "lemma_normalized": "πικρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων λευκος",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.92
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οἴνου αὐστηροῦ",
+      "normalized": "οινου αυστηρου",
+      "lemma_gr": "οἶνος αὐστηρός",
+      "lemma_normalized": "οινος αυστηρος",
+      "is_multiword": true,
+      "head_lemma_normalized": "οινος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων λευκος",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οἴνου",
+      "normalized": "οινου",
+      "lemma_gr": "οἶνος",
+      "lemma_normalized": "οινος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "TOOL_CONTAINER",
+      "display": "ὀξυβάφου",
+      "normalized": "οξυβαφου",
+      "lemma_gr": "ὀξύβαφον",
+      "lemma_normalized": "οξυβαφον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πινομένη",
+      "normalized": "πινομενη",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων λευκος",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἕλμινθας",
+      "normalized": "ελμινθας",
+      "lemma_gr": "ἕλμις",
+      "lemma_normalized": "ελμις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων λευκος",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "CONDITION",
+      "display": "ὑδρωπικούς",
+      "normalized": "υδρωπικους",
+      "lemma_gr": "ὑδρωπικός",
+      "lemma_normalized": "υδρωπικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων λευκος",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.85
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "θερμαίνει καὶ ξηραίνει πλησίον τῆς τρίτης τάξεως",
+      "evidence_normalized": "θερμαινει και ξηραινει πλησιον της τριτης ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.86
+    },
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "approx",
+      "evidence_display": "θερμαίνει καὶ ξηραίνει πλησίον τῆς τρίτης τάξεως",
+      "evidence_normalized": "θερμαινει και ξηραινει πλησιον της τριτης ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "χαμαιλεων μελας",
+        "part_lemma_normalized": "ριζα"
+      },
+      "confidence": 0.86
+    }
+  ]
+}

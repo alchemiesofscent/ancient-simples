@@ -1,0 +1,266 @@
+{
+  "source_id": "PAUL_AEG-7.3.495",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Πνεύμων",
+      "normalized": "πνευμων",
+      "lemma_gr": "πνεύμων",
+      "lemma_normalized": "πνευμων",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πνεύμων ἄρνειος",
+      "normalized": "πνευμων αρνειος",
+      "lemma_gr": "πνεύμων ἄρνειος",
+      "lemma_normalized": "πνευμων αρνειος",
+      "is_multiword": true,
+      "head_lemma_normalized": "πνευμων",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πνεύμων χοίρειος",
+      "normalized": "πνευμων χοιρειος",
+      "lemma_gr": "πνεύμων χοίρειος",
+      "lemma_normalized": "πνευμων χοιρειος",
+      "is_multiword": true,
+      "head_lemma_normalized": "πνευμων",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πνεύμων ἀλώπεκος",
+      "normalized": "πνευμων αλωπεκος",
+      "lemma_gr": "πνεύμων ἀλώπηξ",
+      "lemma_normalized": "πνευμων αλωπηξ",
+      "is_multiword": true,
+      "head_lemma_normalized": "πνευμων",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πνεύμων θαλάσσιος",
+      "normalized": "πνευμων θαλασσιος",
+      "lemma_gr": "πνεύμων θαλάσσιος",
+      "lemma_normalized": "πνευμων θαλασσιος",
+      "is_multiword": true,
+      "head_lemma_normalized": "πνευμων",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "PROCESS",
+      "display": "σκελετευθείς",
+      "normalized": "σκελετευθεις",
+      "lemma_gr": "σκελετεύειν",
+      "lemma_normalized": "σκελετευειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων αλωπηξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.62,
+      "lemma_confidence": 0.5
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πίνοιτο",
+      "normalized": "πινοιτο",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων αλωπηξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "πρόσφατος",
+      "normalized": "προσφατος",
+      "lemma_gr": "πρόσφατος",
+      "lemma_normalized": "προσφατος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων θαλασσιος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεῖος",
+      "normalized": "λειος",
+      "lemma_gr": "λεῖος",
+      "lemma_normalized": "λειος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων θαλασσιος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "παρατρίμματα",
+      "normalized": "παρατριμματα",
+      "lemma_gr": "παράτριμμα",
+      "lemma_normalized": "παρατριμμα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἀσθματικούς",
+      "normalized": "ασθματικους",
+      "lemma_gr": "ἀσθματικός",
+      "lemma_normalized": "ασθματικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων αλωπηξ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "CONDITION",
+      "display": "ποδαγρικοὺς",
+      "normalized": "ποδαγρικους",
+      "lemma_gr": "ποδαγρικός",
+      "lemma_normalized": "ποδαγρικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων θαλασσιος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.83,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "CONDITION",
+      "display": "χιμεθλιῶντας",
+      "normalized": "χιμεθλιωντας",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "πνευμων θαλασσιος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.25
+    }
+  ],
+  "qualities": []
+}

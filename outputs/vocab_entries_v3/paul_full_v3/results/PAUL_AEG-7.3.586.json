@@ -1,0 +1,123 @@
+{
+  "source_id": "PAUL_AEG-7.3.586",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Στίμι",
+      "normalized": "στιμι",
+      "lemma_gr": "στίμι",
+      "lemma_normalized": "στιμι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στῦψιν",
+      "normalized": "στυψιν",
+      "lemma_gr": "στῦψις",
+      "lemma_normalized": "στυψις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "στιμι",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "PREPARATION",
+      "display": "κολλουρίοις",
+      "normalized": "κολλουριοις",
+      "lemma_gr": "κολλούριον",
+      "lemma_normalized": "κολλουριον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "PROCESS",
+      "display": "μίγνυται",
+      "normalized": "μιγνυται",
+      "lemma_gr": "μίγνυμι",
+      "lemma_normalized": "μιγνυμι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "στιμι",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "ὀφθαλμικοῖς",
+      "normalized": "οφθαλμικοις",
+      "lemma_gr": "ὀφθαλμικός",
+      "lemma_normalized": "οφθαλμικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "κολλουριον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.55,
+      "lemma_confidence": 0.55
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "πρὸς τῷ ξηραίνειν",
+      "evidence_normalized": "προς τω ξηραινειν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "στιμι",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85
+    }
+  ]
+}

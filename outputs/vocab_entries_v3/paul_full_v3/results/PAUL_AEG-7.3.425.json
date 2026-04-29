@@ -1,0 +1,59 @@
+{
+  "source_id": "PAUL_AEG-7.3.425",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Νᾶπυ",
+      "normalized": "ναπυ",
+      "lemma_gr": "νᾶπυ",
+      "lemma_normalized": "ναπυ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": 4,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει καὶ ξηραίνει κατὰ τὴν τετάρτην ἀπόστασιν",
+      "evidence_normalized": "θερμαινει και ξηραινει κατα την τεταρτην αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ναπυ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "DRY",
+      "degree": 4,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "θερμαίνει καὶ ξηραίνει κατὰ τὴν τετάρτην ἀπόστασιν",
+      "evidence_normalized": "θερμαινει και ξηραινει κατα την τεταρτην αποστασιν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "ναπυ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    }
+  ]
+}

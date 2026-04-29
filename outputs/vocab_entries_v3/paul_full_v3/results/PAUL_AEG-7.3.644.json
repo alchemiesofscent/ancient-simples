@@ -1,0 +1,266 @@
+{
+  "source_id": "PAUL_AEG-7.3.644",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Φιλύρας",
+      "normalized": "φιλυρας",
+      "lemma_gr": "φιλύρα",
+      "lemma_normalized": "φιλυρα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "Φιλύρας τοῦ δένδρου τὰ φύλλα",
+      "normalized": "φιλυρας του δενδρου τα φυλλα",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "φιλυρα",
+      "part_lemma_normalized": "φυλλον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἀγρίας ἐλαίας",
+      "normalized": "αγριας ελαιας",
+      "lemma_gr": "ἀγρία ἐλαία",
+      "lemma_normalized": "αγρια ελαια",
+      "is_multiword": true,
+      "head_lemma_normalized": "ελαια",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "ἐλαίας",
+      "normalized": "ελαιας",
+      "lemma_gr": "ἐλαία",
+      "lemma_normalized": "ελαια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στύφει",
+      "normalized": "στυφει",
+      "lemma_gr": "στύφειν",
+      "lemma_normalized": "στυφειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "φιλυρα",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἕλκη",
+      "normalized": "ελκη",
+      "lemma_gr": "ἕλκος",
+      "lemma_normalized": "ελκος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "στόματι",
+      "normalized": "στοματι",
+      "lemma_gr": "στόμα",
+      "lemma_normalized": "στομα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.73,
+      "lemma_confidence": 0.76
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ἀφεψήματος",
+      "normalized": "αφεψηματος",
+      "lemma_gr": "ἀφέψημα",
+      "lemma_normalized": "αφεψημα",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "φιλυρα",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.81,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "διαμασώμενα",
+      "normalized": "διαμασωμενα",
+      "lemma_gr": "διαμασάομαι",
+      "lemma_normalized": "διαμασαομαι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "φιλυρα",
+        "part_lemma_normalized": "φυλλον"
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.64
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "διακλυζομένου",
+      "normalized": "διακλυζομενου",
+      "lemma_gr": "διακλύζω",
+      "lemma_normalized": "διακλυζω",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "αφεψημα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πινόμενον",
+      "normalized": "πινομενον",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "αφεψημα",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "οὖρα",
+      "normalized": "ουρα",
+      "lemma_gr": "οὖρον",
+      "lemma_normalized": "ουρον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "καταμήνια",
+      "normalized": "καταμηνια",
+      "lemma_gr": "κατάμηνια",
+      "lemma_normalized": "καταμηνια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.55
+    }
+  ],
+  "qualities": []
+}

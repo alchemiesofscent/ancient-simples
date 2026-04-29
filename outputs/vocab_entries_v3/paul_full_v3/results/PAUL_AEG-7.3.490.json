@@ -1,0 +1,166 @@
+{
+  "source_id": "PAUL_AEG-7.3.490",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Πιτυίδες",
+      "normalized": "πιτυιδες",
+      "lemma_gr": "Πιτυίδες",
+      "lemma_normalized": "πιτυιδες",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.5
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πιτύων",
+      "normalized": "πιτυων",
+      "lemma_gr": "πίτυς",
+      "lemma_normalized": "πιτυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "καρπός",
+      "normalized": "καρπος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "πιτυς",
+      "part_lemma_normalized": "καρπος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "μικτῆς δυνάμεως",
+      "normalized": "μικτης δυναμεως",
+      "lemma_gr": "μικτὴ δύναμις",
+      "lemma_normalized": "μικτη δυναμις",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στυφοῦσης",
+      "normalized": "στυφουσης",
+      "lemma_gr": "στυφός",
+      "lemma_normalized": "στυφος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.55
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "δριμείας",
+      "normalized": "δριμειας",
+      "lemma_gr": "δριμύς",
+      "lemma_normalized": "δριμυς",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE_PART",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": "πιτυς",
+        "part_lemma_normalized": "καρπος"
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἀναπτύσεσι",
+      "normalized": "αναπτυσεσι",
+      "lemma_gr": "ἀνάπτυσις",
+      "lemma_normalized": "αναπτυσις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6,
+      "lemma_confidence": 0.45
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "θώρακος",
+      "normalized": "θωρακος",
+      "lemma_gr": "θώραξ",
+      "lemma_normalized": "θωραξ",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.7
+    }
+  ],
+  "qualities": []
+}

@@ -1,0 +1,106 @@
+{
+  "source_id": "PAUL_AEG-7.3.570",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Σκοροδόπρασον",
+      "normalized": "σκοροδοπρασον",
+      "lemma_gr": "σκοροδόπρασον",
+      "lemma_normalized": "σκοροδοπρασον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.97,
+      "lemma_confidence": 0.93
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "γεύσει",
+      "normalized": "γευσει",
+      "lemma_gr": "γεῦσις",
+      "lemma_normalized": "γευσις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκοροδοπρασον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "μικτόν",
+      "normalized": "μικτον",
+      "lemma_gr": "μικτός",
+      "lemma_normalized": "μικτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "σκοροδοπρασον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.86
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "σκορόδου",
+      "normalized": "σκοροδου",
+      "lemma_gr": "σκόροδον",
+      "lemma_normalized": "σκοροδον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "πράσου",
+      "normalized": "πρασου",
+      "lemma_gr": "πράσον",
+      "lemma_normalized": "πρασον",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.9
+    }
+  ],
+  "qualities": []
+}

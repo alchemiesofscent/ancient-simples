@@ -1,0 +1,115 @@
+{
+  "source_id": "PAUL_AEG-7.3.452",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Ὄξος",
+      "normalized": "οξος",
+      "lemma_gr": "ὄξος",
+      "lemma_normalized": "οξος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.99,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερῶν",
+      "normalized": "λεπτομερων",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οξος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικὸν",
+      "normalized": "ξηραντικον",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οξος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.88
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "COLD",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ψυχρᾶς καὶ θερμῆς … ἐπικρατεῖ δὲ τῆς θερμῆς ἡ ψυχρά",
+      "evidence_normalized": "ψυχρας και θερμης … επικρατει δε της θερμης η ψυχρα",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οξος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ψυχρᾶς καὶ θερμῆς",
+      "evidence_normalized": "ψυχρας και θερμης",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οξος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72
+    },
+    {
+      "axis": "DRY",
+      "degree": 3,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραντικὸν δὲ τῆς τρίτης ἐστὶ τάξεως",
+      "evidence_normalized": "ξηραντικον δε της τριτης εστι ταξεως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "οξος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.96
+    }
+  ]
+}

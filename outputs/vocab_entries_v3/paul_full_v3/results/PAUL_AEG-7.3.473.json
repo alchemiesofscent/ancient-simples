@@ -1,0 +1,123 @@
+{
+  "source_id": "PAUL_AEG-7.3.473",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Παρωνυχία",
+      "normalized": "παρωνυχια",
+      "lemma_gr": "παρωνυχία",
+      "lemma_normalized": "παρωνυχια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.76,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "CONDITION",
+      "display": "παρωνυχίας",
+      "normalized": "παρωνυχιας",
+      "lemma_gr": "παρωνυχία",
+      "lemma_normalized": "παρωνυχια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.74
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "λεπτομερής",
+      "normalized": "λεπτομερης",
+      "lemma_gr": "λεπτομερής",
+      "lemma_normalized": "λεπτομερης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "παρωνυχια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικὴ",
+      "normalized": "ξηραντικη",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "παρωνυχια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.52
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἄδηκτος",
+      "normalized": "αδηκτος",
+      "lemma_gr": "ἄδηκτος",
+      "lemma_normalized": "αδηκτος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "παρωνυχια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.62
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "δύναμις δὲ αὐτοῦ λεπτομερής τέ ἐστι καὶ ξηραντικὴ",
+      "evidence_normalized": "δυναμις δε αυτου λεπτομερης τε εστι και ξηραντικη",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "παρωνυχια",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82
+    }
+  ]
+}

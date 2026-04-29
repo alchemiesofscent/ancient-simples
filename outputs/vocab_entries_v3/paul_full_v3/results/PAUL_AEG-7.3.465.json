@@ -1,0 +1,523 @@
+{
+  "source_id": "PAUL_AEG-7.3.465",
+  "terms": [
+    {
+      "label": "PREPARATION",
+      "display": "Ὀστᾶ κεκαυμένα",
+      "normalized": "οστα κεκαυμενα",
+      "lemma_gr": "ὀστοῦν κεκαυμένον",
+      "lemma_normalized": "οστουν κεκαυμενον",
+      "is_multiword": true,
+      "head_lemma_normalized": "οστουν",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "τὰ τῶν ἀνθρώπων",
+      "normalized": "τα των ανθρωπων",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "ανθρωπος",
+      "part_lemma_normalized": "οστουν",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "διαφορητικῆς",
+      "normalized": "διαφορητικης",
+      "lemma_gr": "διαφορητικός",
+      "lemma_normalized": "διαφορητικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "οστουν κεκαυμενον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ξηραντικῆς",
+      "normalized": "ξηραντικης",
+      "lemma_gr": "ξηραντικός",
+      "lemma_normalized": "ξηραντικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "οστουν κεκαυμενον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.75
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "ὕειον ἀστράγαλον",
+      "normalized": "υειον αστραγαλον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "υς",
+      "part_lemma_normalized": "αστραγαλος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ὕειον ἀστράγαλον κεκαυμένον",
+      "normalized": "υειον αστραγαλον κεκαυμενον",
+      "lemma_gr": "ὕειος ἀστράγαλος κεκαυμένος",
+      "lemma_normalized": "υειος αστραγαλος κεκαυμενος",
+      "is_multiword": true,
+      "head_lemma_normalized": "αστραγαλος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἐμπνευματώσεις",
+      "normalized": "εμπνευματωσεις",
+      "lemma_gr": "ἐμπνευμάτωσις",
+      "lemma_normalized": "εμπνευματωσις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "υειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "CONDITION",
+      "display": "στρόφους",
+      "normalized": "στροφους",
+      "lemma_gr": "στρόφος",
+      "lemma_normalized": "στροφος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "υειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "ADMINISTRATION",
+      "display": "πίνειν",
+      "normalized": "πινειν",
+      "lemma_gr": "πίνειν",
+      "lemma_normalized": "πινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἐπιληψίαν",
+      "normalized": "επιληψιαν",
+      "lemma_gr": "ἐπιληψία",
+      "lemma_normalized": "επιληψια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "οστουν κεκαυμενον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "CONDITION",
+      "display": "ἀρθρῖτιν",
+      "normalized": "αρθριτιν",
+      "lemma_gr": "ἀρθρῖτις",
+      "lemma_normalized": "αρθριτις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "οστουν κεκαυμενον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "βόειον ἀστράγαλον",
+      "normalized": "βοειον αστραγαλον",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βους",
+      "part_lemma_normalized": "αστραγαλος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PREPARATION",
+      "display": "βόειον ἀστράγαλον καυθέντα",
+      "normalized": "βοειον αστραγαλον καυθεντα",
+      "lemma_gr": "βόειος ἀστράγαλος κεκαυμένος",
+      "lemma_normalized": "βοειος αστραγαλος κεκαυμενος",
+      "is_multiword": true,
+      "head_lemma_normalized": "αστραγαλος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.6
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "ὀδόντας",
+      "normalized": "οδοντας",
+      "lemma_gr": "ὀδούς",
+      "lemma_normalized": "οδους",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "βοειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "μέλιτος",
+      "normalized": "μελιτος",
+      "lemma_gr": "μέλι",
+      "lemma_normalized": "μελι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.95,
+      "lemma_confidence": 0.98
+    },
+    {
+      "label": "CONDITION",
+      "display": "στρογγύλας ἕλμινθας",
+      "normalized": "στρογγυλας ελμινθας",
+      "lemma_gr": "στρογγύλη ἕλμινς",
+      "lemma_normalized": "στρογγυλη ελμινς",
+      "is_multiword": true,
+      "head_lemma_normalized": "ελμινς",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "βοειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.7
+    },
+    {
+      "label": "PREPARATION",
+      "display": "ὀξυμέλιτος",
+      "normalized": "οξυμελιτος",
+      "lemma_gr": "ὀξύμελι",
+      "lemma_normalized": "οξυμελι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "σπλῆνα",
+      "normalized": "σπληνα",
+      "lemma_gr": "σπλήν",
+      "lemma_normalized": "σπλην",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "βοειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "PROCESS",
+      "display": "καταχριόμενος",
+      "normalized": "καταχριομενος",
+      "lemma_gr": "καταχρίειν",
+      "lemma_normalized": "καταχριειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "CONDITION",
+      "display": "λεύκας",
+      "normalized": "λευκας",
+      "lemma_gr": "λεύκη",
+      "lemma_normalized": "λευκη",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "βοειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "ἀφροδισιαστικός",
+      "normalized": "αφροδισιαστικος",
+      "lemma_gr": "ἀφροδισιαστικός",
+      "lemma_normalized": "αφροδισιαστικος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "βοειος αστραγαλος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.85
+    },
+    {
+      "label": "SUBSTANCE_PART",
+      "display": "οἱ μηροὶ τοῦ βοὸς",
+      "normalized": "οι μηροι του βοος",
+      "lemma_gr": "",
+      "lemma_normalized": "",
+      "is_multiword": true,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": "βους",
+      "part_lemma_normalized": "μηρος",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.0
+    },
+    {
+      "label": "PREPARATION",
+      "display": "οἱ μηροὶ ... κεκαυμένοι",
+      "normalized": "οι μηροι ... κεκαυμενοι",
+      "lemma_gr": "μηρός κεκαυμένος",
+      "lemma_normalized": "μηρος κεκαυμενος",
+      "is_multiword": true,
+      "head_lemma_normalized": "μηρος",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.75,
+      "lemma_confidence": 0.65
+    },
+    {
+      "label": "CONDITION",
+      "display": "αἱμορραγίας",
+      "normalized": "αιμορραγιας",
+      "lemma_gr": "αἱμορραγία",
+      "lemma_normalized": "αιμορραγια",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "μηρος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.95
+    },
+    {
+      "label": "CONDITION",
+      "display": "ῥύσιν κοιλίας",
+      "normalized": "ρυσιν κοιλιας",
+      "lemma_gr": "ῥύσις κοιλίας",
+      "lemma_normalized": "ρυσις κοιλιας",
+      "is_multiword": true,
+      "head_lemma_normalized": "ρυσις",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "μηρος κεκαυμενος",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.85,
+      "lemma_confidence": 0.85
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηραντικῆς ἱκανῶς",
+      "evidence_normalized": "ξηραντικης ικανως",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "PREPARATION",
+        "lemma_normalized": "οστουν κεκαυμενον",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.8
+    }
+  ]
+}

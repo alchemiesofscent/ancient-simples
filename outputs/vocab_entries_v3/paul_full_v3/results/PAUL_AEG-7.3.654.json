@@ -1,0 +1,259 @@
+{
+  "source_id": "PAUL_AEG-7.3.654",
+  "terms": [
+    {
+      "label": "SUBSTANCE",
+      "display": "Χάλκανθος ὕδωρ",
+      "normalized": "χαλκανθος υδωρ",
+      "lemma_gr": "ὕδωρ",
+      "lemma_normalized": "υδωρ",
+      "is_multiword": true,
+      "head_lemma_normalized": "υδωρ",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86,
+      "lemma_confidence": 0.78
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "χάλκανθος",
+      "normalized": "χαλκανθος",
+      "lemma_gr": "χάλκανθος",
+      "lemma_normalized": "χαλκανθος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.74,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "PLACE",
+      "display": "Κύπρον",
+      "normalized": "κυπρον",
+      "lemma_gr": "Κύπρος",
+      "lemma_normalized": "κυπρος",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.9,
+      "lemma_confidence": 0.9
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "στῦψιν",
+      "normalized": "στυψιν",
+      "lemma_gr": "στῦψις",
+      "lemma_normalized": "στυψις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "QUALITY_PROPERTY",
+      "display": "θερμότητος",
+      "normalized": "θερμοτητος",
+      "lemma_gr": "θερμότης",
+      "lemma_normalized": "θερμοτης",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.88
+    },
+    {
+      "label": "APPLICATION_SITE",
+      "display": "τὰς ὑγρὰς σάρκας",
+      "normalized": "τας υγρας σαρκας",
+      "lemma_gr": "σάρξ",
+      "lemma_normalized": "σαρξ",
+      "is_multiword": true,
+      "head_lemma_normalized": "σαρξ",
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.72,
+      "lemma_confidence": 0.72
+    },
+    {
+      "label": "PROCESS",
+      "display": "ταριχεῦσαί",
+      "normalized": "ταριχευσαι",
+      "lemma_gr": "ταριχεύειν",
+      "lemma_normalized": "ταριχευειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.7,
+      "lemma_confidence": 0.62
+    },
+    {
+      "label": "PROCESS",
+      "display": "ξηρᾶναι",
+      "normalized": "ξηραναι",
+      "lemma_gr": "ξηραίνειν",
+      "lemma_normalized": "ξηραινειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.82,
+      "lemma_confidence": 0.8
+    },
+    {
+      "label": "SUBSTANCE",
+      "display": "χαλκῖτιν",
+      "normalized": "χαλκιτιν",
+      "lemma_gr": "χαλκῖτις",
+      "lemma_normalized": "χαλκιτις",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "UNSPECIFIED",
+        "lemma_normalized": null,
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.78,
+      "lemma_confidence": 0.82
+    },
+    {
+      "label": "PROCESS",
+      "display": "πηγνύμενον",
+      "normalized": "πηγνυμενον",
+      "lemma_gr": "πηγνύναι",
+      "lemma_normalized": "πηγνυναι",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.6,
+      "lemma_confidence": 0.46
+    },
+    {
+      "label": "PROCESS",
+      "display": "μεταβάλλει",
+      "normalized": "μεταβαλλει",
+      "lemma_gr": "μεταβάλλειν",
+      "lemma_normalized": "μεταβαλλειν",
+      "is_multiword": false,
+      "head_lemma_normalized": null,
+      "substance_lemma_normalized": null,
+      "part_lemma_normalized": null,
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.66,
+      "lemma_confidence": 0.72
+    }
+  ],
+  "qualities": [
+    {
+      "axis": "HOT",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "στῦψιν μετὰ θερμότητος οὐκ ἀγεννοῦς",
+      "evidence_normalized": "στυψιν μετα θερμοτητος ουκ αγεννους",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.84
+    },
+    {
+      "axis": "DRY",
+      "degree": null,
+      "intensity": "none",
+      "hedge": "none",
+      "evidence_display": "ξηρᾶναι δυνάμενον",
+      "evidence_normalized": "ξηραναι δυναμενον",
+      "variant_place_lemma_normalized": null,
+      "applies_to": {
+        "kind": "SUBSTANCE",
+        "lemma_normalized": "χαλκανθος υδωρ",
+        "substance_lemma_normalized": null,
+        "part_lemma_normalized": null
+      },
+      "confidence": 0.86
+    }
+  ]
+}
