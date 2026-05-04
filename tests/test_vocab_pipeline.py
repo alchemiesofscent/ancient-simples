@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 
 from scripts.consolidate_results import consolidate
+from scripts.build_simple_name_relation_candidates import candidate_rows, choose_sample
+from scripts.build_simples_registry import build_registry
 from scripts.build_vocab_frontend_index import LABELS, build_index
 from scripts.import_vocab_v3 import build_legacy_rows
 from scripts.make_entries_paul import build_rows as build_paul_rows
@@ -232,3 +234,135 @@ def test_vocab_frontend_index_links_all_facet_categories(tmp_path):
         "APPLICATION_SITE",
     ]:
         assert simple["facets"][label], label
+
+
+def test_simples_registry_keeps_run_and_source_metadata(tmp_path):
+    result_dir = tmp_path / "results"
+    result_dir.mkdir()
+    (result_dir / "AET_LM-1.1.json").write_text(
+        json.dumps(
+            {
+                "source_id": "AET_LM-1.1",
+                "terms": [
+                    {
+                        "label": "SUBSTANCE",
+                        "display": "ἄγνος",
+                        "lemma_gr": "ἄγνος",
+                        "lemma_normalized": "αγνος",
+                        "normalized": "αγνος",
+                        "is_multiword": False,
+                        "head_lemma_normalized": None,
+                        "substance_lemma_normalized": None,
+                        "part_lemma_normalized": None,
+                        "variant_place_lemma_normalized": None,
+                        "applies_to": {
+                            "kind": "UNSPECIFIED",
+                            "lemma_normalized": None,
+                            "substance_lemma_normalized": None,
+                            "part_lemma_normalized": None,
+                        },
+                        "confidence": 0.95,
+                        "lemma_confidence": 0.95,
+                    }
+                ],
+                "qualities": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+    entry_csv = tmp_path / "entries.csv"
+    entry_csv.write_text(
+        "entry_id,source,ref,chapter_title_gr,greek\n"
+        "AET_LM-1.1,AET_LM,1.1,περὶ ἄγνου,ἄγνος θερμός\n",
+        encoding="utf-8",
+    )
+    config = {
+        "included_runs": [
+            {
+                "run_id": "test_run",
+                "result_dir": str(result_dir),
+                "complete": True,
+            }
+        ],
+        "entry_csvs": [str(entry_csv)],
+        "author_groups": [
+            {
+                "author_group": "Aetius",
+                "source_codes": ["AET_LM"],
+            }
+        ],
+        "future_corpora": [
+            {
+                "label": "Aetius 3-4",
+                "expected_source_codes": ["AET_LM"],
+            }
+        ],
+    }
+
+    terms, occurrences, forms, manifest = build_registry(config)
+
+    assert terms[0]["term_key"] == "αγνος"
+    assert terms[0]["text_sources"] == "AET_LM"
+    assert terms[0]["result_runs"] == "test_run"
+    assert occurrences[0]["text_source"] == "AET_LM"
+    assert occurrences[0]["author_group"] == "Aetius"
+    assert occurrences[0]["result_run"] == "test_run"
+    assert forms[0]["form_display"] == "ἄγνος"
+    assert manifest["counts"]["sources"] == {"AET_LM": 1}
+    assert manifest["future_corpora"][0]["label"] == "Aetius 3-4"
+
+
+def test_name_relation_candidate_sample_includes_trigger_and_control():
+    entries = {
+        "AET_LM-1.1": {
+            "entry_id": "AET_LM-1.1",
+            "ref": "1.1",
+            "chapter_title_gr": "περὶ ἄγνου ἢ λύγου",
+            "greek": "ἄγνος ἢ λύγος θερμός.",
+            "greek_normalized": "αγνος η λυγος θερμος.",
+        },
+        "AET_LM-1.2": {
+            "entry_id": "AET_LM-1.2",
+            "ref": "1.2",
+            "chapter_title_gr": "περὶ ἀλόης",
+            "greek": "ἀλόη ξηραίνει.",
+            "greek_normalized": "αλοη ξηραινει.",
+        },
+    }
+    by_entry = {
+        "AET_LM-1.1": [
+            {
+                "term_key": "αγνος",
+                "display": "ἄγνος",
+                "label": "SUBSTANCE",
+                "head_lemma_normalized": "",
+                "variant_place_lemma_normalized": "",
+            },
+            {
+                "term_key": "λυγος",
+                "display": "λύγος",
+                "label": "SUBSTANCE",
+                "head_lemma_normalized": "",
+                "variant_place_lemma_normalized": "",
+            },
+        ],
+        "AET_LM-1.2": [
+            {
+                "term_key": "αλοη",
+                "display": "ἀλόη",
+                "label": "SUBSTANCE",
+                "head_lemma_normalized": "",
+                "variant_place_lemma_normalized": "",
+            }
+        ],
+    }
+
+    sample = choose_sample(entries, by_entry, {"AET_LM": "Aetius"}, per_author=2)
+    rows, packets, counts = candidate_rows(sample)
+
+    assert [item["entry_id"] for item in sample] == ["AET_LM-1.1", "AET_LM-1.2"]
+    assert any(row["candidate_method"] == "heading_eta" for row in rows)
+    assert any(row["candidate_method"] == "control_no_trigger" for row in rows)
+    assert rows[0]["review_status"] == "pending_llm_review"
+    assert packets[0]["candidate_terms"][0]["term_key"] == "αγνος"
+    assert counts["sample_Aetius"] == 2

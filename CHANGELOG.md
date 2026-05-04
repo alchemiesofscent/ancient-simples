@@ -1,5 +1,18 @@
 # Changelog
 
+### 2026-05-04 — Simples registry workflow
+
+**Why**: The project needs a durable, reviewable path from `vocab_entries_v3` extraction output to a complete cross-corpus simples registry, while staying open to future Oribasius 1-14 and Aetius 3-4 additions.
+
+| Before | After | Why |
+|--------|-------|-----|
+| No manifest for complete runs feeding a simples registry | `config/simples_registry_runs.json` declares included runs, entry CSVs, author groups, and future corpus slots | Add future result runs without changing schemas |
+| No durable simples workflow note | `docs/new_simples/simples_registry_workflow.md` | Record long-term identity model, artifacts, review stages, and commit discipline |
+| No registry workbench | `data-workbench/simples/README.md` plus generated CSV/JSON/MD artifacts | Keep outputs reviewable and reproducible |
+| No v0 ancient-term registry generator | `scripts/build_simples_registry.py` and `npm run simples:registry` | Build draft term, occurrence, and form tables from complete `vocab_entries_v3` runs |
+| No name-relation pilot packet generator | `scripts/build_simple_name_relation_candidates.py` and `npm run simples:name-candidates` | Generate high-recall synonym/name candidates plus controls for LLM/human review |
+| No tests for registry/candidate workflow | `tests/test_vocab_pipeline.py` covers run/source metadata and trigger/control sampling | Prevent schema drift and preserve future-corpus extensibility |
+
 Curated record of structural transformations. Not a git log — tracks *what became what* and *why*.
 
 ---

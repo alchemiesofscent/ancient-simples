@@ -63,6 +63,7 @@ This file is the canonical live tracker for the repo.
 - `TEI-TEST-01` `[TEI]` Add automated Python/TS/SQL normalization parity coverage and executable tests for the TEI rule fixtures under `tests/fixtures/tei_rules/`. Status: `partial` (Python parity corpus + fixture generator implemented in `tests/test_parity.py`; TS and SQL test runners still needed)
 - `TEI-PHASE2-01` `[TEI]` Replace placeholder subset IDs, expand the bridge file from real indexed TEI entries, and turn the alignment seed into a real Phase 2 dataset. Status: `blocked`
 - `UI-TEI-01` `[UI]` Port `/entries` list and detail from legacy `entries` to TEI-first tables and shared citation formatting. Status: `not_started`
+- `LEGACY-SIMPLES-REVIEW-01` `[LEGACY]` Review `data-workbench/simples/simple_name_relation_review_packets.jsonl` against `simple_name_relation_candidates.csv`, classify/reject/add name relations, and write accepted rows to `simple_name_relations_pilot.csv`. Status: `not_started`
 - `LEGACY-DIOSC-01` `[LEGACY]` Keep the Dioscorides patch/build/extraction workflow current until it is either completed or folded into TEI-first ingest. Status: `partial`
 - `TEI-SOURCE-ALIM-01` `[TEI]` Full GAL_ALIM ingestion deferred to TEI-first pipeline. Current CSV has 35 sparse entries (books 1-3). Requires: YAML config, CMG submodule, TEI XML. Status: `not_started`
 - `TEI-SOURCE-PAUL-01` `[TEI]` PAUL_RM ingestion deferred to TEI-first pipeline. No entries in CSV; DB status `pending`. Requires: YAML config, CMG submodule, TEI XML. Status: `not_started`
@@ -79,6 +80,7 @@ This file is the canonical live tracker for the repo.
 - `UI-SIMPLES-STATIC-01` `[UI]` Added a static generated `/simples` viewer over vocab v3 outputs with all extracted labels searchable as facets and normalized-simple comparison. Status: `implemented`
 - `LEGACY-PAUL-PIPELINE-01` `[LEGACY]` Added first-class Paul CSV vocab pipeline: `data-workbench/paul.csv` → `data-workbench/entries_paul.csv`, Paul validation/QC, source-aware prompt, package scripts, controller status/consolidation, import wiring, migration seed, and `PAUL_AEG` app filter. Status: `implemented`
 - `LEGACY-PAUL-FULL-01` `[LEGACY]` Completed the full Paul vocab extraction and dry-run import path: 680/680 result JSONs, consolidated `results.jsonl`, full-manifest QC, clean status, and legacy import dry-run. Status: `implemented`
+- `LEGACY-SIMPLES-REGISTRY-01` `[LEGACY]` Created artifact-first simples registry workflow: no manifest → `config/simples_registry_runs.json`; no durable workflow note → `docs/new_simples/simples_registry_workflow.md`; no workbench → `data-workbench/simples/`; no generators → `scripts/build_simples_registry.py` and `scripts/build_simple_name_relation_candidates.py`; no commands → `npm run simples:registry` and `npm run simples:name-candidates`. Status: `implemented`
 
 ## Resume Here
 

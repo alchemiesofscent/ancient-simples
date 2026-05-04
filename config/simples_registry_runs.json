@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "description": "Manifest for the artifact-first simples registry workflow. Add future result runs here without changing the registry schema.",
+  "included_runs": [
+    {
+      "run_id": "entries_full_v3",
+      "result_dir": "outputs/vocab_entries_v3/entries_full_v3/results",
+      "corpus_label": "legacy",
+      "complete": true
+    },
+    {
+      "run_id": "diosc_full_v3",
+      "result_dir": "outputs/vocab_entries_v3/diosc_full_v3/results",
+      "corpus_label": "dioscorides",
+      "complete": true
+    },
+    {
+      "run_id": "paul_full_v3",
+      "result_dir": "outputs/vocab_entries_v3/paul_full_v3/results",
+      "corpus_label": "paul",
+      "complete": true
+    }
+  ],
+  "entry_csvs": [
+    "data-workbench/entries.csv",
+    "data-workbench/entries_diosc.csv",
+    "data-workbench/entries_paul.csv"
+  ],
+  "author_groups": [
+    {
+      "author_group": "Galen",
+      "source_codes": ["GAL_SMT", "GAL_ALIM"]
+    },
+    {
+      "author_group": "Aetius",
+      "source_codes": ["AET_LM"]
+    },
+    {
+      "author_group": "Oribasius",
+      "source_codes": ["ORIB_CM"]
+    },
+    {
+      "author_group": "Dioscorides",
+      "source_codes": ["DIOSC_DMM"]
+    },
+    {
+      "author_group": "Paul",
+      "source_codes": ["PAUL_AEG"]
+    }
+  ],
+  "future_corpora": [
+    {
+      "label": "Oribasius 1-14",
+      "expected_source_codes": ["ORIB_CM"],
+      "status": "future result run; add a new included_runs item when available"
+    },
+    {
+      "label": "Aetius 3-4",
+      "expected_source_codes": ["AET_LM"],
+      "status": "future result run; add a new included_runs item when available"
+    }
+  ]
+}
