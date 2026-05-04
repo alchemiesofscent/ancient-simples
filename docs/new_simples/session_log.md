@@ -153,3 +153,14 @@ Use this template for every session entry:
 - Blockers: `simple_name_relations_pilot.csv` is intentionally pending LLM/human review; no synonym relation is accepted yet. Candidate generation is high-recall and will include false positives by design.
 - Exact next task for this stream: `LEGACY-SIMPLES-REVIEW-01` `[LEGACY]` Review `data-workbench/simples/simple_name_relation_review_packets.jsonl` against `simple_name_relation_candidates.csv`, classify/reject/add name relations, and write accepted rows to `simple_name_relations_pilot.csv`.
 - Resume note: Start with `data-workbench/simples/simple_name_relations_pilot_report.md`, then review packets in `simple_name_relation_review_packets.jsonl`. Board-wide `Resume Here` remains the live DB import task unless the next session is explicitly simples-focused.
+
+### 2026-05-04 - Codex
+
+- Starting context: User asked for a way to visualize the registry and list all named simples/substances with user-friendly data. Current `/simples` route loaded the full evidence index and did not expose the new v0 registry artifacts directly.
+- Tasks moved: Added `UI-SIMPLES-REGISTRY-01` to `Done`. Left `LEGACY-SIMPLES-REVIEW-01` in `Next` and left board `Now`/`Resume Here` on `LEGACY-VOCAB-IMPORT-01`.
+- Decisions: Keep `/simples` as the main app surface. Make `Registry` the default tab for research review and lazy-load the heavier `Evidence` view only when opened. Keep labels clear that rows are draft ancient terms, not final physical substances.
+- Transformations: no compact public registry index -> `app/public/simples/registry-index.json`; no public-index generator -> `scripts/build_simples_public_index.py`; no command -> `npm run simples:public-index`; `/simples` evidence-only client -> Registry/Evidence tabbed client with named-simple filters, detail panel, quality summary, review status, source/author coverage, and filtered CSV/JSON export.
+- Evidence checked: `npm run simples:public-index` wrote 4,861 registry terms into a 5.2 MB browser index; `/usr/local/bin/python -m pytest tests/test_vocab_pipeline.py -q` passed 8 tests; `npm run app:lint` passed; `npm run app:build` passed.
+- Blockers: The registry view still reflects pending name-relation review state; accepted synonym/variant decisions require `LEGACY-SIMPLES-REVIEW-01`.
+- Exact next task for this stream: `LEGACY-SIMPLES-REVIEW-01` `[LEGACY]` review the candidate packets and update `simple_name_relations_pilot.csv`.
+- Resume note: Rebuild sequence after review edits is `npm run simples:name-candidates` only if candidate generation changes, otherwise update pilot rows and run `npm run simples:public-index`.

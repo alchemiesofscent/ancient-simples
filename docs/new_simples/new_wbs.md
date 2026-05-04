@@ -81,6 +81,7 @@ This file is the canonical live tracker for the repo.
 - `LEGACY-PAUL-PIPELINE-01` `[LEGACY]` Added first-class Paul CSV vocab pipeline: `data-workbench/paul.csv` → `data-workbench/entries_paul.csv`, Paul validation/QC, source-aware prompt, package scripts, controller status/consolidation, import wiring, migration seed, and `PAUL_AEG` app filter. Status: `implemented`
 - `LEGACY-PAUL-FULL-01` `[LEGACY]` Completed the full Paul vocab extraction and dry-run import path: 680/680 result JSONs, consolidated `results.jsonl`, full-manifest QC, clean status, and legacy import dry-run. Status: `implemented`
 - `LEGACY-SIMPLES-REGISTRY-01` `[LEGACY]` Created artifact-first simples registry workflow: no manifest → `config/simples_registry_runs.json`; no durable workflow note → `docs/new_simples/simples_registry_workflow.md`; no workbench → `data-workbench/simples/`; no generators → `scripts/build_simples_registry.py` and `scripts/build_simple_name_relation_candidates.py`; no commands → `npm run simples:registry` and `npm run simples:name-candidates`. Status: `implemented`
+- `UI-SIMPLES-REGISTRY-01` `[UI]` Added a user-friendly named-simple registry view: no compact browser index → `app/public/simples/registry-index.json`; no generator → `scripts/build_simples_public_index.py`; `/simples` evidence-only explorer → Registry/Evidence tabs with default compact registry, filters, detail panel, and CSV/JSON export. Status: `implemented`
 
 ## Resume Here
 

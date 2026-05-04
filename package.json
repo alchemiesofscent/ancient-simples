@@ -17,6 +17,7 @@
     "vocab:import": "python scripts/import_vocab_v3.py",
     "simples:registry": "python scripts/build_simples_registry.py",
     "simples:name-candidates": "python scripts/build_simple_name_relation_candidates.py",
+    "simples:public-index": "python scripts/build_simples_public_index.py",
     "diosc:entries:build": "python scripts/make_entries_diosc.py",
     "diosc:entries:validate": "python scripts/validate_diosc_entries.py",
     "diosc:align:extract": "python scripts/extract_diosc_alignment_rows.py",

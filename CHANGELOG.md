@@ -1,5 +1,16 @@
 # Changelog
 
+### 2026-05-04 — Simples registry browser view
+
+**Why**: The project needed a user-friendly way to inspect named simples and their source coverage without loading the full evidence explorer by default.
+
+| Before | After | Why |
+|--------|-------|-----|
+| `/simples` loaded only the 66 MB evidence index | `/simples` defaults to a compact Registry view backed by `app/public/simples/registry-index.json` | Make named-simple review faster and clearer |
+| No compact public registry index | `scripts/build_simples_public_index.py` and `npm run simples:public-index` | Merge term, form, occurrence, quality-summary, and review-status data for the browser |
+| Registry and evidence were not separated | `/simples` has `Registry` and `Evidence` tabs; Evidence lazy-loads the larger vocab index | Keep detailed evidence available without slowing first load |
+| No export from the named-simple list | Registry view exports the filtered rows as CSV or JSON | Support research review and ad hoc analysis |
+
 ### 2026-05-04 — Simples registry workflow
 
 **Why**: The project needs a durable, reviewable path from `vocab_entries_v3` extraction output to a complete cross-corpus simples registry, while staying open to future Oribasius 1-14 and Aetius 3-4 additions.

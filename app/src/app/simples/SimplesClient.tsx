@@ -1,32 +1,37 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { normalizeGreekForMatch } from "@/lib/greek/normalize";
 import { FACET_FILTERS, filterSimple, sortSimples, type FacetMode, type SimpleFilters } from "@/lib/vocab/filter";
-import type { VocabFacet, VocabIndex, VocabQuality, VocabSimple } from "@/lib/vocab/types";
+import type {
+  RegistryQualitySummary,
+  RegistryTerm,
+  SimplesRegistryIndex,
+  VocabFacet,
+  VocabIndex,
+  VocabQuality,
+  VocabSimple,
+} from "@/lib/vocab/types";
 
 const EMPTY_FACETS: Record<string, string> = Object.fromEntries(FACET_FILTERS.map((facet) => [facet.key, ""]));
 const MAX_COMPARE = 4;
 const RESULT_LIMIT = 250;
+const REGISTRY_LIMIT = 500;
 
 const inputClass =
   "h-10 w-full rounded-md border border-zinc-300 bg-white px-3 text-sm text-zinc-950 shadow-sm outline-none transition focus:border-zinc-700 focus:ring-2 focus:ring-zinc-200";
 const smallButtonClass =
   "h-9 rounded-md border border-zinc-300 bg-white px-3 text-sm font-medium text-zinc-800 shadow-sm transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-300";
 
+type ViewMode = "registry" | "evidence";
+type RegistryMultiwordFilter = "" | "simple" | "multiword" | "head" | "place";
+
 function formatCount(value: number): string {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
-function sourceEntries(simple: VocabSimple): Array<[string, number]> {
-  return Object.entries(simple.sources).sort(([a], [b]) => a.localeCompare(b));
-}
-
-function qualityLabel(quality: Pick<VocabQuality, "axis" | "degree">): string {
-  return `${quality.axis}${quality.degree ? ` ${quality.degree}` : ""}`;
-}
-
-function topFacetValues(simple: VocabSimple, label: string, limit = 6): VocabFacet[] {
-  return (simple.facets[label] ?? []).slice(0, limit);
+function searchNeedle(value: string): string {
+  return normalizeGreekForMatch(value).replace(/\s+/g, " ").trim();
 }
 
 function confidenceLabel(value: number | null): string {
@@ -42,10 +47,23 @@ function qualityTone(axis: string): string {
   return "border-zinc-200 bg-zinc-50 text-zinc-900";
 }
 
-function SourceBadges({ simple, compact = false }: { simple: VocabSimple; compact?: boolean }) {
+function qualityLabel(quality: Pick<VocabQuality | RegistryQualitySummary, "axis" | "degree">): string {
+  return `${quality.axis}${quality.degree ? ` ${quality.degree}` : ""}`;
+}
+
+function Metric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-md border border-zinc-200 bg-white px-3 py-2">
+      <div className="text-[11px] font-semibold uppercase text-zinc-500">{label}</div>
+      <div className="mt-0.5 text-sm font-semibold text-zinc-950">{value}</div>
+    </div>
+  );
+}
+
+function SourceBadges({ sources, compact = false }: { sources: Record<string, number>; compact?: boolean }) {
   return (
     <div className="flex flex-wrap gap-1.5">
-      {sourceEntries(simple).map(([source, count]) => (
+      {Object.entries(sources).sort(([a], [b]) => a.localeCompare(b)).map(([source, count]) => (
         <span
           key={source}
           className={`rounded border border-zinc-200 bg-zinc-50 font-mono text-zinc-700 ${
@@ -59,7 +77,7 @@ function SourceBadges({ simple, compact = false }: { simple: VocabSimple; compac
   );
 }
 
-function QualityBadge({ quality }: { quality: VocabQuality }) {
+function QualityBadge({ quality }: { quality: VocabQuality | RegistryQualitySummary }) {
   return (
     <span className={`rounded border px-2 py-1 text-xs font-medium ${qualityTone(quality.axis)}`}>
       {qualityLabel(quality)}
@@ -68,16 +86,429 @@ function QualityBadge({ quality }: { quality: VocabQuality }) {
   );
 }
 
-function Metric({ label, value }: { label: string; value: string }) {
+function reviewLabel(status: RegistryTerm["name_relation"]["status"]): string {
+  if (status === "pending_candidates") return "pending";
+  if (status === "mixed_review") return "mixed";
+  return status;
+}
+
+function reviewTone(status: RegistryTerm["name_relation"]["status"]): string {
+  if (status === "pending_candidates") return "border-amber-200 bg-amber-50 text-amber-950";
+  if (status === "reviewed") return "border-emerald-200 bg-emerald-50 text-emerald-950";
+  if (status === "mixed_review") return "border-sky-200 bg-sky-50 text-sky-950";
+  return "border-zinc-200 bg-zinc-50 text-zinc-700";
+}
+
+function RegistryStatusBadge({ term }: { term: RegistryTerm }) {
   return (
-    <div className="rounded-md border border-zinc-200 bg-white px-3 py-2">
-      <div className="text-[11px] font-semibold uppercase text-zinc-500">{label}</div>
-      <div className="mt-0.5 text-sm font-semibold text-zinc-950">{value}</div>
+    <span className={`rounded border px-2 py-1 text-xs font-medium ${reviewTone(term.name_relation.status)}`}>
+      {reviewLabel(term.name_relation.status)}
+      {term.name_relation.candidate_count ? <span className="ml-1 font-normal">{term.name_relation.candidate_count}</span> : null}
+    </span>
+  );
+}
+
+function exportRegistry(rows: RegistryTerm[], format: "csv" | "json") {
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const filename = `simples-registry-${timestamp}.${format}`;
+  let body: string;
+  let type: string;
+
+  if (format === "json") {
+    body = JSON.stringify(rows, null, 2);
+    type = "application/json";
+  } else {
+    const headers = [
+      "term_key",
+      "preferred_display",
+      "entry_count",
+      "occurrence_count",
+      "source_count",
+      "text_sources",
+      "author_groups",
+      "is_multiword",
+      "head_lemma_normalized",
+      "variant_place_lemma_normalized",
+      "confidence_avg",
+      "review_status",
+      "candidate_count",
+    ];
+    const escape = (value: unknown) => `"${String(value ?? "").replace(/"/g, '""')}"`;
+    body = [
+      headers.join(","),
+      ...rows.map((term) => headers.map((header) => {
+        if (header === "text_sources") return escape(term.text_sources.join(";"));
+        if (header === "author_groups") return escape(term.author_groups.join(";"));
+        if (header === "review_status") return escape(term.name_relation.status);
+        if (header === "candidate_count") return escape(term.name_relation.candidate_count);
+        return escape(term[header as keyof RegistryTerm]);
+      }).join(",")),
+    ].join("\n");
+    type = "text/csv";
+  }
+
+  const blob = new Blob([body], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function registryMatches(
+  term: RegistryTerm,
+  filters: {
+    query: string;
+    source: string;
+    author: string;
+    reviewStatus: string;
+    multiword: RegistryMultiwordFilter;
+    crossCorpus: boolean;
+  },
+): boolean {
+  if (filters.query.trim()) {
+    const query = searchNeedle(filters.query);
+    if (!searchNeedle(term.search_text).includes(query)) return false;
+  }
+  if (filters.source && !term.source_counts[filters.source]) return false;
+  if (filters.author && !term.author_counts[filters.author]) return false;
+  if (filters.reviewStatus && term.name_relation.status !== filters.reviewStatus) return false;
+  if (filters.crossCorpus && term.source_count < 2) return false;
+  if (filters.multiword === "simple" && term.is_multiword) return false;
+  if (filters.multiword === "multiword" && !term.is_multiword) return false;
+  if (filters.multiword === "head" && !term.head_lemma_normalized) return false;
+  if (filters.multiword === "place" && !term.variant_place_lemma_normalized) return false;
+  return true;
+}
+
+function sortRegistryTerms(rows: RegistryTerm[], sortKey: string): RegistryTerm[] {
+  return [...rows].sort((a, b) => {
+    if (sortKey === "source_count") return b.source_count - a.source_count || b.entry_count - a.entry_count;
+    if (sortKey === "occurrence_count") return b.occurrence_count - a.occurrence_count || b.entry_count - a.entry_count;
+    if (sortKey === "confidence") return (b.confidence_avg ?? 0) - (a.confidence_avg ?? 0) || b.entry_count - a.entry_count;
+    if (sortKey === "lemma") return a.preferred_display.localeCompare(b.preferred_display, "el");
+    if (sortKey === "review") return b.name_relation.candidate_count - a.name_relation.candidate_count || b.entry_count - a.entry_count;
+    return b.entry_count - a.entry_count || b.source_count - a.source_count;
+  });
+}
+
+function RegistryList({
+  terms,
+  total,
+  selectedKey,
+  onSelect,
+}: {
+  terms: RegistryTerm[];
+  total: number;
+  selectedKey: string | null;
+  onSelect: (term: RegistryTerm) => void;
+}) {
+  return (
+    <section className="overflow-hidden rounded-md border border-zinc-200 bg-white shadow-sm">
+      <div className="flex items-center justify-between gap-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3">
+        <h2 className="text-sm font-semibold text-zinc-950">Named Simples</h2>
+        <div className="text-xs font-medium text-zinc-600">
+          {formatCount(Math.min(total, REGISTRY_LIMIT))} of {formatCount(total)}
+        </div>
+      </div>
+
+      <div className="max-h-[72vh] overflow-y-auto">
+        {terms.length === 0 ? (
+          <div className="p-6 text-sm text-zinc-600">No registry terms match these filters.</div>
+        ) : (
+          <div className="divide-y divide-zinc-200">
+            {terms.map((term) => {
+              const selected = selectedKey === term.term_key;
+              return (
+                <article key={term.term_key} className={selected ? "bg-zinc-50" : "bg-white"}>
+                  <button
+                    type="button"
+                    onClick={() => onSelect(term)}
+                    className={`grid w-full gap-3 p-3 text-left focus:outline-none focus:ring-2 focus:ring-zinc-300 ${
+                      selected ? "border-l-4 border-zinc-900 pl-2" : "border-l-4 border-transparent"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <div className="break-words font-serif text-xl leading-7 text-zinc-950">{term.preferred_display}</div>
+                        <div className="mt-0.5 break-all font-mono text-xs text-zinc-500">{term.term_key}</div>
+                      </div>
+                      <div className="grid shrink-0 justify-items-end gap-1.5">
+                        <span className="rounded border border-zinc-200 bg-white px-2 py-1 text-xs font-medium text-zinc-700">
+                          {formatCount(term.entry_count)} entries
+                        </span>
+                        <RegistryStatusBadge term={term} />
+                      </div>
+                    </div>
+                    <SourceBadges sources={term.source_counts} compact />
+                    {term.quality_summary.length > 0 ? (
+                      <div className="flex flex-wrap gap-1.5">
+                        {term.quality_summary.slice(0, 5).map((quality) => (
+                          <QualityBadge key={`${quality.axis}-${quality.degree ?? "none"}`} quality={quality} />
+                        ))}
+                      </div>
+                    ) : null}
+                  </button>
+                </article>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function RegistryDetail({
+  term,
+  onOpenEvidence,
+}: {
+  term: RegistryTerm | null;
+  onOpenEvidence: (termKey: string) => void;
+}) {
+  if (!term) {
+    return (
+      <aside className="rounded-md border border-zinc-200 bg-white p-5 text-sm text-zinc-600 shadow-sm">
+        Select a registry term to inspect source coverage and review status.
+      </aside>
+    );
+  }
+
+  return (
+    <aside className="rounded-md border border-zinc-200 bg-white shadow-sm">
+      <div className="border-b border-zinc-200 p-5">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <h2 className="break-words font-serif text-3xl leading-tight text-zinc-950">{term.preferred_display}</h2>
+              <RegistryStatusBadge term={term} />
+            </div>
+            <p className="mt-1 break-all font-mono text-xs text-zinc-500">{term.term_key}</p>
+            <p className="mt-2 text-sm text-zinc-600">Draft ancient term, not a final physical substance.</p>
+          </div>
+          <div className="grid grid-cols-3 gap-2 sm:min-w-[290px]">
+            <Metric label="Entries" value={formatCount(term.entry_count)} />
+            <Metric label="Occurrences" value={formatCount(term.occurrence_count)} />
+            <Metric label="Sources" value={formatCount(term.source_count)} />
+          </div>
+        </div>
+      </div>
+
+      <div className="grid gap-6 p-5">
+        <section>
+          <h3 className="text-xs font-semibold uppercase text-zinc-500">Source Coverage</h3>
+          <div className="mt-2">
+            <SourceBadges sources={term.source_counts} />
+          </div>
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {Object.entries(term.author_counts).map(([author, count]) => (
+              <span key={author} className="rounded-md border border-zinc-200 bg-zinc-50 px-2 py-1 text-xs">
+                {author} <span className="text-zinc-500">{count}</span>
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xs font-semibold uppercase text-zinc-500">Forms</h3>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {term.forms.slice(0, 18).map((form) => (
+              <span key={`${form.display}-${form.normalized}`} className="rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs">
+                <span className="font-serif text-sm text-zinc-950">{form.display}</span>
+                <span className="ml-1 text-zinc-500">{form.count}</span>
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-2">
+          <h3 className="text-xs font-semibold uppercase text-zinc-500">Registry Flags</h3>
+          <div className="grid gap-2 sm:grid-cols-2">
+            <Metric label="Confidence" value={confidenceLabel(term.confidence_avg)} />
+            <Metric label="Labels" value={Object.entries(term.labels).map(([label, count]) => `${label} ${count}`).join(", ") || "none"} />
+            <Metric label="Head" value={term.head_lemma_normalized || "none"} />
+            <Metric label="Place Variant" value={term.variant_place_lemma_normalized || "none"} />
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xs font-semibold uppercase text-zinc-500">Quality Summary</h3>
+          {term.quality_summary.length > 0 ? (
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              {term.quality_summary.map((quality) => (
+                <QualityBadge key={`${quality.axis}-${quality.degree ?? "none"}`} quality={quality} />
+              ))}
+            </div>
+          ) : (
+            <p className="mt-2 text-sm text-zinc-600">No compact quality summary linked.</p>
+          )}
+        </section>
+
+        <section>
+          <h3 className="text-xs font-semibold uppercase text-zinc-500">Name-Relation Review</h3>
+          <div className="mt-2 grid gap-2 sm:grid-cols-3">
+            <Metric label="Status" value={reviewLabel(term.name_relation.status)} />
+            <Metric label="Candidates" value={formatCount(term.name_relation.candidate_count)} />
+            <Metric label="Reviewed" value={formatCount(term.name_relation.reviewed_count)} />
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xs font-semibold uppercase text-zinc-500">Entry Samples</h3>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {term.entry_samples.slice(0, 20).map((entryId) => (
+              <span key={entryId} className="rounded border border-zinc-200 bg-zinc-50 px-2 py-1 font-mono text-xs text-zinc-700">
+                {entryId}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <button type="button" onClick={() => onOpenEvidence(term.term_key)} className={smallButtonClass}>
+          Open Evidence View
+        </button>
+      </div>
+    </aside>
+  );
+}
+
+function RegistryView({
+  registry,
+  onOpenEvidence,
+}: {
+  registry: SimplesRegistryIndex;
+  onOpenEvidence: (termKey: string) => void;
+}) {
+  const [query, setQuery] = useState("");
+  const [source, setSource] = useState("");
+  const [author, setAuthor] = useState("");
+  const [reviewStatus, setReviewStatus] = useState("");
+  const [multiword, setMultiword] = useState<RegistryMultiwordFilter>("");
+  const [crossCorpus, setCrossCorpus] = useState(false);
+  const [sortKey, setSortKey] = useState("entry_count");
+  const [selectedKey, setSelectedKey] = useState<string | null>(registry.terms[0]?.term_key ?? null);
+
+  const sources = Object.keys(registry.stats.sources).sort();
+  const authors = Object.keys(registry.stats.author_groups).sort();
+
+  const filtered = useMemo(() => {
+    const filters = { query, source, author, reviewStatus, multiword, crossCorpus };
+    return sortRegistryTerms(registry.terms.filter((term) => registryMatches(term, filters)), sortKey);
+  }, [author, crossCorpus, multiword, query, registry.terms, reviewStatus, sortKey, source]);
+
+  const selected = useMemo(() => {
+    return registry.terms.find((term) => term.term_key === selectedKey) ?? filtered[0] ?? null;
+  }, [filtered, registry.terms, selectedKey]);
+
+  const visible = filtered.slice(0, REGISTRY_LIMIT);
+
+  function resetFilters() {
+    setQuery("");
+    setSource("");
+    setAuthor("");
+    setReviewStatus("");
+    setMultiword("");
+    setCrossCorpus(false);
+  }
+
+  return (
+    <div className="grid gap-5">
+      <section className="rounded-md border border-zinc-200 bg-white p-4 shadow-sm">
+        <div className="grid gap-4">
+          <div className="grid gap-3 lg:grid-cols-[minmax(280px,2fr)_repeat(5,minmax(120px,1fr))]">
+            <label className="grid gap-1.5">
+              <span className="text-xs font-semibold uppercase text-zinc-600">Search</span>
+              <input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                className={inputClass}
+                placeholder="Greek display, normalized term, source, author"
+              />
+            </label>
+            <label className="grid gap-1.5">
+              <span className="text-xs font-semibold uppercase text-zinc-600">Source</span>
+              <select value={source} onChange={(event) => setSource(event.target.value)} className={inputClass}>
+                <option value="">All sources</option>
+                {sources.map((item) => <option key={item} value={item}>{item}</option>)}
+              </select>
+            </label>
+            <label className="grid gap-1.5">
+              <span className="text-xs font-semibold uppercase text-zinc-600">Author</span>
+              <select value={author} onChange={(event) => setAuthor(event.target.value)} className={inputClass}>
+                <option value="">All authors</option>
+                {authors.map((item) => <option key={item} value={item}>{item}</option>)}
+              </select>
+            </label>
+            <label className="grid gap-1.5">
+              <span className="text-xs font-semibold uppercase text-zinc-600">Review</span>
+              <select value={reviewStatus} onChange={(event) => setReviewStatus(event.target.value)} className={inputClass}>
+                <option value="">Any status</option>
+                <option value="none">No candidates</option>
+                <option value="pending_candidates">Pending candidates</option>
+                <option value="reviewed">Reviewed</option>
+                <option value="mixed_review">Mixed review</option>
+              </select>
+            </label>
+            <label className="grid gap-1.5">
+              <span className="text-xs font-semibold uppercase text-zinc-600">Term Type</span>
+              <select value={multiword} onChange={(event) => setMultiword(event.target.value as RegistryMultiwordFilter)} className={inputClass}>
+                <option value="">Any term</option>
+                <option value="simple">Single/simple terms</option>
+                <option value="multiword">Multiword terms</option>
+                <option value="head">Has head term</option>
+                <option value="place">Place-qualified</option>
+              </select>
+            </label>
+            <label className="grid gap-1.5">
+              <span className="text-xs font-semibold uppercase text-zinc-600">Sort</span>
+              <select value={sortKey} onChange={(event) => setSortKey(event.target.value)} className={inputClass}>
+                <option value="entry_count">Most entries</option>
+                <option value="occurrence_count">Most occurrences</option>
+                <option value="source_count">Most sources</option>
+                <option value="review">Most review candidates</option>
+                <option value="confidence">Highest confidence</option>
+                <option value="lemma">Greek A-Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 border-t border-zinc-200 pt-4 text-sm">
+            <label className="flex h-9 items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 font-medium text-zinc-800">
+              <input type="checkbox" checked={crossCorpus} onChange={(event) => setCrossCorpus(event.target.checked)} />
+              Cross-corpus only
+            </label>
+            <button type="button" onClick={resetFilters} className={smallButtonClass}>Reset</button>
+            <button type="button" onClick={() => exportRegistry(filtered, "csv")} className={smallButtonClass}>Export CSV</button>
+            <button type="button" onClick={() => exportRegistry(filtered, "json")} className={smallButtonClass}>Export JSON</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-5 xl:grid-cols-[minmax(360px,0.56fr)_minmax(0,1fr)]">
+        <RegistryList
+          terms={visible}
+          total={filtered.length}
+          selectedKey={selected?.term_key ?? null}
+          onSelect={(term) => setSelectedKey(term.term_key)}
+        />
+        <div className="xl:sticky xl:top-4 xl:self-start">
+          <RegistryDetail term={selected} onOpenEvidence={onOpenEvidence} />
+        </div>
+      </section>
     </div>
   );
 }
 
-function ResultList({
+function topFacetValues(simple: VocabSimple, label: string, limit = 6): VocabFacet[] {
+  return (simple.facets[label] ?? []).slice(0, limit);
+}
+
+function VocabSourceBadges({ simple, compact = false }: { simple: VocabSimple; compact?: boolean }) {
+  return <SourceBadges sources={simple.sources} compact={compact} />;
+}
+
+function EvidenceResultList({
   simples,
   total,
   selectedKey,
@@ -95,12 +526,9 @@ function ResultList({
   return (
     <section className="overflow-hidden rounded-md border border-zinc-200 bg-white shadow-sm">
       <div className="flex items-center justify-between gap-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3">
-        <h2 className="text-sm font-semibold text-zinc-950">Results</h2>
-        <div className="text-xs font-medium text-zinc-600">
-          {formatCount(Math.min(total, RESULT_LIMIT))} of {formatCount(total)}
-        </div>
+        <h2 className="text-sm font-semibold text-zinc-950">Evidence Results</h2>
+        <div className="text-xs font-medium text-zinc-600">{formatCount(Math.min(total, RESULT_LIMIT))} of {formatCount(total)}</div>
       </div>
-
       <div className="max-h-[70vh] overflow-y-auto">
         {simples.length === 0 ? (
           <div className="p-6 text-sm text-zinc-600">No simples match these filters.</div>
@@ -109,20 +537,14 @@ function ResultList({
             {simples.map((simple) => {
               const isSelected = selectedKey === simple.lemma_normalized;
               const isCompared = compareKeys.includes(simple.lemma_normalized);
-
               return (
                 <article key={simple.lemma_normalized} className={isSelected ? "bg-zinc-50" : "bg-white"}>
                   <div className={`grid gap-3 p-3 ${isSelected ? "border-l-4 border-zinc-900 pl-2" : "border-l-4 border-transparent"}`}>
                     <div className="flex items-start justify-between gap-3">
-                      <button
-                        type="button"
-                        onClick={() => onSelect(simple)}
-                        className="min-w-0 text-left focus:outline-none focus:ring-2 focus:ring-zinc-300"
-                      >
+                      <button type="button" onClick={() => onSelect(simple)} className="min-w-0 text-left focus:outline-none focus:ring-2 focus:ring-zinc-300">
                         <div className="break-words font-serif text-xl leading-7 text-zinc-950">{simple.display}</div>
                         <div className="mt-0.5 break-all font-mono text-xs text-zinc-500">{simple.lemma_normalized}</div>
                       </button>
-
                       <div className="flex shrink-0 flex-col items-end gap-2">
                         <span className="rounded border border-zinc-200 bg-white px-2 py-1 text-xs font-medium text-zinc-700">
                           {formatCount(simple.entry_count)} entries
@@ -131,18 +553,14 @@ function ResultList({
                           type="button"
                           onClick={() => onToggleCompare(simple)}
                           className={`h-8 rounded-md border px-2.5 text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-zinc-300 ${
-                            isCompared
-                              ? "border-zinc-900 bg-zinc-900 text-white"
-                              : "border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-100"
+                            isCompared ? "border-zinc-900 bg-zinc-900 text-white" : "border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-100"
                           }`}
                         >
                           {isCompared ? "Added" : "Compare"}
                         </button>
                       </div>
                     </div>
-
-                    <SourceBadges simple={simple} compact />
-
+                    <VocabSourceBadges simple={simple} compact />
                     {simple.qualities.length > 0 ? (
                       <div className="flex flex-wrap gap-1.5">
                         {simple.qualities.slice(0, 6).map((quality) => (
@@ -206,12 +624,10 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
             <Metric label="Confidence" value={confidenceLabel(simple.confidence_avg)} />
           </div>
         </div>
-
         <div className="mt-4">
-          <SourceBadges simple={simple} />
+          <VocabSourceBadges simple={simple} />
         </div>
       </div>
-
       <div className="grid gap-6 p-5">
         <section>
           <h3 className="text-xs font-semibold uppercase text-zinc-500">Quality Profile</h3>
@@ -220,9 +636,7 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
               {simple.qualities.map((quality) => (
                 <div key={`${quality.axis}-${quality.degree ?? "none"}`} className={`rounded-md border p-3 ${qualityTone(quality.axis)}`}>
                   <div className="font-semibold">{qualityLabel(quality)}</div>
-                  <div className="mt-1 text-xs opacity-80">
-                    {quality.entry_count} entries, {quality.direct ? "direct" : "co-occurs"}
-                  </div>
+                  <div className="mt-1 text-xs opacity-80">{quality.entry_count} entries, {quality.direct ? "direct" : "co-occurs"}</div>
                 </div>
               ))}
             </div>
@@ -256,9 +670,7 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
               <li key={`${item.entry_id}-${index}`} className="bg-white p-3 text-sm">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-zinc-600">
                   <span className="font-mono">{item.entry_id}</span>
-                  <span className={`rounded border px-2 py-0.5 ${qualityTone(item.axis)}`}>
-                    {item.axis}{item.degree ? ` ${item.degree}` : ""}
-                  </span>
+                  <span className={`rounded border px-2 py-0.5 ${qualityTone(item.axis)}`}>{item.axis}{item.degree ? ` ${item.degree}` : ""}</span>
                 </div>
                 <p className="mt-2 font-serif text-base leading-7 text-zinc-950">{item.evidence}</p>
               </li>
@@ -272,13 +684,7 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
   );
 }
 
-function CompareTray({
-  simples,
-  onRemove,
-}: {
-  simples: VocabSimple[];
-  onRemove: (key: string) => void;
-}) {
+function CompareTray({ simples, onRemove }: { simples: VocabSimple[]; onRemove: (key: string) => void }) {
   if (simples.length === 0) return null;
   return (
     <section className="rounded-md border border-zinc-200 bg-white p-4 shadow-sm">
@@ -294,17 +700,11 @@ function CompareTray({
                 <div className="break-words font-serif text-xl text-zinc-950">{simple.display}</div>
                 <div className="break-all font-mono text-xs text-zinc-500">{simple.lemma_normalized}</div>
               </div>
-              <button type="button" onClick={() => onRemove(simple.lemma_normalized)} className={smallButtonClass}>
-                Remove
-              </button>
+              <button type="button" onClick={() => onRemove(simple.lemma_normalized)} className={smallButtonClass}>Remove</button>
             </div>
-            <div className="mt-3">
-              <SourceBadges simple={simple} compact />
-            </div>
+            <div className="mt-3"><VocabSourceBadges simple={simple} compact /></div>
             <div className="mt-3 flex flex-wrap gap-1.5">
-              {simple.qualities.slice(0, 8).map((quality) => (
-                <QualityBadge key={`${quality.axis}-${quality.degree ?? "none"}`} quality={quality} />
-              ))}
+              {simple.qualities.slice(0, 8).map((quality) => <QualityBadge key={`${quality.axis}-${quality.degree ?? "none"}`} quality={quality} />)}
             </div>
             <div className="mt-3 text-xs leading-5 text-zinc-600">
               <span className="font-medium text-zinc-700">Conditions:</span>{" "}
@@ -317,10 +717,10 @@ function CompareTray({
   );
 }
 
-export default function SimplesClient() {
+function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
   const [index, setIndex] = useState<VocabIndex | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(focusTerm);
   const [source, setSource] = useState("");
   const [label, setLabel] = useState("");
   const [axis, setAxis] = useState("");
@@ -341,12 +741,11 @@ export default function SimplesClient() {
       })
       .then((payload) => {
         setIndex(payload);
-        setSelectedKey(payload.simples[0]?.lemma_normalized ?? null);
+        const focused = payload.simples.find((simple) => simple.lemma_normalized === focusTerm);
+        setSelectedKey(focused?.lemma_normalized ?? payload.simples[0]?.lemma_normalized ?? null);
       })
-      .catch((error: unknown) => {
-        setLoadError(error instanceof Error ? error.message : "Could not load vocab index.");
-      });
-  }, []);
+      .catch((error: unknown) => setLoadError(error instanceof Error ? error.message : "Could not load vocab index."));
+  }, [focusTerm]);
 
   const filters: SimpleFilters = useMemo(() => ({
     query,
@@ -394,81 +793,26 @@ export default function SimplesClient() {
 
   function toggleCompare(simple: VocabSimple) {
     setCompareKeys((current) => {
-      if (current.includes(simple.lemma_normalized)) {
-        return current.filter((key) => key !== simple.lemma_normalized);
-      }
+      if (current.includes(simple.lemma_normalized)) return current.filter((key) => key !== simple.lemma_normalized);
       if (current.length >= MAX_COMPARE) return current;
       return [...current, simple.lemma_normalized];
     });
   }
 
-  if (loadError) {
-    return (
-      <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6">
-        <div className="rounded-md border border-red-300 bg-red-50 p-4 text-sm text-red-800">{loadError}</div>
-      </main>
-    );
-  }
-
-  if (!index) {
-    return (
-      <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6">
-        <div className="rounded-md border border-zinc-200 bg-white p-4 text-sm text-zinc-600 shadow-sm">Loading vocab index...</div>
-      </main>
-    );
-  }
+  if (loadError) return <div className="rounded-md border border-red-300 bg-red-50 p-4 text-sm text-red-800">{loadError}</div>;
+  if (!index) return <div className="rounded-md border border-zinc-200 bg-white p-4 text-sm text-zinc-600 shadow-sm">Loading evidence index...</div>;
 
   const sources = Object.keys(index.stats.sources).sort();
   const visibleResults = filtered.slice(0, RESULT_LIMIT);
-  const activeFilters: Array<{ key: string; label: string; clear: () => void }> = [];
-
-  if (query.trim()) activeFilters.push({ key: "query", label: `Search: ${query}`, clear: () => setQuery("") });
-  if (source) activeFilters.push({ key: "source", label: `Source: ${source}`, clear: () => setSource("") });
-  if (label) activeFilters.push({ key: "label", label: `Label: ${label}`, clear: () => setLabel("") });
-  if (axis) activeFilters.push({ key: "axis", label: `Quality: ${axis}`, clear: () => setAxis("") });
-  if (degree) activeFilters.push({ key: "degree", label: `Degree: ${degree}`, clear: () => setDegree("") });
-  if (minConfidence > 0) {
-    activeFilters.push({ key: "confidence", label: `Confidence >= ${minConfidence.toFixed(2)}`, clear: () => setMinConfidence(0) });
-  }
-  if (crossCorpus) activeFilters.push({ key: "crossCorpus", label: "Cross-corpus", clear: () => setCrossCorpus(false) });
-  for (const facet of FACET_FILTERS) {
-    const value = facetTerms[facet.key]?.trim();
-    if (value) {
-      activeFilters.push({
-        key: `facet-${facet.key}`,
-        label: `${facet.label}: ${value}`,
-        clear: () => updateFacet(facet.key, ""),
-      });
-    }
-  }
 
   return (
-    <main className="mx-auto grid w-full max-w-[1500px] gap-5 px-4 py-6 sm:px-6">
-      <header className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-normal text-zinc-950">Simples</h1>
-          <p className="mt-1 text-sm text-zinc-600">
-            {formatCount(index.stats.simples)} simples, {formatCount(index.stats.entries)} entries, {formatCount(filtered.length)} shown
-          </p>
-        </div>
-        <div className="grid grid-cols-3 gap-2">
-          <Metric label="Sources" value={formatCount(sources.length)} />
-          <Metric label="Labels" value={formatCount(index.labels.length)} />
-          <Metric label="Generated" value={formatCount(index.stats.result_files)} />
-        </div>
-      </header>
-
+    <div className="grid gap-5">
       <section className="rounded-md border border-zinc-200 bg-white p-4 shadow-sm">
         <div className="grid gap-4">
           <div className="grid gap-3 lg:grid-cols-[minmax(280px,2fr)_repeat(5,minmax(120px,1fr))]">
             <label className="grid gap-1.5">
               <span className="text-xs font-semibold uppercase text-zinc-600">Search</span>
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                className={inputClass}
-                placeholder="Greek, normalized form, source ID, evidence"
-              />
+              <input value={query} onChange={(event) => setQuery(event.target.value)} className={inputClass} placeholder="Greek, normalized form, source ID, evidence" />
             </label>
             <label className="grid gap-1.5">
               <span className="text-xs font-semibold uppercase text-zinc-600">Source</span>
@@ -524,9 +868,7 @@ export default function SimplesClient() {
                   placeholder={`Filter ${facet.label.toLowerCase()}`}
                 />
                 <datalist id={`facet-options-${facet.key}`}>
-                  {(index.facet_options[facet.key] ?? []).slice(0, 80).map((option) => (
-                    <option key={option.key} value={option.key} />
-                  ))}
+                  {(index.facet_options[facet.key] ?? []).slice(0, 80).map((option) => <option key={option.key} value={option.key} />)}
                 </datalist>
               </label>
             ))}
@@ -535,77 +877,113 @@ export default function SimplesClient() {
           <div className="flex flex-wrap items-center gap-3 border-t border-zinc-200 pt-4 text-sm">
             <label className="flex min-w-[230px] items-center gap-3">
               <span className="shrink-0 font-medium text-zinc-700">Min confidence</span>
-              <input
-                type="range"
-                min="0"
-                max="1"
-                step="0.05"
-                value={minConfidence}
-                onChange={(event) => setMinConfidence(Number(event.target.value) || 0)}
-                className="w-full accent-zinc-900"
-              />
+              <input type="range" min="0" max="1" step="0.05" value={minConfidence} onChange={(event) => setMinConfidence(Number(event.target.value) || 0)} className="w-full accent-zinc-900" />
               <span className="w-9 text-right font-mono text-xs text-zinc-600">{minConfidence.toFixed(2)}</span>
             </label>
-
             <label className="flex h-9 items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 font-medium text-zinc-800">
               <input type="checkbox" checked={crossCorpus} onChange={(event) => setCrossCorpus(event.target.checked)} />
               Cross-corpus only
             </label>
-
             <div className="flex h-9 overflow-hidden rounded-md border border-zinc-300 bg-white">
-              <button
-                type="button"
-                onClick={() => setMode("and")}
-                className={`px-3 text-sm font-semibold ${mode === "and" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}
-              >
-                AND
-              </button>
-              <button
-                type="button"
-                onClick={() => setMode("or")}
-                className={`border-l border-zinc-300 px-3 text-sm font-semibold ${mode === "or" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}
-              >
-                OR
-              </button>
+              <button type="button" onClick={() => setMode("and")} className={`px-3 text-sm font-semibold ${mode === "and" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}>AND</button>
+              <button type="button" onClick={() => setMode("or")} className={`border-l border-zinc-300 px-3 text-sm font-semibold ${mode === "or" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}>OR</button>
             </div>
-
-            <button type="button" onClick={resetFilters} className={smallButtonClass}>
-              Reset
-            </button>
+            <button type="button" onClick={resetFilters} className={smallButtonClass}>Reset</button>
           </div>
-
-          {activeFilters.length > 0 ? (
-            <div className="flex flex-wrap gap-2 border-t border-zinc-200 pt-4">
-              {activeFilters.map((filter) => (
-                <button
-                  key={filter.key}
-                  type="button"
-                  onClick={filter.clear}
-                  className="rounded-full border border-zinc-300 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  {filter.label} x
-                </button>
-              ))}
-            </div>
-          ) : null}
         </div>
       </section>
 
       <CompareTray simples={compared} onRemove={(key) => setCompareKeys((current) => current.filter((item) => item !== key))} />
-
       <section className="grid gap-5 xl:grid-cols-[minmax(360px,0.55fr)_minmax(0,1fr)]">
-        <ResultList
-          simples={visibleResults}
-          total={filtered.length}
-          selectedKey={selected?.lemma_normalized ?? null}
-          compareKeys={compareKeys}
-          onSelect={(simple) => setSelectedKey(simple.lemma_normalized)}
-          onToggleCompare={toggleCompare}
-        />
+        <EvidenceResultList simples={visibleResults} total={filtered.length} selectedKey={selected?.lemma_normalized ?? null} compareKeys={compareKeys} onSelect={(simple) => setSelectedKey(simple.lemma_normalized)} onToggleCompare={toggleCompare} />
         <div className="xl:sticky xl:top-4 xl:self-start">
           <SimpleDetail simple={selected} />
         </div>
       </section>
+    </div>
+  );
+}
+
+export default function SimplesClient() {
+  const [registry, setRegistry] = useState<SimplesRegistryIndex | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<ViewMode>("registry");
+  const [focusTerm, setFocusTerm] = useState("");
+
+  useEffect(() => {
+    fetch("/simples/registry-index.json")
+      .then((response) => {
+        if (!response.ok) throw new Error(`Registry request failed: ${response.status}`);
+        return response.json() as Promise<SimplesRegistryIndex>;
+      })
+      .then((payload) => setRegistry(payload))
+      .catch((error: unknown) => setLoadError(error instanceof Error ? error.message : "Could not load registry index."));
+  }, []);
+
+  if (loadError) {
+    return (
+      <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6">
+        <div className="rounded-md border border-red-300 bg-red-50 p-4 text-sm text-red-800">{loadError}</div>
+      </main>
+    );
+  }
+
+  if (!registry) {
+    return (
+      <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6">
+        <div className="rounded-md border border-zinc-200 bg-white p-4 text-sm text-zinc-600 shadow-sm">Loading registry index...</div>
+      </main>
+    );
+  }
+
+  function openEvidence(termKey: string) {
+    setFocusTerm(termKey);
+    setViewMode("evidence");
+  }
+
+  return (
+    <main className="mx-auto grid w-full max-w-[1500px] gap-5 px-4 py-6 sm:px-6">
+      <header className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-normal text-zinc-950">Simples</h1>
+          <p className="mt-1 text-sm text-zinc-600">
+            {formatCount(registry.stats.terms)} draft ancient terms, {formatCount(registry.stats.occurrences)} occurrences
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-2">
+          <Metric label="Sources" value={formatCount(Object.keys(registry.stats.sources).length)} />
+          <Metric label="Pending" value={formatCount(registry.stats.review_statuses.pending_candidates ?? 0)} />
+          <Metric label="Index" value={viewMode === "registry" ? "Registry" : "Evidence"} />
+        </div>
+      </header>
+
+      <section className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-zinc-200 bg-white p-3 shadow-sm">
+        <div className="flex h-10 overflow-hidden rounded-md border border-zinc-300 bg-white">
+          <button
+            type="button"
+            onClick={() => setViewMode("registry")}
+            className={`px-4 text-sm font-semibold ${viewMode === "registry" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}
+          >
+            Registry
+          </button>
+          <button
+            type="button"
+            onClick={() => setViewMode("evidence")}
+            className={`border-l border-zinc-300 px-4 text-sm font-semibold ${viewMode === "evidence" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}
+          >
+            Evidence
+          </button>
+        </div>
+        <div className="text-sm text-zinc-600">
+          Draft ancient-term registry. Identification and physical-substance links remain future review layers.
+        </div>
+      </section>
+
+      {viewMode === "registry" ? (
+        <RegistryView registry={registry} onOpenEvidence={openEvidence} />
+      ) : (
+        <EvidenceExplorer key={focusTerm || "evidence"} focusTerm={focusTerm} />
+      )}
     </main>
   );
 }

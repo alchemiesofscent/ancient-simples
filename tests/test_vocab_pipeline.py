@@ -4,6 +4,7 @@ import json
 
 from scripts.consolidate_results import consolidate
 from scripts.build_simple_name_relation_candidates import candidate_rows, choose_sample
+from scripts.build_simples_public_index import build_index as build_simples_public_index
 from scripts.build_simples_registry import build_registry
 from scripts.build_vocab_frontend_index import LABELS, build_index
 from scripts.import_vocab_v3 import build_legacy_rows
@@ -366,3 +367,74 @@ def test_name_relation_candidate_sample_includes_trigger_and_control():
     assert rows[0]["review_status"] == "pending_llm_review"
     assert packets[0]["candidate_terms"][0]["term_key"] == "αγνος"
     assert counts["sample_Aetius"] == 2
+
+
+def test_simples_public_index_merges_registry_review_and_quality_data(tmp_path):
+    workbench = tmp_path / "simples"
+    workbench.mkdir()
+    (workbench / "simple_terms_v0.csv").write_text(
+        "term_key,preferred_display,lemma_normalized,labels,is_multiword,head_lemma_normalized,variant_place_lemma_normalized,source_count,entry_count,occurrence_count,text_sources,author_groups,result_runs,confidence_avg,status\n"
+        "αγνος,ἄγνος,αγνος,SUBSTANCE:1,false,,,1,1,1,AET_LM,Aetius,test_run,0.950,draft\n",
+        encoding="utf-8",
+    )
+    (workbench / "simple_term_forms_v0.csv").write_text(
+        "term_key,form_display,form_normalized,count,entry_count,text_sources,author_groups\n"
+        "αγνος,ἄγνος,αγνος,1,1,AET_LM,Aetius\n",
+        encoding="utf-8",
+    )
+    (workbench / "simple_term_occurrences_v0.csv").write_text(
+        "occurrence_id,term_key,entry_id,text_source,author_group,result_run,entry_ref,chapter_title_gr,display,lemma_gr,label,normalized,lemma_normalized,is_multiword,head_lemma_normalized,substance_lemma_normalized,part_lemma_normalized,variant_place_lemma_normalized,confidence,lemma_confidence,result_file,applies_to_kind,applies_to_lemma_normalized,applies_to_substance_lemma_normalized,applies_to_part_lemma_normalized\n"
+        "test_run:AET_LM-1.1:0,αγνος,AET_LM-1.1,AET_LM,Aetius,test_run,1.1,περὶ ἄγνου,ἄγνος,ἄγνος,SUBSTANCE,αγνος,αγνος,false,,,,,0.950,0.950,test.json,UNSPECIFIED,,,\n",
+        encoding="utf-8",
+    )
+    (workbench / "simple_name_relation_candidates.csv").write_text(
+        "candidate_id,author_group,entry_id,text_source,sample_type,candidate_method,trigger_pattern,left_term_key,left_display,right_term_key,right_display,relation_hint,evidence_display,review_status,review_confidence,review_note\n"
+        "SNRC-00001,Aetius,AET_LM-1.1,AET_LM,trigger,heading_eta,,αγνος,ἄγνος,λυγος,λύγος,unreviewed,περὶ ἄγνου ἢ λύγου,pending_llm_review,,\n",
+        encoding="utf-8",
+    )
+    (workbench / "simple_name_relations_pilot.csv").write_text(
+        "candidate_id,entry_id,text_source,author_group,left_term_key,right_term_key,relation_type,evidence_display,review_status,review_confidence,reviewer,review_note\n"
+        "SNRC-00001,AET_LM-1.1,AET_LM,Aetius,αγνος,λυγος,unreviewed,περὶ ἄγνου ἢ λύγου,pending_llm_review,,,\n",
+        encoding="utf-8",
+    )
+    (workbench / "simple_registry_manifest.json").write_text(
+        json.dumps({"counts": {"terms": 1, "occurrences": 1, "forms": 1}}),
+        encoding="utf-8",
+    )
+    vocab_index = tmp_path / "vocab-index.json"
+    vocab_index.write_text(
+        json.dumps(
+            {
+                "simples": [
+                    {
+                        "lemma_normalized": "αγνος",
+                        "qualities": [
+                            {
+                                "axis": "HOT",
+                                "degree": "3",
+                                "entry_count": 1,
+                                "direct": True,
+                            }
+                        ],
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    config = tmp_path / "config.json"
+    config.write_text(
+        json.dumps({"future_corpora": [{"label": "Aetius 3-4"}]}),
+        encoding="utf-8",
+    )
+
+    index = build_simples_public_index(workbench=workbench, vocab_index_path=vocab_index, config_path=config)
+
+    assert index["stats"]["terms"] == 1
+    assert index["stats"]["review_statuses"] == {"pending_candidates": 1}
+    assert index["future_corpora"][0]["label"] == "Aetius 3-4"
+    term = index["terms"][0]
+    assert term["term_key"] == "αγνος"
+    assert term["source_counts"] == {"AET_LM": 1}
+    assert term["name_relation"]["candidate_count"] == 1
+    assert term["quality_summary"][0]["axis"] == "HOT"

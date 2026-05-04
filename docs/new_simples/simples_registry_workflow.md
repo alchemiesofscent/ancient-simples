@@ -39,6 +39,7 @@ Generated files live under `data-workbench/simples/`:
 - `simple_name_relation_review_packets.jsonl`: full-context review packets for LLM or human reviewers.
 - `simple_name_relations_pilot.csv`: reviewed relation surface; initially pending LLM review.
 - `simple_name_relations_pilot_report.md`: pilot counts and next-step status.
+- `app/public/simples/registry-index.json`: compact browser index for the `/simples` Registry view.
 
 These are working artifacts, not final canonical data. They are checked in because review state and reproducibility matter more than hiding generated CSVs at this stage.
 
@@ -50,6 +51,19 @@ These are working artifacts, not final canonical data. They are checked in becau
 4. Have LLM or human reviewers confirm, reject, classify, and add missed name relations.
 5. Use the pilot to decide which normalized terms can become aliases, which are variants, and which must remain separate.
 6. Only after this pilot, build identification candidates and physical-substance links.
+
+## Browser Views
+
+The `/simples` route has two research-review views:
+
+- `Registry`: the default named-simple list. It loads `app/public/simples/registry-index.json`, supports source/author/review filters, and labels every row as a draft ancient term rather than a final physical substance.
+- `Evidence`: the heavier extraction explorer. It loads `app/public/vocab/vocab-index.json` only when opened and preserves the detailed quality/facet/evidence comparison workflow.
+
+Rebuild the compact browser index after regenerating registry artifacts:
+
+```bash
+npm run simples:public-index
+```
 
 ## Review Relation Types
 

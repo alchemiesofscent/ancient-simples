@@ -19,15 +19,19 @@ The goal is to preserve an auditable path from extracted `vocab_entries_v3` term
 - `simple_name_relation_review_packets.jsonl`: full passage packets for LLM/human review.
 - `simple_name_relations_pilot.csv`: reviewer output surface, initially pending review.
 - `simple_name_relations_pilot_report.md`: candidate/sample summary.
+- `app/public/simples/registry-index.json`: compact browser index for the `/simples` Registry view.
 
 ## Commands
 
 ```bash
 npm run simples:registry
 npm run simples:name-candidates
+npm run simples:public-index
 ```
 
 Both commands read `config/simples_registry_runs.json`. Add future Oribasius 1-14 and Aetius 3-4 result runs to that manifest rather than changing the CSV schema.
+
+`simples:public-index` also reads the current evidence index at `app/public/vocab/vocab-index.json` so the Registry view can show compact quality badges without loading the full evidence payload first.
 
 ## Data Model Boundary
 
