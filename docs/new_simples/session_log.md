@@ -175,3 +175,14 @@ Use this template for every session entry:
 - Blockers: `/entries` remains intentionally login-gated until/unless the editor workflow is split from public read-only entry browsing.
 - Exact next task for this stream: `LEGACY-SIMPLES-REVIEW-01` `[LEGACY]` review candidate name-relation packets and update `simple_name_relations_pilot.csv`.
 - Resume note: Public browsing should start at `/simples`; editor/database pages still use magic-link auth.
+
+### 2026-05-04 - Codex
+
+- Starting context: User said the registry was still chaotic and needed filtering by work so a reader can inspect, for example, Dioscorides separately from Aetius.
+- Tasks moved: Added `UI-SIMPLES-WORK-FILTER-01` to `Done`. Left `Now`/`Resume Here` on `LEGACY-VOCAB-IMPORT-01`.
+- Decisions: Keep source codes internally for provenance, but make the UI speak in terms of works. Preserve the selected work when moving from a Registry row to Evidence, because otherwise the user loses the question they were asking.
+- Transformations: `Source` filter labels -> `Work`; raw filter options like `DIOSC_DMM` -> readable labels like `Dioscorides (DIOSC_DMM)`; source badges raw-code-only -> work-name badges with source codes in hover titles; Registry detail all-source emphasis under a work filter -> selected-work hits/forms/samples; Evidence detail all-source evidence under a work filter -> selected-work examples.
+- Evidence checked: `npm run app:lint`; `npm run app:build`.
+- Blockers: The work filter improves navigation, but the underlying registry is still a provisional extraction surface with generic part nouns and lemmatization errors until `LEGACY-SIMPLES-REVIEW-01` and a stricter candidate-simple view are implemented.
+- Exact next task for this stream: add a default candidate-simple view that hides `SUBSTANCE_PART`-only generic rows and moves lemmatization/name problems into review buckets.
+- Resume note: Work filtering is implemented in the static `/simples` route; the next usability issue is data curation, not more navigation.

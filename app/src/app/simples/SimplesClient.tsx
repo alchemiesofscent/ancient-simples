@@ -23,6 +23,15 @@ const inputClass =
 const smallButtonClass =
   "h-9 rounded-md border border-slate-400 bg-white px-3 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-200";
 
+const WORK_LABELS: Record<string, string> = {
+  AET_LM: "Aetius",
+  DIOSC_DMM: "Dioscorides",
+  GAL_ALIM: "Galen, Foods",
+  GAL_SMT: "Galen, Simples",
+  ORIB_CM: "Oribasius",
+  PAUL_AEG: "Paul",
+};
+
 type ViewMode = "registry" | "evidence";
 type RegistryMultiwordFilter = "" | "simple" | "multiword" | "head" | "place";
 
@@ -37,6 +46,18 @@ function searchNeedle(value: string): string {
 function confidenceLabel(value: number | null): string {
   if (value === null) return "n/a";
   return value.toFixed(2);
+}
+
+function workLabel(source: string): string {
+  return WORK_LABELS[source] ?? source;
+}
+
+function sortedSources(sources: Iterable<string>): string[] {
+  return [...sources].sort((a, b) => workLabel(a).localeCompare(workLabel(b)));
+}
+
+function sourcePrefix(source: string): string {
+  return `${source}-`;
 }
 
 function qualityTone(axis: string): string {
@@ -63,14 +84,15 @@ function Metric({ label, value }: { label: string; value: string }) {
 function SourceBadges({ sources, compact = false }: { sources: Record<string, number>; compact?: boolean }) {
   return (
     <div className="flex flex-wrap gap-1.5">
-      {Object.entries(sources).sort(([a], [b]) => a.localeCompare(b)).map(([source, count]) => (
+      {Object.entries(sources).sort(([a], [b]) => workLabel(a).localeCompare(workLabel(b))).map(([source, count]) => (
         <span
           key={source}
           className={`rounded border border-indigo-200 bg-indigo-50 font-mono text-indigo-950 ${
             compact ? "px-1.5 py-0.5 text-[11px]" : "px-2 py-1 text-xs"
           }`}
+          title={source}
         >
-          {source} {count}
+          {workLabel(source)} {count}
         </span>
       ))}
     </div>
@@ -262,10 +284,12 @@ function RegistryList({
 
 function RegistryDetail({
   term,
+  activeSource,
   onOpenEvidence,
 }: {
   term: RegistryTerm | null;
-  onOpenEvidence: (termKey: string) => void;
+  activeSource: string;
+  onOpenEvidence: (termKey: string, source?: string) => void;
 }) {
   if (!term) {
     return (
@@ -274,6 +298,17 @@ function RegistryDetail({
       </aside>
     );
   }
+
+  const scopedSources = activeSource
+    ? { [activeSource]: term.source_counts[activeSource] ?? 0 }
+    : term.source_counts;
+  const visibleForms = activeSource
+    ? term.forms.filter((form) => form.text_sources.includes(activeSource))
+    : term.forms;
+  const visibleSamples = activeSource
+    ? term.entry_samples.filter((entryId) => entryId.startsWith(sourcePrefix(activeSource)))
+    : term.entry_samples;
+  const sourceMetric = activeSource ? term.source_counts[activeSource] ?? 0 : term.source_count;
 
   return (
     <aside className="rounded-md border border-slate-300 bg-white shadow-sm">
@@ -290,16 +325,16 @@ function RegistryDetail({
           <div className="grid grid-cols-3 gap-2 sm:min-w-[290px]">
             <Metric label="Entries" value={formatCount(term.entry_count)} />
             <Metric label="Occurrences" value={formatCount(term.occurrence_count)} />
-            <Metric label="Sources" value={formatCount(term.source_count)} />
+            <Metric label={activeSource ? "Work Hits" : "Works"} value={formatCount(sourceMetric)} />
           </div>
         </div>
       </div>
 
       <div className="grid gap-6 p-5">
         <section>
-          <h3 className="text-xs font-semibold uppercase text-slate-500">Source Coverage</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Work Coverage</h3>
           <div className="mt-2">
-            <SourceBadges sources={term.source_counts} />
+            <SourceBadges sources={scopedSources} />
           </div>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {Object.entries(term.author_counts).map(([author, count]) => (
@@ -313,7 +348,7 @@ function RegistryDetail({
         <section>
           <h3 className="text-xs font-semibold uppercase text-slate-500">Forms</h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {term.forms.slice(0, 18).map((form) => (
+            {visibleForms.slice(0, 18).map((form) => (
               <span key={`${form.display}-${form.normalized}`} className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs">
                 <span className="font-serif text-sm text-slate-950">{form.display}</span>
                 <span className="ml-1 text-slate-500">{form.count}</span>
@@ -357,15 +392,16 @@ function RegistryDetail({
         <section>
           <h3 className="text-xs font-semibold uppercase text-slate-500">Entry Samples</h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {term.entry_samples.slice(0, 20).map((entryId) => (
+            {visibleSamples.slice(0, 20).map((entryId) => (
               <span key={entryId} className="rounded border border-slate-300 bg-slate-50 px-2 py-1 font-mono text-xs text-slate-800">
                 {entryId}
               </span>
             ))}
+            {visibleSamples.length === 0 ? <span className="text-sm text-slate-700">No sampled entries for this work.</span> : null}
           </div>
         </section>
 
-        <button type="button" onClick={() => onOpenEvidence(term.term_key)} className={smallButtonClass}>
+        <button type="button" onClick={() => onOpenEvidence(term.term_key, activeSource)} className={smallButtonClass}>
           Open Evidence View
         </button>
       </div>
@@ -378,7 +414,7 @@ function RegistryView({
   onOpenEvidence,
 }: {
   registry: SimplesRegistryIndex;
-  onOpenEvidence: (termKey: string) => void;
+  onOpenEvidence: (termKey: string, source?: string) => void;
 }) {
   const [query, setQuery] = useState("");
   const [source, setSource] = useState("");
@@ -389,7 +425,7 @@ function RegistryView({
   const [sortKey, setSortKey] = useState("entry_count");
   const [selectedKey, setSelectedKey] = useState<string | null>(registry.terms[0]?.term_key ?? null);
 
-  const sources = Object.keys(registry.stats.sources).sort();
+  const sources = sortedSources(Object.keys(registry.stats.sources));
   const authors = Object.keys(registry.stats.author_groups).sort();
 
   const filtered = useMemo(() => {
@@ -398,8 +434,8 @@ function RegistryView({
   }, [author, crossCorpus, multiword, query, registry.terms, reviewStatus, sortKey, source]);
 
   const selected = useMemo(() => {
-    return registry.terms.find((term) => term.term_key === selectedKey) ?? filtered[0] ?? null;
-  }, [filtered, registry.terms, selectedKey]);
+    return filtered.find((term) => term.term_key === selectedKey) ?? filtered[0] ?? null;
+  }, [filtered, selectedKey]);
 
   const visible = filtered.slice(0, REGISTRY_LIMIT);
 
@@ -423,14 +459,14 @@ function RegistryView({
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 className={inputClass}
-                placeholder="Greek display, normalized term, source, author"
+                placeholder="Greek display, normalized term, work, author"
               />
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-slate-700">Source</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Work</span>
               <select value={source} onChange={(event) => setSource(event.target.value)} className={inputClass}>
-                <option value="">All sources</option>
-                {sources.map((item) => <option key={item} value={item}>{item}</option>)}
+                <option value="">All works</option>
+                {sources.map((item) => <option key={item} value={item}>{workLabel(item)} ({item})</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
@@ -476,8 +512,13 @@ function RegistryView({
           <div className="flex flex-wrap items-center gap-3 border-t border-slate-300 pt-4 text-sm">
             <label className="flex h-9 items-center gap-2 rounded-md border border-slate-400 bg-white px-3 font-medium text-slate-900">
               <input type="checkbox" checked={crossCorpus} onChange={(event) => setCrossCorpus(event.target.checked)} />
-              Cross-corpus only
+              Appears in multiple works
             </label>
+            {source ? (
+              <span className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-sm font-medium text-indigo-950">
+                Work: {workLabel(source)}
+              </span>
+            ) : null}
             <button type="button" onClick={resetFilters} className={smallButtonClass}>Reset</button>
             <button type="button" onClick={() => exportRegistry(filtered, "csv")} className={smallButtonClass}>Export CSV</button>
             <button type="button" onClick={() => exportRegistry(filtered, "json")} className={smallButtonClass}>Export JSON</button>
@@ -493,7 +534,7 @@ function RegistryView({
           onSelect={(term) => setSelectedKey(term.term_key)}
         />
         <div className="xl:sticky xl:top-4 xl:self-start">
-          <RegistryDetail term={selected} onOpenEvidence={onOpenEvidence} />
+          <RegistryDetail term={selected} activeSource={source} onOpenEvidence={onOpenEvidence} />
         </div>
       </section>
     </div>
@@ -504,8 +545,9 @@ function topFacetValues(simple: VocabSimple, label: string, limit = 6): VocabFac
   return (simple.facets[label] ?? []).slice(0, limit);
 }
 
-function VocabSourceBadges({ simple, compact = false }: { simple: VocabSimple; compact?: boolean }) {
-  return <SourceBadges sources={simple.sources} compact={compact} />;
+function VocabSourceBadges({ simple, activeSource = "", compact = false }: { simple: VocabSimple; activeSource?: string; compact?: boolean }) {
+  const sources = activeSource ? { [activeSource]: simple.sources[activeSource] ?? 0 } : simple.sources;
+  return <SourceBadges sources={sources} compact={compact} />;
 }
 
 function EvidenceResultList({
@@ -597,7 +639,7 @@ function FacetGroup({ title, facets }: { title: string; facets: VocabFacet[] }) 
   );
 }
 
-function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
+function SimpleDetail({ simple, activeSource }: { simple: VocabSimple | null; activeSource: string }) {
   if (!simple) {
     return (
       <aside className="rounded-md border border-slate-300 bg-white p-5 text-sm text-slate-700 shadow-sm">
@@ -606,9 +648,18 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
     );
   }
 
-  const evidence = simple.qualities.flatMap((quality) =>
-    quality.examples.map((example) => ({ ...example, axis: quality.axis, degree: quality.degree })),
+  const visibleForms = activeSource
+    ? simple.forms.filter((form) => form.sources.includes(activeSource))
+    : simple.forms;
+  const visibleQualities = activeSource
+    ? simple.qualities.filter((quality) => quality.sources.includes(activeSource))
+    : simple.qualities;
+  const evidence = visibleQualities.flatMap((quality) =>
+    quality.examples
+      .filter((example) => !activeSource || example.source === activeSource)
+      .map((example) => ({ ...example, axis: quality.axis, degree: quality.degree })),
   ).slice(0, 10);
+  const sourceMetric = activeSource ? simple.sources[activeSource] ?? 0 : simple.source_count;
 
   return (
     <aside className="rounded-md border border-slate-300 bg-white shadow-sm">
@@ -620,23 +671,25 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
           </div>
           <div className="grid grid-cols-3 gap-2 sm:min-w-[280px]">
             <Metric label="Entries" value={formatCount(simple.entry_count)} />
-            <Metric label="Sources" value={formatCount(simple.source_count)} />
+            <Metric label={activeSource ? "Work Hits" : "Works"} value={formatCount(sourceMetric)} />
             <Metric label="Confidence" value={confidenceLabel(simple.confidence_avg)} />
           </div>
         </div>
         <div className="mt-4">
-          <VocabSourceBadges simple={simple} />
+          <VocabSourceBadges simple={simple} activeSource={activeSource} />
         </div>
       </div>
       <div className="grid gap-6 p-5">
         <section>
           <h3 className="text-xs font-semibold uppercase text-slate-500">Quality Profile</h3>
-          {simple.qualities.length > 0 ? (
+          {visibleQualities.length > 0 ? (
             <div className="mt-2 grid gap-2 sm:grid-cols-2">
-              {simple.qualities.map((quality) => (
+              {visibleQualities.map((quality) => (
                 <div key={`${quality.axis}-${quality.degree ?? "none"}`} className={`rounded-md border p-3 ${qualityTone(quality.axis)}`}>
                   <div className="font-semibold">{qualityLabel(quality)}</div>
-                  <div className="mt-1 text-xs opacity-80">{quality.entry_count} entries, {quality.direct ? "direct" : "co-occurs"}</div>
+                  <div className="mt-1 text-xs opacity-80">
+                    {activeSource ? quality.examples.filter((example) => example.source === activeSource).length : quality.entry_count} entries, {quality.direct ? "direct" : "co-occurs"}
+                  </div>
                 </div>
               ))}
             </div>
@@ -648,12 +701,13 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
         <section>
           <h3 className="text-xs font-semibold uppercase text-slate-500">Forms</h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {simple.forms.slice(0, 16).map((form) => (
+            {visibleForms.slice(0, 16).map((form) => (
               <span key={form.display} className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs">
                 <span className="font-serif text-sm text-slate-950">{form.display}</span>
                 <span className="ml-1 text-slate-500">{form.count}</span>
               </span>
             ))}
+            {visibleForms.length === 0 ? <span className="text-sm text-slate-700">No forms for this work.</span> : null}
           </div>
         </section>
 
@@ -684,7 +738,7 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
   );
 }
 
-function CompareTray({ simples, onRemove }: { simples: VocabSimple[]; onRemove: (key: string) => void }) {
+function CompareTray({ simples, activeSource, onRemove }: { simples: VocabSimple[]; activeSource: string; onRemove: (key: string) => void }) {
   if (simples.length === 0) return null;
   return (
     <section className="rounded-md border border-slate-300 bg-white p-4 shadow-sm">
@@ -702,7 +756,7 @@ function CompareTray({ simples, onRemove }: { simples: VocabSimple[]; onRemove: 
               </div>
               <button type="button" onClick={() => onRemove(simple.lemma_normalized)} className={smallButtonClass}>Remove</button>
             </div>
-            <div className="mt-3"><VocabSourceBadges simple={simple} compact /></div>
+            <div className="mt-3"><VocabSourceBadges simple={simple} activeSource={activeSource} compact /></div>
             <div className="mt-3 flex flex-wrap gap-1.5">
               {simple.qualities.slice(0, 8).map((quality) => <QualityBadge key={`${quality.axis}-${quality.degree ?? "none"}`} quality={quality} />)}
             </div>
@@ -717,11 +771,11 @@ function CompareTray({ simples, onRemove }: { simples: VocabSimple[]; onRemove: 
   );
 }
 
-function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
+function EvidenceExplorer({ focusTerm, initialSource }: { focusTerm: string; initialSource: string }) {
   const [index, setIndex] = useState<VocabIndex | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [query, setQuery] = useState(focusTerm);
-  const [source, setSource] = useState("");
+  const [source, setSource] = useState(initialSource);
   const [label, setLabel] = useState("");
   const [axis, setAxis] = useState("");
   const [degree, setDegree] = useState("");
@@ -766,7 +820,7 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
 
   const selected = useMemo(() => {
     if (!index) return null;
-    return index.simples.find((simple) => simple.lemma_normalized === selectedKey) ?? filtered[0] ?? null;
+    return filtered.find((simple) => simple.lemma_normalized === selectedKey) ?? filtered[0] ?? null;
   }, [filtered, index, selectedKey]);
 
   const compared = useMemo(() => {
@@ -802,7 +856,7 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
   if (loadError) return <div className="rounded-md border border-red-300 bg-red-50 p-4 text-sm text-red-800">{loadError}</div>;
   if (!index) return <div className="rounded-md border border-slate-300 bg-white p-4 text-sm text-slate-700 shadow-sm">Loading evidence index...</div>;
 
-  const sources = Object.keys(index.stats.sources).sort();
+  const sources = sortedSources(Object.keys(index.stats.sources));
   const visibleResults = filtered.slice(0, RESULT_LIMIT);
 
   return (
@@ -812,13 +866,13 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
           <div className="grid gap-3 lg:grid-cols-[minmax(280px,2fr)_repeat(5,minmax(120px,1fr))]">
             <label className="grid gap-1.5">
               <span className="text-xs font-semibold uppercase text-slate-700">Search</span>
-              <input value={query} onChange={(event) => setQuery(event.target.value)} className={inputClass} placeholder="Greek, normalized form, source ID, evidence" />
+              <input value={query} onChange={(event) => setQuery(event.target.value)} className={inputClass} placeholder="Greek, normalized form, work, evidence" />
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-slate-700">Source</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Work</span>
               <select value={source} onChange={(event) => setSource(event.target.value)} className={inputClass}>
-                <option value="">All sources</option>
-                {sources.map((item) => <option key={item} value={item}>{item}</option>)}
+                <option value="">All works</option>
+                {sources.map((item) => <option key={item} value={item}>{workLabel(item)} ({item})</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
@@ -882,8 +936,13 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
             </label>
             <label className="flex h-9 items-center gap-2 rounded-md border border-slate-400 bg-white px-3 font-medium text-slate-900">
               <input type="checkbox" checked={crossCorpus} onChange={(event) => setCrossCorpus(event.target.checked)} />
-              Cross-corpus only
+              Appears in multiple works
             </label>
+            {source ? (
+              <span className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-sm font-medium text-indigo-950">
+                Work: {workLabel(source)}
+              </span>
+            ) : null}
             <div className="flex h-9 overflow-hidden rounded-md border border-slate-400 bg-white">
               <button type="button" onClick={() => setMode("and")} className={`px-3 text-sm font-semibold ${mode === "and" ? "bg-indigo-700 text-white" : "text-slate-800 hover:bg-slate-100"}`}>AND</button>
               <button type="button" onClick={() => setMode("or")} className={`border-l border-slate-400 px-3 text-sm font-semibold ${mode === "or" ? "bg-indigo-700 text-white" : "text-slate-800 hover:bg-slate-100"}`}>OR</button>
@@ -893,11 +952,11 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
         </div>
       </section>
 
-      <CompareTray simples={compared} onRemove={(key) => setCompareKeys((current) => current.filter((item) => item !== key))} />
+      <CompareTray simples={compared} activeSource={source} onRemove={(key) => setCompareKeys((current) => current.filter((item) => item !== key))} />
       <section className="grid gap-5 xl:grid-cols-[minmax(360px,0.55fr)_minmax(0,1fr)]">
         <EvidenceResultList simples={visibleResults} total={filtered.length} selectedKey={selected?.lemma_normalized ?? null} compareKeys={compareKeys} onSelect={(simple) => setSelectedKey(simple.lemma_normalized)} onToggleCompare={toggleCompare} />
         <div className="xl:sticky xl:top-4 xl:self-start">
-          <SimpleDetail simple={selected} />
+          <SimpleDetail simple={selected} activeSource={source} />
         </div>
       </section>
     </div>
@@ -909,6 +968,7 @@ export default function SimplesClient() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("registry");
   const [focusTerm, setFocusTerm] = useState("");
+  const [focusSource, setFocusSource] = useState("");
 
   useEffect(() => {
     fetch("/simples/registry-index.json")
@@ -936,8 +996,9 @@ export default function SimplesClient() {
     );
   }
 
-  function openEvidence(termKey: string) {
+  function openEvidence(termKey: string, source = "") {
     setFocusTerm(termKey);
+    setFocusSource(source);
     setViewMode("evidence");
   }
 
@@ -951,7 +1012,7 @@ export default function SimplesClient() {
           </p>
         </div>
         <div className="grid grid-cols-3 gap-2">
-          <Metric label="Sources" value={formatCount(Object.keys(registry.stats.sources).length)} />
+          <Metric label="Works" value={formatCount(Object.keys(registry.stats.sources).length)} />
           <Metric label="Pending" value={formatCount(registry.stats.review_statuses.pending_candidates ?? 0)} />
           <Metric label="Index" value={viewMode === "registry" ? "Registry" : "Evidence"} />
         </div>
@@ -982,7 +1043,7 @@ export default function SimplesClient() {
       {viewMode === "registry" ? (
         <RegistryView registry={registry} onOpenEvidence={openEvidence} />
       ) : (
-        <EvidenceExplorer key={focusTerm || "evidence"} focusTerm={focusTerm} />
+        <EvidenceExplorer key={`${focusTerm || "evidence"}-${focusSource}`} focusTerm={focusTerm} initialSource={focusSource} />
       )}
     </main>
   );

@@ -1,5 +1,16 @@
 # Changelog
 
+### 2026-05-04 — Work-scoped simples filtering
+
+**Why**: The registry mixed all corpora together and exposed internal source codes, making it hard to ask basic questions like "what does Dioscorides say?" versus "what does Aetius say?"
+
+| Before | After | Why |
+|--------|-------|-----|
+| Registry and Evidence filters were labeled `Source` and showed raw codes such as `DIOSC_DMM` and `AET_LM` | Filters are labeled `Work` and show readable names such as `Dioscorides (DIOSC_DMM)` and `Aetius (AET_LM)` | Match the way users think about the corpus |
+| Source badges displayed only internal codes | Badges display readable work names with raw codes kept as hover titles | Keep scanability without losing provenance |
+| Opening Evidence from Registry dropped the selected work context | Evidence opens with the selected work already applied | Let users move from a registry row to work-specific evidence |
+| Detail panes stayed visually cross-corpus after a work filter | Work-filtered details foreground the selected work's hits, forms, samples, and evidence examples | Reduce the "everything at once" effect |
+
 ### 2026-05-04 — Public simples browser and visible UI shell
 
 **Why**: The generated simples registry is a read-only research browser and should be usable without a magic-link editor login. The UI also needed stronger contrast so controls, selected rows, and source/status signals were visible.
