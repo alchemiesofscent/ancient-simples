@@ -65,6 +65,14 @@ Rebuild the compact browser index after regenerating registry artifacts:
 npm run simples:public-index
 ```
 
+## Open Problem: Candidate Simples View
+
+Goal: produce a cleaner default list for users while preserving the raw extraction/audit view for transparent review.
+
+The current registry exposes raw `SUBSTANCE` and `SUBSTANCE_PART` extraction terms too directly. Problem examples include `ῥίζα`, `φύλλα`, `σπέρμα`, inflected variants, article phrases, and generic plant parts that can appear as if they were independent simples.
+
+Before adding more UI polish, decide whether candidate-simple status is UI-only, generated into `app/public/simples/registry-index.json`, or written back into `data-workbench/simples/` CSV artifacts.
+
 ## Review Relation Types
 
 - `synonym`

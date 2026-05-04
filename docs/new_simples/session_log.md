@@ -186,3 +186,15 @@ Use this template for every session entry:
 - Blockers: The work filter improves navigation, but the underlying registry is still a provisional extraction surface with generic part nouns and lemmatization errors until `LEGACY-SIMPLES-REVIEW-01` and a stricter candidate-simple view are implemented.
 - Exact next task for this stream: add a default candidate-simple view that hides `SUBSTANCE_PART`-only generic rows and moves lemmatization/name problems into review buckets.
 - Resume note: Work filtering is implemented in the static `/simples` route; the next usability issue is data curation, not more navigation.
+
+### 2026-05-04 - Codex
+
+- Starting context: After reviewing the filtered `/simples` browser, the team paused before adding a candidate-simple view because the classification rules are not settled.
+- Tasks moved: Added `UI-SIMPLES-CANDIDATES-01` to `Next`. Left `Now`/`Resume Here` on `LEGACY-VOCAB-IMPORT-01`.
+- Decisions: Treat the current registry as a useful extraction audit surface, not yet as a reliable user-facing candidate-simple list. Preserve the raw extraction/audit view for transparency. Do not implement candidate-simple rules until the data-model boundary is decided.
+- Problem statement: The current registry exposes raw `SUBSTANCE` / `SUBSTANCE_PART` extraction terms too directly. Generic parts such as root, leaf, and seed, plus inflected forms, article phrases, and lemmatization errors, can appear as if they were independent simples.
+- Transformations: no documented candidate-simple pause -> `docs/new_simples/session_log.md`, `docs/new_simples/new_wbs.md`, and `docs/new_simples/simples_registry_workflow.md` now record `UI-SIMPLES-CANDIDATES-01` as a research/data-model decision before UI polish.
+- Evidence checked: documentation-only change; `git diff --check` passed.
+- Blockers: Work filtering helps navigation, but it does not solve the underlying data curation problem.
+- Exact next task for this stream: `UI-SIMPLES-CANDIDATES-01` `[UI]` determine whether candidate status is UI-only, generated into `registry-index.json`, or written back into workbench CSV artifacts, then implement the chosen candidate-simple view.
+- Resume note: Do not treat this as a frontend-only cleanup. Decide how likely named simples should be separated from generic parts, lemmatization errors, and audit-only extraction terms before changing app behavior.
