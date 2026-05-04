@@ -1,5 +1,16 @@
 # Changelog
 
+### 2026-05-04 — Public simples browser and visible UI shell
+
+**Why**: The generated simples registry is a read-only research browser and should be usable without a magic-link editor login. The UI also needed stronger contrast so controls, selected rows, and source/status signals were visible.
+
+| Before | After | Why |
+|--------|-------|-----|
+| `/simples` passed through the auth middleware and could be redirected to `/login` | `/simples` and its generated `/vocab`/`/simples` JSON assets are public routes | Let users browse named simples without editor credentials |
+| Root `/` redirected to protected `/entries` | Root `/` redirects to public `/simples` | Make the app open into the research browser by default |
+| Global layout always required a Supabase server client | Layout treats auth as optional and keeps login only as `Editor sign in` | Avoid breaking public pages when auth is not configured |
+| Low-contrast zinc-only app shell and controls | Slate shell, indigo active states, stronger borders, colored selected rows, and clearer badges | Make the registry and filters easier to scan |
+
 ### 2026-05-04 — Simples registry browser view
 
 **Why**: The project needed a user-friendly way to inspect named simples and their source coverage without loading the full evidence explorer by default.

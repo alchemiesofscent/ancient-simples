@@ -28,9 +28,12 @@ export async function middleware(request: NextRequest) {
 
   const path = request.nextUrl.pathname;
 
-  // Public routes
+  // Public routes. The `/simples` viewer is a read-only research surface backed
+  // by generated static JSON, so it should remain usable without an editor login.
   const isPublic =
     path === "/" ||
+    path.startsWith("/simples") ||
+    path.startsWith("/vocab") ||
     path.startsWith("/login") ||
     path.startsWith("/auth/callback") ||
     path.startsWith("/_next") ||

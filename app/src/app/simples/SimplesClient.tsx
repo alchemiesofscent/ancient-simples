@@ -19,9 +19,9 @@ const RESULT_LIMIT = 250;
 const REGISTRY_LIMIT = 500;
 
 const inputClass =
-  "h-10 w-full rounded-md border border-zinc-300 bg-white px-3 text-sm text-zinc-950 shadow-sm outline-none transition focus:border-zinc-700 focus:ring-2 focus:ring-zinc-200";
+  "h-10 w-full rounded-md border border-slate-400 bg-white px-3 text-sm text-slate-950 shadow-sm outline-none transition focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200";
 const smallButtonClass =
-  "h-9 rounded-md border border-zinc-300 bg-white px-3 text-sm font-medium text-zinc-800 shadow-sm transition hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-300";
+  "h-9 rounded-md border border-slate-400 bg-white px-3 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-200";
 
 type ViewMode = "registry" | "evidence";
 type RegistryMultiwordFilter = "" | "simple" | "multiword" | "head" | "place";
@@ -44,7 +44,7 @@ function qualityTone(axis: string): string {
   if (axis === "COLD") return "border-sky-200 bg-sky-50 text-sky-950";
   if (axis === "DRY") return "border-amber-200 bg-amber-50 text-amber-950";
   if (axis === "WET") return "border-emerald-200 bg-emerald-50 text-emerald-950";
-  return "border-zinc-200 bg-zinc-50 text-zinc-900";
+  return "border-slate-300 bg-slate-50 text-slate-950";
 }
 
 function qualityLabel(quality: Pick<VocabQuality | RegistryQualitySummary, "axis" | "degree">): string {
@@ -53,9 +53,9 @@ function qualityLabel(quality: Pick<VocabQuality | RegistryQualitySummary, "axis
 
 function Metric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-md border border-zinc-200 bg-white px-3 py-2">
-      <div className="text-[11px] font-semibold uppercase text-zinc-500">{label}</div>
-      <div className="mt-0.5 text-sm font-semibold text-zinc-950">{value}</div>
+    <div className="rounded-md border border-slate-300 bg-slate-50 px-3 py-2">
+      <div className="text-[11px] font-semibold uppercase text-slate-500">{label}</div>
+      <div className="mt-0.5 text-sm font-semibold text-slate-950">{value}</div>
     </div>
   );
 }
@@ -66,7 +66,7 @@ function SourceBadges({ sources, compact = false }: { sources: Record<string, nu
       {Object.entries(sources).sort(([a], [b]) => a.localeCompare(b)).map(([source, count]) => (
         <span
           key={source}
-          className={`rounded border border-zinc-200 bg-zinc-50 font-mono text-zinc-700 ${
+          className={`rounded border border-indigo-200 bg-indigo-50 font-mono text-indigo-950 ${
             compact ? "px-1.5 py-0.5 text-[11px]" : "px-2 py-1 text-xs"
           }`}
         >
@@ -96,7 +96,7 @@ function reviewTone(status: RegistryTerm["name_relation"]["status"]): string {
   if (status === "pending_candidates") return "border-amber-200 bg-amber-50 text-amber-950";
   if (status === "reviewed") return "border-emerald-200 bg-emerald-50 text-emerald-950";
   if (status === "mixed_review") return "border-sky-200 bg-sky-50 text-sky-950";
-  return "border-zinc-200 bg-zinc-50 text-zinc-700";
+  return "border-slate-300 bg-slate-50 text-slate-800";
 }
 
 function RegistryStatusBadge({ term }: { term: RegistryTerm }) {
@@ -205,37 +205,37 @@ function RegistryList({
   onSelect: (term: RegistryTerm) => void;
 }) {
   return (
-    <section className="overflow-hidden rounded-md border border-zinc-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between gap-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3">
-        <h2 className="text-sm font-semibold text-zinc-950">Named Simples</h2>
-        <div className="text-xs font-medium text-zinc-600">
+    <section className="overflow-hidden rounded-md border border-slate-300 bg-white shadow-sm">
+      <div className="flex items-center justify-between gap-3 border-b border-slate-300 bg-slate-100 px-4 py-3">
+        <h2 className="text-sm font-semibold text-slate-950">Named Simples</h2>
+        <div className="text-xs font-medium text-slate-700">
           {formatCount(Math.min(total, REGISTRY_LIMIT))} of {formatCount(total)}
         </div>
       </div>
 
       <div className="max-h-[72vh] overflow-y-auto">
         {terms.length === 0 ? (
-          <div className="p-6 text-sm text-zinc-600">No registry terms match these filters.</div>
+          <div className="p-6 text-sm text-slate-700">No registry terms match these filters.</div>
         ) : (
-          <div className="divide-y divide-zinc-200">
+          <div className="divide-y divide-slate-200">
             {terms.map((term) => {
               const selected = selectedKey === term.term_key;
               return (
-                <article key={term.term_key} className={selected ? "bg-zinc-50" : "bg-white"}>
+                <article key={term.term_key} className={selected ? "bg-indigo-50" : "bg-white"}>
                   <button
                     type="button"
                     onClick={() => onSelect(term)}
-                    className={`grid w-full gap-3 p-3 text-left focus:outline-none focus:ring-2 focus:ring-zinc-300 ${
-                      selected ? "border-l-4 border-zinc-900 pl-2" : "border-l-4 border-transparent"
+                    className={`grid w-full gap-3 p-3 text-left focus:outline-none focus:ring-2 focus:ring-indigo-200 ${
+                      selected ? "border-l-4 border-indigo-700 pl-2" : "border-l-4 border-transparent"
                     }`}
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0">
-                        <div className="break-words font-serif text-xl leading-7 text-zinc-950">{term.preferred_display}</div>
-                        <div className="mt-0.5 break-all font-mono text-xs text-zinc-500">{term.term_key}</div>
+                        <div className="break-words font-serif text-xl leading-7 text-slate-950">{term.preferred_display}</div>
+                        <div className="mt-0.5 break-all font-mono text-xs text-slate-500">{term.term_key}</div>
                       </div>
                       <div className="grid shrink-0 justify-items-end gap-1.5">
-                        <span className="rounded border border-zinc-200 bg-white px-2 py-1 text-xs font-medium text-zinc-700">
+                        <span className="rounded border border-slate-300 bg-white px-2 py-1 text-xs font-medium text-slate-800">
                           {formatCount(term.entry_count)} entries
                         </span>
                         <RegistryStatusBadge term={term} />
@@ -269,23 +269,23 @@ function RegistryDetail({
 }) {
   if (!term) {
     return (
-      <aside className="rounded-md border border-zinc-200 bg-white p-5 text-sm text-zinc-600 shadow-sm">
+      <aside className="rounded-md border border-slate-300 bg-white p-5 text-sm text-slate-700 shadow-sm">
         Select a registry term to inspect source coverage and review status.
       </aside>
     );
   }
 
   return (
-    <aside className="rounded-md border border-zinc-200 bg-white shadow-sm">
-      <div className="border-b border-zinc-200 p-5">
+    <aside className="rounded-md border border-slate-300 bg-white shadow-sm">
+      <div className="border-b border-slate-300 p-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <h2 className="break-words font-serif text-3xl leading-tight text-zinc-950">{term.preferred_display}</h2>
+              <h2 className="break-words font-serif text-3xl leading-tight text-slate-950">{term.preferred_display}</h2>
               <RegistryStatusBadge term={term} />
             </div>
-            <p className="mt-1 break-all font-mono text-xs text-zinc-500">{term.term_key}</p>
-            <p className="mt-2 text-sm text-zinc-600">Draft ancient term, not a final physical substance.</p>
+            <p className="mt-1 break-all font-mono text-xs text-slate-500">{term.term_key}</p>
+            <p className="mt-2 text-sm text-slate-700">Draft ancient term, not a final physical substance.</p>
           </div>
           <div className="grid grid-cols-3 gap-2 sm:min-w-[290px]">
             <Metric label="Entries" value={formatCount(term.entry_count)} />
@@ -297,33 +297,33 @@ function RegistryDetail({
 
       <div className="grid gap-6 p-5">
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Source Coverage</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Source Coverage</h3>
           <div className="mt-2">
             <SourceBadges sources={term.source_counts} />
           </div>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {Object.entries(term.author_counts).map(([author, count]) => (
-              <span key={author} className="rounded-md border border-zinc-200 bg-zinc-50 px-2 py-1 text-xs">
-                {author} <span className="text-zinc-500">{count}</span>
+              <span key={author} className="rounded-md border border-slate-300 bg-slate-50 px-2 py-1 text-xs">
+                {author} <span className="text-slate-500">{count}</span>
               </span>
             ))}
           </div>
         </section>
 
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Forms</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Forms</h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {term.forms.slice(0, 18).map((form) => (
-              <span key={`${form.display}-${form.normalized}`} className="rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs">
-                <span className="font-serif text-sm text-zinc-950">{form.display}</span>
-                <span className="ml-1 text-zinc-500">{form.count}</span>
+              <span key={`${form.display}-${form.normalized}`} className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs">
+                <span className="font-serif text-sm text-slate-950">{form.display}</span>
+                <span className="ml-1 text-slate-500">{form.count}</span>
               </span>
             ))}
           </div>
         </section>
 
         <section className="grid gap-2">
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Registry Flags</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Registry Flags</h3>
           <div className="grid gap-2 sm:grid-cols-2">
             <Metric label="Confidence" value={confidenceLabel(term.confidence_avg)} />
             <Metric label="Labels" value={Object.entries(term.labels).map(([label, count]) => `${label} ${count}`).join(", ") || "none"} />
@@ -333,7 +333,7 @@ function RegistryDetail({
         </section>
 
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Quality Summary</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Quality Summary</h3>
           {term.quality_summary.length > 0 ? (
             <div className="mt-2 flex flex-wrap gap-1.5">
               {term.quality_summary.map((quality) => (
@@ -341,12 +341,12 @@ function RegistryDetail({
               ))}
             </div>
           ) : (
-            <p className="mt-2 text-sm text-zinc-600">No compact quality summary linked.</p>
+            <p className="mt-2 text-sm text-slate-700">No compact quality summary linked.</p>
           )}
         </section>
 
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Name-Relation Review</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Name-Relation Review</h3>
           <div className="mt-2 grid gap-2 sm:grid-cols-3">
             <Metric label="Status" value={reviewLabel(term.name_relation.status)} />
             <Metric label="Candidates" value={formatCount(term.name_relation.candidate_count)} />
@@ -355,10 +355,10 @@ function RegistryDetail({
         </section>
 
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Entry Samples</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Entry Samples</h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {term.entry_samples.slice(0, 20).map((entryId) => (
-              <span key={entryId} className="rounded border border-zinc-200 bg-zinc-50 px-2 py-1 font-mono text-xs text-zinc-700">
+              <span key={entryId} className="rounded border border-slate-300 bg-slate-50 px-2 py-1 font-mono text-xs text-slate-800">
                 {entryId}
               </span>
             ))}
@@ -414,11 +414,11 @@ function RegistryView({
 
   return (
     <div className="grid gap-5">
-      <section className="rounded-md border border-zinc-200 bg-white p-4 shadow-sm">
+      <section className="rounded-md border border-slate-300 bg-white p-4 shadow-sm">
         <div className="grid gap-4">
           <div className="grid gap-3 lg:grid-cols-[minmax(280px,2fr)_repeat(5,minmax(120px,1fr))]">
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Search</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Search</span>
               <input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
@@ -427,21 +427,21 @@ function RegistryView({
               />
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Source</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Source</span>
               <select value={source} onChange={(event) => setSource(event.target.value)} className={inputClass}>
                 <option value="">All sources</option>
                 {sources.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Author</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Author</span>
               <select value={author} onChange={(event) => setAuthor(event.target.value)} className={inputClass}>
                 <option value="">All authors</option>
                 {authors.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Review</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Review</span>
               <select value={reviewStatus} onChange={(event) => setReviewStatus(event.target.value)} className={inputClass}>
                 <option value="">Any status</option>
                 <option value="none">No candidates</option>
@@ -451,7 +451,7 @@ function RegistryView({
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Term Type</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Term Type</span>
               <select value={multiword} onChange={(event) => setMultiword(event.target.value as RegistryMultiwordFilter)} className={inputClass}>
                 <option value="">Any term</option>
                 <option value="simple">Single/simple terms</option>
@@ -461,7 +461,7 @@ function RegistryView({
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Sort</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Sort</span>
               <select value={sortKey} onChange={(event) => setSortKey(event.target.value)} className={inputClass}>
                 <option value="entry_count">Most entries</option>
                 <option value="occurrence_count">Most occurrences</option>
@@ -473,8 +473,8 @@ function RegistryView({
             </label>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 border-t border-zinc-200 pt-4 text-sm">
-            <label className="flex h-9 items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 font-medium text-zinc-800">
+          <div className="flex flex-wrap items-center gap-3 border-t border-slate-300 pt-4 text-sm">
+            <label className="flex h-9 items-center gap-2 rounded-md border border-slate-400 bg-white px-3 font-medium text-slate-900">
               <input type="checkbox" checked={crossCorpus} onChange={(event) => setCrossCorpus(event.target.checked)} />
               Cross-corpus only
             </label>
@@ -524,36 +524,36 @@ function EvidenceResultList({
   onToggleCompare: (simple: VocabSimple) => void;
 }) {
   return (
-    <section className="overflow-hidden rounded-md border border-zinc-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between gap-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3">
-        <h2 className="text-sm font-semibold text-zinc-950">Evidence Results</h2>
-        <div className="text-xs font-medium text-zinc-600">{formatCount(Math.min(total, RESULT_LIMIT))} of {formatCount(total)}</div>
+    <section className="overflow-hidden rounded-md border border-slate-300 bg-white shadow-sm">
+      <div className="flex items-center justify-between gap-3 border-b border-slate-300 bg-slate-100 px-4 py-3">
+        <h2 className="text-sm font-semibold text-slate-950">Evidence Results</h2>
+        <div className="text-xs font-medium text-slate-700">{formatCount(Math.min(total, RESULT_LIMIT))} of {formatCount(total)}</div>
       </div>
       <div className="max-h-[70vh] overflow-y-auto">
         {simples.length === 0 ? (
-          <div className="p-6 text-sm text-zinc-600">No simples match these filters.</div>
+          <div className="p-6 text-sm text-slate-700">No simples match these filters.</div>
         ) : (
-          <div className="divide-y divide-zinc-200">
+          <div className="divide-y divide-slate-200">
             {simples.map((simple) => {
               const isSelected = selectedKey === simple.lemma_normalized;
               const isCompared = compareKeys.includes(simple.lemma_normalized);
               return (
-                <article key={simple.lemma_normalized} className={isSelected ? "bg-zinc-50" : "bg-white"}>
-                  <div className={`grid gap-3 p-3 ${isSelected ? "border-l-4 border-zinc-900 pl-2" : "border-l-4 border-transparent"}`}>
+                <article key={simple.lemma_normalized} className={isSelected ? "bg-indigo-50" : "bg-white"}>
+                  <div className={`grid gap-3 p-3 ${isSelected ? "border-l-4 border-indigo-700 pl-2" : "border-l-4 border-transparent"}`}>
                     <div className="flex items-start justify-between gap-3">
-                      <button type="button" onClick={() => onSelect(simple)} className="min-w-0 text-left focus:outline-none focus:ring-2 focus:ring-zinc-300">
-                        <div className="break-words font-serif text-xl leading-7 text-zinc-950">{simple.display}</div>
-                        <div className="mt-0.5 break-all font-mono text-xs text-zinc-500">{simple.lemma_normalized}</div>
+                      <button type="button" onClick={() => onSelect(simple)} className="min-w-0 text-left focus:outline-none focus:ring-2 focus:ring-indigo-200">
+                        <div className="break-words font-serif text-xl leading-7 text-slate-950">{simple.display}</div>
+                        <div className="mt-0.5 break-all font-mono text-xs text-slate-500">{simple.lemma_normalized}</div>
                       </button>
                       <div className="flex shrink-0 flex-col items-end gap-2">
-                        <span className="rounded border border-zinc-200 bg-white px-2 py-1 text-xs font-medium text-zinc-700">
+                        <span className="rounded border border-slate-300 bg-white px-2 py-1 text-xs font-medium text-slate-800">
                           {formatCount(simple.entry_count)} entries
                         </span>
                         <button
                           type="button"
                           onClick={() => onToggleCompare(simple)}
-                          className={`h-8 rounded-md border px-2.5 text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-zinc-300 ${
-                            isCompared ? "border-zinc-900 bg-zinc-900 text-white" : "border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-100"
+                          className={`h-8 rounded-md border px-2.5 text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-indigo-200 ${
+                            isCompared ? "border-indigo-700 bg-indigo-700 text-white" : "border-slate-400 bg-white text-slate-900 hover:bg-slate-100"
                           }`}
                         >
                           {isCompared ? "Added" : "Compare"}
@@ -583,13 +583,13 @@ function FacetGroup({ title, facets }: { title: string; facets: VocabFacet[] }) 
   if (facets.length === 0) return null;
   return (
     <section className="grid gap-2">
-      <h3 className="text-xs font-semibold uppercase text-zinc-500">{title}</h3>
+      <h3 className="text-xs font-semibold uppercase text-slate-500">{title}</h3>
       <div className="flex flex-wrap gap-1.5">
         {facets.map((facet) => (
-          <span key={facet.key} className="rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs text-zinc-800">
-            <span className="font-serif text-sm text-zinc-950">{facet.display}</span>
-            <span className="ml-1 text-zinc-500">{facet.entry_count}</span>
-            {facet.direct ? <span className="ml-1 rounded bg-zinc-100 px-1 text-[10px] uppercase text-zinc-600">direct</span> : null}
+          <span key={facet.key} className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-900">
+            <span className="font-serif text-sm text-slate-950">{facet.display}</span>
+            <span className="ml-1 text-slate-500">{facet.entry_count}</span>
+            {facet.direct ? <span className="ml-1 rounded bg-slate-100 px-1 text-[10px] uppercase text-slate-700">direct</span> : null}
           </span>
         ))}
       </div>
@@ -600,7 +600,7 @@ function FacetGroup({ title, facets }: { title: string; facets: VocabFacet[] }) 
 function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
   if (!simple) {
     return (
-      <aside className="rounded-md border border-zinc-200 bg-white p-5 text-sm text-zinc-600 shadow-sm">
+      <aside className="rounded-md border border-slate-300 bg-white p-5 text-sm text-slate-700 shadow-sm">
         Select a simple to inspect extracted evidence.
       </aside>
     );
@@ -611,12 +611,12 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
   ).slice(0, 10);
 
   return (
-    <aside className="rounded-md border border-zinc-200 bg-white shadow-sm">
-      <div className="border-b border-zinc-200 p-5">
+    <aside className="rounded-md border border-slate-300 bg-white shadow-sm">
+      <div className="border-b border-slate-300 p-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
-            <h2 className="break-words font-serif text-3xl leading-tight text-zinc-950">{simple.display}</h2>
-            <p className="mt-1 break-all font-mono text-xs text-zinc-500">{simple.lemma_normalized}</p>
+            <h2 className="break-words font-serif text-3xl leading-tight text-slate-950">{simple.display}</h2>
+            <p className="mt-1 break-all font-mono text-xs text-slate-500">{simple.lemma_normalized}</p>
           </div>
           <div className="grid grid-cols-3 gap-2 sm:min-w-[280px]">
             <Metric label="Entries" value={formatCount(simple.entry_count)} />
@@ -630,7 +630,7 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
       </div>
       <div className="grid gap-6 p-5">
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Quality Profile</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Quality Profile</h3>
           {simple.qualities.length > 0 ? (
             <div className="mt-2 grid gap-2 sm:grid-cols-2">
               {simple.qualities.map((quality) => (
@@ -641,17 +641,17 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
               ))}
             </div>
           ) : (
-            <p className="mt-2 text-sm text-zinc-600">No quality assertions linked.</p>
+            <p className="mt-2 text-sm text-slate-700">No quality assertions linked.</p>
           )}
         </section>
 
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Forms</h3>
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Forms</h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {simple.forms.slice(0, 16).map((form) => (
-              <span key={form.display} className="rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs">
-                <span className="font-serif text-sm text-zinc-950">{form.display}</span>
-                <span className="ml-1 text-zinc-500">{form.count}</span>
+              <span key={form.display} className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs">
+                <span className="font-serif text-sm text-slate-950">{form.display}</span>
+                <span className="ml-1 text-slate-500">{form.count}</span>
               </span>
             ))}
           </div>
@@ -664,18 +664,18 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
         </div>
 
         <section>
-          <h3 className="text-xs font-semibold uppercase text-zinc-500">Evidence</h3>
-          <ul className="mt-2 divide-y divide-zinc-200 overflow-hidden rounded-md border border-zinc-200">
+          <h3 className="text-xs font-semibold uppercase text-slate-500">Evidence</h3>
+          <ul className="mt-2 divide-y divide-slate-200 overflow-hidden rounded-md border border-slate-300">
             {evidence.length > 0 ? evidence.map((item, index) => (
               <li key={`${item.entry_id}-${index}`} className="bg-white p-3 text-sm">
-                <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-zinc-600">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-700">
                   <span className="font-mono">{item.entry_id}</span>
                   <span className={`rounded border px-2 py-0.5 ${qualityTone(item.axis)}`}>{item.axis}{item.degree ? ` ${item.degree}` : ""}</span>
                 </div>
-                <p className="mt-2 font-serif text-base leading-7 text-zinc-950">{item.evidence}</p>
+                <p className="mt-2 font-serif text-base leading-7 text-slate-950">{item.evidence}</p>
               </li>
             )) : (
-              <li className="p-3 text-sm text-zinc-600">No evidence snippets available.</li>
+              <li className="p-3 text-sm text-slate-700">No evidence snippets available.</li>
             )}
           </ul>
         </section>
@@ -687,18 +687,18 @@ function SimpleDetail({ simple }: { simple: VocabSimple | null }) {
 function CompareTray({ simples, onRemove }: { simples: VocabSimple[]; onRemove: (key: string) => void }) {
   if (simples.length === 0) return null;
   return (
-    <section className="rounded-md border border-zinc-200 bg-white p-4 shadow-sm">
+    <section className="rounded-md border border-slate-300 bg-white p-4 shadow-sm">
       <div className="flex items-center justify-between gap-3">
-        <h2 className="text-sm font-semibold text-zinc-950">Compare</h2>
-        <div className="text-xs font-medium text-zinc-600">{simples.length}/{MAX_COMPARE}</div>
+        <h2 className="text-sm font-semibold text-slate-950">Compare</h2>
+        <div className="text-xs font-medium text-slate-700">{simples.length}/{MAX_COMPARE}</div>
       </div>
       <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
         {simples.map((simple) => (
-          <div key={simple.lemma_normalized} className="rounded-md border border-zinc-200 bg-zinc-50 p-3">
+          <div key={simple.lemma_normalized} className="rounded-md border border-slate-300 bg-slate-50 p-3">
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
-                <div className="break-words font-serif text-xl text-zinc-950">{simple.display}</div>
-                <div className="break-all font-mono text-xs text-zinc-500">{simple.lemma_normalized}</div>
+                <div className="break-words font-serif text-xl text-slate-950">{simple.display}</div>
+                <div className="break-all font-mono text-xs text-slate-500">{simple.lemma_normalized}</div>
               </div>
               <button type="button" onClick={() => onRemove(simple.lemma_normalized)} className={smallButtonClass}>Remove</button>
             </div>
@@ -706,8 +706,8 @@ function CompareTray({ simples, onRemove }: { simples: VocabSimple[]; onRemove: 
             <div className="mt-3 flex flex-wrap gap-1.5">
               {simple.qualities.slice(0, 8).map((quality) => <QualityBadge key={`${quality.axis}-${quality.degree ?? "none"}`} quality={quality} />)}
             </div>
-            <div className="mt-3 text-xs leading-5 text-zinc-600">
-              <span className="font-medium text-zinc-700">Conditions:</span>{" "}
+            <div className="mt-3 text-xs leading-5 text-slate-700">
+              <span className="font-medium text-slate-800">Conditions:</span>{" "}
               {topFacetValues(simple, "CONDITION", 3).map((facet) => facet.display).join(", ") || "none"}
             </div>
           </div>
@@ -800,43 +800,43 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
   }
 
   if (loadError) return <div className="rounded-md border border-red-300 bg-red-50 p-4 text-sm text-red-800">{loadError}</div>;
-  if (!index) return <div className="rounded-md border border-zinc-200 bg-white p-4 text-sm text-zinc-600 shadow-sm">Loading evidence index...</div>;
+  if (!index) return <div className="rounded-md border border-slate-300 bg-white p-4 text-sm text-slate-700 shadow-sm">Loading evidence index...</div>;
 
   const sources = Object.keys(index.stats.sources).sort();
   const visibleResults = filtered.slice(0, RESULT_LIMIT);
 
   return (
     <div className="grid gap-5">
-      <section className="rounded-md border border-zinc-200 bg-white p-4 shadow-sm">
+      <section className="rounded-md border border-slate-300 bg-white p-4 shadow-sm">
         <div className="grid gap-4">
           <div className="grid gap-3 lg:grid-cols-[minmax(280px,2fr)_repeat(5,minmax(120px,1fr))]">
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Search</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Search</span>
               <input value={query} onChange={(event) => setQuery(event.target.value)} className={inputClass} placeholder="Greek, normalized form, source ID, evidence" />
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Source</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Source</span>
               <select value={source} onChange={(event) => setSource(event.target.value)} className={inputClass}>
                 <option value="">All sources</option>
                 {sources.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Label</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Label</span>
               <select value={label} onChange={(event) => setLabel(event.target.value)} className={inputClass}>
                 <option value="">Any label</option>
                 {index.labels.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Quality</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Quality</span>
               <select value={axis} onChange={(event) => setAxis(event.target.value)} className={inputClass}>
                 <option value="">Any quality</option>
                 {index.quality_axes.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Degree</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Degree</span>
               <select value={degree} onChange={(event) => setDegree(event.target.value)} className={inputClass}>
                 <option value="">Any degree</option>
                 <option value="1">Degree 1</option>
@@ -846,7 +846,7 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
               </select>
             </label>
             <label className="grid gap-1.5">
-              <span className="text-xs font-semibold uppercase text-zinc-600">Sort</span>
+              <span className="text-xs font-semibold uppercase text-slate-700">Sort</span>
               <select value={sortKey} onChange={(event) => setSortKey(event.target.value)} className={inputClass}>
                 <option value="entry_count">Most attested</option>
                 <option value="source_count">Most sources</option>
@@ -856,10 +856,10 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
             </label>
           </div>
 
-          <div className="grid gap-3 border-t border-zinc-200 pt-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-3 border-t border-slate-300 pt-4 md:grid-cols-2 xl:grid-cols-3">
             {FACET_FILTERS.map((facet) => (
               <label key={facet.key} className="grid gap-1.5">
-                <span className="text-xs font-semibold uppercase text-zinc-600">{facet.label}</span>
+                <span className="text-xs font-semibold uppercase text-slate-700">{facet.label}</span>
                 <input
                   value={facetTerms[facet.key] ?? ""}
                   onChange={(event) => updateFacet(facet.key, event.target.value)}
@@ -874,19 +874,19 @@ function EvidenceExplorer({ focusTerm }: { focusTerm: string }) {
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 border-t border-zinc-200 pt-4 text-sm">
+          <div className="flex flex-wrap items-center gap-3 border-t border-slate-300 pt-4 text-sm">
             <label className="flex min-w-[230px] items-center gap-3">
-              <span className="shrink-0 font-medium text-zinc-700">Min confidence</span>
-              <input type="range" min="0" max="1" step="0.05" value={minConfidence} onChange={(event) => setMinConfidence(Number(event.target.value) || 0)} className="w-full accent-zinc-900" />
-              <span className="w-9 text-right font-mono text-xs text-zinc-600">{minConfidence.toFixed(2)}</span>
+              <span className="shrink-0 font-medium text-slate-800">Min confidence</span>
+              <input type="range" min="0" max="1" step="0.05" value={minConfidence} onChange={(event) => setMinConfidence(Number(event.target.value) || 0)} className="w-full accent-indigo-700" />
+              <span className="w-9 text-right font-mono text-xs text-slate-700">{minConfidence.toFixed(2)}</span>
             </label>
-            <label className="flex h-9 items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 font-medium text-zinc-800">
+            <label className="flex h-9 items-center gap-2 rounded-md border border-slate-400 bg-white px-3 font-medium text-slate-900">
               <input type="checkbox" checked={crossCorpus} onChange={(event) => setCrossCorpus(event.target.checked)} />
               Cross-corpus only
             </label>
-            <div className="flex h-9 overflow-hidden rounded-md border border-zinc-300 bg-white">
-              <button type="button" onClick={() => setMode("and")} className={`px-3 text-sm font-semibold ${mode === "and" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}>AND</button>
-              <button type="button" onClick={() => setMode("or")} className={`border-l border-zinc-300 px-3 text-sm font-semibold ${mode === "or" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}>OR</button>
+            <div className="flex h-9 overflow-hidden rounded-md border border-slate-400 bg-white">
+              <button type="button" onClick={() => setMode("and")} className={`px-3 text-sm font-semibold ${mode === "and" ? "bg-indigo-700 text-white" : "text-slate-800 hover:bg-slate-100"}`}>AND</button>
+              <button type="button" onClick={() => setMode("or")} className={`border-l border-slate-400 px-3 text-sm font-semibold ${mode === "or" ? "bg-indigo-700 text-white" : "text-slate-800 hover:bg-slate-100"}`}>OR</button>
             </div>
             <button type="button" onClick={resetFilters} className={smallButtonClass}>Reset</button>
           </div>
@@ -931,7 +931,7 @@ export default function SimplesClient() {
   if (!registry) {
     return (
       <main className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6">
-        <div className="rounded-md border border-zinc-200 bg-white p-4 text-sm text-zinc-600 shadow-sm">Loading registry index...</div>
+        <div className="rounded-md border border-slate-300 bg-white p-4 text-sm text-slate-700 shadow-sm">Loading registry index...</div>
       </main>
     );
   }
@@ -945,8 +945,8 @@ export default function SimplesClient() {
     <main className="mx-auto grid w-full max-w-[1500px] gap-5 px-4 py-6 sm:px-6">
       <header className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
         <div>
-          <h1 className="text-2xl font-semibold tracking-normal text-zinc-950">Simples</h1>
-          <p className="mt-1 text-sm text-zinc-600">
+          <h1 className="text-2xl font-semibold tracking-normal text-slate-950">Simples</h1>
+          <p className="mt-1 text-sm text-slate-700">
             {formatCount(registry.stats.terms)} draft ancient terms, {formatCount(registry.stats.occurrences)} occurrences
           </p>
         </div>
@@ -957,24 +957,24 @@ export default function SimplesClient() {
         </div>
       </header>
 
-      <section className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-zinc-200 bg-white p-3 shadow-sm">
-        <div className="flex h-10 overflow-hidden rounded-md border border-zinc-300 bg-white">
+      <section className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-slate-300 bg-white p-3 shadow-sm">
+        <div className="flex h-10 overflow-hidden rounded-md border border-slate-400 bg-white">
           <button
             type="button"
             onClick={() => setViewMode("registry")}
-            className={`px-4 text-sm font-semibold ${viewMode === "registry" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}
+            className={`px-4 text-sm font-semibold ${viewMode === "registry" ? "bg-indigo-700 text-white" : "text-slate-800 hover:bg-slate-100"}`}
           >
             Registry
           </button>
           <button
             type="button"
             onClick={() => setViewMode("evidence")}
-            className={`border-l border-zinc-300 px-4 text-sm font-semibold ${viewMode === "evidence" ? "bg-zinc-900 text-white" : "text-zinc-700 hover:bg-zinc-100"}`}
+            className={`border-l border-slate-400 px-4 text-sm font-semibold ${viewMode === "evidence" ? "bg-indigo-700 text-white" : "text-slate-800 hover:bg-slate-100"}`}
           >
             Evidence
           </button>
         </div>
-        <div className="text-sm text-zinc-600">
+        <div className="text-sm text-slate-700">
           Draft ancient-term registry. Identification and physical-substance links remain future review layers.
         </div>
       </section>

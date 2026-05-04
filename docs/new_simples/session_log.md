@@ -164,3 +164,14 @@ Use this template for every session entry:
 - Blockers: The registry view still reflects pending name-relation review state; accepted synonym/variant decisions require `LEGACY-SIMPLES-REVIEW-01`.
 - Exact next task for this stream: `LEGACY-SIMPLES-REVIEW-01` `[LEGACY]` review the candidate packets and update `simple_name_relations_pilot.csv`.
 - Resume note: Rebuild sequence after review edits is `npm run simples:name-candidates` only if candidate generation changes, otherwise update pilot rows and run `npm run simples:public-index`.
+
+### 2026-05-04 - Codex
+
+- Starting context: User asked whether the simples app could be usable without login/magic link and asked for the color scheme to be more visible.
+- Tasks moved: Added `UI-SIMPLES-PUBLIC-01` to `Done`. Left `Now`/`Resume Here` on `LEGACY-VOCAB-IMPORT-01` because DB import remains the board-wide operational task.
+- Decisions: Treat `/simples` as a public, read-only research browser because it is backed by generated static JSON. Keep login for editor/database-backed workflows such as `/entries`. Make auth optional in the global layout so public pages do not depend on configured Supabase credentials.
+- Transformations: `/simples` protected by middleware -> public `/simples`; generated `/simples` and `/vocab` JSON asset paths protected by middleware -> public static assets; `/` redirect to `/entries` -> `/` redirect to `/simples`; header `Sign in` -> `Editor sign in`; low-contrast zinc shell and controls -> slate/indigo shell, stronger borders, selected row color, source chips, and active tab states.
+- Evidence checked: `npm run app:lint`; `npm run app:build`; HTTP checks for `/`, `/simples`, `/entries`, `/simples/registry-index.json`, and `/vocab/vocab-index.json` against a local built Next server.
+- Blockers: `/entries` remains intentionally login-gated until/unless the editor workflow is split from public read-only entry browsing.
+- Exact next task for this stream: `LEGACY-SIMPLES-REVIEW-01` `[LEGACY]` review candidate name-relation packets and update `simple_name_relations_pilot.csv`.
+- Resume note: Public browsing should start at `/simples`; editor/database pages still use magic-link auth.
