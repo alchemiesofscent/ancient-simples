@@ -50,8 +50,16 @@ def _read_jsonl(path: Path):
             continue
 
 
-def _extract_usage_from_codex_home(codex_home: Path) -> dict | None:
-    sessions_dir = codex_home / ".codex" / "sessions"
+def _sessions_dir(run_root: Path, safe_id: str) -> Path:
+    # vocab_agent_runner.py moves session logs here after a successful job;
+    # older runs (and failed jobs) still have them inside _codex_home.
+    retired = run_root / "codex_sessions" / safe_id
+    if retired.is_dir():
+        return retired
+    return run_root / "_codex_home" / safe_id / ".codex" / "sessions"
+
+
+def _extract_usage_from_sessions(sessions_dir: Path) -> dict | None:
     if not sessions_dir.exists():
         return None
 
@@ -587,8 +595,7 @@ def main() -> int:
     }
     for job in manifest["jobs"]:
         safe_id = Path(job["result_json"]).stem
-        codex_home = run_root / "_codex_home" / safe_id
-        info = _extract_usage_from_codex_home(codex_home)
+        info = _extract_usage_from_sessions(_sessions_dir(run_root, safe_id))
         if not info:
             continue
         usage_summary["jobs"].append({"source_id": job["source_id"], "safe_id": safe_id, "usage": info})

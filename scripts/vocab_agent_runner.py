@@ -250,6 +250,15 @@ def main() -> int:
             "Defaults to <run_root>/_codex_home when --out is under outputs/*/<run_id>/results/."
         ),
     )
+    ap.add_argument(
+        "--keep-codex-home",
+        action="store_true",
+        help=(
+            "Keep the per-job Codex HOME after a successful run. By default its session "
+            "logs are moved to <run_root>/codex_sessions/<id>/ and the rest (~35 MB of "
+            "plugin cache per job) is deleted. Ignored when --codex-home is given."
+        ),
+    )
 
     args = ap.parse_args()
 
@@ -276,6 +285,8 @@ def main() -> int:
 
     # In this environment, writes outside the workspace (e.g. ~/.codex) are blocked.
     # Point Codex at a writable HOME and (optionally) seed it from the user's real ~/.codex.
+    # Only clean up a HOME this script chose; a caller-supplied --codex-home is theirs.
+    owns_codex_home = not args.codex_home
     if args.codex_home:
         codex_home = Path(args.codex_home)
     else:
@@ -373,7 +384,24 @@ def main() -> int:
         tmp_path.unlink(missing_ok=True)
     except Exception:
         pass
+
+    # On success, keep only the session logs (token usage, transcript) and drop the
+    # per-job HOME. Failed jobs keep their HOME for debugging and for retries.
+    if owns_codex_home and not args.keep_codex_home:
+        _retire_codex_home(codex_home)
     return 0
+
+
+def _retire_codex_home(codex_home: Path) -> None:
+    """Move <home>/.codex/sessions to <home>/../../codex_sessions/<id>/, then delete <home>."""
+    sessions = codex_home / ".codex" / "sessions"
+    dest = codex_home.parent.parent / "codex_sessions" / codex_home.name
+    try:
+        if sessions.is_dir():
+            shutil.copytree(sessions, dest, dirs_exist_ok=True)
+        shutil.rmtree(codex_home)
+    except Exception as e:  # cleanup must never fail a job whose result is written
+        print(f"warning: could not clean up {codex_home}: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -29,6 +29,8 @@ app/.env.local
 _codex_home/
 .codex
 **/_codex_home/
+**/codex_sessions/
+**/codex_sessions.tar.*
 
 # TEI indexer (lxml compiled artifacts)
 *.so
